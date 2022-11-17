@@ -31,7 +31,7 @@
 			<left>13</left>
 			<width>388</width>
 			<height>100</height>
-			<label>Terry Tibbs</label> 			#Add your team name here
+			<label>Terrys Tips</label> 			#Add your team name here
 			<font>font60</font>
 			<align>center</align>
 			<aligny>center</aligny>
@@ -42,7 +42,7 @@
 			<left>5</left>
 			<top>107</top>
 			<description>Icon</description>
-			<width>405</width>
+			<width>400</width>
 			<height>395</height>
 			<texture>test.png</texture> 			#Add you icon here
 			<bordersize>5</bordersize>

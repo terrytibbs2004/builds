@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.program.terrywiz" name="Terry Tibbs Wizard 19" version="0.0.23" provider-name="Magnetic,Slam, BYB">
+<addon id="plugin.program.terrywiz" name="Terry Tibbs Toolbox" version="0.0.25" provider-name="Magnetic,Slam, BYB">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="script.module.requests" optional="true" />
@@ -10,7 +10,7 @@
 	<extension point="xbmc.service" library="service.py" />
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en_GB"></summary>
-		<description lang="en_GB">Kodi 19 Wizard</description>
+		<description lang="en_GB">Terrys tools to help you keep kodi running</description>
 		<disclaimer lang="en_GB">This Addon contains no content</disclaimer>
 		<language>en</language>
 		<platform>all</platform>
