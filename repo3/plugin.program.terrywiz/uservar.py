@@ -3,7 +3,7 @@ import xbmcaddon
 addon_id = xbmcaddon.Addon().getAddonInfo('id')
 
 '''#####-----Build File-----#####'''
-buildfile = 'https://githubraw.com/terrytibbs2004/builds/main/buildsfree.xml'
+buildfile = 'https://githubraw.com/terrytibbs2004/builds/main/builds.xml'
 
 '''#####-----Notifications File-----#####'''
 notify_url  = 'https://githubraw.com/terrytibbs2004/builds/main/notify.txt'
