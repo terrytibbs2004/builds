@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol>9000</defaultcontrol>
+	<backgroundcolor>background</backgroundcolor>
+	<controls>
+		<include>DefaultBackground</include>
+		<control type="multiimage">
+			<depth>DepthBackground</depth>
+			<include>FullScreenDimensions</include>
+			<aspectratio>scale</aspectratio>
+			<animation effect="zoom" center="auto" end="102,102" time="0" condition="Integer.IsGreater(System.StereoscopicMode,0)">conditional</animation>
+			<animation effect="fade" start="0" end="100" time="400" reversible="true" condition="!Window.Previous(SettingsCategory.xml)">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="300" reversible="true" condition="!Window.Next(SettingsCategory.xml)">WindowClose</animation>
+			<animation effect="fade" time="400">VisibleChange</animation>
+			<imagepath colordiffuse="35FFFFFF">$INFO[Skin.String(HomeFanart.path)]settings$INFO[Skin.String(HomeFanart.ext)]</imagepath>
+			<visible>!Player.HasMedia + !String.IsEmpty(Skin.String(HomeFanart.path))</visible>
+		</control>
+		<control type="group">
+			<centerleft>50%</centerleft>
+			<width>1600</width>
+			<top>0</top>
+			<bottom>0</bottom>
+			<include>OpenClose_Right</include>
+			<control type="label">
+				<left>0</left>
+				<right>0</right>
+				<top>420</top>
+				<height>400</height>
+				<label>$LOCALIZE[5]</label>
+				<align>center</align>
+				<font>font37</font>
+			</control>
+			<control type="panel" id="9000">
+				<left>0</left>
+				<width>100%</width>
+				<top>120</top>
+				<height>300</height>
+				<onup>noop</onup>
+				<ondown>Control.SetFocus(9001,$INFO[Container(9000).Position],absolute)</ondown>
+				<include>SettingsPanel</include>
+				<content>
+					<item>
+						<label>$LOCALIZE[10003]</label>
+						<onclick>ActivateWindow(filemanager)</onclick>
+						<icon>icons/settings/filemanager.png</icon>
+					</item>
+					<item>
+						<label>$LOCALIZE[24001]</label>
+						<onclick>ActivateWindow(addonbrowser)</onclick>
+						<icon>icons/settings/addons.png</icon>
+					</item>
+					<item>
+						<label>$LOCALIZE[138]</label>
+						<onclick>ActivateWindow(systeminfo)</onclick>
+						<icon>icons/settings/sysinfo.png</icon>
+					</item>
+					<item>
+						<label>$LOCALIZE[31067]</label>
+						<onclick>ActivateWindow(eventlog)</onclick>
+						<icon>icons/settings/eventlog.png</icon>
+					</item>
+				</content>
+			</control>
+			<control type="panel" id="9001">
+				<left>0</left>
+				<right>0</right>
+				<top>470</top>
+				<bottom>0</bottom>
+				<onup>Control.SetFocus(9000,$INFO[Container(9001).Position],absolute)</onup>
+				<ondown>noop</ondown>
+				<include>SettingsPanel</include>
+				<content>
+					<item>
+						<label>$LOCALIZE[14200]</label>
+						<onclick>ActivateWindow(PlayerSettings)</onclick>
+						<icon>icons/settings/player.png</icon>
+					</item>
+					<item>
+						<label>$LOCALIZE[14211]</label>
+						<onclick>ActivateWindow(MediaSettings)</onclick>
+						<icon>icons/settings/media.png</icon>
+					</item>
+					<item>
+						
+						<label>$LOCALIZE[14036]</label>
+						<onclick>ActivateWindow(ServiceSettings)</onclick>
+						<icon>icons/settings/network.png</icon>
+					</item>
+					<item>
+						<label>Real-Debrid</label>
+						<visible>System.GetBool(gamesgeneral.enable)</visible>
+						<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.magicdragon/?all_w=%7b%7d&amp;data=%20&amp;dates=%20&amp;description=TMDB&amp;eng_name=%20&amp;episode=%20&amp;fanart=https%3a%2f%2fwww.york.ac.uk%2fmedia%2fstudy%2fcourses%2fpostgraduate%2fcentreforlifelonglearning%2fEnglish-Building-History-banner-bought.jpg&amp;fav_status=false&amp;heb_name=%20&amp;iconimage=%2fstorage%2femulated%2f0%2fAndroid%2fdata%2forg.xbmc.kodi%2ffiles%2f.kodi%2faddons%2fplugin.video.magicdragon%2fresources%2fartwork%2frd_Torrents.png&amp;id=%20&amp;image_master&amp;isr=0&amp;last_id&amp;mode=169&amp;mypass&amp;name=RD%20Torrents&amp;original_title=%20&amp;search_db&amp;season=%20&amp;show_original_year=%20&amp;tmdbid=%20&amp;url=1&amp;video_data=%7b%22title%22%3a%20%22RD%20Torrents%22%2c%20%22mediatype%22%3a%20%22movie%22%2c%20%22TVshowtitle%22%3a%20%22%22%2c%20%22season%22%3a%200%2c%20%22episode%22%3a%200%2c%20%22OriginalTitle%22%3a%20%22%20%22%2c%20%22rating%22%3a%20%220%22%2c%20%22plot%22%3a%20%22TMDB%22%2c%20%22Tag%22%3a%20%22None%22%2c%20%22id%22%3a%20%22%20%22%7d&quot;,return)</onclick>
+						<icon>icons/settings/livetv.png</icon>
+					</item>
+					<item>
+						<label>$LOCALIZE[14206]</label>
+						<onclick>ActivateWindow(InterfaceSettings)</onclick>
+						<icon>icons/settings/interface.png</icon>
+					</item>
+					<item>
+						<label>$LOCALIZE[13200]</label>
+						<onclick>ActivateWindow(Profiles)</onclick>
+						<icon>icons/settings/profiles.png</icon>
+					</item>
+					<item>
+						<label>$LOCALIZE[13000]</label>
+						<onclick>ActivateWindow(SystemSettings)</onclick>
+						<icon>icons/settings/system.png</icon>
+					</item>
+					<item>
+						<label>LibreELEC</label>
+						<onclick>RunAddon(service.libreelec.settings)</onclick>
+						<icon>icons/settings/libreelec.png</icon>
+						<visible>System.AddonIsEnabled(service.libreelec.settings)</visible>
+					</item>
+				</content>
+			</control>
+		</control>
+		<include content="TopBar">
+			<param name="breadcrumbs_label" value="$LOCALIZE[13000]" />
+		</include>
+		<include>BottomBar</include>
+	</controls>
+</window>
