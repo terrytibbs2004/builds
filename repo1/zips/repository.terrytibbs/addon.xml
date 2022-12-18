@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="repository.terrytibbs" name="Terrys 19 New Repo" version="1.01" provider-name="Terry Tibbs">
+<addon id="repository.terrytibbs" name="Terrys 19 repo" version="1" provider-name="Terry Tibbs">
     <extension point="xbmc.addon.repository" name="Terrys 19 Repository">
         <dir>
-            <info compressed="false">https://githubraw.com/terrytibbs2004/builds/main/repo1/zips/addons.xml</info>
-            <checksum>https://githubraw.com/terrytibbs2004/builds/main/repo1/zips/addons.xml.md5</checksum>
-            <datadir zip="true">https://githubraw.com/terrytibbs2004/builds/main/repo1/zips/</datadir>
+            <info compressed="false">https://githubraw.com/terrytibbs2004/builds/main/repo/zips/addons.xml</info>
+            <checksum>https://githubraw.com/terrytibbs2004/builds/main/repo/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://githubraw.com/terrytibbs2004/builds/main/repo/zips/</datadir>
         </dir>
     </extension>
     <extension point="xbmc.addon.metadata">
-        <summary>Terry Tibbs New Repo</summary>
+        <summary>Terry Tibbs Repo</summary>
         <description></description>
         <disclaimer></disclaimer>
         <platform>all</platform>

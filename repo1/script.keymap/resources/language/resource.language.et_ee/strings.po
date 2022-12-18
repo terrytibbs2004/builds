@@ -7,642 +7,631 @@ msgstr ""
 "Project-Id-Version: XBMC Addons\n"
 "Report-Msgid-Bugs-To: pkscout@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2022-12-12 07:48+0000\n"
-"Last-Translator: rimasx <riks_12@hot.ee>\n"
-"Language-Team: Estonian <https://kodi.weblate.cloud/projects/kodi-add-ons-scripts/script-keymap/et_ee/>\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language: et_ee\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.2\n"
 
 msgctxt "Addon Summary"
 msgid "An editor for keymap files"
-msgstr "Nupuasetuse redaktor"
+msgstr ""
 
 msgctxt "Addon Description"
 msgid "Keymap Editor is a GUI for configuring mappings for remotes, keyboard and other inputs supported by Kodi. Note: existing user defined key mappings will be renamed to .bak."
-msgstr "Keymap Editor vahend kaugjuhtimispultide, klaviatuuri ja muude Kodi toetatavate sisendite nupuasetuste seadistamiseks. Märkus. Olemasolevad kasutaja määratletud nupuasetused salvestatakse faili .bak."
+msgstr ""
 
 # Text Messages
 msgctxt "#30000"
 msgid "Keymap Editor"
-msgstr "Nupuasetuse seadistus"
+msgstr ""
 
 msgctxt "#30001"
 msgid "Failed to remove old keymap file"
-msgstr "Vana nupuasetusfaili eemaldamine nurjus"
+msgstr ""
 
 msgctxt "#30002"
 msgid "Press the key you want to assign now"
-msgstr "Vajuta nuppu, mida soovid määrata"
+msgstr ""
 
 msgctxt "#30003"
 msgid "Edit"
-msgstr "Muuda"
+msgstr ""
 
 msgctxt "#30004"
 msgid "Reset to default"
-msgstr "Taasta vaikeväärtused"
+msgstr ""
 
 msgctxt "#30005"
 msgid "Save"
-msgstr "Salvesta"
+msgstr ""
 
 msgctxt "#30006"
 msgid "Discard changes?"
-msgstr "Kas loobuda muudatustest?"
+msgstr ""
 
 msgctxt "#30007"
 msgid "Select Window to manage shortcuts"
-msgstr "Vali aken otseteede haldamiseks"
+msgstr ""
 
 msgctxt "#30008"
 msgid "Select action category"
-msgstr "Vali toimingu kategooria"
+msgstr ""
 
 msgctxt "#30009"
 msgid "Select the action to assign a key"
-msgstr "Vali nupule määratav toiming"
+msgstr ""
 
 msgctxt "#30010"
 msgid "Timeout in %.0f seconds..."
-msgstr "Aegumiseni %.0f sekundit..."
+msgstr ""
 
 msgctxt "#30011"
 msgid "Edit key"
-msgstr "Muuda nuppu"
+msgstr ""
 
 msgctxt "#30012"
 msgid "Remove"
-msgstr "Eemalda"
+msgstr ""
 
 # empty strings from id 30013 to 30099
 # Window names
 msgctxt "#30100"
 msgid "Global"
-msgstr "Globaalne"
+msgstr ""
 
 msgctxt "#30101"
 msgid "Fullscreen Video"
-msgstr "Video täisekraanil"
+msgstr ""
 
 msgctxt "#30102"
 msgid "Fullscreen Live TV"
-msgstr "Otse TV täisekraanil"
+msgstr ""
 
 msgctxt "#30103"
 msgid "Fullscreen Radio"
-msgstr "Raadio täisekraanil"
+msgstr ""
 
 msgctxt "#30104"
 msgid "Fullscreen Game"
-msgstr "Mäng täisekraanil"
+msgstr ""
 
 msgctxt "#30105"
 msgid "Home"
-msgstr "Peamenüü"
+msgstr ""
 
 msgctxt "#30106"
 msgid "Programs"
-msgstr "Programmid"
+msgstr ""
 
 msgctxt "#30107"
 msgid "Videos"
-msgstr "Videod"
+msgstr ""
 
 msgctxt "#30108"
 msgid "Music"
-msgstr "Muusika"
+msgstr ""
 
 msgctxt "#30109"
 msgid "Pictures"
-msgstr "Pildid"
+msgstr ""
 
 msgctxt "#30110"
 msgid "PVR"
-msgstr "PVR"
+msgstr ""
 
 msgctxt "#30111"
 msgid "Filemanager"
-msgstr "Failihaldur"
+msgstr ""
 
 msgctxt "#30112"
 msgid "Virtual Keyboard"
-msgstr "Virtuaalne klaviatuur"
+msgstr ""
 
 msgctxt "#30113"
 msgid "Player Controls"
-msgstr "Pleieri juhtelemendid"
+msgstr ""
 
 msgctxt "#30114"
 msgid "Seek bar"
-msgstr "Otsiriba"
+msgstr ""
 
 msgctxt "#30115"
 msgid "Music OSD"
-msgstr "Muusika OSD"
+msgstr ""
 
 msgctxt "#30116"
 msgid "Video OSD Settings"
-msgstr "Video OSD seaded"
+msgstr ""
 
 msgctxt "#30117"
 msgid "Audio OSD Settings"
-msgstr "Heli OSD seaded"
+msgstr ""
 
 msgctxt "#30118"
 msgid "Visualisation"
-msgstr "Visualiseerimine"
+msgstr ""
 
 msgctxt "#30119"
 msgid "Slideshow"
-msgstr "Slaidiesitlus"
+msgstr ""
 
 # empty strings from id 30120 to 30199
 # Navigation
 msgctxt "#30200"
 msgid "Move Left"
-msgstr "Liigu vasakule"
+msgstr ""
 
 msgctxt "#30201"
 msgid "Move Right"
-msgstr "Liigu paremale"
+msgstr ""
 
 msgctxt "#30202"
 msgid "Move Up"
-msgstr "Liigu üles"
+msgstr ""
 
 msgctxt "#30203"
 msgid "Move Down"
-msgstr "Liigu alla"
+msgstr ""
 
 msgctxt "#30204"
 msgid "Page Up"
-msgstr "Lehekülg üles"
+msgstr ""
 
 msgctxt "#30205"
 msgid "Page Down"
-msgstr "Lehekülg alla"
+msgstr ""
 
 msgctxt "#30206"
 msgid "Select Item"
-msgstr "Vali kirje"
+msgstr ""
 
 msgctxt "#30207"
 msgid "Highlight Item"
-msgstr "Tõsta esile kirje"
+msgstr ""
 
 msgctxt "#30208"
 msgid "Parent Directory"
-msgstr "Vanemkataloog"
+msgstr ""
 
 msgctxt "#30209"
 msgid "Back"
-msgstr "Tagasi"
+msgstr ""
 
 msgctxt "#30210"
 msgid "Previous Menu"
-msgstr "Eelmine menüü"
+msgstr ""
 
 msgctxt "#30211"
 msgid "Show Info"
-msgstr "Kuva teave"
+msgstr ""
 
 msgctxt "#30212"
 msgid "Context Menu"
-msgstr "Kontekstmenüü"
+msgstr ""
 
 msgctxt "#30213"
 msgid "Menu"
-msgstr "Menüü"
+msgstr ""
 
 msgctxt "#30214"
 msgid "First Page"
-msgstr "Esimene lehekülg"
+msgstr ""
 
 msgctxt "#30215"
 msgid "Last Page"
-msgstr "Viimane lehekülg"
+msgstr ""
 
 msgctxt "#30216"
 msgid "Next Letter"
-msgstr "Järgmine täht"
+msgstr ""
 
 msgctxt "#30217"
 msgid "Previous Letter"
-msgstr "Eelmine täht"
+msgstr ""
 
 msgctxt "#30218"
 msgid "Scroll Up"
-msgstr "Keri üles"
+msgstr ""
 
 msgctxt "#30219"
 msgid "Scroll Down"
-msgstr "Keri alla"
+msgstr ""
 
 msgctxt "#30220"
 msgid "Cursor Left"
-msgstr "Kursor vasakule"
+msgstr ""
 
 msgctxt "#30221"
 msgid "Cursor Right"
-msgstr "Kursor paremale"
+msgstr ""
 
 # empty strings from id 30222 to 30299
 # Playback
 msgctxt "#30300"
 msgid "Play"
-msgstr "Esita"
+msgstr ""
 
 msgctxt "#30301"
 msgid "Pause"
-msgstr "Paus"
+msgstr ""
 
 msgctxt "#30302"
 msgid "Play/Pause"
-msgstr "Esita/paus"
+msgstr ""
 
 msgctxt "#30303"
 msgid "Stop"
-msgstr "Peata"
+msgstr ""
 
 msgctxt "#30304"
 msgid "Next"
-msgstr "Järgmine"
+msgstr ""
 
 msgctxt "#30305"
 msgid "Previous"
-msgstr "Eelmine"
+msgstr ""
 
 msgctxt "#30306"
 msgid "Fast Forward"
-msgstr "Keri edasi"
+msgstr ""
 
 msgctxt "#30307"
 msgid "Rewind"
-msgstr "Keri tagasi"
+msgstr ""
 
 msgctxt "#30308"
 msgid "Small Step Back"
-msgstr "Väike samm tagasi"
+msgstr ""
 
 msgctxt "#30309"
 msgid "Step Forward"
-msgstr "Samm edasi"
+msgstr ""
 
 msgctxt "#30310"
 msgid "Step Back"
-msgstr "Samm tagasi"
+msgstr ""
 
 msgctxt "#30311"
 msgid "Big Step Forward"
-msgstr "Suur samm edasi"
+msgstr ""
 
 msgctxt "#30312"
 msgid "Big Step Back"
-msgstr "Suur samm tagasi"
+msgstr ""
 
 msgctxt "#30313"
 msgid "Next Chapter or Big Step Forward"
-msgstr "Järgmine peatükk või suur samm edasi"
+msgstr ""
 
 msgctxt "#30314"
 msgid "Previous Chapter or Big Step Back"
-msgstr "Eelmine peatükk või suur samm tagasi"
+msgstr ""
 
 msgctxt "#30315"
 msgid "Show OSD"
-msgstr "Kuva ekraanigraafika"
+msgstr ""
 
 msgctxt "#30316"
 msgid "Show current play time"
-msgstr "Kuva praegune taasesitusaeg"
+msgstr ""
 
 msgctxt "#30317"
 msgid "Show Playlist"
-msgstr "Kuva esitusloend"
+msgstr ""
 
 msgctxt "#30318"
 msgid "Toggle Fullscreen"
-msgstr "Täisekraani lüliti"
+msgstr ""
 
 msgctxt "#30319"
 msgid "Change Aspect Ratio"
-msgstr "Muuda kuvasuhet"
+msgstr ""
 
 msgctxt "#30320"
 msgid "Go to DVD Video Menu"
-msgstr "Ava DVD videomenüü"
+msgstr ""
 
 msgctxt "#30321"
 msgid "Toggle Repeat"
-msgstr "Korduse lüliti"
+msgstr ""
 
 msgctxt "#30322"
 msgid "Repeat One"
-msgstr "Korda üht"
+msgstr ""
 
 msgctxt "#30323"
 msgid "Repeat All"
-msgstr "Korda kõik"
+msgstr ""
 
 msgctxt "#30324"
 msgid "Repeat Off"
-msgstr "Kordus välja"
+msgstr ""
 
 msgctxt "#30325"
 msgid "Toggle Random"
-msgstr "Lüliti: juhuslik"
+msgstr ""
 
 msgctxt "#30326"
 msgid "Random On"
-msgstr "Juhuslik: sees"
+msgstr ""
 
 msgctxt "#30327"
 msgid "Random Off"
-msgstr "Juhuslik: väljas"
+msgstr ""
 
 msgctxt "#30328"
 msgid "Playback Speed Faster"
-msgstr "Taasesitus: kiirem"
+msgstr ""
 
 msgctxt "#30329"
 msgid "Playback Speed Slower"
-msgstr "Taasesitus: aeglasem"
+msgstr ""
 
 msgctxt "#30330"
 msgid "Create Bookmark"
-msgstr "Loo järjehoidja"
+msgstr ""
 
 msgctxt "#30331"
 msgid "Create Episode Bookmark"
-msgstr "Loo episoodi järjehoidja"
+msgstr ""
 
 msgctxt "#30332"
 msgid "Toggle 3D/Stereoscopic mode"
-msgstr "3D/Stereoscopic režiimi lüliti"
+msgstr ""
 
 msgctxt "#30333"
 msgid "Switch Player"
-msgstr "Vaheta pleier"
+msgstr ""
 
 msgctxt "#30334"
 msgid "Play Next"
-msgstr "Esita järgmisena"
+msgstr ""
 
 msgctxt "#30335"
 msgid "Select Program"
-msgstr "Vali programm"
+msgstr ""
 
 msgctxt "#30336"
 msgid "Select Resolution"
-msgstr "Vali ekraanilahutus"
+msgstr ""
 
 msgctxt "#30337"
 msgid "Shift Video Up"
-msgstr "Liiguta video üles"
+msgstr ""
 
 msgctxt "#30338"
 msgid "Shift Video Down"
-msgstr "Liiguta video alla"
+msgstr ""
 
 msgctxt "#30339"
 msgid "Show Time"
-msgstr "Kuva aeg"
+msgstr ""
 
 msgctxt "#30340"
 msgid "Next Scene"
-msgstr "Järgmine stseen"
+msgstr ""
 
 msgctxt "#30341"
 msgid "Previous Scene"
-msgstr "Eelmine stseen"
+msgstr ""
 
 msgctxt "#30342"
 msgid "Next Video Stream"
-msgstr "Järgmine videovoog"
+msgstr ""
 
 msgctxt "#30343"
 msgid "Toggle HDHR"
-msgstr "HDHR lüliti"
+msgstr ""
 
 msgctxt "#30344"
 msgid "Cycle 3D Mode"
-msgstr "Vaheta 3D-režiimi vahel"
+msgstr ""
 
 msgctxt "#30345"
 msgid "Next 3D Mode"
-msgstr "Järgmine 3D-režiim"
+msgstr ""
 
 msgctxt "#30346"
 msgid "Previous 3D Mode"
-msgstr "Eelmine 3D-režiim"
+msgstr ""
 
 msgctxt "#30347"
 msgid "3D Mono"
-msgstr "3D mono"
-
-msgctxt "#30348"
-msgid "Tempo Up"
-msgstr ""
-
-msgctxt "#30349"
-msgid "Tempo Down"
 msgstr ""
 
 # empty strings from id 30348 to 30399
 # Audio
 msgctxt "#30400"
 msgid "Mute"
-msgstr "Vaigista"
+msgstr ""
 
 msgctxt "#30401"
 msgid "Volume Up"
-msgstr "Heli kõvemaks"
+msgstr ""
 
 msgctxt "#30402"
 msgid "Volume Down"
-msgstr "Heli vaiksemaks"
+msgstr ""
 
 msgctxt "#30403"
 msgid "Next Language"
-msgstr "Järgmine keel"
+msgstr ""
 
 msgctxt "#30404"
 msgid "Delay"
-msgstr "Viiteaeg"
+msgstr ""
 
 msgctxt "#30405"
 msgid "Delay Minus"
-msgstr "Viiteaeg '-'"
+msgstr ""
 
 msgctxt "#30406"
 msgid "Delay Plus"
-msgstr "Viiteaeg '+'"
+msgstr ""
 
 msgctxt "#30407"
 msgid "Toggle Digital/Analog"
-msgstr "Digitaal/analoog lüliti"
+msgstr ""
 
 msgctxt "#30408"
 msgid "Volume Amp Up"
-msgstr "Võimendi heli kõvemaks"
+msgstr ""
 
 msgctxt "#30409"
 msgid "Volume Amp Down"
-msgstr "Võimendi heli vaiksemaks"
+msgstr ""
 
 msgctxt "#30410"
 msgid "Volume Amplification"
-msgstr "Helitugevuse võimendamine"
+msgstr ""
 
 # empty strings from id 30411 to 30499
 # Pictures
 msgctxt "#30500"
 msgid "Next Picture"
-msgstr "Järgmine pilt"
+msgstr ""
 
 msgctxt "#30501"
 msgid "Previous Picture"
-msgstr "Eelmine pilt"
+msgstr ""
 
 msgctxt "#30502"
 msgid "Rotate Picture"
-msgstr "Pööra pilti"
+msgstr ""
 
 msgctxt "#30503"
 msgid "Rotate Picture CCW"
-msgstr "Pööra pilti vastupäeva"
+msgstr ""
 
 msgctxt "#30504"
 msgid "Zoom Out"
-msgstr "Suumi välja"
+msgstr ""
 
 msgctxt "#30505"
 msgid "Zoom In "
-msgstr "Suumi sisse "
+msgstr ""
 
 msgctxt "#30506"
 msgid "Zoom level Normal"
-msgstr "Tavaline suumitase"
+msgstr ""
 
 msgctxt "#30507"
 msgid "Zoom level 1"
-msgstr "Suumitase 1"
+msgstr ""
 
 msgctxt "#30508"
 msgid "Zoom level 2"
-msgstr "Suumitase 2"
+msgstr ""
 
 msgctxt "#30509"
 msgid "Zoom level 3"
-msgstr "Suumitase 3"
+msgstr ""
 
 msgctxt "#30510"
 msgid "Zoom level 4"
-msgstr "Suumitase 4"
+msgstr ""
 
 msgctxt "#30511"
 msgid "Zoom level 5"
-msgstr "Suumitase 5"
+msgstr ""
 
 msgctxt "#30512"
 msgid "Zoom level 6"
-msgstr "Suumitase 6"
+msgstr ""
 
 msgctxt "#30513"
 msgid "Zoom level 7"
-msgstr "Suumitase 7"
+msgstr ""
 
 msgctxt "#30514"
 msgid "Zoom level 8"
-msgstr "Suumitase 8"
+msgstr ""
 
 msgctxt "#30515"
 msgid "Zoom level 9"
-msgstr "Suumitase 9"
+msgstr ""
 
 # empty strings from id 30516 to 30599
 # Subtitle
 msgctxt "#30600"
 msgid "Show Subtitles"
-msgstr "Kuva subtiitrid"
+msgstr ""
 
 msgctxt "#30601"
 msgid "Next Subtitle"
-msgstr "Järgmine subtiiter"
+msgstr ""
 
 msgctxt "#30602"
 msgid "Browse Subtitle"
-msgstr "Sirvi subtiitreid"
+msgstr ""
 
 msgctxt "#30603"
 msgid "Cycle Subtitle"
-msgstr "Vaheta subtiitreid"
+msgstr ""
 
 msgctxt "#30604"
 msgid "Delay"
-msgstr "Viiteaeg"
+msgstr ""
 
 msgctxt "#30605"
 msgid "Delay Minus"
-msgstr "Viiteaeg '-'"
+msgstr ""
 
 msgctxt "#30606"
 msgid "Delay Plus"
-msgstr "Viiteaeg '+'"
+msgstr ""
 
 msgctxt "#30607"
 msgid "Align"
-msgstr "Joonda"
+msgstr ""
 
 msgctxt "#30608"
 msgid "Shift Subtitle Up"
-msgstr "Liiguta subtiitreid üles"
+msgstr ""
 
 msgctxt "#30609"
 msgid "Shift Subtitle Down"
-msgstr "Liiguta subtiitreid alla"
+msgstr ""
 
 # empty strings from id 30610 to 30699
 # PVR
 msgctxt "#30700"
 msgid "Channel Up"
-msgstr "Kanal üles"
+msgstr ""
 
 msgctxt "#30701"
 msgid "Channel Down"
-msgstr "Kanal alla"
+msgstr ""
 
 msgctxt "#30702"
 msgid "Previous channel group"
-msgstr "Eelmine lemmiknimekiri"
+msgstr ""
 
 msgctxt "#30703"
 msgid "Next channel group"
-msgstr "Järgmine lemmiknimekiri"
+msgstr ""
 
 msgctxt "#30704"
 msgid "PVR Play"
-msgstr "PVR esitus"
+msgstr ""
 
 msgctxt "#30705"
 msgid "PVR Play TV"
-msgstr "PVR - TV"
+msgstr ""
 
 msgctxt "#30706"
 msgid "PVR Play Radio"
-msgstr "PVR - Radio"
+msgstr ""
 
 msgctxt "#30707"
 msgid "Record"
-msgstr "Salvesta"
+msgstr ""
 
 msgctxt "#30708"
 msgid "Toggle Commskip"
-msgstr "Reklaami eemalduse lüliti"
+msgstr ""
 
 msgctxt "#30709"
 msgid "PVR Show Timer Rule"
@@ -650,107 +639,107 @@ msgstr ""
 
 msgctxt "#30710"
 msgid "Channel Number Separator"
-msgstr "Kanalinumbrite eraldaja"
+msgstr ""
 
 # empty strings from id 30711 to 30799
 # Item Actions
 msgctxt "#30800"
 msgid "Queue item"
-msgstr "Lisa järjekorda"
+msgstr ""
 
 msgctxt "#30801"
 msgid "Delete item"
-msgstr "Kustuta"
+msgstr ""
 
 msgctxt "#30802"
 msgid "Copy item"
-msgstr "Kopeeri"
+msgstr ""
 
 msgctxt "#30803"
 msgid "Move item"
-msgstr "Liiguta"
+msgstr ""
 
 msgctxt "#30804"
 msgid "Move item up"
-msgstr "Liiguta üles"
+msgstr ""
 
 msgctxt "#30805"
 msgid "Move item down"
-msgstr "Liiguta alla"
+msgstr ""
 
 msgctxt "#30806"
 msgid "Rename item"
-msgstr "Nimeta ümber"
+msgstr ""
 
 msgctxt "#30807"
 msgid "Scan item"
-msgstr "Skaneeri"
+msgstr ""
 
 msgctxt "#30808"
 msgid "Toggle Watched"
-msgstr "Vaadatud/mittevaadatud lüliti"
+msgstr ""
 
 msgctxt "#30809"
 msgid "Increase Rating"
-msgstr "Suurenda hinnet"
+msgstr ""
 
 msgctxt "#30810"
 msgid "Decrease Rating"
-msgstr "Alanda hinnet"
+msgstr ""
 
 msgctxt "#30811"
 msgid "Set Rating"
-msgstr "Sea hinne"
+msgstr ""
 
 # empty strings from id 30812 to 30899
 # System
 msgctxt "#30900"
 msgid "Toggle Fullscreen"
-msgstr "Täisekraani lüliti"
+msgstr ""
 
 msgctxt "#30901"
 msgid "Minimise"
-msgstr "Vähenda"
+msgstr ""
 
 msgctxt "#30902"
 msgid "Shutdown"
-msgstr "Seiska"
+msgstr ""
 
 msgctxt "#30903"
 msgid "Reboot"
-msgstr "Taaskäivita"
+msgstr ""
 
 msgctxt "#30904"
 msgid "Hibernate"
-msgstr "Unerežiim"
+msgstr ""
 
 msgctxt "#30905"
 msgid "Suspend"
-msgstr "Puhkeseisund"
+msgstr ""
 
 msgctxt "#30906"
 msgid "Restart Kodi"
-msgstr "Taaskäivita Kodi"
+msgstr ""
 
 msgctxt "#30907"
 msgid "Log off"
-msgstr "Logi välja"
+msgstr ""
 
 msgctxt "#30908"
 msgid "Quit Kodi"
-msgstr "Välju Kodist"
+msgstr ""
 
 msgctxt "#30909"
 msgid "Reset Settings"
-msgstr "Lähtesta seaded"
+msgstr ""
 
 msgctxt "#30910"
 msgid "Change Settings Level"
-msgstr "Muuda seadete taset"
+msgstr ""
 
 msgctxt "#30911"
 msgid "Toggle Font"
-msgstr "Vaheta fonti"
+msgstr ""
 
 # empty strings from id 30912 to 30999
 # Virtual Keyboard
@@ -764,7 +753,7 @@ msgstr ""
 
 msgctxt "#31002"
 msgid "Symbols"
-msgstr "Sümbolid"
+msgstr ""
 
 msgctxt "#31003"
 msgid "Backspace"
@@ -772,93 +761,93 @@ msgstr ""
 
 msgctxt "#31004"
 msgid "0"
-msgstr "0"
+msgstr ""
 
 msgctxt "#31005"
 msgid "1"
-msgstr "1"
+msgstr ""
 
 msgctxt "#31006"
 msgid "2"
-msgstr "2"
+msgstr ""
 
 msgctxt "#31007"
 msgid "3"
-msgstr "3"
+msgstr ""
 
 msgctxt "#31008"
 msgid "4"
-msgstr "4"
+msgstr ""
 
 msgctxt "#31009"
 msgid "5"
-msgstr "5"
+msgstr ""
 
 msgctxt "#31010"
 msgid "6"
-msgstr "6"
+msgstr ""
 
 msgctxt "#31011"
 msgid "7"
-msgstr "7"
+msgstr ""
 
 msgctxt "#31012"
 msgid "8"
-msgstr "8"
+msgstr ""
 
 msgctxt "#31013"
 msgid "9"
-msgstr "9"
+msgstr ""
 
 msgctxt "#31014"
 msgid "Teletext Red"
-msgstr "Teletekst punane"
+msgstr ""
 
 msgctxt "#31015"
 msgid "Teletext Green"
-msgstr "Teletekst roheline"
+msgstr ""
 
 msgctxt "#31016"
 msgid "Teletext Yellow"
-msgstr "Teletekst kollane"
+msgstr ""
 
 msgctxt "#31017"
 msgid "Teletext Blue"
-msgstr "Teletekst sinine"
+msgstr ""
 
 # empty strings from id 31018 to 31099
 # Other
 msgctxt "#31100"
 msgid "Update Video Library"
-msgstr "Uuenda videokogu"
+msgstr ""
 
 msgctxt "#31101"
 msgid "Update Music Library"
-msgstr "Uuenda muusikakogu"
+msgstr ""
 
 msgctxt "#31102"
 msgid "Clean Video Library"
-msgstr "Puhasta videokogu"
+msgstr ""
 
 msgctxt "#31103"
 msgid "Clean Music Library"
-msgstr "Puhasta muusikakogu"
+msgstr ""
 
 msgctxt "#31104"
 msgid "Player Process Info"
-msgstr "Taasesituse info"
+msgstr ""
 
 msgctxt "#31105"
 msgid "Player debug"
-msgstr "Pleieri silumine"
+msgstr ""
 
 msgctxt "#31106"
 msgid "Take screenshot"
-msgstr "Loo ekraanipilt"
+msgstr ""
 
 msgctxt "#31107"
 msgid "Reload Keymaps"
-msgstr "Lae nupuasetus uuesti"
+msgstr ""
 
 msgctxt "#31108"
 msgid "Increase PAR"
@@ -870,15 +859,15 @@ msgstr ""
 
 msgctxt "#31110"
 msgid "Change resolution"
-msgstr "Muuda ekraanilahutust"
+msgstr ""
 
 msgctxt "#31111"
 msgid "Next calibration"
-msgstr "Järgmine kalibreerimine"
+msgstr ""
 
 msgctxt "#31112"
 msgid "Reset calibration"
-msgstr "Lähtesta kalibreerimine"
+msgstr ""
 
 msgctxt "#31113"
 msgid "Show current visualisation preset"
@@ -886,7 +875,7 @@ msgstr ""
 
 msgctxt "#31114"
 msgid "Show visualisation preset list"
-msgstr "Visuaalide eelhäälestused"
+msgstr ""
 
 msgctxt "#31115"
 msgid "Next visualisation preset"
@@ -908,39 +897,39 @@ msgstr ""
 # Activate Window
 msgctxt "#31200"
 msgid "Settings"
-msgstr "Seaded"
+msgstr ""
 
 msgctxt "#31201"
 msgid "Player Settings"
-msgstr "Pleieri seaded"
+msgstr ""
 
 msgctxt "#31202"
 msgid "Programs Settings"
-msgstr "Programmide seaded"
+msgstr ""
 
 msgctxt "#31203"
 msgid "Information Provider Settings"
-msgstr "Infotarnija seaded"
+msgstr ""
 
 msgctxt "#31204"
 msgid "Interface Settings"
-msgstr "Liidese seaded"
+msgstr ""
 
 msgctxt "#31205"
 msgid "System Settings"
-msgstr "Süsteemi seaded"
+msgstr ""
 
 msgctxt "#31206"
 msgid "Media Settings"
-msgstr "Meedia seaded"
+msgstr ""
 
 msgctxt "#31207"
 msgid "Service Settings"
-msgstr "Teenuse seaded"
+msgstr ""
 
 msgctxt "#31208"
 msgid "Appearance Settings"
-msgstr "Välimuse seaded"
+msgstr ""
 
 msgctxt "#31209"
 msgid "Peripherals Settings"
@@ -956,11 +945,11 @@ msgstr ""
 
 msgctxt "#31212"
 msgid "PVR Recording Settings"
-msgstr "PVR salvestuse seaded"
+msgstr ""
 
 msgctxt "#31213"
 msgid "Game Settings"
-msgstr "Mängu seaded"
+msgstr ""
 
 msgctxt "#31214"
 msgid "Advanced Game Settings"
@@ -968,11 +957,11 @@ msgstr ""
 
 msgctxt "#31215"
 msgid "Game Controllers"
-msgstr "Mängu juhtseadmed"
+msgstr ""
 
 msgctxt "#31216"
 msgid "Game Video Filters"
-msgstr "Mängu videofilter"
+msgstr ""
 
 msgctxt "#31217"
 msgid "Game Video Rotation"
@@ -984,59 +973,59 @@ msgstr ""
 
 msgctxt "#31219"
 msgid "Skin Settings"
-msgstr "Rüü seaded"
+msgstr ""
 
 msgctxt "#31220"
 msgid "Addon Browser"
-msgstr "Lisamoodulite brauser"
+msgstr ""
 
 msgctxt "#31221"
 msgid "Addon Settings"
-msgstr "Lisamooduli seaded"
+msgstr ""
 
 msgctxt "#31222"
 msgid "Profile Settings"
-msgstr "Profiili seaded"
+msgstr ""
 
 msgctxt "#31223"
 msgid "Lock Settings"
-msgstr "Lukusta seaded"
+msgstr ""
 
 msgctxt "#31224"
 msgid "Content Settings"
-msgstr "Sisu seaded"
+msgstr ""
 
 msgctxt "#31225"
 msgid "Profiles"
-msgstr "Profiilid"
+msgstr ""
 
 msgctxt "#31226"
 msgid "System info"
-msgstr "Süsteemi andmed"
+msgstr ""
 
 msgctxt "#31227"
 msgid "Test Pattern"
-msgstr "Testpilt"
+msgstr ""
 
 msgctxt "#31228"
 msgid "Screen Calibration"
-msgstr "Ekraani kalibreerimine"
+msgstr ""
 
 msgctxt "#31229"
 msgid "Login Screen"
-msgstr "Logimisekraan"
+msgstr ""
 
 msgctxt "#31230"
 msgid "File Browser"
-msgstr "Failibrauser"
+msgstr ""
 
 msgctxt "#31231"
 msgid "Network Setup"
-msgstr "Võrgu seadistus"
+msgstr ""
 
 msgctxt "#31232"
 msgid "Access Points"
-msgstr "Pääsupunktid"
+msgstr ""
 
 msgctxt "#31233"
 msgid "Mediasource Dialog"
@@ -1048,240 +1037,240 @@ msgstr ""
 
 msgctxt "#31235"
 msgid "Favourites"
-msgstr "Lemmikud"
+msgstr ""
 
 msgctxt "#31236"
 msgid "Context Menu"
-msgstr "Kontekstmenüü"
+msgstr ""
 
 msgctxt "#31237"
 msgid "Media filter"
-msgstr "Meedia filter"
+msgstr ""
 
 msgctxt "#31238"
 msgid "Visualisation Preset List"
-msgstr "Visuaalide eelhäälestused"
+msgstr ""
 
 msgctxt "#31239"
 msgid "Smart Playlist Editor"
-msgstr "Nutika esitlusloendi redaktor"
+msgstr ""
 
 msgctxt "#31240"
 msgid "Smart Playlist Rule"
-msgstr "Nutika esitusloendi reegel"
+msgstr ""
 
 msgctxt "#31241"
 msgid "Shutdown Menu"
-msgstr "Seiskamise menüü"
+msgstr ""
 
 msgctxt "#31242"
 msgid "Fullscreen Info"
-msgstr "Täisekraani info"
+msgstr ""
 
 msgctxt "#31243"
 msgid "Subtitle Search"
-msgstr "Subtiitri otsing"
+msgstr ""
 
 msgctxt "#31244"
 msgid "Weather"
-msgstr "Ilm"
+msgstr ""
 
 msgctxt "#31245"
 msgid "Screensaver"
-msgstr "Ekraanisäästja"
+msgstr ""
 
 msgctxt "#31246"
 msgid "Picture Info"
-msgstr "Pildi info"
+msgstr ""
 
 msgctxt "#31247"
 msgid "Addon Info"
-msgstr "Lisamooduli info"
+msgstr ""
 
 # empty string 31248
 msgctxt "#31249"
 msgid "Music Playlist"
-msgstr "Muusika esitusloend"
+msgstr ""
 
 msgctxt "#31250"
 msgid "Music Playlist Editor"
-msgstr "Muusika pleilisti muutmine"
+msgstr ""
 
 msgctxt "#31251"
 msgid "Music Info"
-msgstr "Muusika andmed"
+msgstr ""
 
 msgctxt "#31252"
 msgid "Song Info"
-msgstr "Loo info"
+msgstr ""
 
 msgctxt "#31253"
 msgid "Movie Info"
-msgstr "Filmi info"
+msgstr ""
 
 msgctxt "#31254"
 msgid "Player Process Info"
-msgstr "Pleieri protsesside teave"
+msgstr ""
 
 msgctxt "#31255"
 msgid "Video Menu"
-msgstr "Video menüü"
+msgstr ""
 
 msgctxt "#31256"
 msgid "Video OSD"
-msgstr "Video OSD"
+msgstr ""
 
 msgctxt "#31257"
 msgid "Colour Management Settings"
-msgstr "Värvihalduse seaded"
+msgstr ""
 
 msgctxt "#31258"
 msgid "Subtitle Settings"
-msgstr "Subtiitrite seaded"
+msgstr ""
 
 msgctxt "#31259"
 msgid "Video Time Seek"
-msgstr "Video ajaotsing"
+msgstr ""
 
 msgctxt "#31260"
 msgid "Video Bookmarks"
-msgstr "Video järjehoidjad"
+msgstr ""
 
 msgctxt "#31261"
 msgid "Video Playlist"
-msgstr "Video esitusloend"
+msgstr ""
 
 msgctxt "#31262"
 msgid "PVR Guide Info"
-msgstr "PVR saatekava info"
+msgstr ""
 
 msgctxt "#31263"
 msgid "PVR Recording Info"
-msgstr "PVR salvestuse info"
+msgstr ""
 
 msgctxt "#31264"
 msgid "PVR Timer Setting"
-msgstr "PVR taimeri seaded"
+msgstr ""
 
 msgctxt "#31265"
 msgid "PVR Group Manager"
-msgstr "PVR lemmiknimekirja haldur"
+msgstr ""
 
 msgctxt "#31266"
 msgid "PVR Channel Manager"
-msgstr "PVR kanali haldur"
+msgstr ""
 
 msgctxt "#31267"
 msgid "PVR Guide Search"
-msgstr "PVR saatekava otsing"
+msgstr ""
 
 msgctxt "#31268"
 msgid "PVR Channel Scan"
-msgstr "PVR kanaliotsing"
+msgstr ""
 
 msgctxt "#31269"
 msgid "PVR Update Progress"
-msgstr "PVR uuenduse edenemine"
+msgstr ""
 
 msgctxt "#31270"
 msgid "PVR OSD Channels"
-msgstr "PVR OSD kanalid"
+msgstr ""
 
 msgctxt "#31271"
 msgid "PVR OSD Guide"
-msgstr "PVR OSD kava"
+msgstr ""
 
 msgctxt "#31272"
 msgid "TV Channels"
-msgstr "Telekanalid"
+msgstr ""
 
 msgctxt "#31273"
 msgid "TV Recordings"
-msgstr "TV salvestused"
+msgstr ""
 
 msgctxt "#31274"
 msgid "TV Guide"
-msgstr "Telekava"
+msgstr ""
 
 msgctxt "#31275"
 msgid "TV Timers"
-msgstr "TV taimerid"
+msgstr ""
 
 msgctxt "#31276"
 msgid "TV Search"
-msgstr "TV otsing"
+msgstr ""
 
 msgctxt "#31277"
 msgid "Radio Channels"
-msgstr "Raadiokanalid"
+msgstr ""
 
 msgctxt "#31278"
 msgid "Radio Recordings"
-msgstr "Raadio salvestused"
+msgstr ""
 
 msgctxt "#31279"
 msgid "Radio Guide"
-msgstr "Raadiokava"
+msgstr ""
 
 msgctxt "#31280"
 msgid "Radio Timers"
-msgstr "Raadio taimerid"
+msgstr ""
 
 msgctxt "#31281"
 msgid "Radio Timer Rules"
-msgstr "Raadio taimeri reeglid"
+msgstr ""
 
 msgctxt "#31282"
 msgid "Radio Search"
-msgstr "Raadio otsing"
+msgstr ""
 
 msgctxt "#31283"
 msgid "RDS Info"
-msgstr "RDS info"
+msgstr ""
 
 msgctxt "#31284"
 msgid "Movies"
-msgstr "Filmid"
+msgstr ""
 
 msgctxt "#31285"
 msgid "Movie Titles"
-msgstr "Filmi pealkirjad"
+msgstr ""
 
 msgctxt "#31286"
 msgid "TV Shows"
-msgstr "Sarjad"
+msgstr ""
 
 msgctxt "#31287"
 msgid "TV Show Titles"
-msgstr "Sarjade pealkirjad"
+msgstr ""
 
 msgctxt "#31288"
 msgid "Music Videos"
-msgstr "Muusikavideod"
+msgstr ""
 
 msgctxt "#31289"
 msgid "Recently Added Movies"
-msgstr "Viimati lisatud filmid"
+msgstr ""
 
 msgctxt "#31290"
 msgid "Recently Added Episodes"
-msgstr "Viimati lisatud episoodid"
+msgstr ""
 
 msgctxt "#31291"
 msgid "Recently Added Music Videos"
-msgstr "Viimati lisatud muusikavideod"
+msgstr ""
 
 msgctxt "#31292"
 msgid "Games"
-msgstr "Mängud"
+msgstr ""
 
 msgctxt "#31293"
 msgid "Games OSD"
-msgstr "Mängude OSD"
+msgstr ""
 
 msgctxt "#31294"
 msgid "Game Pad Input"
-msgstr "Mängupuldi sisend"
+msgstr ""
 
 msgctxt "#31295"
 msgid "Game Volume"

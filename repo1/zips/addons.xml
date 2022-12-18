@@ -183,277 +183,6 @@
         <disclaimer lang="zh_CN">图片来源：OpenEmu（openemu.org）</disclaimer>
         <disclaimer lang="zh_TW">圖片來源：OpenEmu (openemu.org)</disclaimer>
     </extension>
-</addon><addon id="inputstream.adaptive" version="19.0.7" name="InputStream Adaptive" provider-name="peak3d">
-  <requires>
-<import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0" />
-<import addon="kodi.binary.global.general" minversion="1.0.4" version="1.0.5" />
-<import addon="kodi.binary.global.filesystem" minversion="1.1.0" version="1.1.6" />
-<import addon="kodi.binary.global.tools" minversion="1.0.0" version="1.0.4" />
-<import addon="kodi.binary.instance.inputstream" minversion="3.0.1" version="3.0.1" />
-<import addon="kodi.binary.instance.videocodec" minversion="2.0.1" version="2.0.2" /></requires>
-  <extension point="kodi.inputstream" name="adaptive" extension="" tags="true" listitemprops="license_type|license_key|license_data|license_flags|manifest_type|server_certificate|stream_headers|manifest_update_parameter|original_audio_language|max_bandwidth|play_timeshift_buffer|pre_init_data" library_android="libinputstream.adaptive.so" />
-  <extension point="xbmc.addon.metadata">
-    <platform>android-armv7</platform>
-    <news>
-v19.0.7 (2022-06-23)
-- [HLS] fix regression with chunk transferred AES-128 streams
-
-v19.0.6 (2022-06-16)
-[HLS] support PKCS7 padding for AES-128 streams (fixes for AES-128 fmp4 streams)
-
-v19.0.5 (2022-05-18)
-- Fix estimate segment count
-- Update codecs in decrypter interface
-- [HLS] set byteranged init segments explicity (fixes crashing on certain playlists)
-
-v19.0.4 (2022-04-24)
-- Translations updates from Weblate -be_by, fi_fi, cs_cz
-- [DRM] Keep same session from pre-init
-- Fix crash related to mp4 webvtt subtitles
-
-v19.0.3 (2022-02-10)
-- Translations updates from Weblate - hr_hr, nl_nl, sk_s
-- [HLS] Fix for large media sequence numbers
-- [DASH] Allow for multiple representation/bandwidth placeholders
-
-v19.0.2 (2022-01-11)
-- update nl translations
-- [webvtt] only read payl boxes for text
-
-v19.0.1 (2021-12-10)
-- Fix compile error by GCC 11
-
-v19.0.0 (2021-09-14)
-- Change test builds to released 'Kodi 19 Matrix'
-- Increase version to 19.0.0
-  - With start of Kodi 20 Nexus, takes addon as major the same version number as Kodi.
-    This done to know easier to which Kodi the addon works.
-
-v2.6.23 (2021-08-06)
-- Translations from weblate - de_de, ja_jp, ko_kr
- - [Android] use multiple drm sessions (solves stuttering)
- - [DASH] allow for misaligned segs in SegmentTimeline
-
-v2.6.22 (2021-07-18)
-- Automation test release
-
-v2.6.21 (2021-07-18)
-- Automation test release
-
-v2.6.20 (2021-07-17)
-Translations updates from Weblate
-	- de_de, el_gr, es_es, fr_fr, he_il, hi_in, hr_hr, hu_hu, it_it, ja_jp, ko_kr, nl_nl, pl_pl, ro_ro, ru_ru, sk_sk, sv_se
-
-v2.6.19 (2021-07-17)
-- Translations updates from Weblate
-	- af_za, am_et, ar_sa, ast_es, az_az, be_by, bg_bg, bs_ba, ca_es, cs_cz, cy_gb, da_dk, de_de, el_gr, en_au, en_gb, en_nz, en_us, eo, es_ar, es_es, es_mx, et_ee, eu_es, fa_af, fa_ir, fi_fi, fo_fo, fr_ca, fr_fr, gl_es, he_il, hi_in, hr_hr, hu_hu, hy_am, id_id, is_is, it_it, ja_jp, kn_in, ko_kr, lt_lt, lv_lv, ml_in, mn_mn, mt_mt, my_mm, nb_no, nl_nl, os_os, pl_pl, pt_br, pt_pt, ro_md, ro_ro, ru_ru, scn, si_lk, sk_sk, sq_al, sr_rs, sr_rs@latin, sv_se, szl, ta_in, tg_tj, th_th, tr_tr, uk_ua, uz_uz, vi_vn, zh_cn, zh_tw
-
-v2.6.18 (2021-07-13)
-- Add support to pre-initialise DRM
-- Fix intermittent crash when stopping Widevine videos
-
-v2.6.17 (2021-06-20)
-- Fix decrypt errors on non-Android platforms
-- [DASH] fix representation base urls
-- Don't use filecache for subtitle downloads
-
-v2.6.16 (2021-05-21)
-- Allow download retries for VOD
-- [DASH] fix for minimumUpdatePeriod=0
-- [DASH] remove media_renewal_url and media_renewal_time
-- License renewal for widevine
-- [HLS] Fix SSD being deleted with multiple encrypted streams
-- Overhaul manifest redirect logic
-- fix seeking into separate chapters/resume time
-- fix HEVC extra data crash
-- improve settings
-
-v2.6.15 (2021-05-18)
-- [HLS] support webvtt subtitle extensions
-- [DASH] fix segmentTemplate calculation
-- [HEVC] use constant frame rate if average is 0
-- [HLS] don't reset pts on new periods
-- Don't remove secure decoder cap if not requested in manifest_type
-- [Android] fallback to widevine L3 if L1 provisioning fails
-
-v2.6.14 (2021-04-22)
-- Don't overwrite manifest headers with stream headers
-- Stream headers default to manifest headers
-- ac3 is recognised separately to eac3
-- [DASH] time and number placeholders can be used simultaneously
-- [DASH] manifest_update_parameter property defaults to 'full' for SegmentTimeline
-- [DASH] pssh attribute in ContentProtection tag allowed without cenc namespace
-- [DASH] support ttml subs where codec isn't specified
-
-v2.6.13 (2021-04-10)
-- Fix Debian packaging
-
-v2.6.12 (2021-04-09)
-- Remove Android specific decrypter search paths
-- Move Android addon to binary addons repo
-
-v2.6.11 (2021-04-08)
-- Fix ampersand in changelog causing issues from v2.6.9 and v2.6.10
-
-v2.6.10 (2021-04-08)
-- Fix release build
-
-v2.6.9 (2021-04-08)
-- Fix MPD Timing (remove publishTime and presentationTimeOffset)
-- [Dash] Correctly set timeshift_buffer (live)
-- [Dash] Support fpsScale in AdaptationSets
-- [Dash] Fix missing audio languages
-- [DASH] Support ec-3 channel count (urn:mpeg:mpegB:cicp:ChannelConfiguration)
-
-v2.6.8 (2021-03-26)
-- [Dash] Append / to baseurl if required
-- Fix Base Domain (fixes uri=/path/)
-
-v2.6.7 (2021-02-10)
-- Fix build for ios/tvos
-- Use the full BaseUrl if it's a real url inside an AdaptationSet
-
-v2.6.6 (2020-11-21)
-- Matrix VideoCodec API change to v2.0.2 - Fix crypto session id handling
-
-v2.6.5 (2020-11-09)
-- Matrix API change to v3.0.1 - Fix wrong flags bit shift
-
-v2.6.4 (2020-10-31)
-- Fix protocol search in manifest URL
-
-v2.6.3 (2020-10-31)
-- New C-api changes
-- Fix URL's without domain (files)
-- [MPD] Fix SegmentTimeline without given startTime
-
-v2.6.2 (2020-10-30)
-- revert / rework effective url issues
-- api related changes (buildsystem)
-
-v2.6.1 (2020-10-25)
-- Fix effective url if paths beginning with / provided
-- Several translations added / fixed
-- Fix webvtt subtitles for time formats without leading hour 00:
-- Fix segfault when playing PlayReady content (Android)
-- Adapt to kodi c api changes
-
-v2.6.0 (2020-05-16)
-- Update inputstream API 2.3.1
-- Update Global API 1.2.0
-
-v2.5.6 (2020-04-25)
-- Matrix API change to v2.3.0 - Pass mime type to inputstreams if available
-- Matrix API change to v2.2.0 - Allows upto 256 streams, useful for netflix etc.
-
-v2.5.5 (2020-04-06)
-- Matrix API change - Remove CanPauseSteram() and CanSeekStream()
-- Update .gitignore
-
-v2.5.4 (2020-01-19)
-- [HLS] url based initialization segment
-- [DASH] Use effective URL for manifest update
-- Implement Media Renewal Time
-- Fixed WebVTT rlm and lrm
-- Fixed and improved subtitle properties)
-- Add multiple languages
-- [DASH] Fix zero devision segfault
-
-v2.5.3 (2019-11-21)
-- Fix retrieving SIDX from indexRange streams (youtube)
-- Rework seek (use lead stream)
-
-v2.5.2 (2019-11-18)
-- More languages added
-- DolbyVision codec (dvhe) support, kodi changes required to get it work
-- Add property to start LiveStreams from beginning (play_timeshift_buffer)
-- Pass media_headers when downloading pssh-search segment
-- Minor DASH full update / timing / url generation fixes
-
-v2.5.1 (2019-10-07)
-- Language spain added
-- multi period support
-- mp4 webtt binary representation added
-- minor fixes
-
-v2.5.0 (2019-09-02)
-- New major versions for Matrix
-
-v2.4.0 (2019-08-16)
-- Update Kodi VFS API 1.0.3
-- Build script cleanups
-- Implement VP9 static HDR metadata
-- MPD: location attibute added
-- MPD: livestream bugfixes (uninitialized startPTS)
-
-v2.3.22 (2019-06-14)
-- Bento4: sample duration workaround (24/1)
-- WVDecrypter: remove sleep between decrypt calls
-
-v2.3.21 (2019-06-07)
-- [DASH] initialize segment::range_begin_ for URL segments (youtube)
-
-v2.3.20 (2019-06-07)
-- Fix parsing PR ContentProtection KID
-
-v2.3.19 (2019-06-02)
-- [widevine] remove API 8 / Add API 11
-- [TS] Signal configuration change if extra-data has changed
-- [DASH] Use PlayReady WRMHEADER to retrieve DefaultKID
-- [DASH] Allow URL_SEGMENTS + Range-Bytes
-
-v2.3.18 (2019-05-11)
-- align settings with internal resolution check
-- [HLS] support single playlists
-
-v2.3.17 (2019-04-16)
-- Fix KID's with 0 char inside
-
-v2.3.16 (2019-03-25)
-- TTML parser fix
-- [HLS] Add HEVC streams / Fix extra_data_size in ts parser
-- [HLS] effective URL for license
-
-v2.3.15 (2019-02-11)
-- Fix windows build
-
-v2.3.14 (2019-02-10)
-- Add WebM container parser
-    </news>
-    <summary lang="ca_ES">Client InputStream per a transmissions adaptatives</summary>
-    <summary lang="cs_CZ">Klient adaptivních toků protokolu InputStream</summary>
-    <summary lang="da_DK">InputStream-klient til adaptive streams</summary>
-    <summary lang="de_DE">InputStream-Client für adaptive Streams</summary>
-    <summary lang="en_GB">InputStream client for adaptive streams</summary>
-    <summary lang="es_ES">Cliente InputStream para flujo de datos adaptativos</summary>
-    <summary lang="es_MX">Cliente InputStream para transmisiones adaptativas</summary>
-    <summary lang="fi_FI">InputStream-asiakaspääte mukautuville mediavirroille</summary>
-    <summary lang="fr_FR">Client InputStream pour les flux adaptatifs</summary>
-    <summary lang="he_IL">לקוח InputStream לתזרימים מסתגלים</summary>
-    <summary lang="hr_HR">InputStream klijent za prilagodljiva strujanja</summary>
-    <summary lang="hu_HU">InputStream kliens az adaptív streamekhez</summary>
-    <summary lang="ko_KR">가변 스트림을 위한 InputStream 클라이언트</summary>
-    <summary lang="nl_NL">InputStream client voor adaptive streams</summary>
-    <summary lang="pl_PL">Klient InputStream dla strumieni adaptacyjnych</summary>
-    <summary lang="ru_RU">InputStream клиент для адаптивных трансляций</summary>
-    <summary lang="zh_CN">用于自适应流的 InputStream 客户端</summary>
-    <description lang="ca_ES">Client InputStream per a transmissions adaptatives</description>
-    <description lang="cs_CZ">Klient adaptivních toků protokolu InputStream</description>
-    <description lang="da_DK">InputStream-klient til adaptive streams</description>
-    <description lang="de_DE">InputStream-Client für adaptive Streams</description>
-    <description lang="en_GB">InputStream client for adaptive streams</description>
-    <description lang="es_ES">Cliente InputStream para flujo de datos adaptativos</description>
-    <description lang="es_MX">Cliente InputStream para transmisiones adaptativas</description>
-    <description lang="fi_FI">InputStream-asiakaspääte mukautuville mediavirroille</description>
-    <description lang="fr_FR">Client InputStream pour les flux adaptatifs</description>
-    <description lang="he_IL">לקוח InputStream לתזרימים מסתגלים</description>
-    <description lang="hr_HR">InputStream klijent za prilagodljiva strujanja</description>
-    <description lang="hu_HU">InputStream kliens az adaptív streamekhez</description>
-    <description lang="ko_KR">가변 스트림을 위한 InputStream 클라이언트</description>
-    <description lang="pl_PL">Klient InputStream dla strumieni adaptacyjnych</description>
-    <description lang="ru_RU">InputStream клиент для адаптивных трансляций</description>
-    <description lang="zh_CN">用于自适应流的 InputStream 客户端</description>
-  </extension>
 </addon><addon id="metadata.album.universal" name="Universal Album Scraper" version="3.1.9" provider-name="Olympia, Team Kodi">
   <requires>
     <import addon="xbmc.metadata" version="2.1.0" />
@@ -985,15 +714,19 @@ v1.6.0 (2021-12-24) - v1.6.1 (2022-01-09)
         <icon>icon.png</icon>
     </assets>
   </extension>
-</addon><addon id="metadata.tvshows.themoviedb.org.python" name="TMDb TV Shows" version="1.4.17" provider-name="Team Kodi">
+</addon><addon id="metadata.tvshows.themoviedb.org.python" name="TMDb TV Shows" version="1.4.16" provider-name="Team Kodi">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="xbmc.metadata" version="2.1.0" />
   </requires>
   <extension point="xbmc.metadata.scraper.tvshows" library="main.py" cachepersistence="00:15" />
   <extension point="xbmc.addon.metadata">
-    <news>1.4.17
-update to support new episode guide JSON format
+    <news>1.4.16
+fix for cast list in episodes
+properly classify TMDb logos as clearlogos
+filter out SVG files
+fix for scraper ignoring NFO files with TVDB artwork URL
+updated language files
 	</news>
     <platform>all</platform>
     <license>GPL-3.0-or-later</license>
@@ -1018,7 +751,6 @@ update to support new episode guide JSON format
     <summary lang="is_IS">Sækja lýsigögn sjónvarpsþátta frá themoviedb.org</summary>
     <summary lang="it_IT">Recupera i metadati dei programmi TV da themovedb.org</summary>
     <summary lang="ko_KR">themoviedb.org에서 TV쇼 메타데이터를 가져옵니다</summary>
-    <summary lang="nl_NL">Haal metadata van tv-programma's op van themoviedb.org</summary>
     <summary lang="pl_PL">Pobieraj metadane programów telewizyjnch z themoviedb.org</summary>
     <summary lang="pt_BR">Obter metadados de Séries em themoviedb.org</summary>
     <summary lang="ru_RU">Получение метаданных о сериалах с сайта themoviedb.org</summary>
@@ -1040,7 +772,6 @@ update to support new episode guide JSON format
     <description lang="is_IS">The Movie Database (TMDb) er samfélagslegur gagnagrunnur kvikmynda- og sjónvarpsefnis. Hver einasti gagnabútur hefur verið settur inn af frábærum liðsmönnum okkar allar götur síðan 2008. Mikil alþjóðleg áhersla TMDb ásamt breiðu sviði gagna sést óvíða og er eitthvað sem við erum ótrúlega stolt af. Sett fram á einfaldan máta, við lifum og hrærumst í þessu samfélagi og það er nákvæmlega þess vegna sem við erum öðruvísi.</description>
     <description lang="it_IT">Il Movie Database (TMDb) è un database di film e TV creato dalla comunità. Ogni dato è stato aggiunto dalla nostra straordinaria comunità che risale al 2008. La forte attenzione internazionale e l'ampiezza dei dati di TMDb sono in gran parte impareggiabili e qualcosa di cui siamo incredibilmente orgogliosi. In parole povere, viviamo e respiriamo in comunità ed è proprio questo che ci rende diversi.</description>
     <description lang="ko_KR">The Movie Database (TMDb)는 영화와 TV 데이터베이스를 구축한 커뮤니티입니다. 모든 자료들은 우리 놀라운 커뮤니티에서 2008년부터 추가돼 온 것들입니다. TMDb의 강력한 국제적 초점과 광범위한 데이터는 타의 추종을 불허하며 우리가 자랑스러워하는 점입니다. 간단히 말해, 우리는 커뮤니티와 살고 호흡하며 그것이 우리가 다른 점입니다.</description>
-    <description lang="nl_NL">De Movie Database (TMDb) is een door de gemeenschap gebouwde film- en tv-database. Elk stukje data is toegevoegd door onze geweldige community die teruggaat tot 2008. TMDb's sterke internationale focus en brede waaier aan data is grotendeels ongeëvenaard en iets waar we ongelooflijk trots op zijn. Simpel gezegd, we leven en ademen gemeenschap en dat is precies wat ons anders maakt.</description>
     <description lang="pl_PL">The Movie Database (TMDb) to baza filmów i programów telewizyjnych zbudowana przez społeczność. Każdy element danych został dodany przez naszą niesamowitą społeczność od 2008 roku. Silna międzynarodowa koncentracja TMDb i zakres danych są w dużej mierze niezrównane i jesteśmy z tego niesamowicie dumni. Mówiąc prościej, żyjemy i oddychamy wspólnotą i właśnie to nas wyróżnia.</description>
     <description lang="pt_BR">The Movie Database (TMDb) é um banco de dados de filmes e séries criado pela comunidade. Cada um dos pedaços de dados foram adicionados por nossa incrível comunidade desde 2008. O forte foco internacional e a amplitude de dados do TMDb são incomparáveis, algo do qual temos muito orgulho. Resumindo, vivemos e respiramos comunidade e é precisamente isso que nos torna diferentes.</description>
     <description lang="ru_RU">The Movie Database (TMDb) - это база данных фильмов и сериалов, созданная сообществом. Все данные были добавлены нашим замечательным сообществом, начиная с 2008 года. Международная направленность и широта данных TMDb во многом не имеют себе равных, и это то, чем мы невероятно гордимся. Проще говоря, мы живём и дышим сообществом, и именно это отличает нас от других.</description>
@@ -1151,7 +882,7 @@ update to support new episode guide JSON format
         <description lang="ta_IN">இசை துணை பயன் rad.io, radio.de மற்றும் radio.fr இருந்து 30000 க்கும் மேல் வானொலி ஒளிபரப்புகளை அணுக உதவி செய்யும்[CR]தற்போதைய அம்சங்கள்[CR]- ஆங்கிலம், ஜெர்மன் மற்றும் பிரெஞ்சு மொழியாக்கம்[CR]- இருப்பிடம், வகை, தலைப்பு, நாடு, நகரம் மற்றும் மொழி கொண்டு நிலையங்களை உலாவ முடியும்[CR]- நிலையங்களை தேடுதல்[CR]- 115 வகைகள், 59 தலைப்புகள், 94 நாடுகள், 1010 நகரங்கள், 63 மொழிகள்</description>
         <description lang="zh_CN">访问rad.io、radio.de和radio.fr上超过7000个国际电台广播的音频插件[CR]现有功能[CR]- 英语、德语和法语支持[CR]- 按地点、类别、主题、国家、城市和语言浏览站点[CR]- 搜索站点[CR]- 115个类别、59个主题、94个国家、1010城市、63种语言</description>
     </extension>
-</addon><addon id="plugin.program.terrywiz" name="Terry Tibbs Toolbox" version="0.0.25" provider-name="Magnetic,Slam, BYB">
+</addon><addon id="plugin.program.terrywiz" name="Terry Tibbs Toolbox" version="0.0.30" provider-name="Magnetic,Slam, BYB">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0" />
 		<import addon="script.module.requests" optional="true" />
@@ -1328,7 +1059,7 @@ update to support new episode guide JSON format
 - See Changelog on Tools menu
         </news>
     </extension>
-</addon><addon id="plugin.video.youtube" name="YouTube" version="6.8.23+matrix.1" provider-name="anxdpanic, bromix">
+</addon><addon id="plugin.video.youtube" name="YouTube" version="6.8.20+matrix.1" provider-name="anxdpanic, bromix">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="script.module.six" version="1.11.0" />
@@ -1342,7 +1073,10 @@ update to support new episode guide JSON format
   <extension point="xbmc.python.module" library="resources/lib/" />
   <extension point="xbmc.addon.metadata">
     <news>
-[revert] subscription groups/tags - causing breaking issues
+[fix] /uri2addon/ endpoint for playback of youtube.com urls
+[fix] Don't assume addon is installed in home directory |contrib: jfly|
+[fix] Subtitle language names
+[lang] translation updates from Weblate
         </news>
     <assets>
       <icon>icon.png</icon>
@@ -1488,14 +1222,12 @@ update to support new episode guide JSON format
 			<fanart>fanart.jpg</fanart>
 		</assets>
 	</extension>
-</addon><addon id="repository.bugatsinho" name=" Bugatsinho repository" version="2.6" provider-name="Bugatsinho">
+</addon><addon id="repository.bugatsinho" name=" Bugatsinho repository" version="2.5" provider-name="Bugatsinho">
     <extension point="xbmc.addon.repository" name="Bugatsinho repository">
-        <dir>
-            <info compressed="false">https://raw.githubusercontent.com/bugatsinho/bugatsinho.github.io/master/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/bugatsinho/bugatsinho.github.io/master/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/bugatsinho/bugatsinho.github.io/master/_zips</datadir>
-            <hashes>false</hashes>
-        </dir>
+        <info compressed="false">https://raw.githubusercontent.com/bugatsinho/bugatsinho.github.io/master/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/bugatsinho/bugatsinho.github.io/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/bugatsinho/bugatsinho.github.io/master/_zips</datadir>
+        <hashes>false</hashes>
         <dir>
             <info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
             <checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
@@ -1528,16 +1260,16 @@ update to support new episode guide JSON format
         <description>This repository contains Greek, Spanish and other addons!Read first each addon's description!</description>
         <platform>all</platform>
     </extension>
-</addon><addon id="repository.terrytibbs" name="Terrys 19 New Repo" version="1.01" provider-name="Terry Tibbs">
+</addon><addon id="repository.terrytibbs" name="Terrys 19 repo" version="1" provider-name="Terry Tibbs">
     <extension point="xbmc.addon.repository" name="Terrys 19 Repository">
         <dir>
-            <info compressed="false">https://githubraw.com/terrytibbs2004/builds/main/repo1/zips/addons.xml</info>
-            <checksum>https://githubraw.com/terrytibbs2004/builds/main/repo1/zips/addons.xml.md5</checksum>
-            <datadir zip="true">https://githubraw.com/terrytibbs2004/builds/main/repo1/zips/</datadir>
+            <info compressed="false">https://githubraw.com/terrytibbs2004/builds/main/repo/zips/addons.xml</info>
+            <checksum>https://githubraw.com/terrytibbs2004/builds/main/repo/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://githubraw.com/terrytibbs2004/builds/main/repo/zips/</datadir>
         </dir>
     </extension>
     <extension point="xbmc.addon.metadata">
-        <summary>Terry Tibbs New Repo</summary>
+        <summary>Terry Tibbs Repo</summary>
         <description />
         <disclaimer />
         <platform>all</platform>
@@ -1648,15 +1380,17 @@ update to support new episode guide JSON format
         <fanart>fanart.jpg</fanart>
     </assets>
     </extension>
-</addon><addon id="script.keymap" name="Keymap Editor" version="1.1.5" provider-name="takoi,pkscout">
+</addon><addon id="script.keymap" name="Keymap Editor" version="1.1.4" provider-name="takoi,pkscout">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0" />
 		<import addon="script.module.defusedxml" version="0.6.0+matrix.1" />
 	</requires>
 	<extension point="xbmc.python.script" library="default.py" />
 	<extension point="xbmc.addon.metadata">
-		<news>v1.1.5
-added ability to map TempoUp and TempoDown
+		<news>v1.1.4
+- fixed depreciacted translatepath call
+- removed dependancy on kodi-six
+- updated language files
 		</news>
 		<assets>
         	<icon>icon.png</icon>
@@ -1665,26 +1399,16 @@ added ability to map TempoUp and TempoDown
 		<license>GPL-3.0-only</license>
 		<forum>https://forum.kodi.tv/showthread.php?tid=168767</forum>
 		<source>https://github.com/pkscout/script.keymap</source>
-		<summary lang="da_DK">Et redigeringsværktøj for keymap-filer</summary>
 		<summary lang="de_DE">Ein Editor für Keymap-Dateien</summary>
 		<summary lang="en_GB">An editor for keymap files</summary>
-		<summary lang="et_EE">Nupuasetuse redaktor</summary>
-		<summary lang="fi_FI">Editori keymap-näppäinmääritystiedostoille</summary>
 		<summary lang="hu_HU">Távvezérlő fájlok kezelője</summary>
-		<summary lang="it_IT">Un editor per i file keymap</summary>
 		<summary lang="ko_KR">키맵 파일용 편집기</summary>
-		<summary lang="nl_NL">Een editor voor keymap-bestanden</summary>
 		<summary lang="ru_RU">Редактор файлов раскладки клавиатуры</summary>
 		<summary lang="zh_CN">一个键映射文件的编辑器</summary>
-		<description lang="da_DK">Keymap Editor er en GUI til konfiguration af mappinger for fjernbetjeninger, tastatur og andre input, der understøttes af Kodi. Bemærk: eksisterende brugerdefinerede nøglemappinger vil blive omdøbt til .bak.</description>
 		<description lang="de_DE">Keymap Editor ist eine grafische Oberfläche zum Konfigurieren von Tastenzuordnungen für Fernbedienungen, Tastaturen und anderen von Kodi unterstützten Eingabegeräten. Hinweis: Existierende benutzerdefinierte Tastenzuordnungen werden zu .bak umbenannt.</description>
 		<description lang="en_GB">Keymap Editor is a GUI for configuring mappings for remotes, keyboard and other inputs supported by Kodi. Note: existing user defined key mappings will be renamed to .bak.</description>
-		<description lang="et_EE">Keymap Editor vahend kaugjuhtimispultide, klaviatuuri ja muude Kodi toetatavate sisendite nupuasetuste seadistamiseks. Märkus. Olemasolevad kasutaja määratletud nupuasetused salvestatakse faili .bak.</description>
-		<description lang="fi_FI">Keymap-näppäinmäärityseditori on graafinen käyttöliittymä kaukosäätimien, näppäimistöjen ja muiden Kodin tukemien syöttölaitteiden näppäinten määritykseen. Huomioi: Käyttäjän aiempien näppäinmääritystiedostojen nimiin lisätään .bak-pääte.</description>
 		<description lang="hu_HU">A Keymap Editor egy grafikus felhasználói felület a távvezérlők, a billentyűzet és a Kodi által támogatott egyéb bemenetek konfigurálásához. Megjegyzés: a meglévő, felhasználó által definiált keymap fájlok át lesznek nevezve .bak -ra.</description>
-		<description lang="it_IT">Keymap Editor è una GUI per la configurazione di mappature per telecomandi, tastiera e altri input supportati da Kodi. Nota: le mappature delle chiavi definite dall'utente esistenti verranno rinominate in .bak.</description>
 		<description lang="ko_KR">키맵 편집기는 Kodi에서 지원하는 리모컨, 키보드 및 기타 입력에 대한 매핑을 구성하기 위한 GUI입니다. 참고: 기존 사용자 정의 키 매핑은 .bak으로 이름이 바뀝니다.</description>
-		<description lang="nl_NL">Keymap Editor is een GUI voor het configureren van toewijzingen voor afstandsbedieningen, toetsenbord en andere invoer die door Kodi wordt ondersteund. Opmerking: bestaande door de gebruiker gedefinieerde toetstoewijzingen worden hernoemd naar .bak.</description>
 		<description lang="ru_RU">Keymap Editor - это графический интерфейс для настройки привязки клавиш пультов, клавиатуры и других устройств ввода, поддерживаемых Kodi. Примечание: существующие пользовательские привязки клавиш будут переименованы в .bak.</description>
 		<description lang="zh_CN">键映射编辑器是一个用于配置 Kodi 支持的遥控器、键盘和其他输入设备的功能映射的图形界面。注意：现有的用户定义键映射将重命名为.bak。</description>
 	</extension>
@@ -2156,14 +1880,14 @@ v1.0.1 (2019-08-06)
             <fanart>fanart.jpg</fanart>
         </assets>
     </extension>
-</addon><addon id="service.xbmc.versioncheck" name="Version Check" version="0.5.24+matrix.1" provider-name="Team Kodi">
+</addon><addon id="service.xbmc.versioncheck" name="Version Check" version="0.5.23+matrix.1" provider-name="Team Kodi">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
   </requires>
   <extension point="xbmc.service" library="resources/lib/runner.py" />
   <extension point="xbmc.addon.metadata">
     <news>
-- add Kodi 20 RC1 release
+- add Kodi 20 Alpha1 release
 - Update translations from Weblate
         </news>
     <assets>
@@ -2176,7 +1900,6 @@ v1.0.1 (2019-08-06)
     <source>https://github.com/XBMC-Addons/service.xbmc.versioncheck</source>
     <summary lang="be_BY">Kodi Version Check правярае наяўнасць апошняй версіі.</summary>
     <summary lang="bg_BG">Проверява дали ползвате най-новата версия на Kodi.</summary>
-    <summary lang="bs_BA">Kodi Verzijski Provjerač provjerava imate li najnoviju izdanu verziju.</summary>
     <summary lang="ca_ES">Kodi Version Check comprova si està utilitzant la última versió publicada.</summary>
     <summary lang="cs_CZ">Kontrola verze Kodi, zkontroluje, zda používáte nejnovější vydanou verzi.</summary>
     <summary lang="da_DK">Kodi Version Check undersøger om du benytter den nyeste version.</summary>
@@ -2198,7 +1921,7 @@ v1.0.1 (2019-08-06)
     <summary lang="hu_HU">Az Kodi verzió ellenőrző megvizsgálja, hogy a legújabb kiadást futtatja-e.</summary>
     <summary lang="id_ID">Kodi Version Check mengecek apakah Anda menggunakan versi rilis terbaru.</summary>
     <summary lang="is_IS">Kodi Version Check athugar hvort þú sért að keyra nýjustu viðurkennda útgáfu.</summary>
-    <summary lang="it_IT">Kodi Version Check controlla se stai utilizzando l'ultima versione disponibile.</summary>
+    <summary lang="it_IT">Kodi Version Check verifica se hai l'ultima versione rilasciata.</summary>
     <summary lang="ko_KR">Kodi Version Checks는 최신 정식 릴리즈 버전을 사용중인지 검사해줍니다.</summary>
     <summary lang="lt_LT">Kodi Version Check patikrina ar naudojate naujausią versiją.</summary>
     <summary lang="nb_NO">Kodi Versjonsettersyn sjekker om du kjører den sist utgitte versjonen.</summary>
@@ -2210,7 +1933,7 @@ v1.0.1 (2019-08-06)
     <summary lang="ro_RO">Verificare versiune Kodi verifică dacă folosiți ultima versiune lansată.</summary>
     <summary lang="ru_RU">Kodi Version Check проверяет наличие последней версии.</summary>
     <summary lang="sk_SK">Kodi Kontrola verzií overuje, či používate najnovšiu vydanú verziu.</summary>
-    <summary lang="sl_SI">Preverjalnik različic Kodi preveri, ali je nameščena zadnja objavljena različica.</summary>
+    <summary lang="sl_SI">Preverjanje različice Kodi preveri, če imate nameščeno nazadnje izdano različico.</summary>
     <summary lang="sv_SE">Kodi Version Check kontrollerar om du använder den senaste versionen.</summary>
     <summary lang="tr_TR">Kodi Sürüm Kontrol, yayınlanmış son sürümü kullanıp kullanmadığınızı kontrol eder.</summary>
     <summary lang="vi_VN">Kodi Version Check kiểm tra xem bạn có đang chạy phiên bản mới nhất được phát hành hay không.</summary>
@@ -2218,7 +1941,6 @@ v1.0.1 (2019-08-06)
     <summary lang="zh_TW">Kodi版本檢查器會檢查您執行中的是否是最新版本。</summary>
     <description lang="be_BY">Kodi Version Check працуе толькі на пэўнай колькасці платформ і дыстрыбутываў, версіі якіх могуць адрознівацца паміж сабой. Каб даведацца больш падрабязна, наведайце саkodi.tv.</description>
     <description lang="bg_BG">Kodi Version Check поддържа няколко платформи/дистрибуции. За повече информация посетете страницата www.kodi.tv</description>
-    <description lang="bs_BA">Kodi Verzijski Provjerač podržava samo određeni broj platformi/distribucija jer njihova izdanja se međusobno mogu razlikovati. Za više informacija posjetite kodi.tv web stranicu.</description>
     <description lang="ca_ES">Kodi Version Check només és compatible amb una sèrie de plataformes / distribucions ja que les ultimes versions poden ser diferents entre elles. Per obtenir més informació, visiteu el lloc web kodi.tv.</description>
     <description lang="cs_CZ">Kontrola verze Kodi podporuje pouze několik platforem/distribucí a verze mezi nimi se můžou lišit. Pro více informací navštivte webové stránky kodi.tv.</description>
     <description lang="da_DK">Kodi Version Check kan kun undersøge for opdateringer for visse platforme/udgaver, da udgivelserne kan variere mellem dem. For mere information, besøg kodi.tv.</description>
@@ -2240,7 +1962,7 @@ v1.0.1 (2019-08-06)
     <description lang="hu_HU">Az Kodi verzió-ellenőrző csak néhány platformot / disztribúciót támogat, mert a kiadások között különbségek lehetnek. További információkért keresse fel az kodi.tv oldalt.</description>
     <description lang="id_ID">Kodi Version Check hanya mendukung beberapa platform/distro karena rilisnya mungkin berbeda-beda. Untuk informasi lebih lanjut kunjungi situs kodi.tv.</description>
     <description lang="is_IS">Athugun á útgáfu Kodi styður fjölda stýrikerfa/dreifinga þar sem útgáfur geta verið mismunandi á milli þeirra. Farðu inn á Kodi.tv til að fá nánari upplýsingar.</description>
-    <description lang="it_IT">Kodi Version Check supporta solo un certo numero di piattaforme/distribuzioni poiché le versioni potrebbero differire tra loro. Per ulteriori informazioni, visita il sito Web kodi.tv.</description>
+    <description lang="it_IT">Kodi Version Check supporta solo alcune piattaforme e distribuzioni perché le relase possono differire tra loro. Per più informazioni visita il sito kodi.tv.</description>
     <description lang="ko_KR">Kodi 버전 확인은 릴리스가 다를 수 있으므로 다수 플랫폼/배포판만 지원합니다. 자세한 내용은 kodi.tv 웹사이트를 방문하세요.</description>
     <description lang="lt_LT">Kodi Version Check palaiko tik kelias platformas/distribucijas, nes leidimai tarp jų gali skirtis. Norėdami gauti daugiau informacijos, apsilankykite Kodi.tv puslapyje.</description>
     <description lang="nb_NO">Kodi Versjonsettersyn støtter kun noen plattformer/distribusjoner fordi utgivelser kan være forskjellige mellom dem. Besøk kodi.tv for mer informasjon.</description>
@@ -2250,7 +1972,7 @@ v1.0.1 (2019-08-06)
     <description lang="pt_PT">O Kodi Version Check suporta apenas algumas plataformas/distribuições, porque os lançamentos podem não ser sempre idênticos. Para mais informação, visite o site kodi.tv.</description>
     <description lang="ru_RU">Kodi Version Check поддерживается только на ряде платформ/дистрибутивов и они могут различаться между собой. Для получения доп. информации посетите сайт kodi.tv.</description>
     <description lang="sk_SK">Kontrola verzie Kodi podporuje iba niekoľko platforiem/distribúcií keďže vydania sa môžu medzi nimi líšiť. Pre viac informácií navštívte webové stránky kodi.tv.</description>
-    <description lang="sl_SI">Preverjalnik različic Kodi podpira le nekatera okolja, saj se te lahko med njimi močno razlikujejo. Več podrobnosti o tem je na voljo na spletišču kodi.tv.</description>
+    <description lang="sl_SI">Preverjanje različice Kodi podpira le nekatere platforme/distribucije, saj se izdaje med njimi lahko zelo razlikujejo. Za več informacij obiščite spletišče kodi.tv</description>
     <description lang="sv_SE">Kodi Version Check stöder endeast ett antal plattformar/distributioner eftersom utgivningar kan skilja mellan dessa. För mer information besök kodi.tv webplatsen.</description>
     <description lang="tr_TR">Kodi Sürüm Kontrol, sürümler arasında değişiklik olduğu için sadece birkaç platform/dağıtım destekler. Daha fazla bilgi için kodi.tv web sitesini ziyaret edin.</description>
     <description lang="vi_VN">Kodi Version Check chỉ hỗ trợ một số nền tảng/phân phối vì các bản phát hành có thể khác nhau giữa chúng. Để biết thêm thông tin, hãy truy cập trang web kodi.tv.</description>
@@ -2258,7 +1980,6 @@ v1.0.1 (2019-08-06)
     <description lang="zh_TW">由於各發行版之間的差異，Kodi版本檢查器只支援部分平台及版本號。更多資訊請參閱kodi.tv網站。</description>
     <disclaimer lang="be_BY">Выкарыстоўвайце гэты скрыпт па ўласным жаданні. Каб даведацца больш падрабязна, наведайце kodi.tv</disclaimer>
     <disclaimer lang="bg_BG">Ползвайте скрипта свободно. За повече информация посетете www.kodi.tv</disclaimer>
-    <disclaimer lang="bs_BA">Slobodno koristite ovu skriptu ako želite. Za više informacija posjetite kodi.tv</disclaimer>
     <disclaimer lang="ca_ES">Sigues lliure d'utilitzar aquest script. Per més informació visita kodi.tv</disclaimer>
     <disclaimer lang="cs_CZ">Neváhejte použít tento skript. Pro více informací navštivte kodi.tv</disclaimer>
     <disclaimer lang="da_DK">Du er velkommen til at bruge dette script. For information, besøg kodi.tv</disclaimer>
@@ -2280,7 +2001,7 @@ v1.0.1 (2019-08-06)
     <disclaimer lang="hu_HU">Használja bátran ezt a szkriptet! Információkért keresse fel az kodi.tv oldalt!</disclaimer>
     <disclaimer lang="id_ID">Jangan sungkan menggunakan script ini. Untuk informasi hubungi kodi.tv</disclaimer>
     <disclaimer lang="is_IS">Notaðu þessa skriftu eins og þig lystir. Til að vita meira ættirðu að skoða kodi.tv</disclaimer>
-    <disclaimer lang="it_IT">Sentiti libero di usare questo script. Per informazioni visita kodi.tv</disclaimer>
+    <disclaimer lang="it_IT">Usa liberamente lo script. Per informazioni visita kodi.tv</disclaimer>
     <disclaimer lang="ja_JP">このスクリプトをお使いください。詳しくは kodi.tv を参照してください</disclaimer>
     <disclaimer lang="ko_KR">이 스크립트를 자유롭게 사용하세요. 관련 정보는 kodi.tv를 방문하세요</disclaimer>
     <disclaimer lang="lt_LT">Galite laisvai naudoti šį scenarijų. Apsilankykite kodi.tv, norėdami gauti daugiau informacijos.</disclaimer>
@@ -2300,7 +2021,7 @@ v1.0.1 (2019-08-06)
     <disclaimer lang="zh_CN">可放心使用此脚本，更多信息访问 kodi.tv</disclaimer>
     <disclaimer lang="zh_TW">歡迎使用本腳本，相關資訊請參閱kodi.tv</disclaimer>
   </extension>
-</addon><addon id="skin.estuary1" version="1.5.9" name="Estuary1" provider-name="Terry Tibs,phil65, Ichabod Fletchman">
+</addon><addon id="skin.estuary1" version="1.6.0" name="Estuary1" provider-name="Terry Tibs,phil65, Ichabod Fletchman">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0" />
 		xbmc.executebuiltin('UpdateLocalAddons')
@@ -2471,100 +2192,4 @@ v1.0.1 (2019-08-06)
 			<screenshot>resources/screenshot-08.jpg</screenshot>
 		</assets>
 	</extension>
-</addon><addon id="visualization.spectrum" version="19.0.2" name="Spectrum" provider-name="Team Kodi">
-  <requires>
-<import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0" />
-<import addon="kodi.binary.global.gui" minversion="5.15.0" version="5.15.0" />
-<import addon="kodi.binary.global.filesystem" minversion="1.1.0" version="1.1.6" />
-<import addon="kodi.binary.instance.visualization" minversion="3.0.0" version="3.0.0" /></requires>
-  <extension point="xbmc.player.musicviz" library_android="libvisualization.spectrum.so" />
-  <extension point="xbmc.addon.metadata">
-    <platform>android-armv7</platform>
-    <license>GPL-2.0-or-later</license>
-    <source>https://github.com/xbmc/visualization.spectrum</source>
-    <assets>
-      <icon>resources/icon.png</icon>
-      <fanart>resources/fanart.jpg</fanart>
-      <screenshot>resources/screenshot-01.jpg</screenshot>
-      <screenshot>resources/screenshot-02.jpg</screenshot>
-      <screenshot>resources/screenshot-03.jpg</screenshot>
-    </assets>
-    <summary lang="af_ZA">Visualisering wys a roterende 3D Spektrum Analiseerder</summary>
-    <summary lang="ar_SA">عارض يظهر طيف محلل دوري ثلاثي الأبعاد</summary>
-    <summary lang="bg_BG">Визуализация представяща ротиращ се 3D спектрален анализатор</summary>
-    <summary lang="ca_ES">Visualització mostrant un analitzador d'espectre giratori 3D</summary>
-    <summary lang="cs_CZ">Vizualizace zobrazující rotující 3D spektrální analyzátor</summary>
-    <summary lang="da_DK">Visualisering der viser en roterende 3D-spektrumanalyse</summary>
-    <summary lang="de_DE">Diese Visualisierung zeigt eine rotierende Spektrumanalyse in 3D</summary>
-    <summary lang="el_GR">Οπτικοποίηση που εμφανίζει έναν περιστρεφόμενο τρισδιάστατο Αναλυτή Φάσματος</summary>
-    <summary lang="en_GB">Visualisation showing a rotating 3D Spectrum Analyzer</summary>
-    <summary lang="es_AR">Visualización que muestra un analizador de espectro en 3D girando</summary>
-    <summary lang="es_ES">Visualización que muestra un analizador de espectro en 3D girando</summary>
-    <summary lang="es_MX">Visualización que muestra un Analizador de Espectro giratorio 3D</summary>
-    <summary lang="et_EE">Visuaal, mis näitab pöörlevat 3D spektraalanalüüsi</summary>
-    <summary lang="fi_FI">Visualisointi, joka näyttää pyörivän 3D-spektrianalysaattorin</summary>
-    <summary lang="fr_FR">Visualisation affichant un analyseur de spectre 3D en rotation</summary>
-    <summary lang="gl_ES">Visualización que amosa un analizador de espectro virando en 3D</summary>
-    <summary lang="he_IL">DirectX Spectrum זהו חיזוי אשר מציג סיבובי 3D Spectrum Analyzer</summary>
-    <summary lang="hr_HR">Vizualizacija koja prikazuje rotirajući 3D spektralni analizator</summary>
-    <summary lang="hu_HU">Vizualizáció 3D spektrum analizátorral</summary>
-    <summary lang="is_IS">Myndskreyting sem sýnir þrívíddar rófgreini</summary>
-    <summary lang="it_IT">La visualizzazione mostra un analizzatore di spettro 3D rotante</summary>
-    <summary lang="ja_JP">回転する 3D スペクトラムアナライザーを表示する ビジュアライザー</summary>
-    <summary lang="ko_KR">회전하는 3D 스펙트럼 분석기를 보여지는 음악시각화</summary>
-    <summary lang="lt_LT">Vizualizacija rodo rotacinis 3D spektro analizatorių</summary>
-    <summary lang="mk_MK">Визуализација која покажува ротирачки 3Д анализатор на спектар</summary>
-    <summary lang="nb_NO">Visualisering som viser en roterende 3D ​​Spectrum Analyzer</summary>
-    <summary lang="nl_NL">DirectX-visualisatie die een roterende 3D-spectrumanalyse weergeeft</summary>
-    <summary lang="pl_PL">Wizualizacja pokazująca obracający się analizator widma w 3D</summary>
-    <summary lang="pt_BR">Visualização que mostra um analisador espectral rotativo em 3D</summary>
-    <summary lang="pt_PT">Visualização que mostra um analisador espectral rotativo em 3D</summary>
-    <summary lang="ro_RO">Vizualizare cu afișarea unui analizor de spectru 3D rotativ</summary>
-    <summary lang="ru_RU">Визуализация, показывающая вращающийся трёхмерный анализатор спектра</summary>
-    <summary lang="sk_SK">Vizualizácia zobrazujúca rotujúci 3D spektrálny analyzátor</summary>
-    <summary lang="sl_SI">Vizualizacija, ki prikatuje vrtečo 3D spektralno analizo</summary>
-    <summary lang="sv_SE">Visualisering som visar en roterande 3D-spektrumanalysator</summary>
-    <summary lang="th_TH">การแสดงแสงสี ทำให้เห็นการหมุนแบบ 3 มิติ ของการวิเคราะห์คลื่นความถี่เสียง</summary>
-    <summary lang="uk_UA">Візуалізація, яка показує 3D аналізатор спектра, що обертається</summary>
-    <summary lang="zh_CN">显示旋转三维频谱分析图像的可视化效果</summary>
-    <summary lang="zh_TW">顯示旋轉的3D頻譜分析視覺效果</summary>
-    <description lang="af_ZA">Spectrum is 'n Visualisering wat 'n roterende 3D Spektrum Analiseerder, verbeeld met , vertoon wat op die maat van die musiek beweeg en 'n golf effek oor die spektrum rooster skep.[CR]Dit het ook verstellings vir die aanpas van spektrum staaf hoogte, sy spoed, en hoe die stawe verbeeld word (solied, punte, draad raamwerk) en is 'n lekker ligte, lae cpu verbruik visualisering wat fantasties lyk</description>
-    <description lang="ar_SA">طيف  هو تحليل بصري متحرك ثلاثي الابعاد للموسيقى! يتحرك بواسطة يرنامج  على وزن الموسيقى في شكل موجة.[CR]توجد ايضا اعدادات لتعديل شبكة الطيف من حيث طول الاعمدة, سرعتها, وحتى شكلها (صلبة, نقاط, اسلاك) تعمل هذة بحمل خفيف, ومعالجة cpu ضئيلة لكنها تبدو رائعة</description>
-    <description lang="bg_BG">Spectrum е визуализация изобразяваща ротиращ се 3D спектрален анализатор (рендването се извършва с ). Ротацията е според ритъма на музиката и предизвиква вълнови ефект по спектрална решетка.[CR]Можете да настройвате височината на спектралните стълбове, скоростта и рендването - solid, points, wire frame. Характеризира се с отличен вид, като същевременно почти не натоварва процесора.</description>
-    <description lang="ca_ES">Spectrum és una visualització que mostra un analitzador d'espectre giratori en 3D renderitzat amb  que es mou al ritme de la música creant un efecte d'ona al llarg de la graella de l'espectre.[CR]També té opcions per ajustar l'alçada de la barra de l'espectre, la seva velocitat, i com es renderitzen les barres (sòlid, punts, malla de filferro) i és una visualització agradable i lleugera de baix ús de CPU que té un aspecte fantàstic</description>
-    <description lang="cs_CZ">Spectrum je vizualizace zobrazující rotující 3D spektrální analyzátor rendrovaný v , který se pohybuje v rytmu hudby a vytváří vlnový efekt napříč spektrální mřížkou.[CR]Obsahuje také nastavení pro přizpůsobení výšky sloupců spektra, rychlosti a způsobu vykreslení (vyplněný, body, drátový model). Je to velmi lehká vizualizace s nízkou zatíží CPU, která vypadá skvěle</description>
-    <description lang="da_DK">Spektrum er en visualisering, der viser en roterende 3D-spektrumanalysator renderet i DirectX, som bevæger sig i takt til musikken og skaber en bølgeeffekt på tværs af spektrumfeltet.[CR]Den har også indstillinger til at justere spektrumlinjens højde, fart og hvordan den bliver renderet (fast, punkter, trådramme). Det er en letvægtsvisualisering med lavt CPU-forbrug, som ser godt ud.</description>
-    <description lang="de_DE">Spectrum ist eine Visualisierung, die eine rotierende Spektrumanalyse in 3D zeigt. Die Visualisierung wird so gerendert, dass sie sich zum Takt der Musik bewegt und eine Welle über das Spektrumsgitter legt.[CR]Es lässt sich neben Höhe und Geschwindigkeit auch die Art der Balken (durchgehend, Punkte, Drahtgeflecht) einstellen. Eine schöne Visualisierung, die nur eine geringe CPU-Last erzeugt</description>
-    <description lang="el_GR">Το Spectrum είναι μία Οπτικοποίηση που εμφανίζει έναν περιστρεφόμενο τρισδιάστατο Αναλυτή Φάσματος που αποδίδεται μέσω  και κινείται στο ρυθμό της μουσικής δημιουργώντας ένα κυματικό εφέ κατά μήκος του φασματικού πλέγματος.[CR]Διαθέτει ρυθμίσεις για τον ορισμό του ύψους των στηλών του φάσματος, του τρόπου απόδοσης των στηλών (συμπαγείς, σημειακές, συρματόπλεγμα), και είναι μία ελαφριά, εμφανίσιμη και χαμηλής υπολογιστικής ισχύος οπτικοποίηση</description>
-    <description lang="en_GB">Spectrum is a Visualisation showing a rotating 3D Spectrum Analyzer rendered in  that moves to the beat of the music creating a wave effect across the spectrum grid.[CR]It also has settings to adjust the spectrum bar height, Its speed, and how the bars are rendered (solid, points, wire frame) and is a nice light weight, low cpu useage visualisation that looks great</description>
-    <description lang="es_AR">Spectrum es una visualización que muestra un analizador de espectro en 3D girando, renderizado con , que se mueve al ritmo de la música creando un efecto de onda en la rejilla del espectro.[CR]Se puede ajustar la altura de las barras, su velocidad, y como son renderizadas (sólido, puntos, malla). Es una visualización que utiliza poca CPU y muy agradable.</description>
-    <description lang="es_ES">Spectrum es una visualización que muestra un analizador de espectro en 3D girando renderizado con  que se mueve al ritmo de la música creando un efecto de onda en la rejilla del espectro.[CR]Se puede ajustar la altura de las barras, su velocidad, y como son renderizadas (sólido, puntos, malla). Es una visualización que utiliza poca CPU y muy agradable.</description>
-    <description lang="es_MX">Espectro es una Visualización que muestra un Analizador de Especto en 3D rotando renderizado en  que se mueve al ritmo de la música creando un efecto de onda a través del espectro de la red.[CR]También tiene configuraciones para ajustar la altura de la barra de espectro, su velocidad, y cómo las barras son renderizadas (sólidas, puntos, malla de alambre) y es una buena visualización liviana, de poco uso de cpu que se ve genial.</description>
-    <description lang="et_EE">Spectrum on visuaal, mis näitab 3D spektraalanalüüsi renderdatud 'is, mis liigub muusika rütmis luues laineefekti üle spektraalvõrgustiku.[CR]Lisaks on olemas ka võimalus seadistada spektri kõrgust, selle kiirust ja kuidas ribasid renderdatakse (tahkis, punktid, sõrestik).  Spectrum on hea väljanägemisega kerge ja vähese protsessorikasutusega visuaal.</description>
-    <description lang="fi_FI">Näyttää pyörivän 3D-spektrianalysaattorin, joka liikkuu musiikin tahdissa tuottaen aaltotehosteen spektriruudukkoon.[CR]Spektripalkin korkeus, nopeus ja piirtotapa (täytetyt, pisteet, ääriviivat) voidaan määrittää asetuksista. Spectrum on kevyt ja tyylikäs visualisointi.</description>
-    <description lang="fr_FR">Spectrum est une visualisation affichant un analyseur de spectre 3D en rotation, sous . Il réagit au rythme de la musique, créant un effet d'onde sur la grille du spectre.[CR]Il propose divers paramètres pour ajuster la hauteur, la vitesse, et le rendu des barres du spectre (plein, points, fil de fer). Une visualisation légère, peu gourmande en CPU et agréable à regarder.</description>
-    <description lang="gl_ES">Spectrum é unha Visualización que amosa un analizador de espectro virando en 3D renderizado con  que se move ó ritmo da música creando un efecto de onde ó longo da grella do espectro.[CR]Tamén ten opcións para axustar a altura da barra, a velocidade e como se renderizan as barras (sólidas, puntos, malla) do espectro. É bonito, lixeiro, de baixo custo en CPU.</description>
-    <description lang="he_IL">Spectrum זהו חיזוי אשר מציג סיבובי 3D Spectrum Analyzer אשר זז לצלילי המוזיקה שיוצר אפקט גלים לרוחב רשת הספקטרום.[CR]יש אפשרות גם להגדיר את גובה פס הספקטרום, את המהירות, ואת התנהגות הפסים (filled, points, wire frame) וזהו חיזוי נחמד קל משקל לא מעמיס על המעבד ונראה נהדר.</description>
-    <description lang="hr_HR">Spectrum je vizualizacija koja prikazuje rotirajući 3D spektralni analizator renderiran u -u koji se pokreće u ritmu muzike stvarajući efekt valova u spektralnoj mreži.[CR]Također sadrži i postavke za namještanje visine sprektralnih traka, njihove brzine, i načina na koji su prikazane (popunjeno, točke, žičani okvir). Vizualizacija izgleda sjajno te je malih memorijskih i CPU zahtjeva</description>
-    <description lang="hu_HU">Az Spectrum egy olyan vizualizáció ami egy 3D hang spektrum analizátort mutat  segítségével megjelenítve, ami a zene ritmusára mozog egy hullám-effektust képezve a teljes spektrumhálón.[CR]Beállítható a spektrum oszlopok magassága, mozgási sebessége és hogy az oszlopok hogyan jelenjenek meg (teli, pontok, drótváz). Ez egy kis erőforrásigényű vizualizáció ami nagyon jól mutat.</description>
-    <description lang="is_IS">Spectrum er myndskreyting sem sýnir þrívíddar rófgreini sem snýst sem er teiknaður í  og hreyfist í takt við tónlistina sem myndar bylgjuhreyfingu yfir rófið.[CR]Það er líka hægt að stilla hæð mælingana, hraða og hvernig þær eru teiknaðar (fyllt, punktar, útlínur) myndskrytingin setur lítið álag á örgjörva og lítur vel út</description>
-    <description lang="it_IT">Spectrum è una visualizzazione che mostra un analizzatore di spettro renderizzato in  che si muove a tempo di musica creando un effetto onda attraverso la griglia.[CR]E' possibile regolare varie impostazioni: l'altezza delle barre, la velocità di risposta e come le barre sono renderizzate (piene, con punti o con righe). E' una visualizzazione rilassante e con basso uso del processore.</description>
-    <description lang="ko_KR">스펙트럼은 회전하는 3D 스펙트럼 분석기를 통해 음악시각화를 보여주며 음악의 비트가 만들어내는 웨이브 효과를 스펙트럼 그리드에 보여줍니다. 설정에서 스펙트럼 바의 높이, 속도, 바의 갯수 (채워짐, 점, 와이어 프레임)를 지정할수 있습니다. 가볍고 CPU를 많이 사용하지 않습니다</description>
-    <description lang="lt_LT">Spektro vizualizacija, kurioje besisukantį 3D spektro analizatorių, priimtą , katras juda į muzikos ritmą, įsteigiantis bangų poveikį visame spektro tinklelyje.[CR]Taip pat turi nustatymus nureguliuoti spektro juostos aukštį, jos greitį, ir teikiamas kraštines (kieta, taškai, tinklelio rėmas) ir yra gražus bei lengvas, mažai naudoja CPU vizualizacijai, ir atrodo puikiai</description>
-    <description lang="mk_MK">Spectrum is a Visualisation showing a rotating 3D Spectrum Analyzer rendered in  that moves to the beat of the music creating a wave effect across the spectrum grid.⏎ It also has settings to adjust the spectrum bar height, Its speed, and how the bars are rendered (solid, points, wire frame) and is a nice light weight, low cpu useage visualisation that looks great</description>
-    <description lang="nb_NO">Spectrum er en visualisering som viser et roterende 3D ​​Spectrum Analyzer gjengitt i  som flytter til rytmen i musikken skaper en bølge effekt over hele spekteret rutenettet.⏎[CR]Det har også innstillinger for å justere spekterets bar høyde, hastighet, og hvordan barene gjengis (solid, punkt, wireframe) og er en fin lett vekt, lav cpu brukende visualisering som ser flott ut</description>
-    <description lang="nl_NL">Spectrum is een visualisatie met een draaiende 3D ​​Spectrum Analyzer gerenderd in . Deze visualisatie beweegt op het ritme van de muziek en creëert een golf effect over het hele spectrum. ⏎[CR]Het heeft instellingen om de barhoogte en de snelheid aan te passen, en hoe de staven worden weergegeven (vast, punten, draad frame) en is een mooie lichtgewicht visualisatie die weinig van de cpu vraagt en er geweldig uit ziet.</description>
-    <description lang="pl_PL">Spectrum to wizualizacja przedstawiająca obracający się renderowany analizator widma 3D, który porusza się w rytm muzyki, tworząc efekt fali w siatce widma. Zawiera również ustawienia umożliwiające dostosowanie wysokości paska widma, jego szybkości i sposobu renderowania (wypełniony, punktowy, szkieletowy). Jest ona ładną i lekką wizualizacją o niskim zużyciu procesora, która wygląda świetnie</description>
-    <description lang="pt_BR">O Spectrum é uma visualização que mostra um analisador espectral rotativo 3D, renderizado em , que se sincroniza com a batida, criando assim um efeito de ondas na grelha espectral.[CR]Pode-se definir a altura das barras, a sua velocidade e como são renderizadas (sólido, pontos ou contorno). É uma visualização que utiliza pouco o CPU e com um visual fantástico.</description>
-    <description lang="pt_PT">Spectrum é uma visualização que mostra um analisador espectral 3D rotativo, renderizado em , que se sincroniza com o ritmo da música, criando assim um efeito de ondas na grelha espectral.[CR]Pode-se definir a altura das barras, a sua velocidade e como são renderizadas (sólido, pontos ou contorno). É uma visualização que não utiliza muito CPU e tem um aspecto fantástico.</description>
-    <description lang="ro_RO">Spectrul  este o vizualizare care afișează un analizor de spectre 3D rotativ randat în  care se mișcă după bătăile muzicii creând un val dea-lungul grilei spectrale.[CR]De asemenea, are setări pentru ajustarea înălțimii bărilor spectrale, a vitezei, și a modului în care bările sunt randate (umplere, puncte, contur). Este o vizualizare cu consum redus al procesorului care arată fantastic de bine.</description>
-    <description lang="ru_RU">Эта визуализация на основе  показывает вращающийся трёхмерный анализатор спектра, который движется в такт музыке, создавая эффект волны по всему спектру сетки.⏎[CR]Визуализация имеет настройки для регулировки высоты полос спектра, скорости движения и способа отображения полос (сплошной, точки, каркас), а также обладает небольшим размером и малой нагрузкой на процессор.</description>
-    <description lang="sk_SK">Spectrum je vizualizácia zobrazujúca rotujúci 3D spektrálny analyzátor vykresľovaný pomocou , ktorý sa hýbe v rytme hudby a tak vytvára vlny naprieč mriežkou spektra.[CR][CR]Zároveň má nastavenia upravujúce výšku stĺpcov spektra, ich rýchlosť a ako sú vykresľované (vyplnené, body, drôtový model). Je to jednoduchá vizualizácia s nízkou záťažou CPU, ktorá výborne vyzerá.</description>
-    <description lang="sl_SI">Spectrum je vizualizacija, ki prikazuje vrtečo 3D spektralno analizato, generirano v , ki se premika v ritmu glasbe in ustvarja učinek valovanja v celotnem spektru. Vsebuje tudi nastavitve za prilagoditev višine spektra, hitrosti in oblike (polno, točke, okvir) ter je varčna vizualizacija z nizka porabo CPU-ja, ki izgleda super.</description>
-    <description lang="sv_SE">Spektrum är en visualisering som visar en roterande 3D-spektrumanalysator renderad i . Den rör sig till musikens takt och skapar en vågeffekt över spektrat.[CR]-spektrum har inställningar för att justera staplarnas höjd, deras hastighet, hur de ska visas (solida, punkter, ramverk) och är en visualisering med låg cpu-användning samtidigt som den ser bra ut</description>
-    <description lang="th_TH">Spectrum เป็น การแสดงแสงสี ทำให้เห็นการหมุนกราฟวิเคราะห์คลื่นความถี่เสียง แบบ 3 มิติ ที่สร้างขึ้นโดย  ที่ขยับไปตามจังหวะของเพลงที่สร้างผลกระทบเป็นคลื่นไปทั่วตารางความถี่.[CR]นอกจากนี้ยังมีการตั้งค่าเพื่อปรับความสูงของแท่งคลื่นความถี่,ความเร็วและกระบวนการที่แท่งแสดงผล (ของแข็ง, จุด, โครงลวด) ทั้งยังใช้ทรัพยากรน้อยได้ดี, การแสดงแสงสี ที่ใช้ซีพียูต่ำนั่นก็ดูยอดเยี่ยมทีเดียว</description>
-    <description lang="uk_UA">Spectrum є візуалізацією, яка показує 3D аналізатор спектра, що обертається та промальовується з використанням технології  . Аналізатор спектра показує стовпчики змінної висоти, котрі рухаються в такт з музикою і створюють ефект подібний до хвилі.[CR]Ви маєте можливість налаштувати висоту стовпчиків, їх швидкість і те як вони намальовані (заповнені, контури, крапки). Це досить проста і невимоглива до процесора візуалізація, але яка має чудовий вигляд</description>
-    <description lang="zh_CN">光谱是显示旋转3D频谱分析器的可视化图像，在  随着音乐的节拍移动，在整个频谱网格上产生波动效果。[CR]它也有设置来调整光谱条的高度、速度以及条的渲染方式(实线、点、线框)，是一个很好的轻量级、低CPU使用的可视化效果，看起来很棒</description>
-    <description lang="zh_TW">Spectrum 是使用  描繪顯示旋轉的3D頻譜分析視覺效果，頻譜格線隨著音樂節拍而像波浪起伏。[CR]它還可以調整頻譜長條的高度、速度以及呈現效果（實心、點狀、線框）。它是個很好的輕量級、低 CPU 使用率的視覺化效果</description>
-  </extension>
 </addon></addons>

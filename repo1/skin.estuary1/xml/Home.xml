@@ -757,10 +757,10 @@
 				</include>
 				<control type="fixedlist" id="9000">
 					<left>0</left>
-					<top>240</top>
+					<top>140</top>
 					<width>462</width>
 					<bottom>-10</bottom>
-					<movement>7</movement>
+					<movement>8</movement>
 					<focusposition>0</focusposition>
 					<onfocus>ClearProperty(listposition,home)</onfocus>
 					<onright>SetFocus($INFO[Container(9000).ListItem.Property(menu_id)])</onright>
@@ -950,7 +950,7 @@
 					<left>-8</left>
 					<width>480</width>
 					<height>110</height>
-					<top>100</top>
+					<top>10</top>
 					<onup>SetFocus(9000,99,absolute)</onup>
 					<ondown>SetFocus(9000,0,absolute)</ondown>
 					<onright>2000</onright>
@@ -1018,7 +1018,7 @@
 				<animation effect="slide" end="0,-90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
 				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-				<top>30</top>
+				<top>00</top>
 				<left>90</left>
 				<control type="image">
 					<left>40</left>
@@ -1026,7 +1026,7 @@
 					<aspectratio>keep</aspectratio>
 					<width>192</width>
 					<height>36</height>
-					<texture>icons/logo-text.png</texture>
+					<texture>icons/log</texture>
 				</control>
 			</control>
 		</control>
