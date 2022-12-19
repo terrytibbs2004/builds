@@ -1,189 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<addons><addon id="game.controller.default" name="Default Controller" version="1.0.31" provider-name="Team Kodi">
-    <extension point="kodi.game.controller" library="resources/layout.xml" />
-    <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
-        <assets>
-            <icon>resources/icon.png</icon>
-        </assets>
-        <summary lang="be_BY">Прадвызначаны кантролер</summary>
-        <summary lang="bs_BA">Zadani Džojstik</summary>
-        <summary lang="ca_ES">Comandament per defecte</summary>
-        <summary lang="cs_CZ">Výchozí ovladač</summary>
-        <summary lang="da_DK">Standard controller</summary>
-        <summary lang="de_DE">Standard-Controller</summary>
-        <summary lang="en_GB">Default Controller</summary>
-        <summary lang="es_ES">Mando por defecto</summary>
-        <summary lang="es_MX">Mando por defecto</summary>
-        <summary lang="fa_IR">دستهٔ پیش‌گزیده</summary>
-        <summary lang="fi_FI">Oletusohjain</summary>
-        <summary lang="fr_FR">Manette par défaut</summary>
-        <summary lang="he_IL">בקר בררת מחדל</summary>
-        <summary lang="hr_HR">Zadani upravljački uređaj</summary>
-        <summary lang="hu_HU">Alap kontroller</summary>
-        <summary lang="id_ID">Kontrol Bawaan</summary>
-        <summary lang="is_IS">Sjálfgefin stýring</summary>
-        <summary lang="ko_KR">기본 콘트롤러</summary>
-        <summary lang="lt_LT">Numatytasis valdiklis</summary>
-        <summary lang="nl_NL">Standaard Controller</summary>
-        <summary lang="oc_FR">Contrarotlaire per defaut</summary>
-        <summary lang="pl_PL">Kontroler domyślny</summary>
-        <summary lang="pt_BR">Controlador Padrão</summary>
-        <summary lang="ru_RU">Стандартный контроллер</summary>
-        <summary lang="sk_SK">Predvolený Ovládač</summary>
-        <summary lang="sv_SE">Standard handkontroll</summary>
-        <summary lang="tr_TR">Varsayılan Denetimci</summary>
-        <summary lang="zh_CN">默认控制器</summary>
-        <summary lang="zh_TW">預設控制器</summary>
-        <description lang="be_BY">Прадвызначаны кантролер на аснове кантролера Xbox 360.</description>
-        <description lang="bs_BA">Zadani džojstik za medijski centar je baziran na Xbox 360 džojstik.</description>
-        <description lang="ca_ES">El comandament predeterminat del centre multimèdia es basa en el comandament d'Xbox 360.</description>
-        <description lang="cs_CZ">Výchozí ovladač multimediálního centra je založen na ovladači Xbox 360.</description>
-        <description lang="da_DK">Mediecentrets standardcontroller er baseret på Xbox 360-controlleren.</description>
-        <description lang="de_DE">Der Standard-Mediacenter-Controller basiert auf dem Xbox 360 Controller.</description>
-        <description lang="en_GB">The default media center controller is based on the Xbox 360 controller.</description>
-        <description lang="es_ES">El mando por defecto del media center está basado en el mando de Xbox 360.</description>
-        <description lang="es_MX">El mando por defecto de Kodi se basa en el control de Xbox 360.</description>
-        <description lang="fa_IR">دستهٔ پیش‌گزیدهٔ مرکز رسانه، بر پایهٔ دستهٔ اکس‌باکس ۳۶۰ است.</description>
-        <description lang="fi_FI">Mediakeskuksen oletusohjain perustuu Xbox 360 -ohjaimeen.</description>
-        <description lang="fr_FR">La manette par défaut du centre multimedia est basée sur la manette de la Xbox 360.</description>
-        <description lang="he_IL">בקר בררת המחדל של מרכז המדיה מבוסס על הבקר של Xbox 360.</description>
-        <description lang="hr_HR">Zadani upravljač medijskog centra temelji se na Xbox 360 upravljačkom uređaju.</description>
-        <description lang="hu_HU">Az alapértelmezett médiaközpont -vezérlő az Xbox 360 vezérlőn alapul.</description>
-        <description lang="id_ID">Pengontrol pusat media default didasarkan pada pengontrol Xbox 360.</description>
-        <description lang="is_IS">Sjálfgefin stýring margmiðlunarmiðstöðvar er byggð á Xbox 360 stýringunni.</description>
-        <description lang="ko_KR">기본 미디어 센터 컨트롤러는 Xbox 360 컨트롤러를 기반으로 합니다.</description>
-        <description lang="lt_LT">Numatytasis media centro valdiklis yra paremtas Xbox 360 valdikliu.</description>
-        <description lang="nl_NL">De standaard media centrum controller is gebaseerd op de Xbox 360 controller.</description>
-        <description lang="pl_PL">Domyślny kontroler centrum multimedialnego jest oparty na kontrolerze Xbox 360.</description>
-        <description lang="pt_BR">O controlador do media center padrão é baseado no controlador do Xbox 360.</description>
-        <description lang="ru_RU">Стандартный контроллер, основанный на контроллере Xbox 360.</description>
-        <description lang="sk_SK">Predvolený ovládač media centra je založený na ovládači Xbox 360.</description>
-        <description lang="tr_TR">Varsayılan ortam merkezi denetimcisi, Xbox 360 denetimcisini temel alır.</description>
-        <description lang="zh_CN">默认媒体中心控制器基于 Xbox 360 控制器。</description>
-        <description lang="zh_TW">預設的媒體中心控制器佈局是以Xbox 360控制器為基礎。</description>
-        <disclaimer lang="be_BY">Крыніца выяў: Wikipedia (wikipedia.org)</disclaimer>
-        <disclaimer lang="bs_BA">Zasluga za sliku: Wikipedia (wikipedia.org)</disclaimer>
-        <disclaimer lang="ca_ES">Crèdit de la imatge: Wikipedia (wikipedia.org)</disclaimer>
-        <disclaimer lang="cs_CZ">Zásluhy obrázku: Wikipedie (wikipedia.org)</disclaimer>
-        <disclaimer lang="da_DK">Kildeangivelse: Wikipedia (wikipedia.org)</disclaimer>
-        <disclaimer lang="de_DE">Bildnachweis: Wikipedia (wikipedia.org)</disclaimer>
-        <disclaimer lang="en_GB">Image credit: Wikipedia (wikipedia.org)</disclaimer>
-        <disclaimer lang="es_ES">Crédito de la imagen: Wikipedia (wikipedia.org)</disclaimer>
-        <disclaimer lang="es_MX">Crédito de la imagen: Wikipedia (wikipedia.org)</disclaimer>
-        <disclaimer lang="fa_IR">اعتبار تصویر: ویکی‌پدیا (wikipedia.org)</disclaimer>
-        <disclaimer lang="fi_FI">Kuvan lähde: Wikipedia (wikipedia.org)</disclaimer>
-        <disclaimer lang="fr_FR">Crédit Image : Wikipédia (wikipedia.org)</disclaimer>
-        <disclaimer lang="he_IL">זכויות על התמונה: ויקיפדיה (wikipedia.org)</disclaimer>
-        <disclaimer lang="hr_HR">Izvor slike: Wikipedia (wikipedia.org)</disclaimer>
-        <disclaimer lang="hu_HU">Kép credit: Wikipedia (wikipedia.org)</disclaimer>
-        <disclaimer lang="id_ID">Sumber gambar: Wikipedia (wikipedia.org)</disclaimer>
-        <disclaimer lang="is_IS">Mynd frá: Wikipedia (wikipedia.org)</disclaimer>
-        <disclaimer lang="ko_KR">이미지 제공: Wikipedia(wikipedia.org)</disclaimer>
-        <disclaimer lang="lt_LT">Atvaizdo šaltinis: Wikipedia (wikipedia.org)</disclaimer>
-        <disclaimer lang="nl_NL">Bron afbeelding: Wikipedia (wikipedia.org)</disclaimer>
-        <disclaimer lang="oc_FR">Crèdit imatge : Wikipedia (wikipedia.org)</disclaimer>
-        <disclaimer lang="pl_PL">Pochodzenie obrazu: Wikipedia (wikipedia.org)</disclaimer>
-        <disclaimer lang="pt_BR">Crédito da imagem: Wikipedia (wikipedia.org)</disclaimer>
-        <disclaimer lang="ru_RU">Источник изображения: Wikipedia (wikipedia.org)</disclaimer>
-        <disclaimer lang="sk_SK">Zdroj obrázku: Wikipedia (wikipedia.org)</disclaimer>
-        <disclaimer lang="tr_TR">Görsel kaynağı: Vikipedi (wikipedia.org)</disclaimer>
-        <disclaimer lang="zh_CN">图片来源：维基百科（Wikipedia.org）</disclaimer>
-        <disclaimer lang="zh_TW">圖片來源：維基百科 (wikipedia.org)</disclaimer>
-    </extension>
-</addon><addon id="game.controller.snes" name="SNES Controller" version="1.0.30" provider-name="Team Kodi">
-    <extension point="kodi.game.controller" library="resources/layout.xml" />
-    <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
-        <assets>
-            <icon>resources/icon.png</icon>
-        </assets>
-        <summary lang="be_BY">Кантролер SNES</summary>
-        <summary lang="bs_BA">Super Nintendo Džojstik</summary>
-        <summary lang="ca_ES">Comandament SNES</summary>
-        <summary lang="cs_CZ">Ovladač SNES</summary>
-        <summary lang="da_DK">SNES controller</summary>
-        <summary lang="de_DE">SNES-Controller</summary>
-        <summary lang="en_GB">SNES controller</summary>
-        <summary lang="es_ES">Mando SNES</summary>
-        <summary lang="es_MX">Control de SNES</summary>
-        <summary lang="fa_IR">دستهٔ SNES</summary>
-        <summary lang="fi_FI">SNES-ohjain</summary>
-        <summary lang="fr_FR">Manette Super Nintendo</summary>
-        <summary lang="he_IL">בקר SNES</summary>
-        <summary lang="hr_HR">SNES upravljački uređaj</summary>
-        <summary lang="hu_HU">SNES kontroller</summary>
-        <summary lang="id_ID">Kontrol SNES</summary>
-        <summary lang="is_IS">SNES-stýring</summary>
-        <summary lang="ko_KR">SNES 컨트롤러</summary>
-        <summary lang="lt_LT">SNES valdiklis</summary>
-        <summary lang="nl_NL">SNES controller</summary>
-        <summary lang="pl_PL">Kontroler SNES</summary>
-        <summary lang="pt_BR">Controlador SNES</summary>
-        <summary lang="ru_RU">SNES контроллер</summary>
-        <summary lang="sk_SK">SNES controller</summary>
-        <summary lang="sv_SE">SNES handkontroll</summary>
-        <summary lang="tr_TR">SNES denetimcisi</summary>
-        <summary lang="zh_CN">SNES 控制器</summary>
-        <summary lang="zh_TW">SNES控制器</summary>
-        <description lang="be_BY">SNES (таксама вядомая як Super NES або Super Nintendo) - 16-бітавая гульнявая кансоль, выпушчаная ў 1990. Па ўзоры яе кантролераў ствараліся кантролеры для PlayStation, Dreamcast, Xbox і Wii Classic.</description>
-        <description lang="bs_BA">Super Nintendo (također poznat kao Super NES ili SNES) je 16-bitna konzola objavljena 1990-te godine. Dizajn džojstika poslužio je kao inspiracija za PlayStation, Dreamcast, Xbox i Wii Classic džojstike.</description>
-        <description lang="ca_ES">La SNES (també coneguda com Super NES o Super Nintendo) és una consola de 16 bits llançada el 1990. El disseny del comandament va servir d'inspiració per als comandaments de PlayStation, Dreamcast, Xbox i Wii Classic.</description>
-        <description lang="cs_CZ">SNES (taky známé jako Super NES nebo Super Nintendo) je 16 bitová konzole vydaná v roce 1990. Návrh ovladače posloužil jako inspirace pro PlayStation, Dreamcast, Xbox a Wii Classic.</description>
-        <description lang="da_DK">SNES (også kendt som Super NES eller Super Nintendo) er en 16-bit konsol udgivet i 1990. Controllerdesignet fungerede som inspiration til PlayStation-, Dreamcast-, Xbox- og Wii Classic-controllere.</description>
-        <description lang="de_DE">SNES (auch bekannt als Super NES oder Super Nintendo) ist eine 1990 veröffentlichte 16-bit Konsole. Das Controller-Design diente als Inspiration für die Controller von Playstation, Dreamcast, Xbox und Wii Classic.</description>
-        <description lang="en_GB">The SNES (akso known as Super NES or Super Nintendo) is a 16-bit console released in 1990. The controller design served as inspiration for the PlayStation, Dreamcast, Xbox and Wii Classic controllers.</description>
-        <description lang="es_ES">La SNES (tambiíen conocida como Super NES o Super Nintendo) es una consola de 16-bit lanzada en 1990. El diseño de su mando sirvió de inspiracion para la PlayStation, Dreamcast, Xbox y los Mandos Clásicos de Wii.</description>
-        <description lang="es_MX">La SNES (también conocida como Super NES o Super Nintendo) es una consola de 16-bit lanzada en 1990. El diseño del control sirvió como inspiración para los controles de PlayStation, Dreamcast, Xbox, y de la Wii Classic.</description>
-        <description lang="fa_IR">اس‌نس (SNES که به نام‌های سوپر NES و سوپر نینتندو هم شناخته می‌شود) کنسولی ۱۶بیتی است که در ۱۳۶۷ ارائه شد. طرّاحی دسته‌اش، الهامی برای دسته‌های پلی‌استیشن، دریم‌کست، اکس‌باکس و وی بود.</description>
-        <description lang="fi_FI">SNES (tunnetaan myös nimillä Super NES ja Super Nintendo) on 16-bittinen konsoli, joka julkaistiin vuonna 1990. Sen ohjaimen suunnittelu toimi inspiraationa PlayStation-, Dreamcast-, Xbox- ja Wii Classic -ohjaimille.</description>
-        <description lang="fr_FR">La SNES (connue aussi sous le nom de Super NES ou Super Nintendo) est une console 16 bit sortie en 1990. Le dessin de la manette a servi d'inspiration pour les manettes de la PlayStation, la Dreamcast, la Xbox and la Wii Classic.</description>
-        <description lang="he_IL">SNES (ידוע גם בשם סופר NES או סופר נינטנדו) היא מערכת משחקים ב־16 סיביות שיצאה לאור ב־1990. עיצוב הבקר שימש השראה לבקרים של PlayStation,‏ Dreamcast,‏ Xbox ו־Wii Classic.</description>
-        <description lang="hr_HR">SNES (poznat kao i Super NES ili Super Nintendo) je 16-bitna konzola iz 1990. Dizajn upravljačkog uređaja poslužio je kao inspiracija za PlayStation, Dreamcast, Xbox i Wii Classic upravljačke uređaje.</description>
-        <description lang="hu_HU">A SNES (más néven Super NES vagy Super Nintendo) egy 1990-ben kiadott 16 bites konzol. A vezérlő kialakítása inspirációt jelentett a PlayStation, a Dreamcast, az Xbox és a Wii Classic vezérlőkhöz.</description>
-        <description lang="id_ID">SNES (juga dikenal sebagai Super NES atau Super Nintendo) adalah konsol 16-bit yang dirilis pada tahun 1990. Desain pengontrol berfungsi sebagai inspirasi untuk pengontrol PlayStation, Dreamcast, Xbox, dan Wii Classic.</description>
-        <description lang="is_IS">SNES-stýringin (einnig þekkt sem Super NES eða Super Nintendo) er 16-bita leikjastýring frá 1990. Hönnun stýringarinnar var innblástur fyrir leikjastýringar PlayStation, Dreamcast, Xbox og Wii Classic.</description>
-        <description lang="ko_KR">SNES(Super NES 또는 슈퍼 닌텐도라고도 함)는 1990년에 출시된 16비트 콘솔입니다. 컨트롤러 디자인은 PlayStation, Dreamcast, Xbox 및 Wii 클래식 컨트롤러에 영감을 주었습니다.</description>
-        <description lang="lt_LT">SNES (taip pat žinomas kaip Super NES arba Super Nintendo) yra 16 bitų konsolė, išleista 1990 m. Valdiklio dizainas įkvėpė PlayStation, Dreamcast, Xbox ir Wii Classic valdiklius.</description>
-        <description lang="nl_NL">De SNES (ook bekend als de Super NES of Super Nintendo) is een 16-bit console uit 1990. Het controller ontwerp heeft gediend als inspiratie voor de PlayStations, Dreamcast, Xbox en Wii controllers.</description>
-        <description lang="pl_PL">SNES (znana również jako Super NES lub Super Nintendo) to 16-bitowa konsola wydana w 1990 roku. Wzór kontrolera był inspiracją dla kontrolerów PlayStation, Dreamcast, Xbox i Wii Classic.</description>
-        <description lang="pt_BR">O SNES (também conhecido como Super NES ou Super Nintendo) é um console de 16 bits lançado em 1990. O design do controlador serviu de inspiração para os controles PlayStation, Dreamcast, Xbox e Wii Classic.</description>
-        <description lang="ru_RU">SNES (также известная как Super NES или Super Nintendo) - 16-битная консоль, выпущенная в 1990 году. Дизайн контроллера послужил источником вдохновения для контроллеров PlayStation, Dreamcast, Xbox и Wii Classic.</description>
-        <description lang="sk_SK">SNES (tiež známy ako Super NES alebo Super Nintendo) je 16-bitová konzola vydaná v roku 1990. Dizajn ovládača slúžil ako inšpirácia pre ovládače PlayStation, Dreamcast, Xbox a Wii Classic.</description>
-        <description lang="sv_SE">SNES (även känd som Super NES eller Super Nintendo) är en 16-bitars konsol som släpptes 1990. kontrolldesignen fungerade som inspiration för handkontrollerna till PlayStation, Dreamcast, Xbox och Wii Classic.</description>
-        <description lang="tr_TR">SNES (Super NES veya Super Nintendo olarak da bilinir), 1990 yılında yayımlanan 16 bit bir konsoldur. Konsol denetimcisi, PlayStation, Dreamcast, Xbox ve Wii Classic denetimcileri için bir esin kaynağı olarak kabul edilmektedir.</description>
-        <description lang="zh_CN">SNES（又名超级 NES 或超级任天堂）是1990年发布的16位游戏主机。其手柄设计为 PlayStation、Dreamcast、Xbox 和 Wii 经典手柄提供了灵感。</description>
-        <description lang="zh_TW">SNES(又名超任)是在1990發表的16位元遊戲主機。該機型的控制器設計思路啟發了後繼的PS、DC、Xbox及Wii等主機。</description>
-        <disclaimer lang="be_BY">Крыніца выяў: OpenEmu (openemu.org)</disclaimer>
-        <disclaimer lang="bs_BA">Zasluga za sliku: OpenEmu (openemu.org)</disclaimer>
-        <disclaimer lang="ca_ES">Crèdit de la imatge: OpenEmu (openemu.org)</disclaimer>
-        <disclaimer lang="cs_CZ">Zásluhy obrázku: OpenEmu (openemu.org)</disclaimer>
-        <disclaimer lang="da_DK">Kildeangivelse: OpenEmu (openemu.org)</disclaimer>
-        <disclaimer lang="de_DE">Bildnachweis: OpenEmu (openemu.org)</disclaimer>
-        <disclaimer lang="en_GB">Image credit: OpenEmu (openemu.org)</disclaimer>
-        <disclaimer lang="es_ES">Crédito de la imagen: OpenEmu (openemu.org)</disclaimer>
-        <disclaimer lang="es_MX">Créditos de la imagen: OpenEmu (openemu.org)</disclaimer>
-        <disclaimer lang="fa_IR">اعتبار تصویر: openemu.org</disclaimer>
-        <disclaimer lang="fi_FI">Kuvan lähde: OpenEmu (openemu.org)</disclaimer>
-        <disclaimer lang="fr_FR">Crédit Image : OpenEmu (openemu.org)</disclaimer>
-        <disclaimer lang="he_IL">זכויות על התמונה: OpenEmu (openemu.org)</disclaimer>
-        <disclaimer lang="hr_HR">Izvor slike: OpenEmu (openemu.org)</disclaimer>
-        <disclaimer lang="hu_HU">Kép credit: OpenEmu (openemu.org)</disclaimer>
-        <disclaimer lang="id_ID">Sumber gambar: OpenEmu (openemu.org)</disclaimer>
-        <disclaimer lang="is_IS">Mynd frá: OpenEmu (openemu.org)</disclaimer>
-        <disclaimer lang="ko_KR">이미지 제공: OpenEmu(openemu.org)</disclaimer>
-        <disclaimer lang="lt_LT">Atvaizdo šaltinis: OpenEmu (openemu.org)</disclaimer>
-        <disclaimer lang="nl_NL">Bron afbeelding: OpenEmu (openemu.org)</disclaimer>
-        <disclaimer lang="oc_FR">Crèdit imatge : OpenEmu (openemu.org)</disclaimer>
-        <disclaimer lang="pl_PL">Pochodzenie obrazu: OpenEmu (openemu.org)</disclaimer>
-        <disclaimer lang="pt_BR">Crédito da imagem: OpenEmu (openemu.org)</disclaimer>
-        <disclaimer lang="ru_RU">Источник изображения : OpenEmu (openemu.org)</disclaimer>
-        <disclaimer lang="sk_SK">Zdroj obrázka: OpenEmu (openemu.org)</disclaimer>
-        <disclaimer lang="tr_TR">Görsel kaynağı: OpenEmu (openemu.org)</disclaimer>
-        <disclaimer lang="zh_CN">图片来源：OpenEmu（openemu.org）</disclaimer>
-        <disclaimer lang="zh_TW">圖片來源：OpenEmu (openemu.org)</disclaimer>
-    </extension>
-</addon><addon id="metadata.album.universal" name="Universal Album Scraper" version="3.1.9" provider-name="Olympia, Team Kodi">
+<addons><addon id="metadata.album.universal" name="Universal Album Scraper" version="3.1.9" provider-name="Olympia, Team Kodi">
   <requires>
     <import addon="xbmc.metadata" version="2.1.0" />
     <import addon="metadata.common.allmusic.com" version="3.1.0" />
@@ -714,19 +530,15 @@ v1.6.0 (2021-12-24) - v1.6.1 (2022-01-09)
         <icon>icon.png</icon>
     </assets>
   </extension>
-</addon><addon id="metadata.tvshows.themoviedb.org.python" name="TMDb TV Shows" version="1.4.16" provider-name="Team Kodi">
+</addon><addon id="metadata.tvshows.themoviedb.org.python" name="TMDb TV Shows" version="1.4.17" provider-name="Team Kodi">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="xbmc.metadata" version="2.1.0" />
   </requires>
   <extension point="xbmc.metadata.scraper.tvshows" library="main.py" cachepersistence="00:15" />
   <extension point="xbmc.addon.metadata">
-    <news>1.4.16
-fix for cast list in episodes
-properly classify TMDb logos as clearlogos
-filter out SVG files
-fix for scraper ignoring NFO files with TVDB artwork URL
-updated language files
+    <news>1.4.17
+update to support new episode guide JSON format
 	</news>
     <platform>all</platform>
     <license>GPL-3.0-or-later</license>
@@ -751,6 +563,7 @@ updated language files
     <summary lang="is_IS">Sækja lýsigögn sjónvarpsþátta frá themoviedb.org</summary>
     <summary lang="it_IT">Recupera i metadati dei programmi TV da themovedb.org</summary>
     <summary lang="ko_KR">themoviedb.org에서 TV쇼 메타데이터를 가져옵니다</summary>
+    <summary lang="nl_NL">Haal metadata van tv-programma's op van themoviedb.org</summary>
     <summary lang="pl_PL">Pobieraj metadane programów telewizyjnch z themoviedb.org</summary>
     <summary lang="pt_BR">Obter metadados de Séries em themoviedb.org</summary>
     <summary lang="ru_RU">Получение метаданных о сериалах с сайта themoviedb.org</summary>
@@ -772,6 +585,7 @@ updated language files
     <description lang="is_IS">The Movie Database (TMDb) er samfélagslegur gagnagrunnur kvikmynda- og sjónvarpsefnis. Hver einasti gagnabútur hefur verið settur inn af frábærum liðsmönnum okkar allar götur síðan 2008. Mikil alþjóðleg áhersla TMDb ásamt breiðu sviði gagna sést óvíða og er eitthvað sem við erum ótrúlega stolt af. Sett fram á einfaldan máta, við lifum og hrærumst í þessu samfélagi og það er nákvæmlega þess vegna sem við erum öðruvísi.</description>
     <description lang="it_IT">Il Movie Database (TMDb) è un database di film e TV creato dalla comunità. Ogni dato è stato aggiunto dalla nostra straordinaria comunità che risale al 2008. La forte attenzione internazionale e l'ampiezza dei dati di TMDb sono in gran parte impareggiabili e qualcosa di cui siamo incredibilmente orgogliosi. In parole povere, viviamo e respiriamo in comunità ed è proprio questo che ci rende diversi.</description>
     <description lang="ko_KR">The Movie Database (TMDb)는 영화와 TV 데이터베이스를 구축한 커뮤니티입니다. 모든 자료들은 우리 놀라운 커뮤니티에서 2008년부터 추가돼 온 것들입니다. TMDb의 강력한 국제적 초점과 광범위한 데이터는 타의 추종을 불허하며 우리가 자랑스러워하는 점입니다. 간단히 말해, 우리는 커뮤니티와 살고 호흡하며 그것이 우리가 다른 점입니다.</description>
+    <description lang="nl_NL">De Movie Database (TMDb) is een door de gemeenschap gebouwde film- en tv-database. Elk stukje data is toegevoegd door onze geweldige community die teruggaat tot 2008. TMDb's sterke internationale focus en brede waaier aan data is grotendeels ongeëvenaard en iets waar we ongelooflijk trots op zijn. Simpel gezegd, we leven en ademen gemeenschap en dat is precies wat ons anders maakt.</description>
     <description lang="pl_PL">The Movie Database (TMDb) to baza filmów i programów telewizyjnych zbudowana przez społeczność. Każdy element danych został dodany przez naszą niesamowitą społeczność od 2008 roku. Silna międzynarodowa koncentracja TMDb i zakres danych są w dużej mierze niezrównane i jesteśmy z tego niesamowicie dumni. Mówiąc prościej, żyjemy i oddychamy wspólnotą i właśnie to nas wyróżnia.</description>
     <description lang="pt_BR">The Movie Database (TMDb) é um banco de dados de filmes e séries criado pela comunidade. Cada um dos pedaços de dados foram adicionados por nossa incrível comunidade desde 2008. O forte foco internacional e a amplitude de dados do TMDb são incomparáveis, algo do qual temos muito orgulho. Resumindo, vivemos e respiramos comunidade e é precisamente isso que nos torna diferentes.</description>
     <description lang="ru_RU">The Movie Database (TMDb) - это база данных фильмов и сериалов, созданная сообществом. Все данные были добавлены нашим замечательным сообществом, начиная с 2008 года. Международная направленность и широта данных TMDb во многом не имеют себе равных, и это то, чем мы невероятно гордимся. Проще говоря, мы живём и дышим сообществом, и именно это отличает нас от других.</description>
@@ -916,28 +730,6 @@ updated language files
 				<screenshot />
 		</assets>
 	</extension>
-</addon><addon id="plugin.video.Rising.Tides" name="[COLOR red][B]R[/B][/COLOR][COLOR white][B]ising[/B][/COLOR] [COLOR pink][B]T[/B][/COLOR][COLOR white][B]ides[/B][/COLOR]" version="2.0.0" provider-name="[COLOR turquoise][B]mullafabz[/B][/COLOR]">
-  <requires>
-  <import addon="xbmc.python" version="3.0.0" />
-  <import addon="script.module.beautifulsoup4" />
-  <import addon="script.module.requests" />
-  <import addon="script.module.httplib2" />
-  <import addon="inputstream.adaptive" />
-  <import addon="script.module.resolveurl" optional="false" />
-  
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">Watch many sports and events from the world</summary>
-    <description lang="en">I don't have any affiliation with the content provider nor KODI.Content freely available on the internet.More info [COLOR lime][B]@mullafabz[/B][/COLOR] on Twitter</description>
-    <platform>all</platform>
-    <assets>
-      <icon>icon.png</icon>
-      <fanart>fanart.jpg</fanart>
-    </assets>
-  </extension>
 </addon><addon id="plugin.video.magicdragon" name="Magic Dragon" provider-name="tomb raider" version="3.1.5">
     <requires>
 	    <import addon="script.module.six" version="0.0.1" />
@@ -1059,7 +851,7 @@ updated language files
 - See Changelog on Tools menu
         </news>
     </extension>
-</addon><addon id="plugin.video.youtube" name="YouTube" version="6.8.20+matrix.1" provider-name="anxdpanic, bromix">
+</addon><addon id="plugin.video.youtube" name="YouTube" version="6.8.23+matrix.1" provider-name="anxdpanic, bromix">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="script.module.six" version="1.11.0" />
@@ -1073,10 +865,7 @@ updated language files
   <extension point="xbmc.python.module" library="resources/lib/" />
   <extension point="xbmc.addon.metadata">
     <news>
-[fix] /uri2addon/ endpoint for playback of youtube.com urls
-[fix] Don't assume addon is installed in home directory |contrib: jfly|
-[fix] Subtitle language names
-[lang] translation updates from Weblate
+[revert] subscription groups/tags - causing breaking issues
         </news>
     <assets>
       <icon>icon.png</icon>
@@ -1260,34 +1049,16 @@ updated language files
         <description>This repository contains Greek, Spanish and other addons!Read first each addon's description!</description>
         <platform>all</platform>
     </extension>
-</addon><addon id="repository.terrytibbs" name="Terrys 19 repo" version="1" provider-name="Terry Tibbs">
+</addon><addon id="repository.terrytibbs" name="Terrys 19 New Repo" version="1.01" provider-name="Terry Tibbs">
     <extension point="xbmc.addon.repository" name="Terrys 19 Repository">
         <dir>
-            <info compressed="false">https://githubraw.com/terrytibbs2004/builds/main/repo/zips/addons.xml</info>
-            <checksum>https://githubraw.com/terrytibbs2004/builds/main/repo/zips/addons.xml.md5</checksum>
-            <datadir zip="true">https://githubraw.com/terrytibbs2004/builds/main/repo/zips/</datadir>
+            <info compressed="false">https://githubraw.com/terrytibbs2004/builds/main/repo1/zips/addons.xml</info>
+            <checksum>https://githubraw.com/terrytibbs2004/builds/main/repo1/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://githubraw.com/terrytibbs2004/builds/main/repo1/zips/</datadir>
         </dir>
     </extension>
     <extension point="xbmc.addon.metadata">
-        <summary>Terry Tibbs Repo</summary>
-        <description />
-        <disclaimer />
-        <platform>all</platform>
-        <assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.jpg</fanart>
-        </assets>
-    </extension>
-</addon><addon id="repository.terrytibbs3" name="Terrys FREE repo" version="1.0" provider-name="Terry Tibbs">
-    <extension point="xbmc.addon.repository" name="Terrys 19 Repository">
-        <dir>
-            <info compressed="false">https://githubraw.com/terrytibbs2004/builds/main/repo3/zips/addons.xml</info>
-            <checksum>https://githubraw.com/terrytibbs2004/builds/main/repo3/zips/addons.xml.md5</checksum>
-            <datadir zip="true">https://githubraw.com/terrytibbs2004/builds/main/repo3/zips/</datadir>
-        </dir>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <summary>Terry Tibbs Repo</summary>
+        <summary>Terry Tibbs New Repo</summary>
         <description />
         <disclaimer />
         <platform>all</platform>
@@ -1380,17 +1151,15 @@ updated language files
         <fanart>fanart.jpg</fanart>
     </assets>
     </extension>
-</addon><addon id="script.keymap" name="Keymap Editor" version="1.1.4" provider-name="takoi,pkscout">
+</addon><addon id="script.keymap" name="Keymap Editor" version="1.1.5" provider-name="takoi,pkscout">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0" />
 		<import addon="script.module.defusedxml" version="0.6.0+matrix.1" />
 	</requires>
 	<extension point="xbmc.python.script" library="default.py" />
 	<extension point="xbmc.addon.metadata">
-		<news>v1.1.4
-- fixed depreciacted translatepath call
-- removed dependancy on kodi-six
-- updated language files
+		<news>v1.1.5
+added ability to map TempoUp and TempoDown
 		</news>
 		<assets>
         	<icon>icon.png</icon>
@@ -1399,16 +1168,26 @@ updated language files
 		<license>GPL-3.0-only</license>
 		<forum>https://forum.kodi.tv/showthread.php?tid=168767</forum>
 		<source>https://github.com/pkscout/script.keymap</source>
+		<summary lang="da_DK">Et redigeringsværktøj for keymap-filer</summary>
 		<summary lang="de_DE">Ein Editor für Keymap-Dateien</summary>
 		<summary lang="en_GB">An editor for keymap files</summary>
+		<summary lang="et_EE">Nupuasetuse redaktor</summary>
+		<summary lang="fi_FI">Editori keymap-näppäinmääritystiedostoille</summary>
 		<summary lang="hu_HU">Távvezérlő fájlok kezelője</summary>
+		<summary lang="it_IT">Un editor per i file keymap</summary>
 		<summary lang="ko_KR">키맵 파일용 편집기</summary>
+		<summary lang="nl_NL">Een editor voor keymap-bestanden</summary>
 		<summary lang="ru_RU">Редактор файлов раскладки клавиатуры</summary>
 		<summary lang="zh_CN">一个键映射文件的编辑器</summary>
+		<description lang="da_DK">Keymap Editor er en GUI til konfiguration af mappinger for fjernbetjeninger, tastatur og andre input, der understøttes af Kodi. Bemærk: eksisterende brugerdefinerede nøglemappinger vil blive omdøbt til .bak.</description>
 		<description lang="de_DE">Keymap Editor ist eine grafische Oberfläche zum Konfigurieren von Tastenzuordnungen für Fernbedienungen, Tastaturen und anderen von Kodi unterstützten Eingabegeräten. Hinweis: Existierende benutzerdefinierte Tastenzuordnungen werden zu .bak umbenannt.</description>
 		<description lang="en_GB">Keymap Editor is a GUI for configuring mappings for remotes, keyboard and other inputs supported by Kodi. Note: existing user defined key mappings will be renamed to .bak.</description>
+		<description lang="et_EE">Keymap Editor vahend kaugjuhtimispultide, klaviatuuri ja muude Kodi toetatavate sisendite nupuasetuste seadistamiseks. Märkus. Olemasolevad kasutaja määratletud nupuasetused salvestatakse faili .bak.</description>
+		<description lang="fi_FI">Keymap-näppäinmäärityseditori on graafinen käyttöliittymä kaukosäätimien, näppäimistöjen ja muiden Kodin tukemien syöttölaitteiden näppäinten määritykseen. Huomioi: Käyttäjän aiempien näppäinmääritystiedostojen nimiin lisätään .bak-pääte.</description>
 		<description lang="hu_HU">A Keymap Editor egy grafikus felhasználói felület a távvezérlők, a billentyűzet és a Kodi által támogatott egyéb bemenetek konfigurálásához. Megjegyzés: a meglévő, felhasználó által definiált keymap fájlok át lesznek nevezve .bak -ra.</description>
+		<description lang="it_IT">Keymap Editor è una GUI per la configurazione di mappature per telecomandi, tastiera e altri input supportati da Kodi. Nota: le mappature delle chiavi definite dall'utente esistenti verranno rinominate in .bak.</description>
 		<description lang="ko_KR">키맵 편집기는 Kodi에서 지원하는 리모컨, 키보드 및 기타 입력에 대한 매핑을 구성하기 위한 GUI입니다. 참고: 기존 사용자 정의 키 매핑은 .bak으로 이름이 바뀝니다.</description>
+		<description lang="nl_NL">Keymap Editor is een GUI voor het configureren van toewijzingen voor afstandsbedieningen, toetsenbord en andere invoer die door Kodi wordt ondersteund. Opmerking: bestaande door de gebruiker gedefinieerde toetstoewijzingen worden hernoemd naar .bak.</description>
 		<description lang="ru_RU">Keymap Editor - это графический интерфейс для настройки привязки клавиш пультов, клавиатуры и других устройств ввода, поддерживаемых Kodi. Примечание: существующие пользовательские привязки клавиш будут переименованы в .bak.</description>
 		<description lang="zh_CN">键映射编辑器是一个用于配置 Kodi 支持的遥控器、键盘和其他输入设备的功能映射的图形界面。注意：现有的用户定义键映射将重命名为.bak。</description>
 	</extension>
@@ -1508,22 +1287,6 @@ updated language files
       <icon>icon.png</icon>
     </assets>
   </extension>
-</addon><addon id="script.module.httplib2" name="httplib2" provider-name="Joe Gregorio" version="0.17.0+matrix.2">
-  <requires>
-    <import addon="xbmc.python" version="3.0.0" />
-  </requires>
-  <extension library="lib" point="xbmc.python.module" />
-  <extension point="xbmc.addon.metadata">
-        <description lang="en_GB">httplib2 module</description>
-        <summary lang="en_GB">httplib2 module</summary>
-        <license>MIT</license>
-        <platform>all</platform>
-        <website>https://pypi.python.org/pypi/httplib2</website>
-        <source>https://github.com/httplib2/httplib2</source>
-        <assets>
-          <icon>icon.png</icon>
-        </assets>
-   </extension>
 </addon><addon id="script.module.idna" name="idna" version="3.4.0" provider-name="Kim Davies">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
@@ -1880,14 +1643,14 @@ v1.0.1 (2019-08-06)
             <fanart>fanart.jpg</fanart>
         </assets>
     </extension>
-</addon><addon id="service.xbmc.versioncheck" name="Version Check" version="0.5.23+matrix.1" provider-name="Team Kodi">
+</addon><addon id="service.xbmc.versioncheck" name="Version Check" version="0.5.24+matrix.1" provider-name="Team Kodi">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
   </requires>
   <extension point="xbmc.service" library="resources/lib/runner.py" />
   <extension point="xbmc.addon.metadata">
     <news>
-- add Kodi 20 Alpha1 release
+- add Kodi 20 RC1 release
 - Update translations from Weblate
         </news>
     <assets>
@@ -1900,6 +1663,7 @@ v1.0.1 (2019-08-06)
     <source>https://github.com/XBMC-Addons/service.xbmc.versioncheck</source>
     <summary lang="be_BY">Kodi Version Check правярае наяўнасць апошняй версіі.</summary>
     <summary lang="bg_BG">Проверява дали ползвате най-новата версия на Kodi.</summary>
+    <summary lang="bs_BA">Kodi Verzijski Provjerač provjerava imate li najnoviju izdanu verziju.</summary>
     <summary lang="ca_ES">Kodi Version Check comprova si està utilitzant la última versió publicada.</summary>
     <summary lang="cs_CZ">Kontrola verze Kodi, zkontroluje, zda používáte nejnovější vydanou verzi.</summary>
     <summary lang="da_DK">Kodi Version Check undersøger om du benytter den nyeste version.</summary>
@@ -1921,7 +1685,7 @@ v1.0.1 (2019-08-06)
     <summary lang="hu_HU">Az Kodi verzió ellenőrző megvizsgálja, hogy a legújabb kiadást futtatja-e.</summary>
     <summary lang="id_ID">Kodi Version Check mengecek apakah Anda menggunakan versi rilis terbaru.</summary>
     <summary lang="is_IS">Kodi Version Check athugar hvort þú sért að keyra nýjustu viðurkennda útgáfu.</summary>
-    <summary lang="it_IT">Kodi Version Check verifica se hai l'ultima versione rilasciata.</summary>
+    <summary lang="it_IT">Kodi Version Check controlla se stai utilizzando l'ultima versione disponibile.</summary>
     <summary lang="ko_KR">Kodi Version Checks는 최신 정식 릴리즈 버전을 사용중인지 검사해줍니다.</summary>
     <summary lang="lt_LT">Kodi Version Check patikrina ar naudojate naujausią versiją.</summary>
     <summary lang="nb_NO">Kodi Versjonsettersyn sjekker om du kjører den sist utgitte versjonen.</summary>
@@ -1933,7 +1697,7 @@ v1.0.1 (2019-08-06)
     <summary lang="ro_RO">Verificare versiune Kodi verifică dacă folosiți ultima versiune lansată.</summary>
     <summary lang="ru_RU">Kodi Version Check проверяет наличие последней версии.</summary>
     <summary lang="sk_SK">Kodi Kontrola verzií overuje, či používate najnovšiu vydanú verziu.</summary>
-    <summary lang="sl_SI">Preverjanje različice Kodi preveri, če imate nameščeno nazadnje izdano različico.</summary>
+    <summary lang="sl_SI">Preverjalnik različic Kodi preveri, ali je nameščena zadnja objavljena različica.</summary>
     <summary lang="sv_SE">Kodi Version Check kontrollerar om du använder den senaste versionen.</summary>
     <summary lang="tr_TR">Kodi Sürüm Kontrol, yayınlanmış son sürümü kullanıp kullanmadığınızı kontrol eder.</summary>
     <summary lang="vi_VN">Kodi Version Check kiểm tra xem bạn có đang chạy phiên bản mới nhất được phát hành hay không.</summary>
@@ -1941,6 +1705,7 @@ v1.0.1 (2019-08-06)
     <summary lang="zh_TW">Kodi版本檢查器會檢查您執行中的是否是最新版本。</summary>
     <description lang="be_BY">Kodi Version Check працуе толькі на пэўнай колькасці платформ і дыстрыбутываў, версіі якіх могуць адрознівацца паміж сабой. Каб даведацца больш падрабязна, наведайце саkodi.tv.</description>
     <description lang="bg_BG">Kodi Version Check поддържа няколко платформи/дистрибуции. За повече информация посетете страницата www.kodi.tv</description>
+    <description lang="bs_BA">Kodi Verzijski Provjerač podržava samo određeni broj platformi/distribucija jer njihova izdanja se međusobno mogu razlikovati. Za više informacija posjetite kodi.tv web stranicu.</description>
     <description lang="ca_ES">Kodi Version Check només és compatible amb una sèrie de plataformes / distribucions ja que les ultimes versions poden ser diferents entre elles. Per obtenir més informació, visiteu el lloc web kodi.tv.</description>
     <description lang="cs_CZ">Kontrola verze Kodi podporuje pouze několik platforem/distribucí a verze mezi nimi se můžou lišit. Pro více informací navštivte webové stránky kodi.tv.</description>
     <description lang="da_DK">Kodi Version Check kan kun undersøge for opdateringer for visse platforme/udgaver, da udgivelserne kan variere mellem dem. For mere information, besøg kodi.tv.</description>
@@ -1962,7 +1727,7 @@ v1.0.1 (2019-08-06)
     <description lang="hu_HU">Az Kodi verzió-ellenőrző csak néhány platformot / disztribúciót támogat, mert a kiadások között különbségek lehetnek. További információkért keresse fel az kodi.tv oldalt.</description>
     <description lang="id_ID">Kodi Version Check hanya mendukung beberapa platform/distro karena rilisnya mungkin berbeda-beda. Untuk informasi lebih lanjut kunjungi situs kodi.tv.</description>
     <description lang="is_IS">Athugun á útgáfu Kodi styður fjölda stýrikerfa/dreifinga þar sem útgáfur geta verið mismunandi á milli þeirra. Farðu inn á Kodi.tv til að fá nánari upplýsingar.</description>
-    <description lang="it_IT">Kodi Version Check supporta solo alcune piattaforme e distribuzioni perché le relase possono differire tra loro. Per più informazioni visita il sito kodi.tv.</description>
+    <description lang="it_IT">Kodi Version Check supporta solo un certo numero di piattaforme/distribuzioni poiché le versioni potrebbero differire tra loro. Per ulteriori informazioni, visita il sito Web kodi.tv.</description>
     <description lang="ko_KR">Kodi 버전 확인은 릴리스가 다를 수 있으므로 다수 플랫폼/배포판만 지원합니다. 자세한 내용은 kodi.tv 웹사이트를 방문하세요.</description>
     <description lang="lt_LT">Kodi Version Check palaiko tik kelias platformas/distribucijas, nes leidimai tarp jų gali skirtis. Norėdami gauti daugiau informacijos, apsilankykite Kodi.tv puslapyje.</description>
     <description lang="nb_NO">Kodi Versjonsettersyn støtter kun noen plattformer/distribusjoner fordi utgivelser kan være forskjellige mellom dem. Besøk kodi.tv for mer informasjon.</description>
@@ -1972,7 +1737,7 @@ v1.0.1 (2019-08-06)
     <description lang="pt_PT">O Kodi Version Check suporta apenas algumas plataformas/distribuições, porque os lançamentos podem não ser sempre idênticos. Para mais informação, visite o site kodi.tv.</description>
     <description lang="ru_RU">Kodi Version Check поддерживается только на ряде платформ/дистрибутивов и они могут различаться между собой. Для получения доп. информации посетите сайт kodi.tv.</description>
     <description lang="sk_SK">Kontrola verzie Kodi podporuje iba niekoľko platforiem/distribúcií keďže vydania sa môžu medzi nimi líšiť. Pre viac informácií navštívte webové stránky kodi.tv.</description>
-    <description lang="sl_SI">Preverjanje različice Kodi podpira le nekatere platforme/distribucije, saj se izdaje med njimi lahko zelo razlikujejo. Za več informacij obiščite spletišče kodi.tv</description>
+    <description lang="sl_SI">Preverjalnik različic Kodi podpira le nekatera okolja, saj se te lahko med njimi močno razlikujejo. Več podrobnosti o tem je na voljo na spletišču kodi.tv.</description>
     <description lang="sv_SE">Kodi Version Check stöder endeast ett antal plattformar/distributioner eftersom utgivningar kan skilja mellan dessa. För mer information besök kodi.tv webplatsen.</description>
     <description lang="tr_TR">Kodi Sürüm Kontrol, sürümler arasında değişiklik olduğu için sadece birkaç platform/dağıtım destekler. Daha fazla bilgi için kodi.tv web sitesini ziyaret edin.</description>
     <description lang="vi_VN">Kodi Version Check chỉ hỗ trợ một số nền tảng/phân phối vì các bản phát hành có thể khác nhau giữa chúng. Để biết thêm thông tin, hãy truy cập trang web kodi.tv.</description>
@@ -1980,6 +1745,7 @@ v1.0.1 (2019-08-06)
     <description lang="zh_TW">由於各發行版之間的差異，Kodi版本檢查器只支援部分平台及版本號。更多資訊請參閱kodi.tv網站。</description>
     <disclaimer lang="be_BY">Выкарыстоўвайце гэты скрыпт па ўласным жаданні. Каб даведацца больш падрабязна, наведайце kodi.tv</disclaimer>
     <disclaimer lang="bg_BG">Ползвайте скрипта свободно. За повече информация посетете www.kodi.tv</disclaimer>
+    <disclaimer lang="bs_BA">Slobodno koristite ovu skriptu ako želite. Za više informacija posjetite kodi.tv</disclaimer>
     <disclaimer lang="ca_ES">Sigues lliure d'utilitzar aquest script. Per més informació visita kodi.tv</disclaimer>
     <disclaimer lang="cs_CZ">Neváhejte použít tento skript. Pro více informací navštivte kodi.tv</disclaimer>
     <disclaimer lang="da_DK">Du er velkommen til at bruge dette script. For information, besøg kodi.tv</disclaimer>
@@ -2001,7 +1767,7 @@ v1.0.1 (2019-08-06)
     <disclaimer lang="hu_HU">Használja bátran ezt a szkriptet! Információkért keresse fel az kodi.tv oldalt!</disclaimer>
     <disclaimer lang="id_ID">Jangan sungkan menggunakan script ini. Untuk informasi hubungi kodi.tv</disclaimer>
     <disclaimer lang="is_IS">Notaðu þessa skriftu eins og þig lystir. Til að vita meira ættirðu að skoða kodi.tv</disclaimer>
-    <disclaimer lang="it_IT">Usa liberamente lo script. Per informazioni visita kodi.tv</disclaimer>
+    <disclaimer lang="it_IT">Sentiti libero di usare questo script. Per informazioni visita kodi.tv</disclaimer>
     <disclaimer lang="ja_JP">このスクリプトをお使いください。詳しくは kodi.tv を参照してください</disclaimer>
     <disclaimer lang="ko_KR">이 스크립트를 자유롭게 사용하세요. 관련 정보는 kodi.tv를 방문하세요</disclaimer>
     <disclaimer lang="lt_LT">Galite laisvai naudoti šį scenarijų. Apsilankykite kodi.tv, norėdami gauti daugiau informacijos.</disclaimer>
