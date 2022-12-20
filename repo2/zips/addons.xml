@@ -183,6 +183,277 @@
         <disclaimer lang="zh_CN">图片来源：OpenEmu（openemu.org）</disclaimer>
         <disclaimer lang="zh_TW">圖片來源：OpenEmu (openemu.org)</disclaimer>
     </extension>
+</addon><addon id="inputstream.adaptive" version="19.0.7" name="InputStream Adaptive" provider-name="peak3d">
+  <requires>
+<import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0" />
+<import addon="kodi.binary.global.general" minversion="1.0.4" version="1.0.5" />
+<import addon="kodi.binary.global.filesystem" minversion="1.1.0" version="1.1.6" />
+<import addon="kodi.binary.global.tools" minversion="1.0.0" version="1.0.4" />
+<import addon="kodi.binary.instance.inputstream" minversion="3.0.1" version="3.0.1" />
+<import addon="kodi.binary.instance.videocodec" minversion="2.0.1" version="2.0.2" /></requires>
+  <extension point="kodi.inputstream" name="adaptive" extension="" tags="true" listitemprops="license_type|license_key|license_data|license_flags|manifest_type|server_certificate|stream_headers|manifest_update_parameter|original_audio_language|max_bandwidth|play_timeshift_buffer|pre_init_data" library_android="libinputstream.adaptive.so" />
+  <extension point="xbmc.addon.metadata">
+    <platform>android-armv7</platform>
+    <news>
+v19.0.7 (2022-06-23)
+- [HLS] fix regression with chunk transferred AES-128 streams
+
+v19.0.6 (2022-06-16)
+[HLS] support PKCS7 padding for AES-128 streams (fixes for AES-128 fmp4 streams)
+
+v19.0.5 (2022-05-18)
+- Fix estimate segment count
+- Update codecs in decrypter interface
+- [HLS] set byteranged init segments explicity (fixes crashing on certain playlists)
+
+v19.0.4 (2022-04-24)
+- Translations updates from Weblate -be_by, fi_fi, cs_cz
+- [DRM] Keep same session from pre-init
+- Fix crash related to mp4 webvtt subtitles
+
+v19.0.3 (2022-02-10)
+- Translations updates from Weblate - hr_hr, nl_nl, sk_s
+- [HLS] Fix for large media sequence numbers
+- [DASH] Allow for multiple representation/bandwidth placeholders
+
+v19.0.2 (2022-01-11)
+- update nl translations
+- [webvtt] only read payl boxes for text
+
+v19.0.1 (2021-12-10)
+- Fix compile error by GCC 11
+
+v19.0.0 (2021-09-14)
+- Change test builds to released 'Kodi 19 Matrix'
+- Increase version to 19.0.0
+  - With start of Kodi 20 Nexus, takes addon as major the same version number as Kodi.
+    This done to know easier to which Kodi the addon works.
+
+v2.6.23 (2021-08-06)
+- Translations from weblate - de_de, ja_jp, ko_kr
+ - [Android] use multiple drm sessions (solves stuttering)
+ - [DASH] allow for misaligned segs in SegmentTimeline
+
+v2.6.22 (2021-07-18)
+- Automation test release
+
+v2.6.21 (2021-07-18)
+- Automation test release
+
+v2.6.20 (2021-07-17)
+Translations updates from Weblate
+	- de_de, el_gr, es_es, fr_fr, he_il, hi_in, hr_hr, hu_hu, it_it, ja_jp, ko_kr, nl_nl, pl_pl, ro_ro, ru_ru, sk_sk, sv_se
+
+v2.6.19 (2021-07-17)
+- Translations updates from Weblate
+	- af_za, am_et, ar_sa, ast_es, az_az, be_by, bg_bg, bs_ba, ca_es, cs_cz, cy_gb, da_dk, de_de, el_gr, en_au, en_gb, en_nz, en_us, eo, es_ar, es_es, es_mx, et_ee, eu_es, fa_af, fa_ir, fi_fi, fo_fo, fr_ca, fr_fr, gl_es, he_il, hi_in, hr_hr, hu_hu, hy_am, id_id, is_is, it_it, ja_jp, kn_in, ko_kr, lt_lt, lv_lv, ml_in, mn_mn, mt_mt, my_mm, nb_no, nl_nl, os_os, pl_pl, pt_br, pt_pt, ro_md, ro_ro, ru_ru, scn, si_lk, sk_sk, sq_al, sr_rs, sr_rs@latin, sv_se, szl, ta_in, tg_tj, th_th, tr_tr, uk_ua, uz_uz, vi_vn, zh_cn, zh_tw
+
+v2.6.18 (2021-07-13)
+- Add support to pre-initialise DRM
+- Fix intermittent crash when stopping Widevine videos
+
+v2.6.17 (2021-06-20)
+- Fix decrypt errors on non-Android platforms
+- [DASH] fix representation base urls
+- Don't use filecache for subtitle downloads
+
+v2.6.16 (2021-05-21)
+- Allow download retries for VOD
+- [DASH] fix for minimumUpdatePeriod=0
+- [DASH] remove media_renewal_url and media_renewal_time
+- License renewal for widevine
+- [HLS] Fix SSD being deleted with multiple encrypted streams
+- Overhaul manifest redirect logic
+- fix seeking into separate chapters/resume time
+- fix HEVC extra data crash
+- improve settings
+
+v2.6.15 (2021-05-18)
+- [HLS] support webvtt subtitle extensions
+- [DASH] fix segmentTemplate calculation
+- [HEVC] use constant frame rate if average is 0
+- [HLS] don't reset pts on new periods
+- Don't remove secure decoder cap if not requested in manifest_type
+- [Android] fallback to widevine L3 if L1 provisioning fails
+
+v2.6.14 (2021-04-22)
+- Don't overwrite manifest headers with stream headers
+- Stream headers default to manifest headers
+- ac3 is recognised separately to eac3
+- [DASH] time and number placeholders can be used simultaneously
+- [DASH] manifest_update_parameter property defaults to 'full' for SegmentTimeline
+- [DASH] pssh attribute in ContentProtection tag allowed without cenc namespace
+- [DASH] support ttml subs where codec isn't specified
+
+v2.6.13 (2021-04-10)
+- Fix Debian packaging
+
+v2.6.12 (2021-04-09)
+- Remove Android specific decrypter search paths
+- Move Android addon to binary addons repo
+
+v2.6.11 (2021-04-08)
+- Fix ampersand in changelog causing issues from v2.6.9 and v2.6.10
+
+v2.6.10 (2021-04-08)
+- Fix release build
+
+v2.6.9 (2021-04-08)
+- Fix MPD Timing (remove publishTime and presentationTimeOffset)
+- [Dash] Correctly set timeshift_buffer (live)
+- [Dash] Support fpsScale in AdaptationSets
+- [Dash] Fix missing audio languages
+- [DASH] Support ec-3 channel count (urn:mpeg:mpegB:cicp:ChannelConfiguration)
+
+v2.6.8 (2021-03-26)
+- [Dash] Append / to baseurl if required
+- Fix Base Domain (fixes uri=/path/)
+
+v2.6.7 (2021-02-10)
+- Fix build for ios/tvos
+- Use the full BaseUrl if it's a real url inside an AdaptationSet
+
+v2.6.6 (2020-11-21)
+- Matrix VideoCodec API change to v2.0.2 - Fix crypto session id handling
+
+v2.6.5 (2020-11-09)
+- Matrix API change to v3.0.1 - Fix wrong flags bit shift
+
+v2.6.4 (2020-10-31)
+- Fix protocol search in manifest URL
+
+v2.6.3 (2020-10-31)
+- New C-api changes
+- Fix URL's without domain (files)
+- [MPD] Fix SegmentTimeline without given startTime
+
+v2.6.2 (2020-10-30)
+- revert / rework effective url issues
+- api related changes (buildsystem)
+
+v2.6.1 (2020-10-25)
+- Fix effective url if paths beginning with / provided
+- Several translations added / fixed
+- Fix webvtt subtitles for time formats without leading hour 00:
+- Fix segfault when playing PlayReady content (Android)
+- Adapt to kodi c api changes
+
+v2.6.0 (2020-05-16)
+- Update inputstream API 2.3.1
+- Update Global API 1.2.0
+
+v2.5.6 (2020-04-25)
+- Matrix API change to v2.3.0 - Pass mime type to inputstreams if available
+- Matrix API change to v2.2.0 - Allows upto 256 streams, useful for netflix etc.
+
+v2.5.5 (2020-04-06)
+- Matrix API change - Remove CanPauseSteram() and CanSeekStream()
+- Update .gitignore
+
+v2.5.4 (2020-01-19)
+- [HLS] url based initialization segment
+- [DASH] Use effective URL for manifest update
+- Implement Media Renewal Time
+- Fixed WebVTT rlm and lrm
+- Fixed and improved subtitle properties)
+- Add multiple languages
+- [DASH] Fix zero devision segfault
+
+v2.5.3 (2019-11-21)
+- Fix retrieving SIDX from indexRange streams (youtube)
+- Rework seek (use lead stream)
+
+v2.5.2 (2019-11-18)
+- More languages added
+- DolbyVision codec (dvhe) support, kodi changes required to get it work
+- Add property to start LiveStreams from beginning (play_timeshift_buffer)
+- Pass media_headers when downloading pssh-search segment
+- Minor DASH full update / timing / url generation fixes
+
+v2.5.1 (2019-10-07)
+- Language spain added
+- multi period support
+- mp4 webtt binary representation added
+- minor fixes
+
+v2.5.0 (2019-09-02)
+- New major versions for Matrix
+
+v2.4.0 (2019-08-16)
+- Update Kodi VFS API 1.0.3
+- Build script cleanups
+- Implement VP9 static HDR metadata
+- MPD: location attibute added
+- MPD: livestream bugfixes (uninitialized startPTS)
+
+v2.3.22 (2019-06-14)
+- Bento4: sample duration workaround (24/1)
+- WVDecrypter: remove sleep between decrypt calls
+
+v2.3.21 (2019-06-07)
+- [DASH] initialize segment::range_begin_ for URL segments (youtube)
+
+v2.3.20 (2019-06-07)
+- Fix parsing PR ContentProtection KID
+
+v2.3.19 (2019-06-02)
+- [widevine] remove API 8 / Add API 11
+- [TS] Signal configuration change if extra-data has changed
+- [DASH] Use PlayReady WRMHEADER to retrieve DefaultKID
+- [DASH] Allow URL_SEGMENTS + Range-Bytes
+
+v2.3.18 (2019-05-11)
+- align settings with internal resolution check
+- [HLS] support single playlists
+
+v2.3.17 (2019-04-16)
+- Fix KID's with 0 char inside
+
+v2.3.16 (2019-03-25)
+- TTML parser fix
+- [HLS] Add HEVC streams / Fix extra_data_size in ts parser
+- [HLS] effective URL for license
+
+v2.3.15 (2019-02-11)
+- Fix windows build
+
+v2.3.14 (2019-02-10)
+- Add WebM container parser
+    </news>
+    <summary lang="ca_ES">Client InputStream per a transmissions adaptatives</summary>
+    <summary lang="cs_CZ">Klient adaptivních toků protokolu InputStream</summary>
+    <summary lang="da_DK">InputStream-klient til adaptive streams</summary>
+    <summary lang="de_DE">InputStream-Client für adaptive Streams</summary>
+    <summary lang="en_GB">InputStream client for adaptive streams</summary>
+    <summary lang="es_ES">Cliente InputStream para flujo de datos adaptativos</summary>
+    <summary lang="es_MX">Cliente InputStream para transmisiones adaptativas</summary>
+    <summary lang="fi_FI">InputStream-asiakaspääte mukautuville mediavirroille</summary>
+    <summary lang="fr_FR">Client InputStream pour les flux adaptatifs</summary>
+    <summary lang="he_IL">לקוח InputStream לתזרימים מסתגלים</summary>
+    <summary lang="hr_HR">InputStream klijent za prilagodljiva strujanja</summary>
+    <summary lang="hu_HU">InputStream kliens az adaptív streamekhez</summary>
+    <summary lang="ko_KR">가변 스트림을 위한 InputStream 클라이언트</summary>
+    <summary lang="nl_NL">InputStream client voor adaptive streams</summary>
+    <summary lang="pl_PL">Klient InputStream dla strumieni adaptacyjnych</summary>
+    <summary lang="ru_RU">InputStream клиент для адаптивных трансляций</summary>
+    <summary lang="zh_CN">用于自适应流的 InputStream 客户端</summary>
+    <description lang="ca_ES">Client InputStream per a transmissions adaptatives</description>
+    <description lang="cs_CZ">Klient adaptivních toků protokolu InputStream</description>
+    <description lang="da_DK">InputStream-klient til adaptive streams</description>
+    <description lang="de_DE">InputStream-Client für adaptive Streams</description>
+    <description lang="en_GB">InputStream client for adaptive streams</description>
+    <description lang="es_ES">Cliente InputStream para flujo de datos adaptativos</description>
+    <description lang="es_MX">Cliente InputStream para transmisiones adaptativas</description>
+    <description lang="fi_FI">InputStream-asiakaspääte mukautuville mediavirroille</description>
+    <description lang="fr_FR">Client InputStream pour les flux adaptatifs</description>
+    <description lang="he_IL">לקוח InputStream לתזרימים מסתגלים</description>
+    <description lang="hr_HR">InputStream klijent za prilagodljiva strujanja</description>
+    <description lang="hu_HU">InputStream kliens az adaptív streamekhez</description>
+    <description lang="ko_KR">가변 스트림을 위한 InputStream 클라이언트</description>
+    <description lang="pl_PL">Klient InputStream dla strumieni adaptacyjnych</description>
+    <description lang="ru_RU">InputStream клиент для адаптивных трансляций</description>
+    <description lang="zh_CN">用于自适应流的 InputStream 客户端</description>
+  </extension>
 </addon><addon id="metadata.album.universal" name="Universal Album Scraper" version="3.1.9" provider-name="Olympia, Team Kodi">
   <requires>
     <import addon="xbmc.metadata" version="2.1.0" />
@@ -714,19 +985,15 @@ v1.6.0 (2021-12-24) - v1.6.1 (2022-01-09)
         <icon>icon.png</icon>
     </assets>
   </extension>
-</addon><addon id="metadata.tvshows.themoviedb.org.python" name="TMDb TV Shows" version="1.4.16" provider-name="Team Kodi">
+</addon><addon id="metadata.tvshows.themoviedb.org.python" name="TMDb TV Shows" version="1.4.17" provider-name="Team Kodi">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="xbmc.metadata" version="2.1.0" />
   </requires>
   <extension point="xbmc.metadata.scraper.tvshows" library="main.py" cachepersistence="00:15" />
   <extension point="xbmc.addon.metadata">
-    <news>1.4.16
-fix for cast list in episodes
-properly classify TMDb logos as clearlogos
-filter out SVG files
-fix for scraper ignoring NFO files with TVDB artwork URL
-updated language files
+    <news>1.4.17
+update to support new episode guide JSON format
 	</news>
     <platform>all</platform>
     <license>GPL-3.0-or-later</license>
@@ -751,6 +1018,7 @@ updated language files
     <summary lang="is_IS">Sækja lýsigögn sjónvarpsþátta frá themoviedb.org</summary>
     <summary lang="it_IT">Recupera i metadati dei programmi TV da themovedb.org</summary>
     <summary lang="ko_KR">themoviedb.org에서 TV쇼 메타데이터를 가져옵니다</summary>
+    <summary lang="nl_NL">Haal metadata van tv-programma's op van themoviedb.org</summary>
     <summary lang="pl_PL">Pobieraj metadane programów telewizyjnch z themoviedb.org</summary>
     <summary lang="pt_BR">Obter metadados de Séries em themoviedb.org</summary>
     <summary lang="ru_RU">Получение метаданных о сериалах с сайта themoviedb.org</summary>
@@ -772,6 +1040,7 @@ updated language files
     <description lang="is_IS">The Movie Database (TMDb) er samfélagslegur gagnagrunnur kvikmynda- og sjónvarpsefnis. Hver einasti gagnabútur hefur verið settur inn af frábærum liðsmönnum okkar allar götur síðan 2008. Mikil alþjóðleg áhersla TMDb ásamt breiðu sviði gagna sést óvíða og er eitthvað sem við erum ótrúlega stolt af. Sett fram á einfaldan máta, við lifum og hrærumst í þessu samfélagi og það er nákvæmlega þess vegna sem við erum öðruvísi.</description>
     <description lang="it_IT">Il Movie Database (TMDb) è un database di film e TV creato dalla comunità. Ogni dato è stato aggiunto dalla nostra straordinaria comunità che risale al 2008. La forte attenzione internazionale e l'ampiezza dei dati di TMDb sono in gran parte impareggiabili e qualcosa di cui siamo incredibilmente orgogliosi. In parole povere, viviamo e respiriamo in comunità ed è proprio questo che ci rende diversi.</description>
     <description lang="ko_KR">The Movie Database (TMDb)는 영화와 TV 데이터베이스를 구축한 커뮤니티입니다. 모든 자료들은 우리 놀라운 커뮤니티에서 2008년부터 추가돼 온 것들입니다. TMDb의 강력한 국제적 초점과 광범위한 데이터는 타의 추종을 불허하며 우리가 자랑스러워하는 점입니다. 간단히 말해, 우리는 커뮤니티와 살고 호흡하며 그것이 우리가 다른 점입니다.</description>
+    <description lang="nl_NL">De Movie Database (TMDb) is een door de gemeenschap gebouwde film- en tv-database. Elk stukje data is toegevoegd door onze geweldige community die teruggaat tot 2008. TMDb's sterke internationale focus en brede waaier aan data is grotendeels ongeëvenaard en iets waar we ongelooflijk trots op zijn. Simpel gezegd, we leven en ademen gemeenschap en dat is precies wat ons anders maakt.</description>
     <description lang="pl_PL">The Movie Database (TMDb) to baza filmów i programów telewizyjnych zbudowana przez społeczność. Każdy element danych został dodany przez naszą niesamowitą społeczność od 2008 roku. Silna międzynarodowa koncentracja TMDb i zakres danych są w dużej mierze niezrównane i jesteśmy z tego niesamowicie dumni. Mówiąc prościej, żyjemy i oddychamy wspólnotą i właśnie to nas wyróżnia.</description>
     <description lang="pt_BR">The Movie Database (TMDb) é um banco de dados de filmes e séries criado pela comunidade. Cada um dos pedaços de dados foram adicionados por nossa incrível comunidade desde 2008. O forte foco internacional e a amplitude de dados do TMDb são incomparáveis, algo do qual temos muito orgulho. Resumindo, vivemos e respiramos comunidade e é precisamente isso que nos torna diferentes.</description>
     <description lang="ru_RU">The Movie Database (TMDb) - это база данных фильмов и сериалов, созданная сообществом. Все данные были добавлены нашим замечательным сообществом, начиная с 2008 года. Международная направленность и широта данных TMDb во многом не имеют себе равных, и это то, чем мы невероятно гордимся. Проще говоря, мы живём и дышим сообществом, и именно это отличает нас от других.</description>
@@ -882,7 +1151,7 @@ updated language files
         <description lang="ta_IN">இசை துணை பயன் rad.io, radio.de மற்றும் radio.fr இருந்து 30000 க்கும் மேல் வானொலி ஒளிபரப்புகளை அணுக உதவி செய்யும்[CR]தற்போதைய அம்சங்கள்[CR]- ஆங்கிலம், ஜெர்மன் மற்றும் பிரெஞ்சு மொழியாக்கம்[CR]- இருப்பிடம், வகை, தலைப்பு, நாடு, நகரம் மற்றும் மொழி கொண்டு நிலையங்களை உலாவ முடியும்[CR]- நிலையங்களை தேடுதல்[CR]- 115 வகைகள், 59 தலைப்புகள், 94 நாடுகள், 1010 நகரங்கள், 63 மொழிகள்</description>
         <description lang="zh_CN">访问rad.io、radio.de和radio.fr上超过7000个国际电台广播的音频插件[CR]现有功能[CR]- 英语、德语和法语支持[CR]- 按地点、类别、主题、国家、城市和语言浏览站点[CR]- 搜索站点[CR]- 115个类别、59个主题、94个国家、1010城市、63种语言</description>
     </extension>
-</addon><addon id="plugin.program.terrywiz" name="Terry Tibbs Toolbox" version="0.0.30" provider-name="Magnetic,Slam, BYB">
+</addon><addon id="plugin.program.terrywiz" name="Terry Tibbs Toolbox" version="0.0.31" provider-name="Magnetic,Slam, BYB">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0" />
 		<import addon="script.module.requests" optional="true" />
@@ -1059,7 +1328,7 @@ updated language files
 - See Changelog on Tools menu
         </news>
     </extension>
-</addon><addon id="plugin.video.youtube" name="YouTube" version="6.8.20+matrix.1" provider-name="anxdpanic, bromix">
+</addon><addon id="plugin.video.youtube" name="YouTube" version="6.8.23+matrix.1" provider-name="anxdpanic, bromix">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="script.module.six" version="1.11.0" />
@@ -1073,10 +1342,7 @@ updated language files
   <extension point="xbmc.python.module" library="resources/lib/" />
   <extension point="xbmc.addon.metadata">
     <news>
-[fix] /uri2addon/ endpoint for playback of youtube.com urls
-[fix] Don't assume addon is installed in home directory |contrib: jfly|
-[fix] Subtitle language names
-[lang] translation updates from Weblate
+[revert] subscription groups/tags - causing breaking issues
         </news>
     <assets>
       <icon>icon.png</icon>
@@ -1222,12 +1488,14 @@ updated language files
 			<fanart>fanart.jpg</fanart>
 		</assets>
 	</extension>
-</addon><addon id="repository.bugatsinho" name=" Bugatsinho repository" version="2.5" provider-name="Bugatsinho">
+</addon><addon id="repository.bugatsinho" name=" Bugatsinho repository" version="2.6" provider-name="Bugatsinho">
     <extension point="xbmc.addon.repository" name="Bugatsinho repository">
-        <info compressed="false">https://raw.githubusercontent.com/bugatsinho/bugatsinho.github.io/master/addons.xml</info>
-        <checksum>https://raw.githubusercontent.com/bugatsinho/bugatsinho.github.io/master/addons.xml.md5</checksum>
-        <datadir zip="true">https://raw.githubusercontent.com/bugatsinho/bugatsinho.github.io/master/_zips</datadir>
-        <hashes>false</hashes>
+        <dir>
+            <info compressed="false">https://raw.githubusercontent.com/bugatsinho/bugatsinho.github.io/master/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/bugatsinho/bugatsinho.github.io/master/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/bugatsinho/bugatsinho.github.io/master/_zips</datadir>
+            <hashes>false</hashes>
+        </dir>
         <dir>
             <info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
             <checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
@@ -1260,34 +1528,16 @@ updated language files
         <description>This repository contains Greek, Spanish and other addons!Read first each addon's description!</description>
         <platform>all</platform>
     </extension>
-</addon><addon id="repository.terrytibbs" name="Terrys 19 repo" version="1" provider-name="Terry Tibbs">
+</addon><addon id="repository.terrytibbs" name="Terrys 19 New Repo" version="1.01" provider-name="Terry Tibbs">
     <extension point="xbmc.addon.repository" name="Terrys 19 Repository">
         <dir>
-            <info compressed="false">https://githubraw.com/terrytibbs2004/builds/main/repo/zips/addons.xml</info>
-            <checksum>https://githubraw.com/terrytibbs2004/builds/main/repo/zips/addons.xml.md5</checksum>
-            <datadir zip="true">https://githubraw.com/terrytibbs2004/builds/main/repo/zips/</datadir>
+            <info compressed="false">https://githubraw.com/terrytibbs2004/builds/main/repo2/zips/addons.xml</info>
+            <checksum>https://githubraw.com/terrytibbs2004/builds/main/repo2/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://githubraw.com/terrytibbs2004/builds/main/repo2/zips/</datadir>
         </dir>
     </extension>
     <extension point="xbmc.addon.metadata">
-        <summary>Terry Tibbs Repo</summary>
-        <description />
-        <disclaimer />
-        <platform>all</platform>
-        <assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.jpg</fanart>
-        </assets>
-    </extension>
-</addon><addon id="repository.terrytibbs3" name="Terrys FREE repo" version="1.0" provider-name="Terry Tibbs">
-    <extension point="xbmc.addon.repository" name="Terrys 19 Repository">
-        <dir>
-            <info compressed="false">https://githubraw.com/terrytibbs2004/builds/main/repo3/zips/addons.xml</info>
-            <checksum>https://githubraw.com/terrytibbs2004/builds/main/repo3/zips/addons.xml.md5</checksum>
-            <datadir zip="true">https://githubraw.com/terrytibbs2004/builds/main/repo3/zips/</datadir>
-        </dir>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <summary>Terry Tibbs Repo</summary>
+        <summary>Terry Tibbs New Repo</summary>
         <description />
         <disclaimer />
         <platform>all</platform>
@@ -1380,17 +1630,15 @@ updated language files
         <fanart>fanart.jpg</fanart>
     </assets>
     </extension>
-</addon><addon id="script.keymap" name="Keymap Editor" version="1.1.4" provider-name="takoi,pkscout">
+</addon><addon id="script.keymap" name="Keymap Editor" version="1.1.5" provider-name="takoi,pkscout">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0" />
 		<import addon="script.module.defusedxml" version="0.6.0+matrix.1" />
 	</requires>
 	<extension point="xbmc.python.script" library="default.py" />
 	<extension point="xbmc.addon.metadata">
-		<news>v1.1.4
-- fixed depreciacted translatepath call
-- removed dependancy on kodi-six
-- updated language files
+		<news>v1.1.5
+added ability to map TempoUp and TempoDown
 		</news>
 		<assets>
         	<icon>icon.png</icon>
@@ -1399,16 +1647,26 @@ updated language files
 		<license>GPL-3.0-only</license>
 		<forum>https://forum.kodi.tv/showthread.php?tid=168767</forum>
 		<source>https://github.com/pkscout/script.keymap</source>
+		<summary lang="da_DK">Et redigeringsværktøj for keymap-filer</summary>
 		<summary lang="de_DE">Ein Editor für Keymap-Dateien</summary>
 		<summary lang="en_GB">An editor for keymap files</summary>
+		<summary lang="et_EE">Nupuasetuse redaktor</summary>
+		<summary lang="fi_FI">Editori keymap-näppäinmääritystiedostoille</summary>
 		<summary lang="hu_HU">Távvezérlő fájlok kezelője</summary>
+		<summary lang="it_IT">Un editor per i file keymap</summary>
 		<summary lang="ko_KR">키맵 파일용 편집기</summary>
+		<summary lang="nl_NL">Een editor voor keymap-bestanden</summary>
 		<summary lang="ru_RU">Редактор файлов раскладки клавиатуры</summary>
 		<summary lang="zh_CN">一个键映射文件的编辑器</summary>
+		<description lang="da_DK">Keymap Editor er en GUI til konfiguration af mappinger for fjernbetjeninger, tastatur og andre input, der understøttes af Kodi. Bemærk: eksisterende brugerdefinerede nøglemappinger vil blive omdøbt til .bak.</description>
 		<description lang="de_DE">Keymap Editor ist eine grafische Oberfläche zum Konfigurieren von Tastenzuordnungen für Fernbedienungen, Tastaturen und anderen von Kodi unterstützten Eingabegeräten. Hinweis: Existierende benutzerdefinierte Tastenzuordnungen werden zu .bak umbenannt.</description>
 		<description lang="en_GB">Keymap Editor is a GUI for configuring mappings for remotes, keyboard and other inputs supported by Kodi. Note: existing user defined key mappings will be renamed to .bak.</description>
+		<description lang="et_EE">Keymap Editor vahend kaugjuhtimispultide, klaviatuuri ja muude Kodi toetatavate sisendite nupuasetuste seadistamiseks. Märkus. Olemasolevad kasutaja määratletud nupuasetused salvestatakse faili .bak.</description>
+		<description lang="fi_FI">Keymap-näppäinmäärityseditori on graafinen käyttöliittymä kaukosäätimien, näppäimistöjen ja muiden Kodin tukemien syöttölaitteiden näppäinten määritykseen. Huomioi: Käyttäjän aiempien näppäinmääritystiedostojen nimiin lisätään .bak-pääte.</description>
 		<description lang="hu_HU">A Keymap Editor egy grafikus felhasználói felület a távvezérlők, a billentyűzet és a Kodi által támogatott egyéb bemenetek konfigurálásához. Megjegyzés: a meglévő, felhasználó által definiált keymap fájlok át lesznek nevezve .bak -ra.</description>
+		<description lang="it_IT">Keymap Editor è una GUI per la configurazione di mappature per telecomandi, tastiera e altri input supportati da Kodi. Nota: le mappature delle chiavi definite dall'utente esistenti verranno rinominate in .bak.</description>
 		<description lang="ko_KR">키맵 편집기는 Kodi에서 지원하는 리모컨, 키보드 및 기타 입력에 대한 매핑을 구성하기 위한 GUI입니다. 참고: 기존 사용자 정의 키 매핑은 .bak으로 이름이 바뀝니다.</description>
+		<description lang="nl_NL">Keymap Editor is een GUI voor het configureren van toewijzingen voor afstandsbedieningen, toetsenbord en andere invoer die door Kodi wordt ondersteund. Opmerking: bestaande door de gebruiker gedefinieerde toetstoewijzingen worden hernoemd naar .bak.</description>
 		<description lang="ru_RU">Keymap Editor - это графический интерфейс для настройки привязки клавиш пультов, клавиатуры и других устройств ввода, поддерживаемых Kodi. Примечание: существующие пользовательские привязки клавиш будут переименованы в .bak.</description>
 		<description lang="zh_CN">键映射编辑器是一个用于配置 Kodi 支持的遥控器、键盘和其他输入设备的功能映射的图形界面。注意：现有的用户定义键映射将重命名为.bak。</description>
 	</extension>
@@ -1880,14 +2138,14 @@ v1.0.1 (2019-08-06)
             <fanart>fanart.jpg</fanart>
         </assets>
     </extension>
-</addon><addon id="service.xbmc.versioncheck" name="Version Check" version="0.5.23+matrix.1" provider-name="Team Kodi">
+</addon><addon id="service.xbmc.versioncheck" name="Version Check" version="0.5.24+matrix.1" provider-name="Team Kodi">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
   </requires>
   <extension point="xbmc.service" library="resources/lib/runner.py" />
   <extension point="xbmc.addon.metadata">
     <news>
-- add Kodi 20 Alpha1 release
+- add Kodi 20 RC1 release
 - Update translations from Weblate
         </news>
     <assets>
@@ -1900,6 +2158,7 @@ v1.0.1 (2019-08-06)
     <source>https://github.com/XBMC-Addons/service.xbmc.versioncheck</source>
     <summary lang="be_BY">Kodi Version Check правярае наяўнасць апошняй версіі.</summary>
     <summary lang="bg_BG">Проверява дали ползвате най-новата версия на Kodi.</summary>
+    <summary lang="bs_BA">Kodi Verzijski Provjerač provjerava imate li najnoviju izdanu verziju.</summary>
     <summary lang="ca_ES">Kodi Version Check comprova si està utilitzant la última versió publicada.</summary>
     <summary lang="cs_CZ">Kontrola verze Kodi, zkontroluje, zda používáte nejnovější vydanou verzi.</summary>
     <summary lang="da_DK">Kodi Version Check undersøger om du benytter den nyeste version.</summary>
@@ -1921,7 +2180,7 @@ v1.0.1 (2019-08-06)
     <summary lang="hu_HU">Az Kodi verzió ellenőrző megvizsgálja, hogy a legújabb kiadást futtatja-e.</summary>
     <summary lang="id_ID">Kodi Version Check mengecek apakah Anda menggunakan versi rilis terbaru.</summary>
     <summary lang="is_IS">Kodi Version Check athugar hvort þú sért að keyra nýjustu viðurkennda útgáfu.</summary>
-    <summary lang="it_IT">Kodi Version Check verifica se hai l'ultima versione rilasciata.</summary>
+    <summary lang="it_IT">Kodi Version Check controlla se stai utilizzando l'ultima versione disponibile.</summary>
     <summary lang="ko_KR">Kodi Version Checks는 최신 정식 릴리즈 버전을 사용중인지 검사해줍니다.</summary>
     <summary lang="lt_LT">Kodi Version Check patikrina ar naudojate naujausią versiją.</summary>
     <summary lang="nb_NO">Kodi Versjonsettersyn sjekker om du kjører den sist utgitte versjonen.</summary>
@@ -1933,7 +2192,7 @@ v1.0.1 (2019-08-06)
     <summary lang="ro_RO">Verificare versiune Kodi verifică dacă folosiți ultima versiune lansată.</summary>
     <summary lang="ru_RU">Kodi Version Check проверяет наличие последней версии.</summary>
     <summary lang="sk_SK">Kodi Kontrola verzií overuje, či používate najnovšiu vydanú verziu.</summary>
-    <summary lang="sl_SI">Preverjanje različice Kodi preveri, če imate nameščeno nazadnje izdano različico.</summary>
+    <summary lang="sl_SI">Preverjalnik različic Kodi preveri, ali je nameščena zadnja objavljena različica.</summary>
     <summary lang="sv_SE">Kodi Version Check kontrollerar om du använder den senaste versionen.</summary>
     <summary lang="tr_TR">Kodi Sürüm Kontrol, yayınlanmış son sürümü kullanıp kullanmadığınızı kontrol eder.</summary>
     <summary lang="vi_VN">Kodi Version Check kiểm tra xem bạn có đang chạy phiên bản mới nhất được phát hành hay không.</summary>
@@ -1941,6 +2200,7 @@ v1.0.1 (2019-08-06)
     <summary lang="zh_TW">Kodi版本檢查器會檢查您執行中的是否是最新版本。</summary>
     <description lang="be_BY">Kodi Version Check працуе толькі на пэўнай колькасці платформ і дыстрыбутываў, версіі якіх могуць адрознівацца паміж сабой. Каб даведацца больш падрабязна, наведайце саkodi.tv.</description>
     <description lang="bg_BG">Kodi Version Check поддържа няколко платформи/дистрибуции. За повече информация посетете страницата www.kodi.tv</description>
+    <description lang="bs_BA">Kodi Verzijski Provjerač podržava samo određeni broj platformi/distribucija jer njihova izdanja se međusobno mogu razlikovati. Za više informacija posjetite kodi.tv web stranicu.</description>
     <description lang="ca_ES">Kodi Version Check només és compatible amb una sèrie de plataformes / distribucions ja que les ultimes versions poden ser diferents entre elles. Per obtenir més informació, visiteu el lloc web kodi.tv.</description>
     <description lang="cs_CZ">Kontrola verze Kodi podporuje pouze několik platforem/distribucí a verze mezi nimi se můžou lišit. Pro více informací navštivte webové stránky kodi.tv.</description>
     <description lang="da_DK">Kodi Version Check kan kun undersøge for opdateringer for visse platforme/udgaver, da udgivelserne kan variere mellem dem. For mere information, besøg kodi.tv.</description>
@@ -1962,7 +2222,7 @@ v1.0.1 (2019-08-06)
     <description lang="hu_HU">Az Kodi verzió-ellenőrző csak néhány platformot / disztribúciót támogat, mert a kiadások között különbségek lehetnek. További információkért keresse fel az kodi.tv oldalt.</description>
     <description lang="id_ID">Kodi Version Check hanya mendukung beberapa platform/distro karena rilisnya mungkin berbeda-beda. Untuk informasi lebih lanjut kunjungi situs kodi.tv.</description>
     <description lang="is_IS">Athugun á útgáfu Kodi styður fjölda stýrikerfa/dreifinga þar sem útgáfur geta verið mismunandi á milli þeirra. Farðu inn á Kodi.tv til að fá nánari upplýsingar.</description>
-    <description lang="it_IT">Kodi Version Check supporta solo alcune piattaforme e distribuzioni perché le relase possono differire tra loro. Per più informazioni visita il sito kodi.tv.</description>
+    <description lang="it_IT">Kodi Version Check supporta solo un certo numero di piattaforme/distribuzioni poiché le versioni potrebbero differire tra loro. Per ulteriori informazioni, visita il sito Web kodi.tv.</description>
     <description lang="ko_KR">Kodi 버전 확인은 릴리스가 다를 수 있으므로 다수 플랫폼/배포판만 지원합니다. 자세한 내용은 kodi.tv 웹사이트를 방문하세요.</description>
     <description lang="lt_LT">Kodi Version Check palaiko tik kelias platformas/distribucijas, nes leidimai tarp jų gali skirtis. Norėdami gauti daugiau informacijos, apsilankykite Kodi.tv puslapyje.</description>
     <description lang="nb_NO">Kodi Versjonsettersyn støtter kun noen plattformer/distribusjoner fordi utgivelser kan være forskjellige mellom dem. Besøk kodi.tv for mer informasjon.</description>
@@ -1972,7 +2232,7 @@ v1.0.1 (2019-08-06)
     <description lang="pt_PT">O Kodi Version Check suporta apenas algumas plataformas/distribuições, porque os lançamentos podem não ser sempre idênticos. Para mais informação, visite o site kodi.tv.</description>
     <description lang="ru_RU">Kodi Version Check поддерживается только на ряде платформ/дистрибутивов и они могут различаться между собой. Для получения доп. информации посетите сайт kodi.tv.</description>
     <description lang="sk_SK">Kontrola verzie Kodi podporuje iba niekoľko platforiem/distribúcií keďže vydania sa môžu medzi nimi líšiť. Pre viac informácií navštívte webové stránky kodi.tv.</description>
-    <description lang="sl_SI">Preverjanje različice Kodi podpira le nekatere platforme/distribucije, saj se izdaje med njimi lahko zelo razlikujejo. Za več informacij obiščite spletišče kodi.tv</description>
+    <description lang="sl_SI">Preverjalnik različic Kodi podpira le nekatera okolja, saj se te lahko med njimi močno razlikujejo. Več podrobnosti o tem je na voljo na spletišču kodi.tv.</description>
     <description lang="sv_SE">Kodi Version Check stöder endeast ett antal plattformar/distributioner eftersom utgivningar kan skilja mellan dessa. För mer information besök kodi.tv webplatsen.</description>
     <description lang="tr_TR">Kodi Sürüm Kontrol, sürümler arasında değişiklik olduğu için sadece birkaç platform/dağıtım destekler. Daha fazla bilgi için kodi.tv web sitesini ziyaret edin.</description>
     <description lang="vi_VN">Kodi Version Check chỉ hỗ trợ một số nền tảng/phân phối vì các bản phát hành có thể khác nhau giữa chúng. Để biết thêm thông tin, hãy truy cập trang web kodi.tv.</description>
@@ -1980,6 +2240,7 @@ v1.0.1 (2019-08-06)
     <description lang="zh_TW">由於各發行版之間的差異，Kodi版本檢查器只支援部分平台及版本號。更多資訊請參閱kodi.tv網站。</description>
     <disclaimer lang="be_BY">Выкарыстоўвайце гэты скрыпт па ўласным жаданні. Каб даведацца больш падрабязна, наведайце kodi.tv</disclaimer>
     <disclaimer lang="bg_BG">Ползвайте скрипта свободно. За повече информация посетете www.kodi.tv</disclaimer>
+    <disclaimer lang="bs_BA">Slobodno koristite ovu skriptu ako želite. Za više informacija posjetite kodi.tv</disclaimer>
     <disclaimer lang="ca_ES">Sigues lliure d'utilitzar aquest script. Per més informació visita kodi.tv</disclaimer>
     <disclaimer lang="cs_CZ">Neváhejte použít tento skript. Pro více informací navštivte kodi.tv</disclaimer>
     <disclaimer lang="da_DK">Du er velkommen til at bruge dette script. For information, besøg kodi.tv</disclaimer>
@@ -2001,7 +2262,7 @@ v1.0.1 (2019-08-06)
     <disclaimer lang="hu_HU">Használja bátran ezt a szkriptet! Információkért keresse fel az kodi.tv oldalt!</disclaimer>
     <disclaimer lang="id_ID">Jangan sungkan menggunakan script ini. Untuk informasi hubungi kodi.tv</disclaimer>
     <disclaimer lang="is_IS">Notaðu þessa skriftu eins og þig lystir. Til að vita meira ættirðu að skoða kodi.tv</disclaimer>
-    <disclaimer lang="it_IT">Usa liberamente lo script. Per informazioni visita kodi.tv</disclaimer>
+    <disclaimer lang="it_IT">Sentiti libero di usare questo script. Per informazioni visita kodi.tv</disclaimer>
     <disclaimer lang="ja_JP">このスクリプトをお使いください。詳しくは kodi.tv を参照してください</disclaimer>
     <disclaimer lang="ko_KR">이 스크립트를 자유롭게 사용하세요. 관련 정보는 kodi.tv를 방문하세요</disclaimer>
     <disclaimer lang="lt_LT">Galite laisvai naudoti šį scenarijų. Apsilankykite kodi.tv, norėdami gauti daugiau informacijos.</disclaimer>
