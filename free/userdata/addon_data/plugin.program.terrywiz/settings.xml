@@ -1,0 +1,15 @@
+<settings version="2">
+    <setting id="buildname">Full Install</setting>
+    <setting id="buildversion">1.1</setting>
+    <setting id="firstrun" default="true">false</setting>
+    <setting id="firstrunNotify">true</setting>
+    <setting id="notifyversion">16</setting>
+    <setting id="autoclearpackages">true</setting>
+    <setting id="update_passed" default="true">false</setting>
+    <setting id="backupfolder">/storage/emulated/0/astro/</setting>
+    <setting id="savefavs" default="true">false</setting>
+    <setting id="savedebrid">true</setting>
+    <setting id="savesources" default="true">false</setting>
+    <setting id="saveadvanced">true</setting>
+    <setting id="firstrunSave" default="true">true</setting>
+</settings>
