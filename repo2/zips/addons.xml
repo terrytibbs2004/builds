@@ -1863,6 +1863,22 @@ v0.5.9 (2022-03-22)
     <news>0.1.3:
 - Fix non-UTF-8 byte string decoding in Python 2.</news>
   </extension>
+</addon><addon id="script.module.matrix.force.refresh" name="[COLOR aqua]Matrix Force Refresh[/COLOR]" version="0.0.1" provider-name="Aliunde">
+	<extension point="xbmc.python.script" library="addon.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en">Repository and Addon Update</summary>
+		<description lang="en">Force Refresh Repos and Add-ons for Kodi 19 (Matrix).[CR]Credits to JB.</description>
+		<license>GNU General Public License, v2</license>
+		<language />
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+		</assets>
+		<news>Version 0.0.1 Updated for Kodi 19 (Matrix), Credits to JB.</news>
+	</extension>
 </addon><addon id="script.module.mutagen" name="Mutagen" version="1.44.0+matrix.1" provider-name="Christoph Reiter">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
@@ -2138,7 +2154,7 @@ v1.0.1 (2019-08-06)
             <fanart>fanart.jpg</fanart>
         </assets>
     </extension>
-</addon><addon id="skin.estuary1" version="1.8.0" name="Estuary1" provider-name="Terry Tibs,phil65, Ichabod Fletchman">
+</addon><addon id="skin.estuary1" version="1.9.0" name="Estuary1" provider-name="Terry Tibs,phil65, Ichabod Fletchman">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0" />
 		xbmc.executebuiltin('UpdateLocalAddons')
