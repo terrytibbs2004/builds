@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.module.matrix.force.refresh" name="[COLOR aqua]Matrix Force Refresh[/COLOR]" version="0.0.1" provider-name="Aliunde">
+<addon id="script.module.matrix.force.refresh" name="[COLOR aqua]Matrix Force Refresh[/COLOR]" version="0.0.2" provider-name="Aliunde">
 	<extension point="xbmc.python.script" library="addon.py">
 		<provides>executable</provides>
 	</extension>

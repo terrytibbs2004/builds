@@ -1863,7 +1863,7 @@ v0.5.9 (2022-03-22)
     <news>0.1.3:
 - Fix non-UTF-8 byte string decoding in Python 2.</news>
   </extension>
-</addon><addon id="script.module.matrix.force.refresh" name="[COLOR aqua]Matrix Force Refresh[/COLOR]" version="0.0.1" provider-name="Aliunde">
+</addon><addon id="script.module.matrix.force.refresh" name="[COLOR aqua]Matrix Force Refresh[/COLOR]" version="0.0.2" provider-name="Aliunde">
 	<extension point="xbmc.python.script" library="addon.py">
 		<provides>executable</provides>
 	</extension>
