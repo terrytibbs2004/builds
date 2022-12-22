@@ -107,7 +107,7 @@ class _PersistentDictMixin(object):
         raise NotImplementedError
 
 
-class _Storage(collections.abc.MutableMapping, _PersistentDictMixin):
+class _Storage(collections.MutableMapping, _PersistentDictMixin):
     '''Storage that acts like a dict but also can persist to disk.
 
     :param filename: An absolute filepath to reprsent the storage on disk. The
@@ -140,13 +140,13 @@ class _Storage(collections.abc.MutableMapping, _PersistentDictMixin):
         return iter(self._items)
 
     def __len__(self):
-        return len(self._items)
+        return self._items.__len__
 
     def raw_dict(self):
         '''Returns the wrapped dict'''
         return self._items
 
-    initial_update = collections.abc.MutableMapping.update
+    initial_update = collections.MutableMapping.update
 
     def clear(self):
         super(_Storage, self).clear()

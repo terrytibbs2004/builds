@@ -11,7 +11,7 @@ from copy import deepcopy
 
 from requests.adapters import HTTPAdapter
 from requests.sessions import Session
-from . import dump
+from requests_toolbelt.utils import dump
 
 from time import sleep
 
@@ -58,7 +58,7 @@ from .user_agent import User_Agent
 
 # ------------------------------------------------------------------------------- #
 
-__version__ = '1.2.59'
+__version__ = '1.2.48'
 
 # ------------------------------------------------------------------------------- #
 
@@ -197,7 +197,7 @@ class CloudScraper(Session):
     @staticmethod
     def debugRequest(req):
         try:
-            print(dump.dump_all(req).decode('utf-8', errors='backslashreplace'))
+            print(dump.dump_all(req).decode('utf-8'))
         except ValueError as e:
             print("Debug Error: {}".format(getattr(e, 'message', e)))
 
@@ -275,13 +275,10 @@ class CloudScraper(Session):
         # ------------------------------------------------------------------------------- #
 
         if self.requestPostHook:
-            newResponse = self.requestPostHook(self, response)
+            response = self.requestPostHook(self, response)
 
-            if response != newResponse:  # Give me walrus in 3.7!!!
-                response = newResponse
-                if self.debug:
-                    print('==== requestPostHook Debug ====')
-                    self.debugRequest(response)
+            if self.debug:
+                self.debugRequest(response)
 
         # Check if Cloudflare anti-bot is on
         if self.is_Challenge_Request(response):
@@ -304,27 +301,6 @@ class CloudScraper(Session):
                 self._solveDepthCnt = 0
 
         return response
-
-    # ------------------------------------------------------------------------------- #
-    # check if the response contains a valid Cloudflare Bot Fight Mode challenge
-    # ------------------------------------------------------------------------------- #
-
-    @staticmethod
-    def is_BFM_Challenge(resp):
-        try:
-            return (
-                resp.headers.get('Server', '').startswith('cloudflare')
-                and re.search(
-                    r"\/cdn-cgi\/bm\/cv\/\d+\/api\.js.*?"
-                    r"window\['__CF\$cv\$params'\]\s*=\s*{",
-                    resp.text,
-                    re.M | re.S
-                )
-            )
-        except AttributeError:
-            pass
-
-        return False
 
     # ------------------------------------------------------------------------------- #
     # check if the response contains a valid Cloudflare challenge
@@ -358,11 +334,11 @@ class CloudScraper(Session):
                 resp.headers.get('Server', '').startswith('cloudflare')
                 and resp.status_code in [429, 503]
                 and re.search(
-                    r'cpo.src\s*=\s*"/cdn-cgi/challenge-platform/\S+orchestrate/jsch/v1',
+                    r'cpo.src\s*=\s*"/cdn-cgi/challenge-platform/\S+orchestrate/jsch/v1"',
                     resp.text,
                     re.M | re.S
                 )
-                and re.search(r'window._cf_chl_enter\s*[\(=]', resp.text, re.M | re.S)
+                and re.search(r'window._cf_chl_enter\(', resp.text, re.M | re.S)
             )
         except AttributeError:
             pass
@@ -379,11 +355,11 @@ class CloudScraper(Session):
             return (
                 CloudScraper.is_Captcha_Challenge(resp)
                 and re.search(
-                    r'cpo.src\s*=\s*"/cdn-cgi/challenge-platform/\S+orchestrate/captcha/v1',
+                    r'cpo.src\s*=\s*"/cdn-cgi/challenge-platform/\S+orchestrate/captcha/v1"',
                     resp.text,
                     re.M | re.S
                 )
-                and re.search(r'\s*id="trk_captcha_js"', resp.text, re.M | re.S)
+                and re.search(r'window._cf_chl_enter\(', resp.text, re.M | re.S)
             )
         except AttributeError:
             pass

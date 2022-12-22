@@ -23,7 +23,7 @@
 '''
 
 import re
-import json
+import simplejson as json
 import six
 
 

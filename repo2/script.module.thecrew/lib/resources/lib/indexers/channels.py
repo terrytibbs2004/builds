@@ -29,10 +29,8 @@ from resources.lib.modules import metacache
 from resources.lib.modules import workers
 from resources.lib.modules import trakt
 
-import sys,re,datetime
-import simplejson as json
+import sys,re,json,datetime
 
-import six
 from six.moves import urllib_parse
 params = dict(urllib_parse.parse_qsl(sys.argv[2].replace('?',''))) if len(sys.argv) > 1 else dict()
 
@@ -99,14 +97,14 @@ class channels:
             try:
                 year = result['listings'][id][0]['d']
                 year = re.findall('[(](\d{4})[)]', year)[0].strip()
-                year = six.ensure_str(year)
+                year = control.six_encode(year)
             except:
                 year = ''
 
             title = result['listings'][id][0]['t']
             title = title.replace('(%s)' % year, '').strip()
             title = client.replaceHTMLCodes(title)
-            title = six.ensure_str(title)
+            title = control.six_encode(title)
 
             self.items.append((title, year, channel, num))
         except:
@@ -216,13 +214,11 @@ class channels:
 
         isPlayable = 'true' if not 'plugin' in control.infoLabel('Container.PluginName') else 'false'
 
-        playbackMenu = six.ensure_str(control.lang(32063)) if control.setting('hosts.mode') == '2' else six.ensure_str(control.lang(32064))
+        playbackMenu = control.six_encode(control.lang(32063)) if control.setting('hosts.mode') == '2' else control.six_encode(control.lang(32064))
 
-        queueMenu = six.ensure_str(control.lang(32065))
+        queueMenu = control.six_encode(control.lang(32065))
 
-        refreshMenu = six.ensure_str(control.lang(32072))
-
-        infoMenu = six.ensure_str(control.lang(32101))
+        refreshMenu = control.six_encode(control.lang(32072))
 
 
         for i in items:
@@ -232,7 +228,7 @@ class channels:
                 systitle = urllib_parse.quote_plus(i['title'])
                 imdb, tmdb, year = i['imdb'], i['tmdb'], i['year']
 
-                meta = dict((k,v) for k, v in six.iteritems(i) if not v == '0')
+                meta = dict((k,v) for k, v in i.iteritems() if not v == '0')
                 meta.update({'code': imdb, 'imdbnumber': imdb, 'imdb_id': imdb})
                 meta.update({'tmdb_id': tmdb})
                 meta.update({'mediatype': 'movie'})
@@ -258,7 +254,7 @@ class channels:
                 cm.append((playbackMenu, 'RunPlugin(%s?action=alterSources&url=%s&meta=%s)' % (sysaddon, sysurl, sysmeta)))
 
                 if isOld == True:
-                    cm.append((infoMenu, 'Action(Info)'))
+                    cm.append((control.lang2(19033).encode('utf-8'), 'Action(Info)'))
 
 
                 item = control.item(label=label)

@@ -26,15 +26,18 @@
 # represent arbitrary binary data, we must use the "bytes" object. This method
 # ensures the object behaves as we need it to.
 
+
 def to_bufferable(binary):
     return binary
+
 
 def _get_byte(c):
     return ord(c)
 
+
 try:
     xrange
-except:
+except Exception:
 
     def to_bufferable(binary):
         if isinstance(binary, bytes):
@@ -54,7 +57,7 @@ def strip_PKCS7_padding(data):
 
     pad = _get_byte(data[-1])
 
-    if pad > 16:
-        raise ValueError("invalid padding byte")
+    if not pad or pad > 16:
+        return data
 
     return data[:-pad]

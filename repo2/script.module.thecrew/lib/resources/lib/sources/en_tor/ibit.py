@@ -14,18 +14,13 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 '''
 
-import re
-
-try: from urlparse import parse_qs, urljoin
-except ImportError: from urllib.parse import parse_qs, urljoin
-try: from urllib import urlencode, quote_plus, unquote, quote
-except ImportError: from urllib.parse import urlencode, quote_plus, unquote, quote
-
+import re, urllib, urlparse
+from urllib import unquote
 from resources.lib.modules import cleantitle, debrid, source_utils
 from resources.lib.modules import client
 
 
-class source:
+class s0urce:
     def __init__(self):
         self.priority = 1
         self.language = ['en']
@@ -36,7 +31,7 @@ class source:
     def movie(self, imdb, title, localtitle, aliases, year):
         try:
             url = {'imdb': imdb, 'title': title, 'year': year}
-            url = urlencode(url)
+            url = urllib.urlencode(url)
             return url
         except:
             return
@@ -44,7 +39,7 @@ class source:
     def tvshow(self, imdb, tvdb, tvshowtitle, localtvshowtitle, aliases, year):
         try:
             url = {'imdb': imdb, 'tvdb': tvdb, 'tvshowtitle': tvshowtitle, 'year': year}
-            url = urlencode(url)
+            url = urllib.urlencode(url)
             return url
         except:
             return
@@ -53,10 +48,10 @@ class source:
         try:
             if url is None:
                 return
-            url = parse_qs(url)
+            url = urlparse.parse_qs(url)
             url = dict([(i, url[i][0]) if url[i] else (i, '') for i in url])
             url['title'], url['premiered'], url['season'], url['episode'] = title, premiered, season, episode
-            url = urlencode(url)
+            url = urllib.urlencode(url)
             return url
         except:
             return
@@ -69,7 +64,7 @@ class source:
             if debrid.status() is False:
                 raise Exception()
 
-            data = parse_qs(url)
+            data = urlparse.parse_qs(url)
             data = dict([(i, data[i][0]) if data[i] else (i, '') for i in data])
 
             title = data['tvshowtitle'] if 'tvshowtitle' in data else data['title']
@@ -79,10 +74,10 @@ class source:
             query = '%s S%02dE%02d' % (
             data['tvshowtitle'], int(data['season']), int(data['episode'])) if 'tvshowtitle' in data else '%s %s' % (
             data['title'], data['year'])
-            query = re.sub(r'(\\\|/| -|:|;|\*|\?|"|\'|<|>|\|)', ' ', query)
+            query = re.sub('(\\\|/| -|:|;|\*|\?|"|\'|<|>|\|)', ' ', query)
 
-            url = self.search_link % quote_plus(query)
-            url = urljoin(self.base_link, url).replace('++', '+')
+            url = self.search_link % urllib.quote_plus(query)
+            url = urlparse.urljoin(self.base_link, url).replace('++', '+')
 
             try:
                 r = client.request(url)
@@ -93,7 +88,7 @@ class source:
                     for link, data in links:
                         if hdlr not in data:
                             continue
-                        link = urljoin(self.base_link, link)
+                        link = urlparse.urljoin(self.base_link, link)
                         if any(x in link for x in ['FRENCH', 'Ita', 'ITA', 'italian', 'Tamil', 'TRUEFRENCH', '-lat-', 'Dublado', 'Dub', 'Rus', 'Hindi']):
                                 continue
                         link = client.request(link)
@@ -102,14 +97,13 @@ class source:
                             size = re.findall('((?:\d+\,\d+\.\d+|\d+\.\d+|\d+\,\d+|\d+)\s*(?:GiB|MiB|GB|MB))', getsize)[0]
 
                             div = 1 if size.endswith('GB') else 1024
-                            size = float(re.sub(r'[^0-9|/.|/,]', '', size.replace(',', '.'))) / div
+                            size = float(re.sub('[^0-9|/.|/,]', '', size.replace(',', '.'))) / div
                             size = '%.2f GB' % size
                         except BaseException:
                             size = '0'
                         link = re.findall("'(magnet:.+?)'", link, re.DOTALL)
                         for url in link:
-                            try: url = unquote(url).decode('utf8')
-                            except: pass
+                            url = unquote(url).decode('utf8')
                             url = url.replace('X-X', '').replace('\\x26', '&').replace('\\x2b', '+')
                             url = url.split('&tr=')[0]
                             quality, info = source_utils.get_release_quality(data)

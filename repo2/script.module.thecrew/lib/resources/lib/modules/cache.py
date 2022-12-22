@@ -21,13 +21,12 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 '''
-from __future__ import absolute_import
 
+import ast
 import hashlib
 import re
 import time
-import os
-from ast import literal_eval as evaluate
+from resources.lib.modules import control
 import six
 
 try:
@@ -35,97 +34,125 @@ try:
 except ImportError:
     from pysqlite2 import dbapi2 as db, OperationalError
 
-from resources.lib.modules import control
-
-if six.PY2:
-    str = unicode
-elif six.PY3:
-    str = unicode = basestring = str
+"""
+This module is used to get/set cache for every action done in the system
+"""
 
 cache_table = 'cache'
 
-def get(function_, duration, *args, **table):
+def get(function, duration, *args):
+    # type: (function, int, object) -> object or None
+    """
+    Gets cached value for provided function with optional arguments, or executes and stores the result
+    :param function: Function to be executed
+    :param duration: Duration of validity of cache in hours
+    :param args: Optional arguments for the provided function
+    """
 
     try:
+        key = _hash_function(function, args)
+        cache_result = cache_get(key)
+        if cache_result:
+            if _is_cache_valid(cache_result['date'], duration):
+                try:
+                    result = ast.literal_eval(cache_result['value'].encode('utf-8'))
+                except:
+                    result = ast.literal_eval(cache_result['value'])
+                return result
 
-        response = None
+        fresh_result = repr(function(*args))
+        if not fresh_result:
+            # If the cache is old, but we didn't get fresh result, return the old cache
+            if cache_result:
+                return cache_result
+            return None
 
-        f = repr(function_)
-        f = re.sub(r'.+\smethod\s|.+function\s|\sat\s.+|\sof\s.+', '', f)
-
-        a = hashlib.md5()
-        for i in args:
-            a.update(str(i))
-        a = str(a.hexdigest())
-
-    except Exception:
-
-        pass
-
-    try:
-        table = table['table']
-    except Exception:
-        table = 'rel_list'
-
-    try:
-
-        control.makeFile(control.dataPath)
-        dbcon = db.connect(control.cacheFile)
-        dbcur = dbcon.cursor()
-        dbcur.execute("SELECT * FROM {tn} WHERE func = '{f}' AND args = '{a}'".format(tn=table, f=f, a=a))
-        match = dbcur.fetchone()
-
+        cache_insert(key, fresh_result)
         try:
-            response = evaluate(match[2].encode('utf-8'))
-        except AttributeError:
-            response = evaluate(match[2])
+            result = ast.literal_eval(fresh_result.encode('utf-8'))
+        except:
+            result = ast.literal_eval(fresh_result)
+        return result
+    except:
+        return None
 
-        t1 = int(match[3])
-        t2 = int(time.time())
-        update = (abs(t2 - t1) / 3600) >= int(duration)
-        if not update:
-            return response
 
-    except Exception:
-
-        pass
-
+def remove(function, *args):
     try:
-
-        r = function_(*args)
-        if (r is None or r == []) and response is not None:
-            return response
-        elif r is None or r == []:
-            return r
-
-    except Exception:
-        return
-
-    try:
-
-        r = repr(r)
-        t = int(time.time())
-        dbcur.execute("CREATE TABLE IF NOT EXISTS {} (""func TEXT, ""args TEXT, ""response TEXT, ""added TEXT, ""UNIQUE(func, args)"");".format(table))
-        dbcur.execute("DELETE FROM {0} WHERE func = '{1}' AND args = '{2}'".format(table, f, a))
-        dbcur.execute("INSERT INTO {} Values (?, ?, ?, ?)".format(table), (f, a, r, t))
-        dbcon.commit()
-
+        key = _hash_function(function, args)
+        cursor = _get_connection_cursor()
+        cursor.execute("DELETE FROM %s WHERE key = ?" % cache_table, [key])
+        cursor.connection.commit()
     except Exception:
         pass
 
+def timeout(function, *args):
     try:
-        return evaluate(r.encode('utf-8'))
-    except Exception:
-        return evaluate(r)
-
-def timeout(function_, *args):
-    try:
-        key = _hash_function(function_, args)
+        key = _hash_function(function, args)
         result = cache_get(key)
         return int(result['date'])
     except Exception:
         return None
 
+def bennu_download_get(function, timeout, *args, **table):
+    try:
+        response = None
+
+        f = repr(function)
+        f = re.sub('.+\smethod\s|.+function\s|\sat\s.+|\sof\s.+', '', f)
+
+        a = hashlib.md5()
+        for i in args: a.update(str(i))
+        a = str(a.hexdigest())
+    except:
+        pass
+
+    try:
+        table = table['table']
+    except:
+        table = 'rel_list'
+
+    try:
+        control.makeFile(control.dataPath)
+        dbcon = db.connect(control.cacheFile)
+        dbcur = dbcon.cursor()
+        dbcur.execute("SELECT * FROM %s WHERE func = '%s' AND args = '%s'" % (table, f, a))
+        match = dbcur.fetchone()
+
+        response = eval(match[2].encode('utf-8'))
+
+        t1 = int(match[3])
+        t2 = int(time.time())
+        update = (abs(t2 - t1) / 3600) >= int(timeout)
+        if update == False:
+            return response
+    except:
+        pass
+
+    try:
+        r = function(*args)
+        if (r == None or r == []) and not response == None:
+            return response
+        elif (r == None or r == []):
+            return r
+    except:
+        return
+
+    try:
+        r = repr(r)
+        t = int(time.time())
+        dbcur.execute("CREATE TABLE IF NOT EXISTS %s (""func TEXT, ""args TEXT, ""response TEXT, ""added TEXT, ""UNIQUE(func, args)"");" % table)
+        dbcur.execute("DELETE FROM %s WHERE func = '%s' AND args = '%s'" % (table, f, a))
+        dbcur.execute("INSERT INTO %s Values (?, ?, ?, ?)" % table, (f, a, r, t))
+        dbcon.commit()
+    except:
+        pass
+
+    try:
+        return eval(r.encode('utf-8'))
+    except:
+        pass
+#TC 2/01/19 started
 def cache_get(key):
     # type: (str, str) -> dict or None
     try:
@@ -147,7 +174,7 @@ def cache_insert(key, value):
         "UPDATE %s SET value=?,date=? WHERE key=?"
         % cache_table, (value, now, key))
 
-    if update_result.rowcount == 0:
+    if update_result.rowcount is 0:
         cursor.execute(
             "INSERT INTO %s Values (?, ?, ?)"
             % cache_table, (key, value, now)
@@ -198,20 +225,6 @@ def cache_clear_providers():
     except:
         pass
 
-def cache_clear_debrid():
-    try:
-        cursor = _get_connection_cursor_debrid()
-
-        for t in ['debrid_data']:
-            try:
-                cursor.execute("DROP TABLE IF EXISTS %s" % t)
-                cursor.execute("VACUUM")
-                cursor.commit()
-            except:
-                pass
-    except:
-        pass
-
 def cache_clear_search():
     try:
         cursor = _get_connection_cursor_search()
@@ -230,8 +243,7 @@ def cache_clear_all():
     cache_clear()
     cache_clear_meta()
     cache_clear_providers()
-    cache_clear_debrid()
-
+        
 def _get_connection_cursor():
     conn = _get_connection()
     return conn.cursor()
@@ -241,7 +253,6 @@ def _get_connection():
     conn = db.connect(control.cacheFile)
     conn.row_factory = _dict_factory
     return conn
-
 def _get_connection_cursor_meta():
     conn = _get_connection_meta()
     return conn.cursor()
@@ -261,17 +272,7 @@ def _get_connection_providers():
     conn = db.connect(control.providercacheFile)
     conn.row_factory = _dict_factory
     return conn
-
-def _get_connection_cursor_debrid():
-    conn = _get_connection_debrid()
-    return conn.cursor()
-
-def _get_connection_debrid():
-    control.makeFile(control.dataPath)
-    conn = db.connect(control.dbFile)
-    conn.row_factory = _dict_factory
-    return conn
-
+    
 def _get_connection_cursor_search():
     conn = _get_connection_search()
     return conn.cursor()
@@ -281,7 +282,6 @@ def _get_connection_search():
     conn = db.connect(control.searchFile)
     conn.row_factory = _dict_factory
     return conn
-
 def _dict_factory(cursor, row):
     d = {}
     for idx, col in enumerate(cursor.description):
@@ -299,7 +299,10 @@ def _get_function_name(function_instance):
 
 def _generate_md5(*args):
     md5_hash = hashlib.md5()
-    [md5_hash.update(str(arg)) for arg in args]
+    try:
+        [md5_hash.update(str(arg)) for arg in args]
+    except:
+        [md5_hash.update(str(arg).encode('utf-8')) for arg in args]
     return str(md5_hash.hexdigest())
 
 
@@ -307,30 +310,32 @@ def _is_cache_valid(cached_time, cache_timeout):
     now = int(time.time())
     diff = now - cached_time
     return (cache_timeout * 3600) > diff
-
-
 def cache_version_check():
+
     if _find_cache_version():
-        cache_clear()
-        cache_clear_providers()
+        cache_clear(); cache_clear_meta(); cache_clear_providers()
         control.infoDialog(six.ensure_str(control.lang(32057)), sound=True, icon='INFO')
-
-
+        
 def _find_cache_version():
+
+    import os
     versionFile = os.path.join(control.dataPath, 'cache.v')
+    try: 
+        if not os.path.exists(versionFile):
+            f = open(versionFile, 'w')
+            f.close()
+    except Exception:
+        import xbmc
+        print 'The Crew Addon Data Path Does not Exist. Creating Folder....'
+        ad_folder = xbmc.translatePath('special://home/userdata/addon_data/plugin.video.thecrew')
+        os.makedirs(ad_folder)
     try:
-        if six.PY2:
-            with open(versionFile, 'rb') as fh: oldVersion = fh.read()
-        elif six.PY3:
-            with open(versionFile, 'r') as fh: oldVersion = fh.read()
+        with open(versionFile, 'rb') as fh: oldVersion = fh.read()
     except: oldVersion = '0'
     try:
         curVersion = control.addon('script.module.thecrew').getAddonInfo('version')
-        if oldVersion != curVersion:
-            if six.PY2:
-                with open(versionFile, 'wb') as fh: fh.write(curVersion)
-            elif six.PY3:
-                with open(versionFile, 'w') as fh: fh.write(curVersion)
+        if oldVersion != curVersion: 
+            with open(versionFile, 'wb') as fh: fh.write(curVersion)
             return True
         else: return False
     except: return False

@@ -8,13 +8,13 @@
     :license: GPLv3, see LICENSE for more details.
 '''
 
+from urllib import urlencode
+from urllib2 import urlopen
+
 try:
     import cPickle as pickle
 except ImportError:
     import pickle
-
-from urllib.parse import urlencode
-from urllib.request import urlopen
 
 
 def xbmc_url(url, **options):
@@ -46,7 +46,7 @@ def enum(*args, **kwargs):
 
 
 Modes = enum('XBMC', 'ONCE', 'CRAWL', 'INTERACTIVE')
-DEBUG_MODES = [Modes.ONCE, Modes.CRAWL, Modes.INTERACTIVE] # pylint: disable=no-member
+DEBUG_MODES = [Modes.ONCE, Modes.CRAWL, Modes.INTERACTIVE]
 
 
 def clean_dict(dct):
@@ -62,7 +62,7 @@ def pickle_dict(items):
     ret = {}
     pickled_keys = []
     for key, val in items.items():
-        if isinstance(val, bytes) or isinstance(val, str):
+        if isinstance(val, basestring):
             ret[key] = val
         else:
             pickled_keys.append(key)
@@ -122,12 +122,12 @@ _hextochr.update(('%02X' % i, chr(i)) for i in range(256))
 def unhex(inp):
     '''unquote(r'abc\x20def') -> 'abc def'.'''
     res = inp.split(r'\x')
-    for i in range(1, len(res)):
+    for i in xrange(1, len(res)):
         item = res[i]
         try:
             res[i] = _hextochr[item[:2]] + item[2:]
         except KeyError:
             res[i] = '%' + item
         except UnicodeDecodeError:
-            res[i] = chr(int(item[:2], 16)) + item[2:]
+            res[i] = unichr(int(item[:2], 16)) + item[2:]
     return ''.join(res)

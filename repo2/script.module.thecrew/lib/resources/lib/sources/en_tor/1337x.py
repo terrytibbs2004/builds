@@ -15,12 +15,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 '''
 
-import re
-
-try: from urlparse import parse_qs, urljoin
-except ImportError: from urllib.parse import parse_qs, urljoin
-try: from urllib import urlencode, quote
-except ImportError: from urllib.parse import urlencode, quote
+import re, urllib, urlparse
 
 from resources.lib.modules import debrid
 from resources.lib.modules import cleantitle
@@ -29,7 +24,8 @@ from resources.lib.modules import dom_parser2 as dom
 from resources.lib.modules import workers
 from resources.lib.modules import source_utils
 
-class source:
+
+class s0urce:
     def __init__(self):
         self.priority = 1
         self.language = ['en']
@@ -42,7 +38,7 @@ class source:
     def movie(self, imdb, title, localtitle, aliases, year):
         try:
             url = {'imdb': imdb, 'title': title, 'year': year}
-            url = urlencode(url)
+            url = urllib.urlencode(url)
             return url
         except BaseException:
             return
@@ -50,7 +46,7 @@ class source:
     def tvshow(self, imdb, tvdb, tvshowtitle, localtvshowtitle, aliases, year):
         try:
             url = {'imdb': imdb, 'tvdb': tvdb, 'tvshowtitle': tvshowtitle, 'year': year}
-            url = urlencode(url)
+            url = urllib.urlencode(url)
             return url
         except BaseException:
             return
@@ -59,10 +55,10 @@ class source:
         try:
             if url is None: return
 
-            url = parse_qs(url)
+            url = urlparse.parse_qs(url)
             url = dict([(i, url[i][0]) if url[i] else (i, '') for i in url])
             url['title'], url['premiered'], url['season'], url['episode'] = title, premiered, season, episode
-            url = urlencode(url)
+            url = urllib.urlencode(url)
             return url
         except BaseException:
             return
@@ -77,7 +73,7 @@ class source:
             if debrid.status() is False:
                 raise Exception()
 
-            data = parse_qs(url)
+            data = urlparse.parse_qs(url)
             data = dict([(i, data[i][0]) if data[i] else (i, '') for i in data])
 
             self.title = data['tvshowtitle'] if 'tvshowtitle' in data else data['title']
@@ -89,13 +85,13 @@ class source:
             query = re.sub('(\\\|/| -|:|;|\*|\?|"|\'|<|>|\|)', ' ', query)
             urls = []
             if 'tvshowtitle' in data:
-                urls.append(self.tvsearch.format(quote(query), '1'))
-                urls.append(self.tvsearch.format(quote(query), '2'))
-                urls.append(self.tvsearch.format(quote(query), '3'))
+                urls.append(self.tvsearch.format(urllib.quote(query), '1'))
+                urls.append(self.tvsearch.format(urllib.quote(query), '2'))
+                urls.append(self.tvsearch.format(urllib.quote(query), '3'))
             else:
-                urls.append(self.moviesearch.format(quote(query), '1'))
-                urls.append(self.moviesearch.format(quote(query), '2'))
-                urls.append(self.moviesearch.format(quote(query), '3'))
+                urls.append(self.moviesearch.format(urllib.quote(query), '1'))
+                urls.append(self.moviesearch.format(urllib.quote(query), '2'))
+                urls.append(self.moviesearch.format(urllib.quote(query), '3'))
 
             threads = []
             for url in urls:
@@ -122,7 +118,7 @@ class source:
             posts = client.parseDOM(posts, 'tr')
             for post in posts:
                 data = dom.parse_dom(post, 'a', req='href')[1]
-                link = urljoin(self.base_link, data.attrs['href'])
+                link = urlparse.urljoin(self.base_link, data.attrs['href'])
                 name = data.content
                 t = name.split(self.hdlr)[0]
 

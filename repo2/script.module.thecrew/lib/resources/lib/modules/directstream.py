@@ -22,9 +22,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 '''
 
-import re, os, binascii#, httplib, urllib, urlparse
-import simplejson as json
-from six.moves import urllib_parse
+import re, os, urllib, urlparse, json, binascii
 from resources.lib.modules import client
 
 
@@ -48,7 +46,7 @@ def google(url, ref=None):
             return url
         if any(x in url for x in ['youtube.', 'docid=']): url = 'https://drive.google.com/file/d/%s/view' % re.compile('docid=([\w-]+)').findall(url)[0]
 
-        netloc = urllib_parse.urlparse(url.strip().lower()).netloc
+        netloc = urlparse.urlparse(url.strip().lower()).netloc
         netloc = netloc.split('.google')[0]
 
         if netloc == 'docs' or netloc == 'drive':
@@ -79,7 +77,7 @@ def google(url, ref=None):
 
             result = result.replace('\\u003d', '=').replace('\\u0026', '&')
             result = re.compile('url=(.+?)&').findall(result)
-            result = [urllib_parse.unquote(i) for i in result]
+            result = [urllib.unquote(i) for i in result]
 
             result = sum([googletag(i, append_height=True) for i in result], [])
 
@@ -101,21 +99,21 @@ def google(url, ref=None):
 
 
         elif netloc == 'plus':
-            id = (urllib_parse.urlparse(url).path).split('/')[-1]
+            id = (urlparse.urlparse(url).path).split('/')[-1]
 
             result = result.replace('\r', '').replace('\n', '').replace('\t', '')
             result = result.split('"%s"' % id)[-1].split(']]')[0]
 
             result = result.replace('\\u003d', '=').replace('\\u0026', '&')
             result = re.compile('url=(.+?)&').findall(result)
-            result = [urllib_parse.unquote(i) for i in result]
+            result = [urllib.unquote(i) for i in result]
 
             result = sum([googletag(i, append_height=True) for i in result], [])
 
         result = sorted(result, key=lambda i: i.get('height', 0), reverse=True)
 
         url = []
-        for q in ['4K', '1440p', '1080p', 'HD', 'SD']:
+        for q in ['4K', '1440p', '1080p', '720p', 'SD']:
             try:
                 url += [[i for i in result if i.get('quality') == q][0]]
             except:
@@ -123,7 +121,7 @@ def google(url, ref=None):
 
         for i in url:
             i.pop('height', None)
-            i.update({'url': i['url'] + '|%s' % urllib_parse.urlencode(headers)})
+            i.update({'url': i['url'] + '|%s' % urllib.urlencode(headers)})
 
         if not url: return
         return url
@@ -142,24 +140,24 @@ def googletag(url, append_height=False):
     itag_map = {'151': {'quality': 'SD', 'height': 72}, '212': {'quality': 'SD', 'height': 480}, '313': {'quality': '4K', 'height': 2160},
                 '242': {'quality': 'SD', 'height': 240}, '315': {'quality': '4K', 'height': 2160}, '219': {'quality': 'SD', 'height': 480},
                 '133': {'quality': 'SD', 'height': 240}, '271': {'quality': '1440p', 'height': 1440}, '272': {'quality': '4K', 'height': 2160},
-                '137': {'quality': '1080p', 'height': 1080}, '136': {'quality': 'HD', 'height': 720}, '135': {'quality': 'SD', 'height': 480},
+                '137': {'quality': '1080p', 'height': 1080}, '136': {'quality': '720p', 'height': 720}, '135': {'quality': 'SD', 'height': 480},
                 '134': {'quality': 'SD', 'height': 360}, '82': {'quality': 'SD', 'height': 360}, '83': {'quality': 'SD', 'height': 480},
-                '218': {'quality': 'SD', 'height': 480}, '93': {'quality': 'SD', 'height': 360}, '84': {'quality': 'HD', 'height': 720},
-                '170': {'quality': '1080p', 'height': 1080}, '167': {'quality': 'SD', 'height': 360}, '22': {'quality': 'HD', 'height': 720},
+                '218': {'quality': 'SD', 'height': 480}, '93': {'quality': 'SD', 'height': 360}, '84': {'quality': '720p', 'height': 720},
+                '170': {'quality': '1080p', 'height': 1080}, '167': {'quality': 'SD', 'height': 360}, '22': {'quality': '720p', 'height': 720},
                 '46': {'quality': '1080p', 'height': 1080}, '160': {'quality': 'SD', 'height': 144}, '44': {'quality': 'SD', 'height': 480},
-                '45': {'quality': 'HD', 'height': 720}, '43': {'quality': 'SD', 'height': 360}, '94': {'quality': 'SD', 'height': 480},
+                '45': {'quality': '720p', 'height': 720}, '43': {'quality': 'SD', 'height': 360}, '94': {'quality': 'SD', 'height': 480},
                 '5': {'quality': 'SD', 'height': 240}, '6': {'quality': 'SD', 'height': 270}, '92': {'quality': 'SD', 'height': 240},
                 '85': {'quality': '1080p', 'height': 1080}, '308': {'quality': '1440p', 'height': 1440}, '278': {'quality': 'SD', 'height': 144},
-                '78': {'quality': 'SD', 'height': 480}, '302': {'quality': 'HD', 'height': 720}, '303': {'quality': '1080p', 'height': 1080},
-                '245': {'quality': 'SD', 'height': 480}, '244': {'quality': 'SD', 'height': 480}, '247': {'quality': 'HD', 'height': 720},
+                '78': {'quality': 'SD', 'height': 480}, '302': {'quality': '720p', 'height': 720}, '303': {'quality': '1080p', 'height': 1080},
+                '245': {'quality': 'SD', 'height': 480}, '244': {'quality': 'SD', 'height': 480}, '247': {'quality': '720p', 'height': 720},
                 '246': {'quality': 'SD', 'height': 480}, '168': {'quality': 'SD', 'height': 480}, '266': {'quality': '4K', 'height': 2160},
-                '243': {'quality': 'SD', 'height': 360}, '264': {'quality': '1440p', 'height': 1440}, '102': {'quality': 'HD', 'height': 720},
-                '100': {'quality': 'SD', 'height': 360}, '101': {'quality': 'SD', 'height': 480}, '95': {'quality': 'HD', 'height': 720},
+                '243': {'quality': 'SD', 'height': 360}, '264': {'quality': '1440p', 'height': 1440}, '102': {'quality': '720p', 'height': 720},
+                '100': {'quality': 'SD', 'height': 360}, '101': {'quality': 'SD', 'height': 480}, '95': {'quality': '720p', 'height': 720},
                 '248': {'quality': '1080p', 'height': 1080}, '96': {'quality': '1080p', 'height': 1080}, '91': {'quality': 'SD', 'height': 144},
                 '38': {'quality': '4K', 'height': 3072}, '59': {'quality': 'SD', 'height': 480}, '17': {'quality': 'SD', 'height': 144},
                 '132': {'quality': 'SD', 'height': 240}, '18': {'quality': 'SD', 'height': 360}, '37': {'quality': '1080p', 'height': 1080},
-                '35': {'quality': 'SD', 'height': 480}, '34': {'quality': 'SD', 'height': 360}, '298': {'quality': 'HD', 'height': 720},
-                '299': {'quality': '1080p', 'height': 1080}, '169': {'quality': 'HD', 'height': 720}}
+                '35': {'quality': 'SD', 'height': 480}, '34': {'quality': 'SD', 'height': 360}, '298': {'quality': '720p', 'height': 720},
+                '299': {'quality': '1080p', 'height': 1080}, '169': {'quality': '720p', 'height': 720}}
 
     if quality in itag_map:
         quality = itag_map[quality]
@@ -173,7 +171,7 @@ def googletag(url, append_height=False):
 def googlepass(url):
     try:
         try:
-            headers = dict(urllib_parse.parse_qsl(url.rsplit('|', 1)[1]))
+            headers = dict(urlparse.parse_qsl(url.rsplit('|', 1)[1]))
         except:
             headers = None
         url = url.split('|')[0].replace('\\', '')
@@ -182,7 +180,7 @@ def googlepass(url):
             url = url.replace('http://', 'https://')
         else:
             url = url.replace('https://', 'http://')
-        if headers: url += '|%s' % urllib_parse.urlencode(headers)
+        if headers: url += '|%s' % urllib.urlencode(headers)
         return url
     except:
         return
@@ -190,7 +188,7 @@ def googlepass(url):
 
 def vk(url):
     try:
-        query = urllib_parse.parse_qs(urllib_parse.urlparse(url).query)
+        query = urlparse.parse_qs(urlparse.urlparse(url).query)
 
         try:
             oid, video_id = query['oid'][0], query['id'][0]
@@ -211,7 +209,7 @@ def vk(url):
 
         url = []
         try:
-            url += [{'quality': 'HD', 'url': sources['720']}]
+            url += [{'quality': '720p', 'url': sources['720']}]
         except:
             pass
         try:
@@ -246,7 +244,7 @@ def odnoklassniki(url):
         result = json.loads(result).get('videos', [])
 
         hd = []
-        for name, quali in {'ultra': '4K', 'quad': '1440p', 'full': '1080p', 'hd': 'HD'}.items():
+        for name, quali in {'ultra': '4K', 'quad': '1440p', 'full': '1080p', 'hd': '720p'}.items():
             hd += [{'quality': quali, 'url': i.get('url')} for i in result if i.get('name').lower() == name]
 
         sd = []
@@ -291,7 +289,7 @@ def yandex(url):
         idclient = binascii.b2a_hex(os.urandom(16))
 
         post = {'idClient': idclient, 'version': '3.9.2', 'sk': sk, '_model.0': 'do-get-resource-url', 'id.0': idstring}
-        post = urllib_parse.urlencode(post)
+        post = urllib.urlencode(post)
 
         r = client.request('https://yadi.sk/models/?_m=do-get-resource-url', post=post, cookie=cookie)
         r = json.loads(r)
