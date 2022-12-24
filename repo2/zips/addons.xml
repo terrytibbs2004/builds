@@ -903,7 +903,7 @@ Momentálne podporuje:
             <screenshot>resources/art/screenshot-4.png</screenshot>
         </assets>
     </extension>
-</addon><addon id="plugin.program.openwizard" name="[COLOR limegreen]Open[/COLOR]Wizard" provider-name="drinfernoo" version="1.4.9">
+</addon><addon id="plugin.program.openwizard" name="[COLOR limegreen]Open[/COLOR]Wizard" provider-name="drinfernoo" version="1.5.9">
     <requires>
         <import addon="xbmc.python" version="2.1.0" />
         <import addon="script.module.requests" />
