@@ -17,8 +17,8 @@
     <setting id="locale.keyboardlayouts" default="true">English QWERTY</setting>
     <setting id="locale.activekeyboardlayout" default="true">English QWERTY</setting>
     <setting id="locale.country">UK (24h)</setting>
-    <setting id="locale.timezonecountry" default="true">Britain (UK)</setting>
-    <setting id="locale.timezone" default="true">Europe/London</setting>
+    <setting id="locale.timezonecountry" default="true">default</setting>
+    <setting id="locale.timezone" default="true">default</setting>
     <setting id="locale.shortdateformat" default="true">regional</setting>
     <setting id="locale.longdateformat" default="true">regional</setting>
     <setting id="locale.timeformat" default="true">regional</setting>
@@ -124,22 +124,6 @@
     <setting id="videoplayer.usedxva2" default="true">true</setting>
     <setting id="videoplayer.usevtb" default="true">true</setting>
     <setting id="winsystem.ishdrdisplay" default="true">true</setting>
-    <setting id="videoplayer.usevdpau" default="true">true</setting>
-    <setting id="videoplayer.usevdpaumixer" default="true">true</setting>
-    <setting id="videoplayer.usevdpaumpeg2" default="true">false</setting>
-    <setting id="videoplayer.usevdpaumpeg4" default="true">false</setting>
-    <setting id="videoplayer.usevdpauvc1" default="true">true</setting>
-    <setting id="videoplayer.usevaapi" default="true">true</setting>
-    <setting id="videoplayer.usevaapimpeg2" default="true">false</setting>
-    <setting id="videoplayer.usevaapimpeg4" default="true">true</setting>
-    <setting id="videoplayer.usevaapivc1" default="true">true</setting>
-    <setting id="videoplayer.usevaapivp8" default="true">true</setting>
-    <setting id="videoplayer.usevaapivp9" default="true">true</setting>
-    <setting id="videoplayer.usevaapihevc" default="true">true</setting>
-    <setting id="videoplayer.prefervaapirender" default="true">true</setting>
-    <setting id="videoplayer.useprimedecoder" default="true">false</setting>
-    <setting id="videoplayer.useprimedecoderforhw" default="true">true</setting>
-    <setting id="videoplayer.useprimerenderer" default="true">1</setting>
     <setting id="videoplayer.stereoscopicplaybackmode" default="true">0</setting>
     <setting id="videoplayer.quitstereomodeonstop" default="true">true</setting>
     <setting id="videoplayer.teletextenabled">false</setting>
@@ -291,9 +275,7 @@
     <setting id="videoscreen.cmsgammamode" default="true">0</setting>
     <setting id="videoscreen.cmsgamma" default="true">220</setting>
     <setting id="videoscreen.cmslutsize" default="true">6</setting>
-    <setting id="videoscreen.hwscalingfilter" default="true">true</setting>
-    <setting id="videoscreen.limitguisize" default="true">0</setting>
-    <setting id="videoscreen.limitedrange" default="true">false</setting>
+    <setting id="videoscreen.limitgui" default="true">0</setting>
     <setting id="videoscreen.whitelist" default="true" />
     <setting id="videoscreen.whitelistpulldown" default="true">false</setting>
     <setting id="videoscreen.whitelistdoublerefreshrate" default="true">false</setting>
@@ -326,7 +308,6 @@
     <setting id="input.asknewcontrollers" default="true">true</setting>
     <setting id="input.rumblenotify" default="true">false</setting>
     <setting id="input.controllerpoweroff" default="true">false</setting>
-    <setting id="input.libinputkeyboardlayout" default="true">us</setting>
     <setting id="network.usehttpproxy" default="true">false</setting>
     <setting id="network.httpproxytype" default="true">0</setting>
     <setting id="network.httpproxyserver" default="true" />
@@ -472,7 +453,7 @@
             <level>0</level>
             <showhigherlevels>true</showhigherlevels>
         </eventlog>
-        <systemtotaluptime>149</systemtotaluptime>
+        <systemtotaluptime>154</systemtotaluptime>
     </general>
     <resolutions />
     <defaultvideosettings>
