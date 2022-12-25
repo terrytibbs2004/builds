@@ -24,9 +24,6 @@ import urllib
 import urllib2
 import socket
 
-#Set Global timeout - Useful for slow connections and Putlocker.
-socket.setdefaulttimeout(60)
-
 class HeadRequest(urllib2.Request):
     '''A Request class that sends HEAD requests'''
     def get_method(self):
@@ -48,13 +45,13 @@ class Net:
     
     _cj = cookielib.LWPCookieJar()
     _proxy = None
-    _user_agent = 'Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 ' + \
-                  '(KHTML, like Gecko) Chrome/13.0.782.99 Safari/535.1'
+    _user_agent = 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.72 Safari/537.36'
+    _accept = 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
     _http_debug = False
-    
+    _socket_timeout = 60
     
     def __init__(self, cookie_file='', proxy='', user_agent='', 
-                 http_debug=False):
+                 http_debug=False, accept=_accept, socket_timeout=_socket_timeout):
         '''
         Kwargs:
             cookie_file (str): Full path to a file to be used to load and save
@@ -68,7 +65,15 @@ class Net:
             
             http_debug (bool): Set ``True`` to have HTTP header info written to
             the XBMC log for all requests.
+            
+            accept (str) : String to use as HTTP Request Accept header.
+            
+            socket_timeout (int): time in seconds for socket connections to wait until time out
         '''
+        
+        #Set socket timeout - Useful for slow connections
+        socket.setdefaulttimeout(socket_timeout)
+
         if cookie_file:
             self.set_cookies(cookie_file)
         if proxy:
@@ -224,6 +229,7 @@ class Net:
         '''
         req = HeadRequest(url)
         req.add_header('User-Agent', self._user_agent)
+        req.add_header('Accept', self._accept)
         for k, v in headers.items():
             req.add_header(k, v)
         response = urllib2.urlopen(req)

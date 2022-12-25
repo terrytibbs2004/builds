@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <addon id="repository.terrytibbs" name="Terry Tibbs" version="1.2.0" provider-name="Terry Tibbs">
+        <requires>
+            <import addon="xbmc.addon" version="12.0.0"/>
+        </requires>
+        <extension point="xbmc.addon.repository" name="Terry Tibbs">
+            <info compressed="false">https://terrytibbs2022.github.io/terrytibbs/zips/addons.xml</info>
+            <checksum>https://terrytibbs2022.github.io/terrytibbs/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://terrytibbs2022.github.io/terrytibbs/zips/</datadir>
+            <hashes>false</hashes>
+        </extension>
+        <extension point="xbmc.addon.metadata">
+            <summary>kodi 18 repo for terrys stuff</summary>
+            <description>This is a private repo.</description>
+            <platform>all</platform>
+    </extension>
+</addon>
