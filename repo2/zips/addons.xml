@@ -903,7 +903,7 @@ Momentálne podporuje:
             <screenshot>resources/art/screenshot-4.png</screenshot>
         </assets>
     </extension>
-</addon><addon id="plugin.program.openwizard" name="[COLOR limegreen]Open[/COLOR]Wizard" provider-name="drinfernoo" version="1.5.9">
+</addon><addon id="plugin.program.openwizard" name="[COLOR limegreen]Open[/COLOR]Wizard" version="1.8.9" provider-name="drinfernoo">
     <requires>
         <import addon="xbmc.python" version="2.1.0" />
         <import addon="script.module.requests" />
@@ -912,11 +912,11 @@ Momentálne podporuje:
         <import addon="script.speedtester" optional="true" version="1.1.2" />
     </requires>
     
-    <extension library="default.py" point="xbmc.python.pluginsource">
+    <extension point="xbmc.python.pluginsource" library="default.py">
         <provides>executable</provides>
     </extension>
     
-    <extension library="startup.py" point="xbmc.service" start="startup" />
+    <extension point="xbmc.service" library="startup.py" start="startup" />
     
     <extension point="xbmc.addon.metadata">
         <summary lang="en">[COLOR limegreen]Open[/COLOR]Wizard</summary>
