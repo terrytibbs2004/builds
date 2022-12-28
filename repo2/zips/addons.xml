@@ -1019,7 +1019,7 @@ Momentálne podporuje:
             <screenshot>resources/art/screenshot-4.png</screenshot>
         </assets>
     </extension>
-</addon><addon id="plugin.program.openwizard" name="[COLOR limegreen]Open[/COLOR]Wizard" version="1.9.0" provider-name="drinfernoo">
+</addon><addon id="plugin.program.openwizard" name="[COLOR limegreen]Open[/COLOR]Wizard" version="1.5.1" provider-name="drinfernoo">
     <requires>
         <import addon="xbmc.python" version="2.1.0" />
         <import addon="script.module.requests" />
