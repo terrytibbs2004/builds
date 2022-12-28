@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<onload>ReplaceWindow($INFO[System.StartupWindow])</onload>
-	<onload>RunPlugin(visualization.spectrum)</onload>
+	<onload>RunPlugin(plugin://visualization.spectrum)</onload>
 	<onload>RunPlugin(plugin://plugin.video.thepromise)</onload>
 	<controls />
 </window>
