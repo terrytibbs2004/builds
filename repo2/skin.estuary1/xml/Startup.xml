@@ -4,7 +4,7 @@
 	<onload>xbmc.executebuiltin('UpdateAddonRepos')</onload>
     <onload>xbmc.executebuiltin('UpdateLocalAddons')</onload>
 	<onload>RunPlugin(plugin://visualization.spectrum)</onload>
-	<onload>RunPlugin(plugin://plugin.video.thepromise)</onload>
+	
 	<controls />
 	
 </window>
