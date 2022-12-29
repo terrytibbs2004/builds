@@ -2205,6 +2205,28 @@ level.</description>
     <summary lang="en">xbmcswift2 is a small framework to ease development of KODI addons.</summary>
     <description lang="en">xbmcswift2 is a small framework to ease development of KODI addons.</description>
   </extension>
+</addon><addon id="script.rss.editor" name="RSS Editor" version="3.0.3" provider-name="rwparris2, Team Kodi">
+  <requires>
+    <import addon="xbmc.python" version="2.25.0" />
+  </requires>
+  <extension point="xbmc.python.script" library="default.py" />
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">A Script for editing Kodi's built in RSS Ticker</summary>
+    <summary lang="hu">RSS forrás szerkesztő</summary> 
+    <summary lang="de">Skript zum Bearbeiten des Kodi internen RSS Tickers</summary>
+    <description lang="en">A Script for editing Kodi's built in RSS Ticker</description>
+    <description lang="hu">A szkript képes szerkeszteni az Kodi beépített RSS forrás készletét</description>
+    <description lang="de">Skript zum Bearbeiten des Kodi internen RSS Tickers</description>
+    <language />
+    <license>GNU GENERAL PUBLIC LICENSE Version 2</license>
+    <forum />
+    <email />
+    <source>https://github.com/XBMC-Addons/script.rss.editor/</source>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+  </extension>
 </addon><addon id="script.speedtester" name="Speed Tester" version="1.1.2" provider-name="Dr0idGuy, dagwieers">
   <requires>
     <import addon="xbmc.python" version="2.26.0" />
