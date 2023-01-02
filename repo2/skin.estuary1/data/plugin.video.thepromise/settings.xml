@@ -19,7 +19,7 @@
     <setting id="dl.text2" default="true"></setting>
     <setting id="downloads" default="true">false</setting>
     <setting id="external.providers">true</setting>
-    <setting id="fanart">true</setting>
+    <setting id="fanart">false</setting>
     <setting id="fanart.tv.user" default="true"></setting>
     <setting id="furk.api" default="true"></setting>
     <setting id="furk.limit">25</setting>
@@ -37,7 +37,7 @@
     <setting id="indicators" default="true">0</setting>
     <setting id="indicators.alt">1</setting>
     <setting id="iplayer">true</setting>
-    <setting id="items.per.page">120</setting>
+    <setting id="items.per.page">20</setting>
     <setting id="library.check">true</setting>
     <setting id="library.importdelay" default="true">false</setting>
     <setting id="library.include_special">true</setting>
@@ -56,7 +56,7 @@
     <setting id="movie.download.path" default="true"></setting>
     <setting id="movie.widget">1</setting>
     <setting id="netflix">true</setting>
-    <setting id="official.country" default="true">US</setting>
+    <setting id="official.country">GB</setting>
     <setting id="official.identify">15</setting>
     <setting id="official.text" default="true"></setting>
     <setting id="open.Osettings" default="true"></setting>
@@ -105,8 +105,8 @@
     <setting id="trakt.refresh">6310765d3078fc63f7fb8f6a7eed08dc23eacff63f441dff726b383aee6b80ab</setting>
     <setting id="trakt.scrobble" default="true">false</setting>
     <setting id="trakt.scrobble.notify" default="true">false</setting>
-    <setting id="trakt.token">67b7d09fc1c9b46b33aab371939b0c77c3397699e93fe2ff335b467228da9c3c</setting>
-    <setting id="trakt.user">zippy165141</setting>
+    <setting id="trakt.token"></setting>
+    <setting id="trakt.user"></setting>
     <setting id="tv.download.path" default="true"></setting>
     <setting id="tv.specials">true</setting>
     <setting id="tv.widget">1</setting>

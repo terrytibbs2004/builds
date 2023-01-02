@@ -203,27 +203,27 @@
     <setting id="screensaver.time" default="true">3</setting>
     <setting id="screensaver.usedimonpause" default="true">true</setting>
     <setting id="screensaver.usemusicvisinstead" default="true">true</setting>
-    <setting id="services.airplay" default="true">false</setting>
+    <setting id="services.airplay">true</setting>
     <setting id="services.airplaypassword" default="true"></setting>
-    <setting id="services.airplayvideosupport" default="true">false</setting>
+    <setting id="services.airplayvideosupport">true</setting>
     <setting id="services.airplayvolumecontrol" default="true">true</setting>
     <setting id="services.devicename" default="true">Kodi</setting>
     <setting id="services.deviceuuid">853d9424-dcf0-410f-9007-880af5869674</setting>
-    <setting id="services.esallinterfaces" default="true">false</setting>
+    <setting id="services.esallinterfaces">true</setting>
     <setting id="services.escontinuousdelay" default="true">25</setting>
     <setting id="services.esenabled" default="true">true</setting>
     <setting id="services.esinitialdelay" default="true">750</setting>
     <setting id="services.esmaxclients" default="true">20</setting>
     <setting id="services.esport" default="true">9777</setting>
     <setting id="services.esportrange" default="true">10</setting>
-    <setting id="services.upnp" default="true">false</setting>
+    <setting id="services.upnp">true</setting>
     <setting id="services.upnpannounce" default="true">true</setting>
-    <setting id="services.upnpcontroller" default="true">false</setting>
+    <setting id="services.upnpcontroller">true</setting>
     <setting id="services.upnplookforexternalsubtitles" default="true">false</setting>
-    <setting id="services.upnprenderer" default="true">false</setting>
-    <setting id="services.upnpserver" default="true">false</setting>
+    <setting id="services.upnprenderer">true</setting>
+    <setting id="services.upnpserver">true</setting>
     <setting id="services.useairplaypassword" default="true">false</setting>
-    <setting id="services.webserver" default="true">false</setting>
+    <setting id="services.webserver">true</setting>
     <setting id="services.webserverpassword" default="true"></setting>
     <setting id="services.webserverport" default="true">8080</setting>
     <setting id="services.webserverssl" default="true">false</setting>
@@ -236,7 +236,7 @@
     <setting id="slideshow.staytime" default="true">5</setting>
     <setting id="smb.legacysecurity" default="true">false</setting>
     <setting id="smb.maxprotocol" default="true">3</setting>
-    <setting id="smb.minprotocol" default="true">0</setting>
+    <setting id="smb.minprotocol">1</setting>
     <setting id="smb.winsserver" default="true">0.0.0.0</setting>
     <setting id="smb.workgroup" default="true">WORKGROUP</setting>
     <setting id="subtitles.align" default="true">0</setting>
@@ -429,7 +429,7 @@
             <level>0</level>
             <showhigherlevels>true</showhigherlevels>
         </eventlog>
-        <systemtotaluptime>190</systemtotaluptime>
+        <systemtotaluptime>285</systemtotaluptime>
     </general>
     <resolutions />
     <defaultvideosettings>
