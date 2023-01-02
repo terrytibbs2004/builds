@@ -1,6 +1,6 @@
 
 name="Full Install"
-version="1.1"
+version="1.2"
 url="https://githubraw.com/terrytibbs2004/builds/main/free.zip"
 minor="http://"
 gui="url.to.guisettings"
