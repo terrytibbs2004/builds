@@ -2345,7 +2345,7 @@ v1.0.1 (2019-08-06)
             <fanart>fanart.jpg</fanart>
         </assets>
     </extension>
-</addon><addon id="skin.estuary1" version="2.1.1" name="Estuary1" provider-name="Terry Tibs,phil65, Ichabod Fletchman">
+</addon><addon id="skin.estuary1" version="2.3.1" name="Estuary1" provider-name="Terry Tibs,phil65, Ichabod Fletchman">
 	<requires>
 		<import addon="xbmc.gui" version="5.14.0" />
 		<import addon="visualization.spectrum" />
