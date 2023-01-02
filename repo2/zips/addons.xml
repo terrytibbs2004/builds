@@ -1019,7 +1019,7 @@ Momentálne podporuje:
             <screenshot>resources/art/screenshot-4.png</screenshot>
         </assets>
     </extension>
-</addon><addon id="plugin.program.openwizard" name="[COLOR limegreen]Open[/COLOR]Wizard" version="1.5.1" provider-name="drinfernoo">
+</addon><addon id="plugin.program.openwizard" name="[COLOR limegreen]Open[/COLOR]Wizard" version="1.5.2" provider-name="drinfernoo">
     <requires>
         <import addon="xbmc.python" version="2.1.0" />
         <import addon="script.module.requests" />
@@ -2345,7 +2345,7 @@ v1.0.1 (2019-08-06)
             <fanart>fanart.jpg</fanart>
         </assets>
     </extension>
-</addon><addon id="skin.estuary1" version="1.9.7" name="Estuary1" provider-name="Terry Tibs,phil65, Ichabod Fletchman">
+</addon><addon id="skin.estuary1" version="1.9.8" name="Estuary1" provider-name="Terry Tibs,phil65, Ichabod Fletchman">
 	<requires>
 		<import addon="xbmc.gui" version="5.14.0" />
 		<import addon="visualization.spectrum" />
