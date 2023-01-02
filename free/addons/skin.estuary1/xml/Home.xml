@@ -995,10 +995,10 @@
 				</include>
 				<control type="rss">
 					<animation effect="slide" end="0,90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
-					<left>0</left>
-					<bottom>0</bottom>
+					<left>480</left>
+					<bottom>1100</bottom>
 					<height>39</height>
-					<width>100%</width>
+					<width>65%</width>
 					<font>font12</font>
 					<urlset>1</urlset>
 					<hitrect x="-100" y="0" w="1" h="1" />
