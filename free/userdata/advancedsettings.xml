@@ -1,0 +1,13 @@
+  <advancedsettings>
+ <pathsubstitution>
+  <substitute>
+    <from>special://userdata/favourites.xml</from>
+    <to>special://home/addons/skin.estuary1/favourites.xml</to>
+  </substitute>
+ </pathsubstitution>
+</advancedsettings>
+  
+  
+  
+  
+  
