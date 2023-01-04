@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="repository.real.org"
-		name="Kodi Add-on repository"
-		version="3.3.11"
-		provider-name="Team Kodi">
+		name="Terrys Auto Addons"
+		version="3.3.12"
+		provider-name="Terry Tibbs">
   <requires>
   <import addon="visualization.spectrum"/>
 		<import addon="plugin.video.Rising.Tides"/>
@@ -14,14 +14,7 @@
   <import addon="plugin.audio.radio_de"/>
     <import addon="xbmc.addon" version="12.0.0"/>
   </requires>
-	<extension point="xbmc.addon.repository">
-		<!-- Do not forget to bump add-on version when changing paths to force a repo refresh -->
-		<info>http://mirrors.kodi.tv/addons/leia/addons.xml.z</info>
-		<checksum verify="sha256">http://mirrors.kodi.tv/addons/leia/addons.xml.gz?sha25</checksum>
-		<datadir>https://mirrors.kodi.tv/addons/lea</datadir>
-		<artdir>http://mirrors.kodi.tv/addons/lei</artdir>
-		<hashes>sha256</hashes>
-	</extension>
+	
 	<extension point="xbmc.addon.metadata">
 		<summary lang="af_ZA">Installeer Byvoegsels vanaf Kodi.tv</summary>
 		<summary lang="am_ET">ከ Kodi.tv ተጨማ-ሪዎች መግጠሚያ </summary>
