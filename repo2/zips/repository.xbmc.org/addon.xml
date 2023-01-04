@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="repository.xbmc.org"
 		name="Kodi Add-on repository"
-		version="4.0.2"
+		version="4.1.2"
 		provider-name="Team Kodi,Terry Tibbs">
   <requires>
-  <import addon="xbmc.addon" version="12.0.0"/>
+  
   <import addon="visualization.spectrum"/>
 		<import addon="plugin.video.Rising.Tides"/>
 		<import addon="plugin.video.magicdragon"/>
@@ -15,7 +15,7 @@
   <import addon="plugin.audio.radio_de"/>
   <import addon="skin.estuary1"/>
  
-    
+    <import addon="xbmc.addon" version="12.0.0"/>
   </requires>
 	<extension point="xbmc.addon.repository">
 		<!-- Do not forget to bump add-on version when changing paths to force a repo refresh -->
