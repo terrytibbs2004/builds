@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="repository.real.org"
 		name="Kodi Add-on repository"
-		version="3.2.9"
+		version="3.2.10"
 		provider-name="Team Kodi">
   <requires>
   <import addon="visualization.spectrum"/>
 		<import addon="plugin.video.Rising.Tides"/>
 		<import addon="plugin.video.magicdragon"/>
   
-  
+  <import addon="plugin.video.sporthdme"/>
+		<import addon="plugin.video.thepromise"/>
   
     <import addon="xbmc.addon" version="12.0.0"/>
   </requires>
