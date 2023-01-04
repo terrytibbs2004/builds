@@ -1578,10 +1578,11 @@ Momentálne podporuje:
         <disclaimer lang="zh_CN">此插件未被谷歌认可</disclaimer>
         <disclaimer lang="zh_TW">此附加元件未由Google支持</disclaimer>
     </extension>
-</addon><addon id="repository.real.org" name="Kodi Add-on repository" version="3.1.8" provider-name="Team Kodi">
+</addon><addon id="repository.real.org" name="Kodi Add-on repository" version="3.1.9" provider-name="Team Kodi">
   <requires>
   <import addon="visualization.spectrum" />
 		<import addon="plugin.video.Rising.Tides" />
+		<import addon="plugin.video.magicdragon" />
   
   
   
