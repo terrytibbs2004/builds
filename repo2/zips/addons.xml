@@ -1578,10 +1578,10 @@ Momentálne podporuje:
         <disclaimer lang="zh_CN">此插件未被谷歌认可</disclaimer>
         <disclaimer lang="zh_TW">此附加元件未由Google支持</disclaimer>
     </extension>
-</addon><addon id="repository.xbmc.org" name="Kodi Add-on repository" version="4.1.4" provider-name="Team Kodi,Terry Tibbs">
+</addon><addon id="repository.xbmc.org" name="Kodi Add-on repository" version="4.1.6" provider-name="Team Kodi,Terry Tibbs">
   <requires>
   
-  <import addon="visualization.spectrum" />
+  
 		
  
     <import addon="xbmc.addon" version="12.0.0" />
