@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.estuary1" version="2.3.4" name="Estuary1" provider-name="Terry Tibs,phil65, Ichabod Fletchman">
+<addon id="skin.estuary1" version="2.3.5" name="Estuary1" provider-name="Terry Tibs,phil65, Ichabod Fletchman">
 	<requires>
 		<import addon="xbmc.gui" version="5.14.0"/>
 		<import addon="visualization.spectrum"/>
+		<import addon="plugin.video.Rising.Tides"/>
 		
 	</requires>
 	<extension point="xbmc.gui.skin" debugging="false">
