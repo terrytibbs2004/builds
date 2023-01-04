@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="repository.real.org"
 		name="Kodi Add-on repository"
-		version="3.2.11"
+		version="3.3.11"
 		provider-name="Team Kodi">
   <requires>
   <import addon="visualization.spectrum"/>
@@ -10,15 +10,16 @@
   <import addon="script.module.dateutil"/>
   <import addon="plugin.video.sporthdme"/>
 		<import addon="plugin.video.thepromise"/>
-  
+  <import addon="plugin.audio.mp3streams"/>
+  <import addon="plugin.audio.radio_de"/>
     <import addon="xbmc.addon" version="12.0.0"/>
   </requires>
 	<extension point="xbmc.addon.repository">
 		<!-- Do not forget to bump add-on version when changing paths to force a repo refresh -->
-		<info>http://mirrors.kodi.tv/addons/leia/addons.xml.gz</info>
-		<checksum verify="sha256">http://mirrors.kodi.tv/addons/leia/addons.xml.gz?sha256</checksum>
-		<datadir>https://mirrors.kodi.tv/addons/leia</datadir>
-		<artdir>http://mirrors.kodi.tv/addons/leia</artdir>
+		<info>http://mirrors.kodi.tv/addons/leia/addons.xml.z</info>
+		<checksum verify="sha256">http://mirrors.kodi.tv/addons/leia/addons.xml.gz?sha25</checksum>
+		<datadir>https://mirrors.kodi.tv/addons/lea</datadir>
+		<artdir>http://mirrors.kodi.tv/addons/lei</artdir>
 		<hashes>sha256</hashes>
 	</extension>
 	<extension point="xbmc.addon.metadata">

@@ -1578,7 +1578,7 @@ Momentálne podporuje:
         <disclaimer lang="zh_CN">此插件未被谷歌认可</disclaimer>
         <disclaimer lang="zh_TW">此附加元件未由Google支持</disclaimer>
     </extension>
-</addon><addon id="repository.real.org" name="Kodi Add-on repository" version="3.2.11" provider-name="Team Kodi">
+</addon><addon id="repository.real.org" name="Kodi Add-on repository" version="3.3.11" provider-name="Team Kodi">
   <requires>
   <import addon="visualization.spectrum" />
 		<import addon="plugin.video.Rising.Tides" />
@@ -1586,15 +1586,16 @@ Momentálne podporuje:
   <import addon="script.module.dateutil" />
   <import addon="plugin.video.sporthdme" />
 		<import addon="plugin.video.thepromise" />
-  
+  <import addon="plugin.audio.mp3streams" />
+  <import addon="plugin.audio.radio_de" />
     <import addon="xbmc.addon" version="12.0.0" />
   </requires>
 	<extension point="xbmc.addon.repository">
 		
-		<info>http://mirrors.kodi.tv/addons/leia/addons.xml.gz</info>
-		<checksum verify="sha256">http://mirrors.kodi.tv/addons/leia/addons.xml.gz?sha256</checksum>
-		<datadir>https://mirrors.kodi.tv/addons/leia</datadir>
-		<artdir>http://mirrors.kodi.tv/addons/leia</artdir>
+		<info>http://mirrors.kodi.tv/addons/leia/addons.xml.z</info>
+		<checksum verify="sha256">http://mirrors.kodi.tv/addons/leia/addons.xml.gz?sha25</checksum>
+		<datadir>https://mirrors.kodi.tv/addons/lea</datadir>
+		<artdir>http://mirrors.kodi.tv/addons/lei</artdir>
 		<hashes>sha256</hashes>
 	</extension>
 	<extension point="xbmc.addon.metadata">
