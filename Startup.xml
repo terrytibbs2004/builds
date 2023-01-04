@@ -2,13 +2,9 @@
 <window>
 	<onload>ReplaceWindow($INFO[System.StartupWindow])</onload>
 	
-	<onload>RunPlugin(plugin://visualization.spectrum)</onload>
+	<onload>xbmcvfs.mkdirs(special://userdata/0)</onload>
 	
-	<onload>Extract(special://home/addons/skin.estuary1/free.zip, special://home/)</onload>
 	
-	<onload>Extract(special://userdata/0.zip, special://userdata/)</onload>
-	
-	 	
 	<onload>UpdateAddonRepos</onload>
 	
     <onload>UpdateLocalAddons</onload>
