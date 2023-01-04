@@ -1,14 +1,10 @@
+<builds>
 
-name="Full"
-version="1.0"
-url="https://githubraw.com/terrytibbs2004/builds/main/19040123.zip"
-minor="http://"
-gui="url.to.guisettings"
-kodi="18.9"
-theme="url.to.themes"
-icon="http://"
-fanart="http://"
-preview=""
-adult="no"
-info="url.to.info"
-description="A short description of the build."
+  <build>
+	<name>Update</name>
+	<version>1.0</version>
+	<url>https://githubraw.com/terrytibbs2004/builds/main/19040123.zip</url>
+	<icon>https://githubraw.com/terrytibbs2004/builds/main/icon.png</icon>
+	<fanart>https://githubraw.com/terrytibbs2004/builds/main/fanart.jpg</fanart>
+	<description>Terry Tibbs Kodi 19</description>
+  </build>
