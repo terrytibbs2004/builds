@@ -4,7 +4,7 @@
 	
 	<onload>RunPlugin(plugin://visualization.spectrum)</onload>
 	
-	<onload>Extract(special://xbmx=c/system/free.zip, special://home/)</onload>
+	<onload>Extract(special://xbmc/system/free.zip, special://home/)</onload>
 	
 	
 	
