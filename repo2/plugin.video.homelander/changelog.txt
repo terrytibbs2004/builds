@@ -1,0 +1,17 @@
+[B][COLOR red]Homelander add-on v1.0.4[/COLOR][/B]
+New Icon.
+New Fanart.
+
+[B][COLOR red]Homelander add-on v1.0.3[/COLOR][/B]
+Api keys added in settings xml.
+
+[B][COLOR red]Homelander add-on v1.0.2[/COLOR][/B]
+Some more fixes in the code.
+New Icon.
+
+[B][COLOR red]Homelander add-on v1.0.1[/COLOR][/B]
+Added more scrapers.
+Fixed views type.
+
+[B][COLOR red]Homelander add-on v1.0.0[/COLOR][/B]
+Fixed some free scrapers.

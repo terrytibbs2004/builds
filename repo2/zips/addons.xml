@@ -1179,6 +1179,37 @@ Momentálne podporuje:
     <description lang="en">I don't have any affiliation with the content provider nor KODI.Content freely available on the internet.More info at [COLOR lime][B]@mullafabz[/B][/COLOR]</description>
     <platform>all</platform>
   </extension>
+</addon><addon id="plugin.video.asgard" name="[COLOR goldenrod]Asgard[/COLOR]" provider-name="Team Asgard" version="1.5.0">
+    <requires>
+	    <import addon="script.module.six" version="0.0.1" />
+		<import addon="script.module.requests" />
+        <import addon="script.module.resolveurl" />
+    </requires>
+    <extension library="default.py" point="xbmc.python.pluginsource">
+        <provides>video</provides>
+    </extension>
+	<extension library="resources/modules/" point="xbmc.python.module" />
+    <extension library="resources/sources/" point="xbmc.python.module" />
+    <extension library="resources/" point="xbmc.python.module" />
+    <extension point="xbmc.addon.metadata">
+        <reuselanguageinvoker>true</reuselanguageinvoker>
+	<reuselanguageinvoker>true</reuselanguageinvoker>
+        <summary lang="en">Welcome to Asgard</summary>
+        <description lang="en">“Asgard is not a place, it's a people.”</description>
+        <platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+        <forum />
+        <website />
+        <source />
+        <disclaimer lang="en">The author of this add-on does not host any of the content which is found and has no affiliation with any of the content providers. This add-on simply searches websites for content. Use at your own risk!</disclaimer>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+        <news>
+
+        </news>
+    </extension>
 </addon><addon id="plugin.video.cumination" name="Cumination" provider-name="Cumination" version="1.1.61">
     <requires>
         <import addon="script.module.six" />
@@ -1202,6 +1233,59 @@ Momentálne podporuje:
             <icon>icon.png</icon>
             <fanart>fanart.jpg</fanart>
         </assets>
+    </extension>
+</addon><addon id="plugin.video.ghost" name="Ghost" version="1.0.8" provider-name="Ghost">
+  <requires>
+	<import addon="script.module.resolveurl" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Ghost Addon</summary>
+    <description lang="en">All in one addon</description>
+	
+    <platform>all</platform>
+	<assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+  
+</addon><addon id="plugin.video.homelander" name="[COLOR red]Homelander[/COLOR]" provider-name="Homelander" version="1.0.4">
+    <requires>
+        
+        
+        <import addon="script.homelander.artwork" />
+        <import addon="script.module.resolveurl" />
+        <import addon="script.module.requests" />
+        <import addon="script.module.homelanderscrapers" />
+        <import addon="script.module.six" />
+        <import addon="script.module.kodi-six" />
+        <import addon="script.module.simplejson" />
+		<import addon="plugin.video.youtube" optional="true" />
+    </requires>
+    <extension library="homelander.py" point="xbmc.python.pluginsource">
+        <provides>video</provides>
+    </extension>
+    <extension library="service.py" point="xbmc.service" start="startup" />
+    <extension point="xbmc.addon.metadata">
+        <reuselanguageinvoker>false</reuselanguageinvoker>
+        <summary lang="en_GB">Homelander</summary>
+        <description lang="en_GB">[COLOR red]The Crew Team[/COLOR]</description>
+        <platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+        <forum />
+        <website />
+        <source />
+        <disclaimer lang="en_GB">The author of this add-on does not host any of the content which is found and has no affiliation with any of the content providers. This add-on simply searches websites for content. Use at your own risk!</disclaimer>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+        <news>
+        See Changelog on Tools menu
+        </news>
     </extension>
 </addon><addon id="plugin.video.magicdragon" name="Magic Dragon" provider-name="tomb raider" version="3.1.6">
     <requires>
@@ -1229,6 +1313,103 @@ Momentálne podporuje:
         <news>
 
         </news>
+    </extension>
+</addon><addon id="plugin.video.moria" name="[COLORff58c1e0][B]MORIA[/B][/COLOR]" provider-name="CC" version="4.11.09">
+    <requires>
+        
+        
+        <import addon="script.moria.artwork" />
+        <import addon="script.module.resolveurl" />
+        <import addon="script.module.requests" />
+        <import addon="script.module.moriascrapers" />
+        <import addon="script.module.six" />
+        <import addon="script.module.kodi-six" />
+        <import addon="script.module.simplejson" />
+        <import addon="plugin.video.youtube" optional="true" />
+    </requires>
+    <extension library="moria.py" point="xbmc.python.pluginsource">
+        <provides>video</provides>
+    </extension>
+    <extension library="service.py" point="xbmc.service" start="startup" />
+    <extension point="xbmc.addon.metadata">
+        <reuselanguageinvoker>false</reuselanguageinvoker>
+        <summary lang="en_GB">Moria</summary>
+        <description lang="en_GB">Multi-source add-on</description>
+        <platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+        <forum />
+        <website />
+        <source />
+        <disclaimer lang="en_GB">The author of this add-on does not host any of the content which is found and has no affiliation with any of the content providers. This add-on simply searches websites for content. Use at your own risk![CR]This project uses the TMDb, Trakt, Fanart.tv APIs, but is not affiliated nor endorsed by any of their respective ogranisations.[CR]Please support these ogranisations however you can.</disclaimer>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+        <news>
+- See Changelog on Tools menu
+        </news>
+    </extension>
+</addon><addon id="plugin.video.nightwing" name="[COLORblue]Nightwing[/COLOR]" provider-name="Magnetic" version="1.1.7a">
+    <requires>
+        
+        <import addon="script.module.resolveurl" />
+        <import addon="script.module.requests" />
+        <import addon="script.module.beautifulsoup4" />
+        <import addon="script.module.nightwingscrapers" />
+        <import addon="script.module.six" />
+        <import addon="script.module.simplejson" />
+        <import addon="script.module.metahandler" optional="true" />
+        <import addon="plugin.video.youtube" optional="true" />
+    </requires>
+    <extension library="nightwing.py" point="xbmc.python.pluginsource">
+        <provides>video</provides>
+    </extension>
+    <extension library="service.py" point="xbmc.service" start="startup" />
+    <extension point="xbmc.addon.metadata">
+        <reuselanguageinvoker>false</reuselanguageinvoker>
+        <summary lang="en_GB">Nightwing</summary>
+        <description lang="en_GB" />
+        <platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+        <forum />
+        <website />
+        <source />
+        <disclaimer lang="en_GB">A small but packed with goodies! A huge shoutout to the Way Of Kodi Learning Team, for their teaching. The author of this add-on does not host any of the content which is found and has no affiliation with any of the content providers. This add-on simply searches websites for content. Use at your own risk!</disclaimer>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+        <news>
+        </news>
+    </extension>
+</addon><addon id="plugin.video.scrubsv2" version="5.0.34" name="[COLOR orange]Scrubs v2[/COLOR]" provider-name="JewBMX">
+    <requires>
+        <import addon="script.module.six" />
+        <import addon="script.module.kodi-six" />
+        <import addon="script.module.simplejson" />
+        <import addon="script.module.requests" />
+        <import addon="script.module.resolveurl" />
+        <import addon="script.scrubsv2.artwork" optional="true" />
+        <import addon="script.trakt" optional="true" />
+        <import addon="plugin.video.json_iptv" optional="true" />
+        <import addon="plugin.video.youtube" optional="true" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>video</provides>
+    </extension>
+    <extension library="service.py" point="xbmc.service" start="startup" />
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">A Clean Source To Dirty Things...</summary>
+        <description lang="en">Movies, Tv Shows, Anime, and What Not. [CR] See Changelog For Changes. [CR] You enable/disable the ones you dont like and let me handle the broken providers. [CR] How it should be :)</description>
+        <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
+        <license>Free the People!, Free the World!!</license>
+        <platform>all</platform>
+        <assets>
+            <icon>resources/images/icon.png</icon>
+            <fanart>resources/images/fanart.jpg</fanart>
+            <screenshot>resources/images/screenshot.png</screenshot>
+        </assets>
+        <news>[B] Total CleanUp of Providers [/B]: Checked and Cleaned as of Oct. 2022. [CR][B] Check ChangeLog For More Details. [/B] [CR][B] (Please Report Any Issues To Me Directly By Email Or GitHub.) [/B]</news>
     </extension>
 </addon><addon id="plugin.video.sporthdme" name="SportHD" version="0.1.30" provider-name="Bugatsinho">
   <requires>
@@ -1818,6 +1999,20 @@ Biltegi honetako gehigarri guztiek oinarrizko probak gainditu dituzte baina hond
         <summary lang="en_GB">A common caching API for Kodi add-ons.</summary>
         <description lang="en_GB">A common caching API for Kodi add-ons.</description>
     </extension>
+</addon><addon id="script.homelander.artwork" version="1.0.2" name="[COLOR red]Homelander [/COLOR]Artwork" provider-name="Homelander">
+    <requires>
+        
+    </requires>
+    <extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.addon.metadata">
+        <summary>Homelander Artwork</summary>
+        <description>Homelander Artwork</description>
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
 </addon><addon id="script.keymap" name="Keymap Editor" version="1.1.3" provider-name="takoi,pkscout">
 	<requires>
 		<import addon="xbmc.python" version="2.26.0" />
@@ -1992,6 +2187,33 @@ v1.1.3
     <source>https://github.com/PythonCharmers/python-future</source>
     <website>http://python-future.org</website>
   </extension>
+</addon><addon id="script.module.homelanderscrapers" name="[COLOR red]Homelander [/COLOR]Scrapers" version="1.0.8" provider-name="Homelander">
+    <requires>
+        
+        <import addon="script.module.beautifulsoup4" />
+        <import addon="script.module.requests" />
+        <import addon="script.module.six" />
+        <import addon="script.module.kodi-six" />
+        <import addon="script.module.simplejson" />
+        <import addon="script.module.orion" optional="true" />
+    </requires>
+    <extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.python.pluginsource" library="lib/default.py">
+        <provides>executable</provides>
+    </extension>
+        <extension point="xbmc.addon.metadata">
+            <platform>all</platform>
+            <summary lang="en">Homelander Scrapers Module</summary>
+            <description>Scrape common video host for URL's to be playable in Kodi, simplifying addon development of video plugins requiring multi video hosts.</description>
+                <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+    <news />
+    </extension>
 </addon><addon id="script.module.httplib2" name="httplib2" provider-name="Joe Gregorio" version="0.10.3">
   <requires>
     <import addon="xbmc.python" version="2.14.0" />
@@ -2123,6 +2345,33 @@ v0.5.9 (2022-03-22)
     <email />
     <source />
   </extension>
+</addon><addon id="script.module.moriascrapers" name="MoriaScrapers Module" version="1.03.04" provider-name="Moria">
+    <requires>
+        
+        <import addon="script.module.beautifulsoup4" />
+        <import addon="script.module.requests" />
+        <import addon="script.module.six" />
+        <import addon="script.module.kodi-six" />
+        <import addon="script.module.simplejson" />
+        <import addon="script.module.orion" optional="true" />
+    </requires>
+    <extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.python.pluginsource" library="lib/default.py">
+        <provides>executable</provides>
+    </extension>
+        <extension point="xbmc.addon.metadata">
+            <platform>all</platform>
+            <summary lang="en">MoriaScrapers Module</summary>
+            <description>Scrape common video host for URL's to be playable in Kodi, simplifying addon development of video plugins requiring multi video hosts.</description>
+                <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart />
+    </assets>
+    <news />
+    </extension>
 </addon><addon id="script.module.mutagen" name="mutagen" version="2019.10.10" provider-name="Joe Wreschnig">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
@@ -2157,6 +2406,32 @@ level.</description>
         <platform>all</platform>
         <website>http://dev.mysql.com/doc/connector-python/en/index.html</website>
         <source>http://dev.mysql.com/downloads/connector/python/</source>
+    </extension>
+</addon><addon id="script.module.nightwingscrapers" name="nightwingscrapers Module" version="1.0.4a" provider-name="Nightwing">
+    <requires>
+        
+        <import addon="script.module.beautifulsoup4" />
+        <import addon="script.module.requests" />
+        <import addon="script.module.six" />
+        <import addon="script.module.kodi-six" />
+        <import addon="script.module.simplejson" />
+    </requires>
+    <extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.python.pluginsource" library="lib/default.py">
+        <provides>executable</provides>
+    </extension>
+        <extension point="xbmc.addon.metadata">
+            <platform>all</platform>
+            <summary lang="en">nightwingscrapers Module</summary>
+            <description>Scrape common video host for URL's to be playable in Kodi, simplifying addon development of video plugins requiring multi video hosts.</description>
+                <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart />
+    </assets>
+    <news />
     </extension>
 </addon><addon id="script.module.parsedom" name="Parsedom for xbmc plugins" provider-name="TheCollective" version="2.5.2">
   <requires>
@@ -2223,7 +2498,7 @@ level.</description>
       <icon>resources/icon.png</icon>
     </assets>
   </extension>
-</addon><addon id="script.module.resolveurl" name="ResolveURL" version="5.1.86" provider-name="gujal">
+</addon><addon id="script.module.resolveurl" name="ResolveURL" version="5.1.87" provider-name="gujal">
     <requires>
         
         <import addon="script.module.six" />
@@ -2397,6 +2672,16 @@ level.</description>
     <summary lang="en">xbmcswift2 is a small framework to ease development of KODI addons.</summary>
     <description lang="en">xbmcswift2 is a small framework to ease development of KODI addons.</description>
   </extension>
+</addon><addon id="script.moria.artwork" version="1.1.0" name="Moria Artwork" provider-name="host505">
+	<requires>
+		
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary>Themes for the Moria Addon</summary>
+		<description />
+		<platform>all</platform>
+	</extension>
 </addon><addon id="script.realdebrid" name="RealDebrid" version="0.7" provider-name="ptom, peno">
     <requires>
         <import addon="script.module.requests" version="2.3.0" />
@@ -2446,6 +2731,17 @@ level.</description>
       <icon>icon.png</icon>
     </assets>
   </extension>
+</addon><addon id="script.scrubsv2.artwork" version="1.6" name="[COLOR orange]Scrubs v2 Artwork[/COLOR]" provider-name="JewBMX">
+    <extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.addon.metadata">
+        <summary>Scrubs v2 Artwork</summary>
+        <description>Scrubs v2 Artwork</description>
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+        <news>Changed the fanart to be a simple small image that has a matching color tone to the theme chosen.</news>
+    </extension>
 </addon><addon id="script.speedtester" name="Speed Tester" version="1.1.2" provider-name="Dr0idGuy, dagwieers">
   <requires>
     <import addon="xbmc.python" version="2.26.0" />

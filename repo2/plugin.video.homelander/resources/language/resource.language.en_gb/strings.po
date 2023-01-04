@@ -1,0 +1,1428 @@
+# Addon Name: homelander
+# Addon id: plugin.video.homelander
+# Addon Provider: Homelander
+# Translators: lambda81
+# Translators: Homelander
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: homelander\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2019-10-11 02:03+0000\n"
+"Last-Translator: Homelander\n"
+"Language-Team:\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+
+msgctxt "#32001"
+msgid "[COLOR white]Movies[/COLOR]"
+msgstr ""
+
+msgctxt "#32002"
+msgid "[COLOR white]TV Shows[/COLOR]"
+msgstr ""
+
+msgctxt "#32003"
+msgid "[COLOR white]My Movies[/COLOR]"
+msgstr ""
+
+msgctxt "#32004"
+msgid "[COLOR white]My TV Shows[/COLOR]"
+msgstr ""
+
+msgctxt "#32005"
+msgid "[COLOR white]New Movies[/COLOR]"
+msgstr ""
+
+msgctxt "#32006"
+msgid "[COLOR white]New Episodes[/COLOR]"
+msgstr ""
+
+msgctxt "#32007"
+msgid "[COLOR white]Channels[/COLOR]"
+msgstr ""
+
+msgctxt "#32008"
+msgid "[COLOR white][B]Tools[/B][/COLOR]"
+msgstr ""
+
+msgctxt "#32009"
+msgid "[COLOR white]Downloads[/COLOR]"
+msgstr ""
+
+msgctxt "#32010"
+msgid "[COLOR white][B]Search[/B][/COLOR]"
+msgstr ""
+
+msgctxt "#32011"
+msgid "[COLOR white]Genres[/COLOR]"
+msgstr ""
+
+msgctxt "#32012"
+msgid "[COLOR white]Year[/COLOR]"
+msgstr ""
+
+msgctxt "#32013"
+msgid "[COLOR white]People[/COLOR]"
+msgstr ""
+
+msgctxt "#32014"
+msgid "[COLOR white]Languages[/COLOR]"
+msgstr ""
+
+msgctxt "#32015"
+msgid "[COLOR white]Certificates[/COLOR]"
+msgstr ""
+
+msgctxt "#32016"
+msgid "[COLOR white]Networks[/COLOR]"
+msgstr ""
+
+msgctxt "#32017"
+msgid "[COLOR white]People Watching[/COLOR]"
+msgstr ""
+
+msgctxt "#32018"
+msgid "[COLOR white]Most Popular[/COLOR]"
+msgstr ""
+
+msgctxt "#32019"
+msgid "[COLOR white]Most Voted[/COLOR]"
+msgstr ""
+
+msgctxt "#32020"
+msgid "[COLOR white]Box Office[/COLOR]"
+msgstr ""
+
+msgctxt "#32021"
+msgid "[COLOR white]Oscar Winners[/COLOR]"
+msgstr ""
+
+msgctxt "#32022"
+msgid "[COLOR white]In Theaters[/COLOR]"
+msgstr ""
+
+msgctxt "#32023"
+msgid "[COLOR white]Highly Rated[/COLOR]"
+msgstr ""
+
+msgctxt "#32024"
+msgid "[COLOR white]Airing today[/COLOR]"
+msgstr ""
+
+msgctxt "#32025"
+msgid "[COLOR white]Returning TV Shows[/COLOR]"
+msgstr ""
+
+msgctxt "#32026"
+msgid "[COLOR white]New TV Shows[/COLOR]"
+msgstr ""
+
+msgctxt "#32027"
+msgid "[COLOR white]TV Calendar[/COLOR]"
+msgstr ""
+
+msgctxt "#32028"
+msgid "[COLOR white]People Search[/COLOR]"
+msgstr ""
+
+msgctxt "#32029"
+msgid "[COLOR white]People (Movies)[/COLOR]"
+msgstr ""
+
+msgctxt "#32030"
+msgid "[COLOR white]People (TV)[/COLOR]"
+msgstr ""
+
+msgctxt "#32031"
+msgid "[COLOR white]Discover[/COLOR]"
+msgstr ""
+
+msgctxt "#32032"
+msgid "[COLOR white]Collection[/COLOR]"
+msgstr ""
+
+msgctxt "#32033"
+msgid "[COLOR white]Trakt Watchlist[/COLOR]"
+msgstr ""
+
+msgctxt "#32034"
+msgid "[COLOR white]IMDb Watchlist[/COLOR]"
+msgstr ""
+
+msgctxt "#32035"
+msgid "[COLOR white]Trakt Recommendations[/COLOR]"
+msgstr ""
+
+msgctxt "#32036"
+msgid "[COLOR white]History[/COLOR]"
+msgstr ""
+
+msgctxt "#32037"
+msgid "[COLOR white]Progress[/COLOR]"
+msgstr ""
+
+msgctxt "#32038"
+msgid "[COLOR white]Episodes[/COLOR]"
+msgstr ""
+
+msgctxt "#32039"
+msgid "[COLOR white]Movie Lists[/COLOR]"
+msgstr ""
+
+msgctxt "#32040"
+msgid "[COLOR white]TV Show Lists[/COLOR]"
+msgstr ""
+
+msgctxt "#32041"
+msgid "[COLOR white]Episode Lists[/COLOR]"
+msgstr ""
+
+msgctxt "#32042"
+msgid "[COLOR white]No Trakt or IMDb account found.[/COLOR]"
+msgstr ""
+
+msgctxt "#32043"
+msgid "[COLOR white][B]Homelander[/B] : Settings[/COLOR]"
+msgstr ""
+
+msgctxt "#32044"
+msgid "[COLOR white][B]SETTINGS[/B] : Accounts[/COLOR]"
+msgstr ""
+
+msgctxt "#32045"
+msgid "[COLOR white][B]SETTINGS[/B] : Playback[/COLOR]"
+msgstr ""
+
+msgctxt "#32046"
+msgid "[COLOR white][B]SETTINGS[/B] : Subtitles[/COLOR]"
+msgstr ""
+
+msgctxt "#32047"
+msgid "[COLOR white][B]SETTINGS[/B] : Providers[/COLOR]"
+msgstr ""
+
+msgctxt "#32048"
+msgid "[COLOR white][B]Homelander[/B] : Downloads[/COLOR]"
+msgstr ""
+
+msgctxt "#32049"
+msgid "[COLOR white][B]Homelander[/B] : Viewtypes[/COLOR]"
+msgstr ""
+
+msgctxt "#32050"
+msgid "[COLOR white][B]Homelander[/B] : Clear providers...[/COLOR]"
+msgstr ""
+
+msgctxt "#32051"
+msgid "[COLOR white][B]Homelander[/B] : Clear metadata...[/COLOR]"
+msgstr ""
+
+msgctxt "#32052"
+msgid "[COLOR white][B]Homelander[/B] : Clear cache...[/COLOR]"
+msgstr ""
+
+msgctxt "#32053"
+msgid "[COLOR white][I]Next Page[/I][/COLOR]"
+msgstr ""
+
+msgctxt "#32054"
+msgid "[COLOR white]Seasons[/COLOR]"
+msgstr ""
+
+msgctxt "#32055"
+msgid "[COLOR white]Season[/COLOR]"
+msgstr ""
+
+msgctxt "#32056"
+msgid "[COLOR white]Are you sure?[/COLOR]"
+msgstr ""
+
+msgctxt "#32057"
+msgid "[COLOR white]Process Complete[/COLOR]"
+msgstr ""
+
+msgctxt "#32058"
+msgid "[COLOR white]This will slow down things until they are re-cached![/COLOR]"
+msgstr ""
+
+msgctxt "#32059"
+msgid "[COLOR white]CLICK HERE TO SAVE VIEW[/COLOR]"
+msgstr ""
+
+msgctxt "#32060"
+msgid "January|February|March|April|May|June|July|August|September|October|November|December"
+msgstr ""
+
+msgctxt "#32061"
+msgid "Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday"
+msgstr ""
+
+msgctxt "#32062"
+msgid "[B]%s[/B] : %s"
+msgstr ""
+
+msgctxt "#32063"
+msgid "[COLOR white][I]Select source[/I][/COLOR]"
+msgstr ""
+
+msgctxt "#32064"
+msgid "[COLOR white][I]Auto Play[/I][/COLOR]"
+msgstr ""
+
+msgctxt "#32065"
+msgid "[COLOR white][I]Queue item[/I][/COLOR]"
+msgstr ""
+
+msgctxt "#32066"
+msgid "[COLOR white][I]Watched in Homelander[/I][/COLOR]"
+msgstr ""
+
+msgctxt "#32067"
+msgid "[COLOR white][I]Unwatched in Homelander[/I][/COLOR]"
+msgstr ""
+
+msgctxt "#32068"
+msgid "[COLOR white][I]Watched in Trakt[/I][/COLOR]"
+msgstr ""
+
+msgctxt "#32069"
+msgid "[COLOR white][I]Unwatched in Trakt[/I][/COLOR]"
+msgstr ""
+
+msgctxt "#32070"
+msgid "[COLOR white][I]Trakt Manager[/I][/COLOR]"
+msgstr ""
+
+msgctxt "#32071"
+msgid "[COLOR white][I]Browse Series[/I][/COLOR]"
+msgstr ""
+
+msgctxt "#32072"
+msgid "[COLOR white][I]Refresh[/I][/COLOR]"
+msgstr ""
+
+msgctxt "#32073"
+msgid "[COLOR white][B]TRAKT[/B] : Authorise[/COLOR]"
+msgstr ""
+
+msgctxt "#32074"
+msgid "[COLOR white][B]HELP[/B][/COLOR]"
+msgstr ""
+
+msgctxt "#32075"
+msgid "[COLOR white]Utilise your own Trakt API key (optional):[/COLOR]"
+msgstr ""
+
+msgctxt "#32076"
+msgid "[COLOR white][B]ResolveURL[/B] : Settings[/COLOR]"
+msgstr ""
+
+msgctxt "#32077"
+msgid "[COLOR white]Trending[/COLOR]"
+msgstr ""
+
+msgctxt "#32078"
+msgid "[COLOR white][B]LambdaScrapers[/B] : Settings[/COLOR]"
+msgstr ""
+
+msgctxt "#32079"
+msgid "[COLOR white][B]HomelanderScrapers[/B] : Settings[/COLOR]"
+msgstr ""
+
+msgctxt "#32080"
+msgid "[COLOR white][B]Orion[/B] : Settings[/COLOR]"
+msgstr ""
+
+msgctxt "#32081"
+msgid "[COLOR white][I]Clear Providers[/I][/COLOR]"
+msgstr ""
+
+msgctxt "#32082"
+msgid "[COLOR white][B]OpenScrapers[/B] : Settings[/COLOR]"
+msgstr ""
+
+msgctxt "#32083"
+msgid "[COLOR white]Choose Provider Source(s)[/COLOR]"
+msgstr ""
+
+msgctxt "#32084"
+msgid "[COLOR white]Provider Source:[/COLOR]"
+msgstr ""
+
+msgctxt "#32085"
+msgid "[COLOR white]HomelanderScrapers Settings[/COLOR]"
+msgstr ""
+
+msgctxt "#32086"
+msgid "[COLOR white]Open Openscrapers Settings[/COLOR]"
+msgstr ""
+
+msgctxt "#32087"
+msgid "[COLOR white]Clear Providers Cache (recommended after provider source change)[/COLOR]"
+msgstr ""
+
+msgctxt "#32088"
+msgid "[COLOR white]Built-in Providers[/COLOR]"
+msgstr ""
+
+msgctxt "#32089"
+msgid "[COLOR white]{0} duplicate links removed[/COLOR]"
+msgstr ""
+
+msgctxt "#32090"
+msgid "[COLOR white]Filter-out duplicate links[/COLOR]"
+msgstr ""
+
+msgctxt "#32091"
+msgid "[COLOR white]Sync with Trakt watched status on add-on startup[/COLOR]"
+msgstr ""
+
+msgctxt "#32092"
+msgid [COLOR white]"Homelander <=> Trakt Synced[/COLOR]"
+msgstr ""
+
+msgctxt "#32093"
+msgid "[COLOR white][B]TRAKT[/B] : Sync Watched Status[/COLOR]"
+msgstr ""
+
+msgctxt "#32094"
+msgid "[COLOR white]Continue watching...[/COLOR]"
+msgstr ""
+
+msgctxt "#32095"
+msgid "[COLOR white]Resume Point source:[/COLOR]"
+msgstr ""
+
+msgctxt "#32096"
+msgid "[COLOR white]Trakt scrobbles[/COLOR]"
+msgstr ""
+
+msgctxt "#32097"
+msgid "[COLOR white]Enable scrobbling[/COLOR]"
+msgstr ""
+
+msgctxt "#32098"
+msgid "[COLOR white]NOTE: Do Not enable this if you scrobble through the Trakt add-on.[CR]Also note that only scrobble on Stop currently works.[/COLOR]"
+msgstr ""
+
+msgctxt "#32099"
+msgid "[COLOR white]Show notification on scrobble[/COLOR]"
+msgstr ""
+
+msgctxt "#32100"
+msgid "[COLOR white][I]Find similar[/I][/COLOR]"
+msgstr ""
+
+msgctxt "#32101"
+msgid "[COLOR white][I]Information[/I][/COLOR]"
+msgstr ""
+
+msgctxt "#32102"
+msgid "[COLOR white]To use this you must install and configure an add-on: Orion.[CR]    Account required.[/COLOR]"
+msgstr ""
+
+msgctxt "#32103"
+msgid "[COLOR white]Open Orion module settings[/COLOR]"
+msgstr ""
+
+msgctxt "#32104"
+msgid "[COLOR white]Stream Type:[/COLOR]"
+msgstr ""
+
+msgctxt "#32105"
+msgid "[COLOR white]Extra stream info (popularity, age)[/COLOR]"
+msgstr ""
+
+msgctxt "#32106"
+msgid "[COLOR white]Extra stream info (filename)[/COLOR]"
+msgstr ""
+
+msgctxt "#32107"
+msgid "[COLOR white]Orion label color:[/COLOR]"
+msgstr ""
+
+msgctxt "#32108"
+msgid "[COLOR white][B]Homelander[/B] : Clean Settings file[/COLOR]"
+msgstr ""
+
+msgctxt "#32109"
+msgid "[B]Homelanderscrapers[/B] : Clean Settings file[/COLOR]"
+msgstr ""
+
+msgctxt "#32110"
+msgid "{} Obsolete Settings Entries Removed"
+msgstr ""
+
+msgctxt "#32111"
+msgid "[COLOR white]No Obselete Settings to Remove[/COLOR]"
+msgstr ""
+
+msgctxt "#32112"
+msgid "[COLOR white]Enable metadata on source list[/COLOR]"
+msgstr ""
+
+msgctxt "#32113"
+msgid "[COLOR white]Sort by size if available[/COLOR]"
+msgstr ""
+
+msgctxt "#32114"
+msgid "[COLOR white]Verify torrents cache[/COLOR]"
+msgstr ""
+
+msgctxt "#32115"
+msgid "[COLOR white]Supported services: Real-Debrid, AllDebrid,[CR]   Premiumize, Debrid-Link[/COLOR]"
+msgstr ""
+
+msgctxt "#32116"
+msgid "[COLOR white][B]Homelander[/B] : Clear debrid checks...[/COLOR]"
+msgstr ""
+
+msgctxt "#32117"
+msgid "[COLOR white]Username[/COLOR]"
+msgstr ""
+
+msgctxt "#32118"
+msgid "[COLOR white]Enter your Opensubtitles.org log-in credentials on 'Accounts' tab[/COLOR]"
+msgstr ""
+
+msgctxt "#32119"
+msgid "[COLOR white]Select[/COLOR]"
+msgstr ""
+
+msgctxt "#32120"
+msgid "[COLOR white]Choose on season/episode level[/COLOR]"
+msgstr ""
+
+msgctxt "#32121"
+msgid "Related videos (%s):"
+msgstr ""
+
+msgctxt "#32122"
+msgid "[COLOR white]Remove CAM/SCR results[/COLOR]"
+msgstr ""
+
+msgctxt "#32123"
+msgid "[COLOR white]Decade[/COLOR]"
+msgstr ""
+
+msgctxt "#32124"
+msgid "[COLOR white]IMDb keyword searches[/COLOR]"
+msgstr ""
+
+msgctxt "#32125"
+msgid "[COLOR white]Popular IMDb user lists[/COLOR]"
+msgstr ""
+
+msgctxt "#32126"
+msgid "[COLOR white]Remove uncached torrents if cached exist[/COLOR]"
+msgstr ""
+
+msgctxt "#32127"
+msgid "[COLOR white]Min Resolution[/COLOR]"
+msgstr ""
+
+msgctxt "#32128"
+msgid "[COLOR white]Get episodes ratings from Trakt (slow)[/COLOR]"
+msgstr ""
+
+msgctxt "#32129"
+msgid "[COLOR white]Enable extra & hq artwork[/COLOR]"
+msgstr ""
+
+msgctxt "#32130"
+msgid "[COLOR white]Personal Fanart.tv API key required to be entered on Accounts tab[/COLOR]"
+msgstr ""
+
+msgctxt "#32131"
+msgid "[COLOR white]Filename when available[/COLOR]"
+msgstr ""
+
+msgctxt "#32132"
+msgid "[COLOR white]Simplified info[/COLOR]"
+msgstr ""
+
+msgctxt "#32133"
+msgid "[COLOR white]Min size (GB per hour)[/COLOR]"
+msgstr ""
+
+msgctxt "#32134"
+msgid "[COLOR white]Max size (GB per hour)[/COLOR]"
+msgstr ""
+
+msgctxt "#32135"
+msgid "[COLOR white]Min episode size (GB)[/COLOR]"
+msgstr ""
+
+msgctxt "#32136"
+msgid "[COLOR white]Max episode size (GB)[/COLOR]"
+msgstr ""
+
+msgctxt "#32137"
+msgid "[COLOR white]Enable size filtering[/COLOR]"
+msgstr ""
+
+msgctxt "#32138"
+msgid "[COLOR white]Items per page[/COLOR]"
+msgstr ""
+
+msgctxt "#32139"
+msgid "[COLOR white]WARNING: Enable only if you were asked to.[CR]Possible memory leaks.[/COLOR]"
+msgstr ""
+
+msgctxt "#32140"
+msgid "[COLOR white]Log file is empty.[CR]Please enable debugging in add-on\'s settings,[CR]reproduce the problem and try uploading again.[CR]DISABLE debugging afterwards.[/COLOR]"
+msgstr ""
+
+msgctxt "#32141"
+msgid "Your log file was uploaded to:[CR][CR]    [B]%s[/B]"
+msgstr ""
+
+msgctxt "#32142"
+msgid "[COLOR white]Sorting Options[/COLOR]"
+msgstr ""
+
+msgctxt "#32143"
+msgid "[COLOR white]Primal sorting parameter[/COLOR]"
+msgstr ""
+
+msgctxt "#32144"
+msgid "[COLOR white]Resolution[/COLOR]"
+msgstr ""
+
+msgctxt "#32145"
+msgid "[COLOR white]Premium[/COLOR]"
+msgstr ""
+
+msgctxt "#32146"
+msgid "Using available {} subtitle"
+msgstr ""
+
+msgctxt "#32147"
+msgid "Preferred {} subtitle already available in-stream"
+msgstr ""
+
+msgctxt "#32148"
+msgid "{} subtitles downloaded"
+msgstr ""
+
+msgctxt "#32200"
+msgid "[COLOR white]No Color[/COLOR]"
+msgstr ""
+
+msgctxt "#32201"
+msgid "[COLOR=blue]Blue[/COLOR]"
+msgstr ""
+
+msgctxt "#32202"
+msgid "[COLOR=red]Red[/COLOR]"
+msgstr ""
+
+msgctxt "#32203"
+msgid "[COLOR=white]Yellow[/COLOR]"
+msgstr ""
+
+msgctxt "#32204"
+msgid "[COLOR=deeppink]Deep Pink[/COLOR]"
+msgstr ""
+
+msgctxt "#32205"
+msgid "[COLOR=cyan]Cyan[/COLOR]"
+msgstr ""
+
+msgctxt "#32206"
+msgid "[COLOR=lawngreen]Lawn Green[/COLOR]"
+msgstr ""
+
+msgctxt "#32207"
+msgid "[COLOR=gold]Gold[/COLOR]"
+msgstr ""
+
+msgctxt "#32208"
+msgid "[COLOR=magenta]Magenta[/COLOR]"
+msgstr ""
+
+msgctxt "#32209"
+msgid "[COLOR=whitegreen]Yellow Green[/COLOR]"
+msgstr ""
+
+msgctxt "#32210"
+msgid "[COLOR=white]White[/COLOR]"
+msgstr ""
+
+msgctxt "#32211"
+msgid "[COLOR=black]Black[/COLOR]"
+msgstr ""
+
+msgctxt "#32212"
+msgid "[COLOR=crimson]Crimson[/COLOR]"
+msgstr ""
+
+msgctxt "#32213"
+msgid "[COLOR=goldenrod]Goldenrod[/COLOR]"
+msgstr ""
+
+msgctxt "#32214"
+msgid "[COLOR=powderblue]Powderblue[/COLOR]"
+msgstr ""
+
+msgctxt "#32215"
+msgid "[COLOR=deepskyblue]Deepsky Blue[/COLOR]"
+msgstr ""
+
+msgctxt "#32216"
+msgid "[COLOR=springgreen]Spring Green[/COLOR]"
+msgstr ""
+
+msgctxt "#32217"
+msgid "[COLOR=darkcyan]Dark Cyan[/COLOR]"
+msgstr ""
+
+msgctxt "#32218"
+msgid "[COLOR=whitemarine]Aquamarine[/COLOR]"
+msgstr ""
+
+msgctxt "#32219"
+msgid "[COLOR=mediumturquoise]Medium Turquoise[/COLOR]"
+msgstr ""
+
+msgctxt "#32220"
+msgid "[COLOR=khaki]Khaki[/COLOR]"
+msgstr ""
+
+msgctxt "#32221"
+msgid "[COLOR=darkorange]Dark Orange[/COLOR]"
+msgstr ""
+
+msgctxt "#32301"
+msgid "[COLOR white]Enabled[/COLOR]"
+msgstr ""
+
+msgctxt "#32302"
+msgid "[COLOR white]Disabled[/COLOR]"
+msgstr ""
+
+msgctxt "#32303[/COLOR]"
+msgid "[COLOR white]User ID[/COLOR]"
+msgstr ""
+
+msgctxt "#32304[/COLOR]"
+msgid "[COLOR white]Email[/COLOR]"
+msgstr ""
+
+msgctxt "#32305"
+msgid "[COLOR white]ID[/COLOR]"
+msgstr ""
+
+msgctxt "#32306"
+msgid "[COLOR white][B]Authorise[/B][/COLOR]"
+msgstr ""
+
+msgctxt "#32307"
+msgid "[COLOR white]Password[/COLOR]"
+msgstr ""
+
+msgctxt "#32308"
+msgid "[COLOR white]PIN[/COLOR]"
+msgstr ""
+
+msgctxt "#32309"
+msgid "[COLOR white]API[/COLOR]"
+msgstr ""
+
+msgctxt "#32310"
+msgid "[COLOR white]General[/COLOR]"
+msgstr ""
+
+msgctxt "#32311"
+msgid "[COLOR white]Appearance[/COLOR]"
+msgstr ""
+
+msgctxt "#32312"
+msgid "[COLOR white]Providers Timeout[/COLOR]"
+msgstr ""
+
+msgctxt "#32313"
+msgid "[COLOR white]Indicators[/COLOR]"
+msgstr ""
+
+msgctxt "#32314"
+msgid "[COLOR white]Local[/COLOR]"
+msgstr ""
+
+msgctxt "#32315"
+msgid "[COLOR white]Trakt[/COLOR]"
+msgstr ""
+
+msgctxt "#32316"
+msgid "[COLOR white]Info Language[/COLOR]"
+msgstr ""
+
+msgctxt "#32317"
+msgid "[COLOR white]Flatten TV seasons[/COLOR]"
+msgstr ""
+
+msgctxt "#32318"
+msgid "[COLOR white]Enable Fanart[/COLOR]"
+msgstr ""
+
+msgctxt "#32319"
+msgid "[COLOR white]Menu[/COLOR]"
+msgstr ""
+
+msgctxt "#32320"
+msgid "[COLOR white]New Movies[/COLOR]"
+msgstr ""
+
+msgctxt "#32321"
+msgid "[COLOR white]Featured[/COLOR]"
+msgstr ""
+
+msgctxt "#32322"
+msgid "[COLOR white]People Watching[/COLOR]"
+msgstr ""
+
+msgctxt "#32323"
+msgid "[COLOR white]Most Popular[/COLOR]"
+msgstr ""
+
+msgctxt "#32324"
+msgid "[COLOR white]In Theaters[/COLOR]"
+msgstr ""
+
+msgctxt "#32325"
+msgid "[COLOR white]New Episodes[/COLOR]"
+msgstr ""
+
+msgctxt "#32326"
+msgid "[COLOR white]Episodes[/COLOR]"
+msgstr ""
+
+msgctxt "#32327"
+msgid "[COLOR white]Trakt Progress[/COLOR]"
+msgstr ""
+
+msgctxt "#32328"
+msgid "[COLOR white]Trakt Episodes[/COLOR]"
+msgstr ""
+
+msgctxt "#32329"
+msgid "[COLOR white]My Lists[/COLOR]"
+msgstr ""
+
+msgctxt "#32330"
+msgid "[COLOR white]Playback[/COLOR]"
+msgstr ""
+
+msgctxt "#32331"
+msgid "[COLOR white]Default action[/COLOR]"
+msgstr ""
+
+msgctxt "#32332"
+msgid "[COLOR white]Dialog[/COLOR]"
+msgstr ""
+
+msgctxt "#32333"
+msgid "[COLOR white]Directory[/COLOR]"
+msgstr ""
+
+msgctxt "#32334"
+msgid "[COLOR white]Auto Play[/COLOR]"
+msgstr ""
+
+msgctxt "#32335"
+msgid "[COLOR white]Progress Dialog[/COLOR]"
+msgstr ""
+
+msgctxt "#32336"
+msgid "[COLOR white]Foreground[/COLOR]"
+msgstr ""
+
+msgctxt "#32337"
+msgid "[COLOR white]Background[/COLOR]"
+msgstr ""
+
+msgctxt "#32338"
+msgid "[COLOR white]Sources Filters[/COLOR]"
+msgstr ""
+
+msgctxt "#32339"
+msgid "[COLOR white]Max Resolution[/COLOR]"
+msgstr ""
+
+msgctxt "#32340"
+msgid "[COLOR white]SD Hosters in Auto Play[/COLOR]"
+msgstr ""
+
+msgctxt "#32341"
+msgid "[COLOR white]Remove pair/captcha hosts[/COLOR]"
+msgstr ""
+
+msgctxt "#32342"
+msgid "[COLOR white]Sort by Provider[/COLOR]"
+msgstr ""
+
+msgctxt "#32343"
+msgid "[COLOR white]When playback starts...[/COLOR]"
+msgstr ""
+
+msgctxt "#32344"
+msgid "[COLOR white]Resume Playback[/COLOR]"
+msgstr ""
+
+msgctxt "#32345"
+msgid "[COLOR white]Providers[/COLOR]"
+msgstr ""
+
+msgctxt "#32346"
+msgid "[COLOR white]Accounts[/COLOR]"
+msgstr ""
+
+msgctxt "#32347"
+msgid "[COLOR white]Downloads[/COLOR]"
+msgstr ""
+
+msgctxt "#32348"
+msgid "[COLOR white]Enable downloads[/COLOR]"
+msgstr ""
+
+msgctxt "#32349"
+msgid "[COLOR white]Movies[/COLOR]"
+msgstr ""
+
+msgctxt "#32350"
+msgid "[COLOR white]TV[/COLOR]"
+msgstr ""
+
+msgctxt "#32351"
+msgid "[COLOR white]Downloading features are disabled by default.[/COLOR]"
+msgstr ""
+
+msgctxt "#32352"
+msgid "[COLOR white]Set up your download folders in order to enable them.[/COLOR]"
+msgstr ""
+
+msgctxt "#32353"
+msgid "[COLOR white]Subtitles[/COLOR]"
+msgstr ""
+
+msgctxt "#32354"
+msgid "[COLOR white]Enable subtitles[/COLOR]"
+msgstr ""
+
+msgctxt "#32355"
+msgid "[COLOR white]Convert subtitles to UTF-8[/COLOR]"
+msgstr ""
+
+msgctxt "#32356"
+msgid "[COLOR white]Primary Language[/COLOR]"
+msgstr ""
+
+msgctxt "#32357"
+msgid "[COLOR white]Secondary Language[/COLOR]"
+msgstr ""
+
+msgctxt "#32358"
+msgid "[COLOR white]Subtitles could be unavailable or out of sync.[/COLOR]"
+msgstr ""
+
+msgctxt "#32359"
+msgid "[COLOR white]In that case use your own subtitles.[/COLOR]"
+msgstr ""
+
+msgctxt "#32360"
+msgid "[COLOR white]Providers Language[/COLOR]"
+msgstr ""
+
+msgctxt "#32361"
+msgid "[COLOR white]Show notification[/COLOR]"
+msgstr ""
+
+msgctxt "#32362"
+msgid "[COLOR white]Disable CloudFlare protected providers[/COLOR]"
+msgstr ""
+
+msgctxt "#32363"
+msgid "[COLOR white]Remove HEVC streams[/COLOR]"
+msgstr ""
+
+msgctxt "#32364"
+msgid "[COLOR white]Remove Dolby-Vision streams[/COLOR]"
+msgstr ""
+
+msgctxt "#32372"
+msgid "[COLOR white]When playback ends...[/COLOR]"
+msgstr ""
+
+msgctxt "#32373"
+msgid "[COLOR white]Refresh watched status[/COLOR]"
+msgstr ""
+
+msgctxt "#32401"
+msgid "[COLOR white]No stream available[/COLOR]"
+msgstr ""
+
+msgctxt "#32402"
+msgid "[COLOR white]Playback outside Homelander is not allowed[/COLOR]"
+msgstr ""
+
+msgctxt "#32403"
+msgid "[COLOR white][I]Download[/I][/COLOR]"
+msgstr ""
+
+msgctxt "#32404"
+msgid "Time elapsed: %s seconds"
+msgstr ""
+
+msgctxt "#32405"
+msgid "%s seconds"
+msgstr ""
+
+msgctxt "#32406"
+msgid "Remaining providers: %s"
+msgstr ""
+
+msgctxt "#32407"
+msgid "[COLOR white]Are you sure?[/COLOR]"
+msgstr ""
+
+msgctxt "#32408"
+msgid "[COLOR white]Process Complete[/COLOR]"
+msgstr ""
+
+msgctxt "#32501"
+msgid "[COLOR white]Start from beginning[/COLOR]"
+msgstr ""
+
+msgctxt "#32502"
+msgid "Resume from %s"
+msgstr ""
+
+msgctxt "#32503"
+msgid "[COLOR white]Resume[/COLOR]"
+msgstr ""
+
+msgctxt "#32511"
+msgid "[COLOR white]An account already exists.[/COLOR]"
+msgstr ""
+
+msgctxt "#32512"
+msgid "[COLOR white]Do you want to reset?[/COLOR]"
+msgstr ""
+
+msgctxt "#32513"
+msgid "1) Visit : [COLOR skyblue]%s[/COLOR]"
+msgstr ""
+
+msgctxt "#32514"
+msgid "2) When prompted enter : [COLOR skyblue]%s[/COLOR]"
+msgstr ""
+
+msgctxt "#32515"
+msgid "[COLOR white]Trakt Manager[/COLOR]"
+msgstr ""
+
+msgctxt "#32516"
+msgid "[COLOR white]Add to [B]Collection[/B][/COLOR]"
+msgstr ""
+
+msgctxt "#32517"
+msgid "[COLOR white]Remove from [B]Collection[/B][/COLOR]"
+msgstr ""
+
+msgctxt "#32518"
+msgid "[COLOR white]Add to [B]Watchlist[/B][/COLOR]"
+msgstr ""
+
+msgctxt "#32519"
+msgid "[COLOR white]Remove from [B]Watchlist[/B][/COLOR]"
+msgstr ""
+
+msgctxt "#32520"
+msgid "[COLOR white]Add to [B]new List[/B][/COLOR]"
+msgstr ""
+
+msgctxt "#32521"
+msgid "Add to [B]%s[/B]"
+msgstr ""
+
+msgctxt "#32522"
+msgid "Remove from [B]%s[/B]"
+msgstr ""
+
+msgctxt "#32531"
+msgid "[COLOR white]An account already exists.[/COLOR]"
+msgstr ""
+
+msgctxt "#32532"
+msgid "[COLOR white]Do you want to reset?[/COLOR]"
+msgstr ""
+
+msgctxt "#32533"
+msgid "1) Visit : [COLOR skyblue]%s[/COLOR]"
+msgstr ""
+
+msgctxt "#32534"
+msgid "2) When prompted enter : [COLOR skyblue]%s[/COLOR]"
+msgstr ""
+
+msgctxt "#32535"
+msgid "[COLOR white][I]Play Random[/I][/COLOR]"
+msgstr ""
+
+msgctxt "#32536"
+msgid "[COLOR white]Playing[/COLOR]"
+msgstr ""
+
+msgctxt "#32537"
+msgid "[COLOR white]Nothing found to play[/COLOR]"
+msgstr ""
+
+msgctxt "#32538"
+msgid "[COLOR white]DEBRID-SERVICE[/COLOR]"
+msgstr ""
+
+msgctxt "#32539"
+msgid "[COLOR white]Configure Debrid Services in ResolveURL Settings.[/COLOR]"
+msgstr ""
+
+msgctxt "#32540"
+msgid "[COLOR white]ResolveURL Settings[/COLOR]"
+msgstr ""
+
+msgctxt "#32541"
+msgid "[COLOR white]Library[/COLOR]"
+msgstr ""
+
+msgctxt "#32542"
+msgid "[COLOR white]Homelander folders will be imported to library if they are added to media sources.[/COLOR]"
+msgstr ""
+
+msgctxt "#32543"
+msgid "[COLOR white]Movies[/COLOR]"
+msgstr ""
+
+msgctxt "#32544"
+msgid "[COLOR white]TV[/COLOR]"
+msgstr ""
+
+msgctxt "#32545"
+msgid "[COLOR white]Auto update TV Shows[/COLOR]"
+msgstr ""
+
+msgctxt "#32546"
+msgid "[COLOR white]Show notifications during update[/COLOR]"
+msgstr ""
+
+msgctxt "#32547"
+msgid "[COLOR white]Update library after adding content[/COLOR]"
+msgstr ""
+
+msgctxt "#32548"
+msgid "[COLOR white]Avoid creating duplicate content[/COLOR]"
+msgstr ""
+
+msgctxt "#32549"
+msgid "[COLOR white]Check movie before adding it[/COLOR]"
+msgstr ""
+
+msgctxt "#32550"
+msgid "[COLOR white]Check first episode of season before adding it[/COLOR]"
+msgstr ""
+
+msgctxt "#32551"
+msgid "[COLOR white][I]Add to Library[/I][/COLOR]"
+msgstr ""
+
+msgctxt "#32552"
+msgid "[COLOR white]Adding to library...[/COLOR]"
+msgstr ""
+
+msgctxt "#32553"
+msgid "[COLOR white]Updating TV shows...[/COLOR]"
+msgstr ""
+
+msgctxt "#32554"
+msgid "[COLOR white]Process Complete[/COLOR]"
+msgstr ""
+
+msgctxt "#32555"
+msgid "[COLOR white]Are you sure?[/COLOR]"
+msgstr ""
+
+msgctxt "#32556"
+msgid "[COLOR white][B]Homelander[/B] : Library[/COLOR]"
+msgstr ""
+
+msgctxt "#32557"
+msgid "[COLOR white][B]LIBRARY[/B] : Settings[/COLOR]"
+msgstr ""
+
+msgctxt "#32558"
+msgid "[COLOR white][B]Homelander[/B] : Update library...[/COLOR]"
+msgstr ""
+
+msgctxt "#32559"
+msgid "[COLOR white][B]Homelander[/B] : Movie folder...[/COLOR]"
+msgstr ""
+
+msgctxt "#32560"
+msgid "[COLOR white][B]Homelander[/B] : TV folder...[/COLOR]"
+msgstr ""
+
+msgctxt "#32561"
+msgid "[COLOR white][B]TRAKT[/B] : Import Collection...[/COLOR]"
+msgstr ""
+
+msgctxt "#32562"
+msgid "[COLOR white][B]TRAKT[/B] : Import Watchlist...[/COLOR]"
+msgstr ""
+
+msgctxt "#32563"
+msgid "[COLOR white][B]TRAKT[/B] : Import TV Collection...[/COLOR]"
+msgstr ""
+
+msgctxt "#32564"
+msgid "[COLOR white][B]TRAKT[/B] : Import TV Watchlist...[/COLOR]"
+msgstr ""
+
+msgctxt "#32565"
+msgid "[COLOR white]Include episodes with unknown air dates[/COLOR]"
+msgstr ""
+
+msgctxt "#32566"
+msgid "[COLOR white]Include special episodes[/COLOR]"
+msgstr ""
+
+msgctxt "#32567"
+msgid "[COLOR white]IMDb watchlist/user lists sort by:[/COLOR]"
+msgstr ""
+
+msgctxt "#32568"
+msgid "[COLOR white]Recently added[/COLOR]"
+msgstr ""
+
+msgctxt "#32569"
+msgid "[COLOR white]Title[/COLOR]"
+msgstr ""
+
+msgctxt "#32570"
+msgid "[COLOR white]Show unaired seasons/episodes[/COLOR]"
+msgstr ""
+
+msgctxt "#32571"
+msgid "[COLOR white]Hide movies in cinema[/COLOR]"
+msgstr ""
+
+msgctxt "#32572"
+msgid "[COLOR white]Protected Link. Please enter account credentials in the settings.[/COLOR]"
+msgstr ""
+
+msgctxt "#32580"
+msgid "[COLOR white]Recently Released[/COLOR]"
+msgstr ""
+
+msgctxt "#32581"
+msgid "[COLOR white]Results Limit[/COLOR]"
+msgstr ""
+
+msgctxt "#32582"
+msgid "[COLOR white]Personal API keys provide quicker API responses.[CR]Please support the metadata sites however you can (tmdb, tvdb, trakt, fanart.tv)[/COLOR]"
+msgstr ""
+
+msgctxt "#32583"
+msgid "[COLOR white]Become a VIP member for many benefits at: https://fanart.tv/vip[/COLOR]"
+msgstr ""
+
+msgctxt "#32584"
+msgid "[COLOR white]Sort order for Trakt Watched Progress[/COLOR]"
+msgstr ""
+
+msgctxt "#32585"
+msgid "[COLOR white]Recently aired[/COLOR]"
+msgstr ""
+
+msgctxt "#32586"
+msgid "[COLOR white]Recently watched[/COLOR]"
+msgstr ""
+
+msgctxt "#32587"
+msgid "[COLOR white]Extra source info[/COLOR]"
+msgstr ""
+
+msgctxt "#32588"
+msgid "[COLOR white]Premium Source Identifier Color[/COLOR]"
+msgstr ""
+
+msgctxt "#32599"
+msgid "[COLOR white]Getting genre information from Trakt[/COLOR]"
+msgstr ""
+
+msgctxt "#32600"
+msgid "[COLOR white]Preparing sources[/COLOR]"
+msgstr ""
+
+msgctxt "#32601"
+msgid "[COLOR white]Total[/COLOR]"
+msgstr ""
+
+msgctxt "#32602"
+msgid "[COLOR white]Waiting for[/COLOR]"
+msgstr ""
+
+msgctxt "#32603"
+msgid "[COLOR white][I]New search...[/I][/COLOR]"
+msgstr ""
+
+msgctxt "#32604"
+msgid "[COLOR white][B]Homelander[/B] : Clear search history...[/COLOR]"
+msgstr ""
+
+msgctxt "#32605"
+msgid "[COLOR white][I]Clear search history...[/I][/COLOR]"
+msgstr ""
+
+msgctxt "#32606"
+msgid "[COLOR white]Prem[/COLOR]"
+msgstr ""
+
+msgctxt "#32607"
+msgid "[COLOR white]Norm[/COLOR]"
+msgstr ""
+
+msgctxt "#32608"
+msgid "[COLOR white]Auto Syncing Trakt Library[/COLOR]"
+msgstr ""
+
+msgctxt "#32609"
+msgid "[COLOR white]Client ID[/COLOR]"
+msgstr ""
+
+msgctxt "#32610"
+msgid "[COLOR white]Client Secret[/COLOR]"
+msgstr ""
+
+msgctxt "#32611"
+msgid "[COLOR white][B]Homelander[/B] : Clear all cache...[/COLOR]"
+msgstr ""
+
+msgctxt "#32612"
+msgid "[COLOR white]24HR delay before import[/COLOR]"
+msgstr ""
+
+msgctxt "#32613"
+msgid "[COLOR white]Show Special Episodes[/COLOR]"
+msgstr ""
+
+msgctxt "#32614"
+msgid "[COLOR white]Auto Trakt Collections Syncing[/COLOR]"
+msgstr ""
+
+msgctxt "#32615"
+msgid "[COLOR white]Sync on Kodi Start[/COLOR]"
+msgstr ""
+
+msgctxt "#32616"
+msgid "[COLOR white]Schedule Updates Every _ Hour/s[/COLOR]"
+msgstr ""
+
+msgctxt "#32617"
+msgid "[COLOR white]0 Value Disables Scheduling[/COLOR]"
+msgstr ""
+
+msgctxt "#32618"
+msgid "[COLOR white]Pre-emptive Termination[/COLOR]"
+msgstr ""
+
+msgctxt "#32619"
+msgid "[COLOR white]Pre-emptive Limit[/COLOR]"
+msgstr ""
+
+msgctxt "#32620"
+msgid "[COLOR white]Autoplay SD Quality only[/COLOR]"
+msgstr ""
+
+msgctxt "#32621"
+msgid "[COLOR white]Debrid Sources Only[/COLOR]"
+msgstr ""
+
+msgctxt "#32622"
+msgid "[COLOR white]Trakt Bookmarks[/COLOR]"
+msgstr ""
+
+msgctxt "#32623"
+msgid "[COLOR white]Auto Resume[/COLOR]"
+msgstr ""
+
+msgctxt "#32624"
+msgid "[COLOR white]FANART.TV[/COLOR]"
+msgstr ""
+
+msgctxt "#32625"
+msgid "[COLOR white]TMDb[/COLOR]"
+msgstr ""
+
+msgctxt "#32626"
+msgid "[COLOR white]Secondary Color[/COLOR]"
+msgstr ""
+
+msgctxt "#32627"
+msgid "[COLOR white]IMDb[/COLOR]"
+msgstr ""
+
+msgctxt "#32628"
+msgid "[COLOR white]Source selection appearance[/COLOR]"
+msgstr ""
+
+msgctxt "#32629"
+msgid "[COLOR white]Single line[/COLOR]"
+msgstr ""
+
+msgctxt "#32630"
+msgid "[COLOR white]Double line[/COLOR]"
+msgstr ""
+
+msgctxt "#32631"
+msgid "[COLOR white]Simple[/COLOR]"
+msgstr ""
+
+msgctxt "#32632"
+msgid "[COLOR white]Official Source Identifier Color[/COLOR]"
+msgstr ""
+
+msgctxt "#32633"
+msgid "[COLOR white]Official Providers[/COLOR]"
+msgstr ""
+
+msgctxt "#32634"
+msgid "[COLOR white]For these scrapers to work, their equivalent[CR]  Kodi add-on is required to be installed and configured.[/COLOR]"
+msgstr ""
+
+msgctxt "#32635"
+msgid "[COLOR white]Country code[/COLOR]"
+msgstr ""
+
+msgctxt "#32636"
+msgid "[COLOR white]External Providers[/COLOR]"
+msgstr ""
+
+msgctxt "#32637"
+msgid "[COLOR white]Enable external providers (Homelanderscrapers)[/COLOR]"
+msgstr ""
