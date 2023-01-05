@@ -1,6 +1,0 @@
-<settings version="2">
-    <setting id="hide-fanart" default="true">false</setting>
-    <setting id="language" default="true">0</setting>
-    <setting id="not_first_run" default="true">1</setting>
-    <setting id="prefer-http">true</setting>
-</settings>

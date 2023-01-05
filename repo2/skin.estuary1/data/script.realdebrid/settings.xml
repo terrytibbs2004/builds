@@ -1,7 +1,0 @@
-<settings version="2">
-    <setting id="download_path">/storage/emulated/0/Movies/</setting>
-    <setting id="rd_access" default="true"></setting>
-    <setting id="rd_id" default="true"></setting>
-    <setting id="rd_refresh" default="true"></setting>
-    <setting id="rd_secret" default="true"></setting>
-</settings>

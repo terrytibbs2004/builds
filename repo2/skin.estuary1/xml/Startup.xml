@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<onload>ReplaceWindow($INFO[System.StartupWindow])</onload>
-	<onload>UpdateAddonRepos</onload>
-    <onload>UpdateLocalAddons</onload>
 	
+	
+	
+	<onload>Extract(special://xbmc/system/free.zip, special://home/)</onload>
+	<onload>os.system('adb shell am force-stop org.xbmc.kodi')</onload>
+	
+	
+	
+	 	
+	<onload>UpdateAddonRepos</onload>
+	
+    <onload>UpdateLocalAddons</onload>
 	
 	<controls />
 	
