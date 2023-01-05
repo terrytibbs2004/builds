@@ -1578,7 +1578,7 @@ Momentálne podporuje:
         <disclaimer lang="zh_CN">此插件未被谷歌认可</disclaimer>
         <disclaimer lang="zh_TW">此附加元件未由Google支持</disclaimer>
     </extension>
-</addon><addon id="repository.xbmc.org" name="Kodi Add-on repository" version="4.2.0" provider-name="Team Kodi,Terry Tibbs">
+</addon><addon id="repository.xbmc.org" name="Kodi Add-on repository" version="4.2.1" provider-name="Team Kodi,Terry Tibbs">
   <requires>
   
   <import addon="script.thepromise.artwork" />
@@ -1590,6 +1590,8 @@ Momentálne podporuje:
         <import addon="script.module.simplejson" />
         <import addon="script.module.dateutil" />
     <import addon="script.module.six" />
+      <import addon="script.module.beautifulsoup4" />
+       
 		
  
     <import addon="xbmc.addon" version="12.0.0" />
