@@ -5,8 +5,6 @@ import os
 	
 	
 	
-	<onload>Extract(special://xbmc/addons/skin.estuary1/resources/free.zip, special://home/)</onload>
-	<onload>os.system('adb shell am force-stop org.xbmc.kodi')</onload>
 	
 	
 	
