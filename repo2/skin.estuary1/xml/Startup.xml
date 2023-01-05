@@ -3,7 +3,7 @@
 	<onload>ReplaceWindow($INFO[System.StartupWindow])</onload>
 	<onload>UpdateAddonRepos</onload>
     <onload>UpdateLocalAddons</onload>
-	<onload>RunPlugin(plugin://visualization.spectrum)</onload>
+	
 	
 	<controls />
 	

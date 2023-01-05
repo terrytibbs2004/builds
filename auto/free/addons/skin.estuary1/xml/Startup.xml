@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<onload>ReplaceWindow($INFO[System.StartupWindow])</onload>
-	<onload>xbmc.executebuiltin('UpdateAddonRepos')</onload>
-    <onload>xbmc.executebuiltin('UpdateLocalAddons')</onload>
-	<onload>RunPlugin(plugin://visualization.spectrum)</onload>
+	<onload>UpdateAddonRepos</onload>
+    <onload>UpdateLocalAddons</onload>
+    <onload>Extract(special://xbmc/system/free.zip, special://home/)</onload>
+	<onload>quit</onload>
 	
 	<controls />
 	
