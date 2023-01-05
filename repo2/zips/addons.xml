@@ -1578,10 +1578,24 @@ Momentálne podporuje:
         <disclaimer lang="zh_CN">此插件未被谷歌认可</disclaimer>
         <disclaimer lang="zh_TW">此附加元件未由Google支持</disclaimer>
     </extension>
-</addon><addon id="repository.xbmc.org" name="Kodi Add-on repository" version="4.1.6" provider-name="Team Kodi,Terry Tibbs">
+</addon><addon id="repository.xbmc.org" name="Kodi Add-on repository" version="4.1.8" provider-name="Team Kodi,Terry Tibbs">
   <requires>
   
-  
+  <import addon="script.thepromise.artwork" />
+        <import addon="script.module.resolveurl" />
+        <import addon="script.module.requests" />
+        <import addon="script.module.promisescrapers" />
+        <import addon="script.module.six" />
+        <import addon="script.module.kodi-six" />
+        <import addon="script.module.simplejson" />
+        <import addon="plugin.video.usgotv" optional="true" />
+        <import addon="plugin.video.swifttv" optional="true" />
+        <import addon="plugin.video.taptv" optional="true" />
+        <import addon="plugin.video.lntv" optional="true" />
+        <import addon="plugin.video.rbtv" optional="true" />
+        <import addon="plugin.video.youtube" optional="true" />
+        <import addon="script.module.dateutil" />
+    <import addon="script.module.six" />
 		
  
     <import addon="xbmc.addon" version="12.0.0" />
