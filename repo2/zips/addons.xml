@@ -1961,7 +1961,7 @@ updated language files
 		<disclaimer />
 		<platform>all</platform>
 	</extension>
-</addon><addon id="repository.real19.org" name="Real Kodi Add-on repository" version="102.5" provider-name="Team Kodi">
+</addon><addon id="repository.real19.org" name="Real Kodi Add-on repository" version="112.5" provider-name="Team Kodi">
   <requires>
     <import addon="xbmc.addon" version="12.0.0" />
   </requires>
