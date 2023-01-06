@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.estuary1" version="4.4.0" name="Estuary1" provider-name="Terry Tibs,phil65, Ichabod Fletchman">
+<addon id="skin.estuary1" version="4.3.9" name="Estuary1" provider-name="Terry Tibs,phil65, Ichabod Fletchman">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0"/>
-		<import addon="visualization.spectrum"/>
+		
 		
 	</requires>
 	<extension point="xbmc.gui.skin" debugging="false">
