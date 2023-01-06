@@ -1,0 +1,183 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="9233011874" tvg-name="ABC" tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/abc-us.png" group-title="USTVGO",ABC
+plugin://plugin.video.ustvgo/?action=play&video=ABC
+#EXTINF:-1 tvg-id="9200017734" tvg-name="ACC Network " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/acc-network-us.png" group-title="USTVGO",ACC Network 
+plugin://plugin.video.ustvgo/?action=play&video=ACCN
+#EXTINF:-1 tvg-id="9200004889" tvg-name="AE" tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/US/a-and-e-us.png" group-title="USTVGO",AE | [VPN]
+plugin://plugin.video.ustvgo/?action=play&video=AE
+#EXTINF:-1 tvg-id="9200020107" tvg-name="AMC " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/US/amc-us.png" group-title="USTVGO",AMC 
+plugin://plugin.video.ustvgo/?action=play&video=AMC
+#EXTINF:-1 tvg-id="9233013462" tvg-name="Animal Planet " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/animal-planet-us.png" group-title="USTVGO",Animal Planet 
+plugin://plugin.video.ustvgo/?action=play&video=Animal
+#EXTINF:-1 tvg-id="9200009303" tvg-name="BBCAmerica " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/US/bbc-america-us.png" group-title="USTVGO",BBCAmerica 
+plugin://plugin.video.ustvgo/?action=play&video=BBCAmerica
+#EXTINF:-1 tvg-id="9200004533" tvg-name="BTN" tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/btn-us.png" group-title="USTVGO",Big Ten Network 
+plugin://plugin.video.ustvgo/?action=play&video=BTN
+#EXTINF:-1 tvg-id="9233000226" tvg-name="BET " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/bet-us.png" group-title="USTVGO",BET | [VPN]
+plugin://plugin.video.ustvgo/?action=play&video=BET
+#EXTINF:-1 tvg-id="9233015844" tvg-name="Boomerang " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/boomerang-us.png" group-title="USTVGO",Boomerang 
+plugin://plugin.video.ustvgo/?action=play&video=Boomerang
+#EXTINF:-1 tvg-id="9200020094" tvg-name="Bravo " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/bravo-us.png" group-title="USTVGO",Bravo 
+plugin://plugin.video.ustvgo/?action=play&video=Bravo
+#EXTINF:-1 tvg-id="9233007144" tvg-name="C-span " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/c-span-1-us.png" group-title="USTVGO",C-span 
+plugin://plugin.video.ustvgo/?action=play&video=CSPAN
+#EXTINF:-1 tvg-id="9200018514" tvg-name="CBS " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/cbs-logo-white-us.png" group-title="USTVGO",CBS 
+plugin://plugin.video.ustvgo/?action=play&video=CBS
+#EXTINF:-1 tvg-id="9233015468" tvg-name="CBS Sports Network " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/cbs-sports-network-us.png" group-title="USTVGO",CBS Sports Network 
+plugin://plugin.video.ustvgo/?action=play&video=CBSSN
+#EXTINF:-1 tvg-id="9200000143" tvg-name="Cinemax " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/cinemax-us.png" group-title="USTVGO",Cinemax 
+plugin://plugin.video.ustvgo/?action=play&video=Cinemax
+#EXTINF:-1 tvg-id="9233000169" tvg-name="CMT " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/cmt-us.png" group-title="USTVGO",CMT 
+plugin://plugin.video.ustvgo/?action=play&video=CMT
+#EXTINF:-1 tvg-id="9233001926" tvg-name="Cartoon Network " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/US/cartoon-network-us.png" group-title="USTVGO",Cartoon Network 
+plugin://plugin.video.ustvgo/?action=play&video=CN
+#EXTINF:-1 tvg-id="9200009145" tvg-name="CNBC " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/US/cnbc-us.png" group-title="USTVGO",CNBC 
+plugin://plugin.video.ustvgo/?action=play&video=CNBC
+#EXTINF:-1 tvg-id="9233008130" tvg-name="CNN " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/cnn-us.png" group-title="USTVGO",CNN 
+plugin://plugin.video.ustvgo/?action=play&video=CNN
+#EXTINF:-1 tvg-id="9233009509" tvg-name="Comedy Central" tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/US/comedy-central-us.png" group-title="USTVGO",Comedy Central
+plugin://plugin.video.ustvgo/?action=play&video=Comedy
+#EXTINF:-1 tvg-id="9233011398" tvg-name="CW " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/cw-us.png" group-title="USTVGO",CW 
+plugin://plugin.video.ustvgo/?action=play&video=CW
+#EXTINF:-1 tvg-id="9200014472" tvg-name="Destination America " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/destination-america-us.png" group-title="USTVGO",Destination America 
+plugin://plugin.video.ustvgo/?action=play&video=DA
+#EXTINF:-1 tvg-id="9233001914" tvg-name="Discovery " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/discovery-channel-us.png" group-title="USTVGO",Discovery | [VPN]
+plugin://plugin.video.ustvgo/?action=play&video=Discovery
+#EXTINF:-1 tvg-id="9200011893" tvg-name="Disney " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/disney-channel-us.png" group-title="USTVGO",Disney 
+plugin://plugin.video.ustvgo/?action=play&video=Disney
+#EXTINF:-1 tvg-id="9200016560" tvg-name="DisneyJr " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/disney-junior-us.png" group-title="USTVGO",DisneyJr 
+plugin://plugin.video.ustvgo/?action=play&video=DisneyJr
+#EXTINF:-1 tvg-id="9200004852" tvg-name="DisneyXD " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/US/disney-xd-us.png" group-title="USTVGO",DisneyXD 
+plugin://plugin.video.ustvgo/?action=play&video=DisneyXD
+#EXTINF:-1 tvg-id="9233003794" tvg-name="E" tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/e-entertainment-us.png" group-title="USTVGO",E! 
+plugin://plugin.video.ustvgo/?action=play&video=E
+#EXTINF:-1 tvg-id="9233007996" tvg-name="ESPN " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/US/espn-us.png" group-title="USTVGO",ESPN | [VPN]
+plugin://plugin.video.ustvgo/?action=play&video=ESPN
+#EXTINF:-1 tvg-id="9200016131" tvg-name="ESPN2 " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/espn-2-us.png" group-title="USTVGO",ESPN2 
+plugin://plugin.video.ustvgo/?action=play&video=ESPN2
+#EXTINF:-1 tvg-id="9233011350" tvg-name="ESPNU " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/espn-u-us.png" group-title="USTVGO",ESPNU 
+plugin://plugin.video.ustvgo/?action=play&video=ESPNU
+#EXTINF:-1 tvg-id="9200006523" tvg-name="ESPNews " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/espnews-us.png" group-title="USTVGO",ESPNews 
+plugin://plugin.video.ustvgo/?action=play&video=ESPNews
+#EXTINF:-1 tvg-id="9233005598" tvg-name="FoodNetwork " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/US/food-network-us.png" group-title="USTVGO",FoodNetwork 
+plugin://plugin.video.ustvgo/?action=play&video=FoodNetwork
+#EXTINF:-1 tvg-id="9233002271" tvg-name="FOX " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/US/Fox5.png" group-title="USTVGO",FOX 
+plugin://plugin.video.ustvgo/?action=play&video=FOX
+#EXTINF:-1 tvg-id="9200009124" tvg-name="FoxBusiness " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/fox-business-us.png" group-title="USTVGO",FoxBusiness 
+plugin://plugin.video.ustvgo/?action=play&video=FoxBusiness
+#EXTINF:-1 tvg-id="9233006969" tvg-name="FoxNews " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/fox-news-us.png" group-title="USTVGO",FoxNews 
+plugin://plugin.video.ustvgo/?action=play&video=FoxNews
+#EXTINF:-1 tvg-id="9200000497" tvg-name="Freeform " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/freeform-us.png" group-title="USTVGO",Freeform 
+plugin://plugin.video.ustvgo/?action=play&video=Freeform
+#EXTINF:-1 tvg-id="9233000539" tvg-name="FS1 (FS1) " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/fox-sports-1-us.png" group-title="USTVGO",Fox Sports 1 (FS1) | [VPN]
+plugin://plugin.video.ustvgo/?action=play&video=FS1
+#EXTINF:-1 tvg-id="9200009884" tvg-name="FS2 (FS2) " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/fox-sports-2-us.png" group-title="USTVGO",Fox Sports 2 (FS2) 
+plugin://plugin.video.ustvgo/?action=play&video=FS2
+#EXTINF:-1 tvg-id="9233006959" tvg-name="FX " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/fx-us.png" group-title="USTVGO",FX 
+plugin://plugin.video.ustvgo/?action=play&video=FX
+#EXTINF:-1 tvg-id="9233013967" tvg-name="FX Movie Channel " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/US/fxm-movie-channel-us.png" group-title="USTVGO",FX Movie Channel 
+plugin://plugin.video.ustvgo/?action=play&video=FXMovie
+#EXTINF:-1 tvg-id="9200014910" tvg-name="FXX " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/fxx-us.png" group-title="USTVGO",FXX 
+plugin://plugin.video.ustvgo/?action=play&video=FXX
+#EXTINF:-1 tvg-id="9200011865" tvg-name="Golf Channel " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/nbc-golf-channel-us.png" group-title="USTVGO",Golf Channel | [VPN]
+plugin://plugin.video.ustvgo/?action=play&video=GOLF
+#EXTINF:-1 tvg-id="9200019858" tvg-name="Game Show Network " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/US/game-show-network-us.png" group-title="USTVGO",Game Show Network 
+plugin://plugin.video.ustvgo/?action=play&video=GSN
+#EXTINF:-1 tvg-id="9200016034" tvg-name="Hallmark Channel " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/US/hallmark-us.png" group-title="USTVGO",Hallmark Channel 
+plugin://plugin.video.ustvgo/?action=play&video=Hallmark
+#EXTINF:-1 tvg-id="9200004886" tvg-name="HBO " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/hbo-us.png" group-title="USTVGO",HBO | [VPN]
+plugin://plugin.video.ustvgo/?action=play&video=HBO
+#EXTINF:-1 tvg-id="9200004467" tvg-name="HGTV " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/US/hgtv-us.png" group-title="USTVGO",HGTV 
+plugin://plugin.video.ustvgo/?action=play&video=HGTV
+#EXTINF:-1 tvg-id="9233008002" tvg-name="History " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/US/history-channel-us.png" group-title="USTVGO",History | [VPN]
+plugin://plugin.video.ustvgo/?action=play&video=History
+#EXTINF:-1 tvg-id="9233005762" tvg-name="HLN " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/hln-us.png" group-title="USTVGO",HLN 
+plugin://plugin.video.ustvgo/?action=play&video=HLN
+#EXTINF:-1 tvg-id="9200020115" tvg-name="HMM" tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/US/hallmark-movies-and-mysteries-us.png" group-title="USTVGO",Hallmark Movies & Mysteries
+plugin://plugin.video.ustvgo/?action=play&video=HMM
+#EXTINF:-1 tvg-id="9200002243" tvg-name="Investigation Discovery " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/investigation-discovery-us.png" group-title="USTVGO",Investigation Discovery | [VPN]
+plugin://plugin.video.ustvgo/?action=play&video=ID
+#EXTINF:-1 tvg-id="9200000502" tvg-name="Lifetime " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/US/lifetime-us.png" group-title="USTVGO",Lifetime 
+plugin://plugin.video.ustvgo/?action=play&video=Lifetime
+#EXTINF:-1 tvg-id="9200000502" tvg-name="Lifetime Movie Network " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/lifetime-movie-network-us.png" group-title="USTVGO",Lifetime Movie Network 
+plugin://plugin.video.ustvgo/?action=play&video=LifetimeM
+#EXTINF:-1 tvg-id="9200000664" tvg-name="Magnolia Network " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/magnolia-network-us.png" group-title="USTVGO",Magnolia Network 
+plugin://plugin.video.ustvgo/?action=play&video=DIY
+#EXTINF:-1 tvg-id="9200009223" tvg-name="MLB Network " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/mlb-network-us.png" group-title="USTVGO",MLB Network 
+plugin://plugin.video.ustvgo/?action=play&video=MLB
+#EXTINF:-1 tvg-id="9233003479" tvg-name="Motor Trend " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/US/motor-trend-us.png" group-title="USTVGO",Motor Trend 
+plugin://plugin.video.ustvgo/?action=play&video=MotorTrend
+#EXTINF:-1 tvg-id="9233006803" tvg-name="MSNBC " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/msnbc-alt-us.png" group-title="USTVGO",MSNBC 
+plugin://plugin.video.ustvgo/?action=play&video=MSNBC
+#EXTINF:-1 tvg-id="9233015501" tvg-name="MTV " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/US/mtv-us.png" group-title="USTVGO",MTV 
+plugin://plugin.video.ustvgo/?action=play&video=MTV
+#EXTINF:-1 tvg-id="9233009337" tvg-name="National Geographic " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/national-geographic-us.png" group-title="USTVGO",National Geographic | [VPN]
+plugin://plugin.video.ustvgo/?action=play&video=NatGEO
+#EXTINF:-1 tvg-id="9200004683" tvg-name="Nat Geo Wild " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/nat-geo-wild-us.png" group-title="USTVGO",Nat Geo Wild 
+plugin://plugin.video.ustvgo/?action=play&video=NatGEOWild
+#EXTINF:-1 tvg-id="9200000070" tvg-name="NBA TV " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/nba-tv-us.png" group-title="USTVGO",NBA TV | [VPN]
+plugin://plugin.video.ustvgo/?action=play&video=NBA
+#EXTINF:-1 tvg-id="9233009876" tvg-name="NBC " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/nbc-logo-2013-us.png" group-title="USTVGO",NBC | [VPN]
+plugin://plugin.video.ustvgo/?action=play&video=NBC
+#EXTINF:-1 tvg-id="9200004330" tvg-name="NFL Network " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/US/nfl-network-us.png" group-title="USTVGO",NFL Network | [VPN]
+plugin://plugin.video.ustvgo/?action=play&video=NFL
+#EXTINF:-1 tvg-id="9233000241" tvg-name="NFL Redzone " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/nfl-red-zone-us.png" group-title="USTVGO",NFL Redzone 
+plugin://plugin.video.ustvgo/?action=play&video=NFLRZ
+#EXTINF:-1 tvg-id="9233011497" tvg-name="Nickelodeon " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/nickelodeon-us.png" group-title="USTVGO",Nickelodeon 
+plugin://plugin.video.ustvgo/?action=play&video=Nickelodeon
+#EXTINF:-1 tvg-id="9200020469" tvg-name="Nicktoons " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/nick-toons-us.png" group-title="USTVGO",Nicktoons 
+plugin://plugin.video.ustvgo/?action=play&video=Nicktoons
+#EXTINF:-1 tvg-id="9200005058" tvg-name="One America News Network " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/one-america-news-network-us.png" group-title="USTVGO",One America News Network 
+plugin://plugin.video.ustvgo/?action=play&video=OAN
+#EXTINF:-1 tvg-id="9200004740" tvg-name="OWN (OWN) " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/opra-winfrey-network-us.png" group-title="USTVGO",Oprah Winfrey Network (OWN) 
+plugin://plugin.video.ustvgo/?action=play&video=OWN
+#EXTINF:-1 tvg-id="9233008939" tvg-name="Olympic Channel " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/US/olympics.png" group-title="USTVGO",Olympic Channel 
+plugin://plugin.video.ustvgo/?action=play&video=OLY
+#EXTINF:-1 tvg-id="9200012145" tvg-name="Oxygen " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/oxygen-us.png" group-title="USTVGO",Oxygen 
+plugin://plugin.video.ustvgo/?action=play&video=Oxygen
+#EXTINF:-1 tvg-id="9233001931" tvg-name="Paramount " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/US/paramount-network-us.png" group-title="USTVGO",Paramount | [VPN]
+plugin://plugin.video.ustvgo/?action=play&video=Paramount
+#EXTINF:-1 tvg-id="9233004141" tvg-name="PBS " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/pbs-us.png" group-title="USTVGO",PBS 
+plugin://plugin.video.ustvgo/?action=play&video=PBS
+#EXTINF:-1 tvg-id="9200018304" tvg-name="POP " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/US/pop-us.png" group-title="USTVGO",POP 
+plugin://plugin.video.ustvgo/?action=play&video=POP
+#EXTINF:-1 tvg-id="9200019847" tvg-name="Science " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/discovery-science-us.png" group-title="USTVGO",Science 
+plugin://plugin.video.ustvgo/?action=play&video=Science
+#EXTINF:-1 tvg-id="9233002484" tvg-name="SEC Network " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/sec-network-us.png" group-title="USTVGO",SEC Network 
+plugin://plugin.video.ustvgo/?action=play&video=SECN
+#EXTINF:-1 tvg-id="9233011188" tvg-name="Showtime " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/showtime-us.png" group-title="USTVGO",Showtime | [VPN]
+plugin://plugin.video.ustvgo/?action=play&video=Showtime
+#EXTINF:-1 tvg-id="9233013809" tvg-name="StarZ " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/US/starz-us.png" group-title="USTVGO",StarZ 
+plugin://plugin.video.ustvgo/?action=play&video=StarZ
+#EXTINF:-1 tvg-id="9233001687" tvg-name="SundanceTV " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/sundance-tv-us.png" group-title="USTVGO",SundanceTV 
+plugin://plugin.video.ustvgo/?action=play&video=SundanceTV
+#EXTINF:-1 tvg-id="9200004316" tvg-name="SYFY " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/US/syfy-us.png" group-title="USTVGO",SYFY 
+plugin://plugin.video.ustvgo/?action=play&video=SYFY
+#EXTINF:-1 tvg-id="9233011348" tvg-name="TBS " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/US/tbs-us.png" group-title="USTVGO",TBS 
+plugin://plugin.video.ustvgo/?action=play&video=TBS
+#EXTINF:-1 tvg-id="9200017928" tvg-name="Turner Classic Movies (TCM) " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/tcm-movies-us.png" group-title="USTVGO",Turner Classic Movies (TCM) | [VPN]
+plugin://plugin.video.ustvgo/?action=play&video=TCM
+#EXTINF:-1 tvg-id="9200011857" tvg-name="Telemundo " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/US/telemundo-us.png" group-title="USTVGO",Telemundo 
+plugin://plugin.video.ustvgo/?action=play&video=Telemundo
+#EXTINF:-1 tvg-id="9200017917" tvg-name="Tennis Channel " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/tennis-channel-us.png" group-title="USTVGO",Tennis Channel | [VPN]
+plugin://plugin.video.ustvgo/?action=play&video=Tennis
+#EXTINF:-1 tvg-id="9200016249" tvg-name="TLC " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/US/tlc-us.png" group-title="USTVGO",TLC 
+plugin://plugin.video.ustvgo/?action=play&video=TLC
+#EXTINF:-1 tvg-id="9233011830" tvg-name="TNT " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/US/tnt-us.png" group-title="USTVGO",TNT | [VPN]
+plugin://plugin.video.ustvgo/?action=play&video=TNT
+#EXTINF:-1 tvg-id="9233000035" tvg-name="Travel Channel " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/travel-channel-us.png" group-title="USTVGO",Travel Channel 
+plugin://plugin.video.ustvgo/?action=play&video=Travel
+#EXTINF:-1 tvg-id="9233015561" tvg-name="truTV " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/US/tru-tv-us.png" group-title="USTVGO",truTV 
+plugin://plugin.video.ustvgo/?action=play&video=TruTV
+#EXTINF:-1 tvg-id="9233005468" tvg-name="TV Land " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/US/tv-land-us.png" group-title="USTVGO",TV Land 
+plugin://plugin.video.ustvgo/?action=play&video=TVLand
+#EXTINF:-1 tvg-id="9200016258" tvg-name="The Weather Channel " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/weather-channel-us.png" group-title="USTVGO",The Weather Channel 
+plugin://plugin.video.ustvgo/?action=play&video=TWC
+#EXTINF:-1 tvg-id="9200000867" tvg-name="Univision " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/US/univision-us.png" group-title="USTVGO",Univision | [VPN]
+plugin://plugin.video.ustvgo/?action=play&video=Univision
+#EXTINF:-1 tvg-id="9200009133" tvg-name="USA Network " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/US/usa-us.png" group-title="USTVGO",USA Network | [VPN]
+plugin://plugin.video.ustvgo/?action=play&video=USANetwork
+#EXTINF:-1 tvg-id="9233000037" tvg-name="VH1 " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/vh1-us.png" group-title="USTVGO",VH1 | [VPN]
+plugin://plugin.video.ustvgo/?action=play&video=VH1
+#EXTINF:-1 tvg-id="9233003770" tvg-name="We TV " tvg-logo="https://raw.githubusercontent.com/Tw1zT3d247/myepg/master/Logos/we-tv-us.png" group-title="USTVGO",We TV 
+plugin://plugin.video.ustvgo/?action=play&video=WETV

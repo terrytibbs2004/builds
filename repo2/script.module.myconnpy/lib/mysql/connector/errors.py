@@ -1,34 +1,39 @@
-# MySQL Connector/Python - MySQL driver written in Python.
-# Copyright (c) 2009, 2013, Oracle and/or its affiliates. All rights reserved.
-
-# MySQL Connector/Python is licensed under the terms of the GPLv2
-# <http://www.gnu.org/licenses/old-licenses/gpl-2.0.html>, like most
-# MySQL Connectors. There are special exceptions to the terms and
-# conditions of the GPLv2 as it is applied to this software, see the
-# FOSS License Exception
-# <http://www.mysql.com/about/legal/licensing/foss-exception.html>.
+# Copyright (c) 2009, 2018, Oracle and/or its affiliates. All rights reserved.
 #
 # This program is free software; you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation.
+# it under the terms of the GNU General Public License, version 2.0, as
+# published by the Free Software Foundation.
 #
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
+# This program is also distributed with certain software (including
+# but not limited to OpenSSL) that is licensed under separate terms,
+# as designated in a particular file or component or in included license
+# documentation.  The authors of MySQL hereby grant you an
+# additional permission to link the program and your derivative works
+# with the separately licensed software that they have included with
+# MySQL.
+#
+# Without limiting anything contained in the foregoing, this file,
+# which is part of MySQL Connector/Python, is also subject to the
+# Universal FOSS Exception, version 1.0, a copy of which can be found at
+# http://oss.oracle.com/licenses/universal-foss-exception.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# See the GNU General Public License, version 2.0, for more details.
 #
 # You should have received a copy of the GNU General Public License
-# along with this program; if not, write to the Free Software
-# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
+# along with this program; if not, write to the Free Software Foundation, Inc.,
+# 51 Franklin St, Fifth Floor, Boston, MA 02110-1301  USA
 
-"""This module implements Exception classes
+"""Python exceptions
 """
 
-from mysql.connector import utils
-from mysql.connector.locales import get_client_error
+from . import utils
+from .locales import get_client_error
+from .catch23 import PY2
 
-
-# _CUSTOM_ERROR_EXCEPTIONS holds custom exceptions and is used by the
+# _CUSTOM_ERROR_EXCEPTIONS holds custom exceptions and is ued by the
 # function custom_error_exception. _ERROR_EXCEPTIONS (at bottom of module)
 # is similar, but hardcoded exceptions.
 _CUSTOM_ERROR_EXCEPTIONS = {}
@@ -72,7 +77,7 @@ def custom_error_exception(error=None, exception=None):
     """
     global _CUSTOM_ERROR_EXCEPTIONS  # pylint: disable=W0603
 
-    if isinstance(error, dict) and not len(error):
+    if isinstance(error, dict) and not error:
         _CUSTOM_ERROR_EXCEPTIONS = {}
         return _CUSTOM_ERROR_EXCEPTIONS
 
@@ -86,19 +91,19 @@ def custom_error_exception(error=None, exception=None):
     if isinstance(error, int):
         error = {error: exception}
 
-    for errno, exception in error.items():
+    for errno, _exception in error.items():
         if not isinstance(errno, int):
             raise ValueError("error number should be an integer")
         try:
-            if not issubclass(exception, Exception):
+            if not issubclass(_exception, Exception):
                 raise TypeError
         except TypeError:
             raise ValueError("exception should be subclass of Exception")
-        _CUSTOM_ERROR_EXCEPTIONS[errno] = exception
+        _CUSTOM_ERROR_EXCEPTIONS[errno] = _exception
 
     return _CUSTOM_ERROR_EXCEPTIONS
 
-def get_mysql_exception(errno, msg, sqlstate=None):
+def get_mysql_exception(errno, msg=None, sqlstate=None):
     """Get the exception matching the MySQL error
 
     This function will return an exception based on the SQLState. The given
@@ -113,7 +118,7 @@ def get_mysql_exception(errno, msg, sqlstate=None):
         return _CUSTOM_ERROR_EXCEPTIONS[errno](
             msg=msg, errno=errno, sqlstate=sqlstate)
     except KeyError:
-        # Error was not mapped to custom exception
+        # Error was not mapped to particular exception
         pass
 
     try:
@@ -143,26 +148,33 @@ def get_exception(packet):
     """
     errno = errmsg = None
 
-    if packet[4] != '\xff':
-        raise ValueError("Packet is not an error packet")
+    try:
+        if packet[4] != 255:
+            raise ValueError("Packet is not an error packet")
+    except IndexError as err:
+        return InterfaceError("Failed getting Error information (%r)" % err)
 
     sqlstate = None
     try:
         packet = packet[5:]
         (packet, errno) = utils.read_int(packet, 2)
-        if packet[0] != '\x23':
+        if packet[0] != 35:
             # Error without SQLState
-            errmsg = packet
+            if isinstance(packet, (bytes, bytearray)):
+                errmsg = packet.decode('utf8')
+            else:
+                errmsg = packet
         else:
             (packet, sqlstate) = utils.read_bytes(packet[1:], 5)
-            errmsg = packet
-    except StandardError as err:
+            sqlstate = sqlstate.decode('utf8')
+            errmsg = packet.decode('utf8')
+    except Exception as err:  # pylint: disable=W0703
         return InterfaceError("Failed getting Error information (%r)" % err)
     else:
         return get_mysql_exception(errno, errmsg, sqlstate)
 
 
-class Error(StandardError):
+class Error(Exception):
     """Exception that is base class for all other error exceptions"""
     def __init__(self, msg=None, errno=None, values=None, sqlstate=None):
         super(Error, self).__init__()
@@ -184,7 +196,7 @@ class Error(StandardError):
         if self.msg and self.errno != -1:
             fields = {
                 'errno': self.errno,
-                'msg': self.msg
+                'msg': self.msg.encode('utf8') if PY2 else self.msg
             }
             if self.sqlstate:
                 fmt = '{errno} ({state}): {msg}'
@@ -193,11 +205,13 @@ class Error(StandardError):
                 fmt = '{errno}: {msg}'
             self._full_msg = fmt.format(**fields)
 
+        self.args = (self.errno, self._full_msg, self.sqlstate)
+
     def __str__(self):
         return self._full_msg
 
 
-class Warning(StandardError):  # pylint: disable=W0622
+class Warning(Exception):  # pylint: disable=W0622
     """Exception for important warnings"""
     pass
 
@@ -243,8 +257,9 @@ class NotSupportedError(DatabaseError):
 
 
 class PoolError(Error):
-    """Exception raise for errors relating to connection pooling"""
+    """Exception for errors relating to connection pooling"""
     pass
+
 
 _SQLSTATE_CLASS_EXCEPTION = {
     '02': DataError,  # no data
@@ -273,7 +288,7 @@ _SQLSTATE_CLASS_EXCEPTION = {
     '3F': ProgrammingError,  # invalid schema name
     '40': InternalError,  # transaction rollback
     '42': ProgrammingError,  # syntax error or access rule violation
-    '44': InternalError,  # with check option violation
+    '44': InternalError,   # with check option violation
     'HZ': OperationalError,  # remote database access
     'XA': IntegrityError,
     '0K': OperationalError,
@@ -283,4 +298,10 @@ _SQLSTATE_CLASS_EXCEPTION = {
 _ERROR_EXCEPTIONS = {
     1243: ProgrammingError,
     1210: ProgrammingError,
+    2002: InterfaceError,
+    2013: OperationalError,
+    2049: NotSupportedError,
+    2055: OperationalError,
+    2061: InterfaceError,
+    2026: InterfaceError,
 }

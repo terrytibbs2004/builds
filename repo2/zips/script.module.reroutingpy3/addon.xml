@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.module.reroutingpy3" name="reroutingpy3" version="0.1.2" provider-name="fredrik-sy">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+    </requires>
+    <extension point="xbmc.python.module" library="lib"/>
+    <extension point="xbmc.addon.metadata">
+        <language>en</language>
+        <platform>all</platform>
+        <license>MIT License</license>
+        <source>https://github.com/fredrik-sy/script.module.rerouting</source>
+    </extension>
+</addon>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+	<category label="Auto Enabler">
+		<setting id="autoenable" type="bool" label="Auto Enable Next Startup" visible="false" default="false"/>
+    </category>
+</settings>

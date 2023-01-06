@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import sys, urllib, os
 import xbmc, xbmcvfs, xbmcplugin, xbmcgui, xbmcaddon
 
@@ -15,7 +16,7 @@ home=translatePath(addon.getAddonInfo('path'))
 # the main menu structure
 mainMenu=[
     {
-        "title":"Unrestrict Link",
+        "title":"Unrestrict Link (url)",
         "url":"",
         "mode":5,
         "poster":"none",
@@ -38,7 +39,7 @@ mainMenu=[
         "isFolder":True,
     },
     {
-        "title":"Add Magnet Link",
+        "title":"Add Magnet Link (url)",
         "url":"",
         "mode":4,
         "poster":"none",
@@ -74,7 +75,7 @@ mainMenu=[
     }
     ,
     {
-        "title":"View Host Statuses",
+        "title":"View Host Statuses (online / offline)",
         "url":"",
         "mode":7,
         "poster":"none",
@@ -87,7 +88,7 @@ mainMenu=[
     }
     ,
     {
-        "title":"VPN Info",
+        "title":"VPN info IP",
         "url":"",
         "mode":14,
         "poster":"none",

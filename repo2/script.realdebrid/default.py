@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from lib import util
 from lib import realdebrid as rd
 import menu

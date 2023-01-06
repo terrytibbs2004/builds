@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.VMAXX"
+	name="[COLOR red]VMAXX[/COLOR]"
+	version="1.0.1"
+	provider-name="[I][COLOR red]Rock/Dreamweaver[/COLOR][/I]">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.simplejson"/>
+    <import addon="script.module.resolveurl"/>
+    <import addon="plugin.video.youtube" optional="true"/>
+    <import addon="inputstream.adaptive"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>Music and video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+       <summary lang="en">VMAXX YouTube</summary>
+       <description lang="en">All video contained within this add-on is scraped from youtube Channels and is not hosted in any way by the author.</description>
+       <news>Thanks to @mr000iconz / Team Iconz and @hughes_posty for artwork.</news>
+       <platform>all</platform>
+       <reuselanguageinvoker>false</reuselanguageinvoker>
+    <assets>
+    <icon>icon.png</icon>
+    <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+

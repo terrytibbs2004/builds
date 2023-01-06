@@ -1,0 +1,20 @@
+<settings>
+<category label="General">
+    <setting id="Username" type="text" label="Username" default=""/>
+    <setting id="Password" type="text" label="Password" default=""/>
+    <setting id="meta" type="bool" label="Meta" default="true"/>
+    <setting id="hidexxx" type="bool" label="XXX Channels" default="false"/>
+   
+    <setting label="DNS" type="lsep"/>
+    <setting id="Host" type="select" label='Select DNS Address' values="http://s1.ix.tc|http://s2.ix.tc|http://s3.ix.tc|" default="http://s1.ix.tc" />
+    
+    
+    <setting label="Server" type="lsep"/>
+    <setting id="server-location" type="bool" label="[B]SS Server Locations[/B]" default="true" visible="true"/>
+    <setting id="server_region" type="select" label="32223" values="North America|Europe|Asia" default="North America" />
+    <setting id="server_r0" type="select" label="32204" visible="eq(-1,0)|eq(-1,North America)" values="SLK-East 1 Miami|SLK-East 2 Atlanta|SLK-East 5 Chicago|SLK-East 6 New York|SLK-West 1 Dallas|SLK-West 2 LA|" default="SLK-East 6 New York" />
+    <setting id="server_r1" type="select" label="32204" visible="eq(-2,1)|eq(-2,Europe)" values="SLK-UK 1 London|SLK-UK 2 Manchester|SLK-EU NL 1 Amsterdam|SLK-EU NL 2 Rotterdam|SLK-EU DE 1 Frankfurt|SLK-EU FR 1 Paris|SLK-EU SWE 1 Stockholm|SLK-EU SW 1 Zurich|SLK-EU PL 1 Warsaw|SLK-EU CZ 1 Prague|" default="SLK-UK 1 London" />
+    <setting id="server_r2" type="select" label="32204" visible="eq(-3,2)|eq(-3,Asia)" values="SLK-Asia SG 1|SLK-Asia HK 8|SLK-Asia JP 3 (Testing)" default="SLK-Asia SG 1" />
+    <!--<setting id="up_link" type="enum" label="32203" values="Tier 1 Streaming Network|Coming Soon|Coming Soon" default="" />-->
+</category>
+</settings>

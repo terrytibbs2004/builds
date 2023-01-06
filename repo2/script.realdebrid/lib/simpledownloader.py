@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 '''
     Simple XBMC Download Script
     Copyright (C) 2013 Sean Poyser (seanpoyser@gmail.com)
@@ -40,14 +41,14 @@ try:  # Python 3
     from urllib.parse import unquote_plus
     from urllib.request import urlopen
     from urllib.request import Request
-    p2 = False
+    p3 = True
 except ImportError:
     import cookielib
     from urllib2 import urlopen
     from urllib2 import Request
     from urllib import quote_plus
     from urllib import unquote_plus
-    p2 = True
+    p3 = False
 
 ADDON_ID='script.realdebrid'
 addon = xbmcaddon.Addon(id=ADDON_ID)
@@ -140,7 +141,7 @@ def doDownload(url, dest, title, image, headers):
     download_path = addon.getSetting('download_path')
 
     if download_path == '':
-        xbmcgui.Dialog().ok("Download " + title, 'No Video Download Path chosen in settings\nPlease set this first.')
+        xbmcgui.Dialog().ok("Download " + title, 'W ustawieniach nie wybrano ścieżki pobierania wideo \nPrzejdź do ustawień i podaj ścieżkę pobierania.')
         return
 
     headers = json.loads(unquote_plus(headers))
@@ -162,7 +163,7 @@ def doDownload(url, dest, title, image, headers):
     resp = getResponse(url, headers, 0)
 
     if not resp:
-        xbmcgui.Dialog().ok(title, dest + '\nDownload failed\nNo response from server')
+        xbmcgui.Dialog().ok(title, dest + '\nPobieranie nie udane\nBrak odpowiedzi z serwera')
         return
 
     try:    content = int(resp.headers['Content-Length'])
@@ -177,7 +178,7 @@ def doDownload(url, dest, title, image, headers):
         print("Download is resumable")
 
     if content < 1:
-        xbmcgui.Dialog().ok(title, file, 'Unknown filesize\nUnable to download')
+        xbmcgui.Dialog().ok(title, file, 'Nieznany rozmiar pliku\nNiemożliwe do pobrania')
         return
 
     size = 1024 * 1024
@@ -193,10 +194,10 @@ def doDownload(url, dest, title, image, headers):
     resume  = 0
     sleep   = 0
     xbmc.executebuiltin( "Dialog.Close(busydialognocancel)" )
-    if xbmcgui.Dialog().yesno(title + ' - Confirm Download', file + '\nComplete file is %dMB' % mb + '\nContinue with download?', nolabel='Confirm',  yeslabel='Cancel') == 1:
+    if xbmcgui.Dialog().yesno(title + ' - Potwierdź pobieranie', file + '\nKompletny plik to %dMB' % mb + '\nKontynuuj pobieranie?', nolabel='Confirm',  yeslabel='Cancel') == 1:
         return
 
-    print('Download File Size : %dMB %s ' % (mb, dest))
+    print('Rozmiar pobieranego pliku : %dMB %s ' % (mb, dest))
 
     #f = open(dest, mode='wb')
     f = xbmcvfs.File(dest, 'w')
@@ -210,7 +211,7 @@ def doDownload(url, dest, title, image, headers):
             downloaded += len(c)
         percent = min(100 * downloaded / content, 100)
         if percent >= notify:
-            xbmc.executebuiltin( "Notification(%s,%s,%i,%s)" % ( title + ' - Download Progress - ' + str(percent)+'%', dest, 10000, image))
+            xbmc.executebuiltin( "Notification(%s,%s,%i,%s)" % ( title + ' - Postęp pobierania - ' + str(percent)+'%', dest, 10000, image))
 
             print('Download percent : %s %s %dMB downloaded : %sMB File Size : %sMB' % (str(percent)+'%', dest, mb, downloaded / 1000000, content / 1000000))
 

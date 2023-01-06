@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.fidoK19" name="Fido.K19" version="0.0.8e" provider-name="Fido">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.routing"/>
+    <import addon="script.module.unidecode" />
+    <import addon="script.module.inputstreamhelper" />
+    <import addon="script.module.resolveurl"/>
+    <import addon="script.module.microjenscrapers" />
+    <!--<import addon="name" />-->
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>audio video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">All In One. Thanks to help of GKoBu, slamious for the awesome scrapper and coding addon along with PeeJay, JetJet for opendirectories and also ELLIE for amazing new logo</summary>
+    <description lang="en">Dedicated to Fido</description>
+     <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
+    <website>http://fantazyrepo.uk/repo/</website>
+    <video_guide>https://youtu.be/0kFhoWahtFw</video_guide>
+    <platform>all</platform>
+    <language>en</language>
+    <license>GPL-2.0-or-later</license>
+	<assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+		<screenshot>resources/screenshots/screenshot001.jpg</screenshot>
+		<screenshot>resources/screenshots/screenshot002.jpg</screenshot>
+		<screenshot>resources/screenshots/screenshot003.jpg</screenshot>
+  </assets>
+  </extension>
+</addon>

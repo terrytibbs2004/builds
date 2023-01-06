@@ -1,42 +1,52 @@
-# MySQL Connector/Python - MySQL driver written in Python.
-# Copyright (c) 2013, 2014, Oracle and/or its affiliates. All rights reserved.
-
-# MySQL Connector/Python is licensed under the terms of the GPLv2
-# <http://www.gnu.org/licenses/old-licenses/gpl-2.0.html>, like most
-# MySQL Connectors. There are special exceptions to the terms and
-# conditions of the GPLv2 as it is applied to this software, see the
-# FOSS License Exception
-# <http://www.mysql.com/about/legal/licensing/foss-exception.html>.
+# Copyright (c) 2013, 2017, Oracle and/or its affiliates. All rights reserved.
 #
 # This program is free software; you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation.
+# it under the terms of the GNU General Public License, version 2.0, as
+# published by the Free Software Foundation.
 #
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
+# This program is also distributed with certain software (including
+# but not limited to OpenSSL) that is licensed under separate terms,
+# as designated in a particular file or component or in included license
+# documentation.  The authors of MySQL hereby grant you an
+# additional permission to link the program and your derivative works
+# with the separately licensed software that they have included with
+# MySQL.
+#
+# Without limiting anything contained in the foregoing, this file,
+# which is part of MySQL Connector/Python, is also subject to the
+# Universal FOSS Exception, version 1.0, a copy of which can be found at
+# http://oss.oracle.com/licenses/universal-foss-exception.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# See the GNU General Public License, version 2.0, for more details.
 #
 # You should have received a copy of the GNU General Public License
-# along with this program; if not, write to the Free Software
-# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
+# along with this program; if not, write to the Free Software Foundation, Inc.,
+# 51 Franklin St, Fifth Floor, Boston, MA 02110-1301  USA
 
 """Implementing pooling of connections to MySQL servers.
 """
 
 import re
-import threading
-import Queue
 from uuid import uuid4
+# pylint: disable=F0401
+try:
+    import queue
+except ImportError:
+    # Python v2
+    import Queue as queue
+# pylint: enable=F0401
+import threading
 
-from mysql.connector import errors
-from mysql.connector.connection import MySQLConnection
+from . import errors
+from .connection import MySQLConnection
 
 CONNECTION_POOL_LOCK = threading.RLock()
-CNX_POOL_ARGS = ('pool_name', 'pool_size', 'pool_cnx')
 CNX_POOL_MAXSIZE = 32
 CNX_POOL_MAXNAMESIZE = 64
-CNX_POOL_NAMEREGEX = re.compile(r'[^a-zA-Z0-9._\-*$#]')
+CNX_POOL_NAMEREGEX = re.compile(r'[^a-zA-Z0-9._:\-*$#]')
 
 
 def generate_pool_name(**kwargs):
@@ -103,15 +113,17 @@ class PooledMySQLConnection(object):
         The close() method does not close the connection with the
         MySQL server. The connection is added back to the pool so it
         can be reused.
+
+        When the pool is configured to reset the session, the session
+        state will be cleared by re-authenticating the user.
         """
-        cnx = self._cnx
-        if self._cnx_pool.reset_session:
-            # pylint: disable=W0212
-            cnx.cmd_change_user(cnx._user, cnx._password, cnx._database,
-                                cnx._charset_id)
-            # pylint: enable=W0212
-        self._cnx_pool.add_connection(cnx)
-        self._cnx = None
+        try:
+            cnx = self._cnx
+            if self._cnx_pool.reset_session:
+                cnx.reset_session()
+        finally:
+            self._cnx_pool.add_connection(cnx)
+            self._cnx = None
 
     def config(self, **kwargs):
         """Configuration is done through the pool"""
@@ -127,8 +139,7 @@ class PooledMySQLConnection(object):
 
 
 class MySQLConnectionPool(object):
-    """Class defining a pool of MySQL connections
-    """
+    """Class defining a pool of MySQL connections"""
     def __init__(self, pool_size=5, pool_name=None, pool_reset_session=True,
                  **kwargs):
         """Initialize
@@ -144,7 +155,7 @@ class MySQLConnectionPool(object):
         self._set_pool_size(pool_size)
         self._set_pool_name(pool_name or generate_pool_name(**kwargs))
         self._cnx_config = {}
-        self._cnx_queue = Queue.Queue(self._pool_size)
+        self._cnx_queue = queue.Queue(self._pool_size)
         self._config_version = uuid4()
 
         if kwargs:
@@ -168,6 +179,30 @@ class MySQLConnectionPool(object):
     def reset_session(self):
         """Return whether to reset session"""
         return self._reset_session
+
+    def set_config(self, **kwargs):
+        """Set the connection configuration for MySQLConnection instances
+
+        This method sets the configuration used for creating MySQLConnection
+        instances. See MySQLConnection for valid connection arguments.
+
+        Raises PoolError when a connection argument is not valid, missing
+        or not supported by MySQLConnection.
+        """
+        if not kwargs:
+            return
+
+        with CONNECTION_POOL_LOCK:
+            try:
+                test_cnx = MySQLConnection()
+                if "use_pure" in kwargs:
+                    del kwargs["use_pure"]
+                test_cnx.config(**kwargs)
+                self._cnx_config = kwargs
+                self._config_version = uuid4()
+            except AttributeError as err:
+                raise errors.PoolError(
+                    "Connection configuration not valid: {0}".format(err))
 
     def _set_pool_size(self, pool_size):
         """Set the size of the pool
@@ -199,28 +234,6 @@ class MySQLConnectionPool(object):
                 "Pool name '{0}' is too long".format(pool_name))
         self._pool_name = pool_name
 
-    def set_config(self, **kwargs):
-        """Set the connection configuration for MySQLConnection instances
-
-        This method sets the configuration used for creating MySQLConnection
-        instances. See MySQLConnection for valid connection arguments.
-
-        Raises PoolError when a connection argument is not valid, missing
-        or not supported by MySQLConnection.
-        """
-        if not kwargs:
-            return
-
-        with CONNECTION_POOL_LOCK:
-            try:
-                test_cnx = MySQLConnection()
-                test_cnx.config(**kwargs)
-                self._cnx_config = kwargs
-                self._config_version = uuid4()
-            except AttributeError as err:
-                raise errors.PoolError(
-                    "Connection configuration not valid: {0}".format(err))
-
     def _queue_connection(self, cnx):
         """Put connection back in the queue
 
@@ -236,7 +249,7 @@ class MySQLConnectionPool(object):
 
         try:
             self._cnx_queue.put(cnx, block=False)
-        except Queue.Full:
+        except queue.Full:
             errors.PoolError("Failed adding connection; queue is full")
 
     def add_connection(self, cnx=None):
@@ -263,9 +276,20 @@ class MySQLConnectionPool(object):
 
             if not cnx:
                 cnx = MySQLConnection(**self._cnx_config)
-                # pylint: disable=W0212
+                try:
+                    if (self._reset_session and self._cnx_config['compress']
+                            and cnx.get_server_version() < (5, 7, 3)):
+                        raise errors.NotSupportedError("Pool reset session is "
+                                                       "not supported with "
+                                                       "compression for MySQL "
+                                                       "server version 5.7.2 "
+                                                       "or earlier.")
+                except KeyError:
+                    pass
+
+                # pylint: disable=W0201,W0212
                 cnx._pool_config_version = self._config_version
-                # pylint: enable=W0212
+                # pylint: enable=W0201,W0212
             else:
                 if not isinstance(cnx, MySQLConnection):
                     raise errors.PoolError(
@@ -289,13 +313,13 @@ class MySQLConnectionPool(object):
         with CONNECTION_POOL_LOCK:
             try:
                 cnx = self._cnx_queue.get(block=False)
-            except Queue.Empty:
+            except queue.Empty:
                 raise errors.PoolError(
                     "Failed getting connection; pool exhausted")
 
-            # pylint: disable=W0212
-            if (not cnx.is_connected()
-                or self._config_version != cnx._pool_config_version):
+            # pylint: disable=W0201,W0212
+            if not cnx.is_connected() \
+                    or self._config_version != cnx._pool_config_version:
                 cnx.config(**self._cnx_config)
                 try:
                     cnx.reconnect()
@@ -304,7 +328,7 @@ class MySQLConnectionPool(object):
                     self._queue_connection(cnx)
                     raise
                 cnx._pool_config_version = self._config_version
-            # pylint: enable=W0212
+            # pylint: enable=W0201,W0212
 
             return PooledMySQLConnection(self, cnx)
 
@@ -326,7 +350,7 @@ class MySQLConnectionPool(object):
                     cnx = cnxq.get(block=False)
                     cnx.disconnect()
                     cnt += 1
-                except Queue.Empty:
+                except queue.Empty:
                     return cnt
                 except errors.PoolError:
                     raise

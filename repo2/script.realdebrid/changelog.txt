@@ -1,4 +1,5 @@
 v0.6.0 22/12/2020
+- Converted menu to english
 - several fixes
 - added VPN info
 - made it run on Matrix (Python 3)

@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<addon id="script.module.looptv3" name="Loop TV 3" version="21+matrix.1" provider-name="@munkee and RACC">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="xbmc.addon" version="17.0.0"/>
+    <import addon="script.module.pyamf"/>
+    <import addon="script.module.kodi-six"/>
+    <import addon="script.module.future"/>
+    <import addon="script.module.requests"/>
+    <import addon="script.module.routing"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>all</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <summary lang="en_gb">Loop TV 3</summary>
+    <description lang="en_gb">Loop TV 3 - All credit to RACC for Base Code</description>
+    <disclaimer lang="en_gb"/>
+    <language/>
+    <platform>all</platform>
+    <license>GPL-3.0-only</license>
+    <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart> 
+    </assets>
+    <forum/>
+    <website/>
+    <email/>
+    <source/>
+    <assets/>
+  </extension>
+</addon>

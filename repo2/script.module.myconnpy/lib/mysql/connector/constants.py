@@ -1,37 +1,82 @@
-# MySQL Connector/Python - MySQL driver written in Python.
-# Copyright (c) 2009, 2013, Oracle and/or its affiliates. All rights reserved.
-
-# MySQL Connector/Python is licensed under the terms of the GPLv2
-# <http://www.gnu.org/licenses/old-licenses/gpl-2.0.html>, like most
-# MySQL Connectors. There are special exceptions to the terms and
-# conditions of the GPLv2 as it is applied to this software, see the
-# FOSS License Exception
-# <http://www.mysql.com/about/legal/licensing/foss-exception.html>.
+# Copyright (c) 2009, 2019, Oracle and/or its affiliates. All rights reserved.
 #
 # This program is free software; you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation.
+# it under the terms of the GNU General Public License, version 2.0, as
+# published by the Free Software Foundation.
 #
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
+# This program is also distributed with certain software (including
+# but not limited to OpenSSL) that is licensed under separate terms,
+# as designated in a particular file or component or in included license
+# documentation.  The authors of MySQL hereby grant you an
+# additional permission to link the program and your derivative works
+# with the separately licensed software that they have included with
+# MySQL.
+#
+# Without limiting anything contained in the foregoing, this file,
+# which is part of MySQL Connector/Python, is also subject to the
+# Universal FOSS Exception, version 1.0, a copy of which can be found at
+# http://oss.oracle.com/licenses/universal-foss-exception.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# See the GNU General Public License, version 2.0, for more details.
 #
 # You should have received a copy of the GNU General Public License
-# along with this program; if not, write to the Free Software
-# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
+# along with this program; if not, write to the Free Software Foundation, Inc.,
+# 51 Franklin St, Fifth Floor, Boston, MA 02110-1301  USA
 
 """Various MySQL constants and character sets
 """
 
-from mysql.connector.errors import ProgrammingError
-from mysql.connector.charsets import MYSQL_CHARACTER_SETS
+from .errors import ProgrammingError
+from .charsets import MYSQL_CHARACTER_SETS
 
 MAX_PACKET_LENGTH = 16777215
 NET_BUFFER_LENGTH = 8192
-RESULT_WITHOUT_ROWS = 0
-RESULT_WITH_ROWS = 1
+MAX_MYSQL_TABLE_COLUMNS = 4096
 
+DEFAULT_CONFIGURATION = {
+    'database': None,
+    'user': '',
+    'password': '',
+    'host': '127.0.0.1',
+    'port': 3306,
+    'unix_socket': None,
+    'use_unicode': True,
+    'charset': 'utf8mb4',
+    'collation': None,
+    'converter_class': None,
+    'autocommit': False,
+    'time_zone': None,
+    'sql_mode': None,
+    'get_warnings': False,
+    'raise_on_warnings': False,
+    'connection_timeout': None,
+    'client_flags': 0,
+    'compress': False,
+    'buffered': False,
+    'raw': False,
+    'ssl_ca': None,
+    'ssl_cert': None,
+    'ssl_key': None,
+    'ssl_verify_cert': False,
+    'ssl_verify_identity': False,
+    'ssl_cipher': None,
+    'ssl_disabled': False,
+    'ssl_version': None,
+    'passwd': None,
+    'db': None,
+    'connect_timeout': None,
+    'dsn': None,
+    'force_ipv6': False,
+    'auth_plugin': None,
+    'allow_local_infile': False,
+    'consume_results': False,
+    'conn_attrs': None,
+}
+
+CNX_POOL_ARGS = ('pool_name', 'pool_size', 'pool_reset_session')
 
 def flag_is_set(flag, flags):
     """Checks if the flag is set
@@ -43,7 +88,8 @@ def flag_is_set(flag, flags):
 
 
 class _Constants(object):
-    """Base class for constants
+    """
+    Base class for constants
     """
     prefix = ''
     desc = {}
@@ -60,20 +106,20 @@ class _Constants(object):
             return None
 
     @classmethod
-    def get_info(cls, num):
+    def get_info(cls, setid):
         """Get information about given constant"""
         for name, info in cls.desc.items():
-            if info[0] == num:
+            if info[0] == setid:
                 return name
         return None
 
     @classmethod
     def get_full_info(cls):
-        """Get full information about given constant"""
+        """get full information about given constant"""
         res = ()
         try:
             res = ["%s : %s" % (k, v[1]) for k, v in cls.desc.items()]
-        except StandardError as err:
+        except Exception as err:  # pylint: disable=W0703
             res = ('No information found in constant class.%s' % err)
 
         return res
@@ -82,6 +128,7 @@ class _Constants(object):
 class _Flags(_Constants):
     """Base class for classes describing flags
     """
+
     @classmethod
     def get_bit_info(cls, value):
         """Get the name of all bits set
@@ -98,62 +145,64 @@ class FieldType(_Constants):
     """MySQL Field Types
     """
     prefix = 'FIELD_TYPE_'
-    DECIMAL     = 0x00
-    TINY        = 0x01
-    SHORT       = 0x02
-    LONG        = 0x03
-    FLOAT       = 0x04
-    DOUBLE      = 0x05
-    NULL        = 0x06
-    TIMESTAMP   = 0x07
-    LONGLONG    = 0x08
-    INT24       = 0x09
-    DATE        = 0x0a
-    TIME        = 0x0b
-    DATETIME    = 0x0c
-    YEAR        = 0x0d
-    NEWDATE     = 0x0e
-    VARCHAR     = 0x0f
-    BIT         = 0x10
-    NEWDECIMAL  = 0xf6
-    ENUM        = 0xf7
-    SET         = 0xf8
-    TINY_BLOB   = 0xf9
+    DECIMAL = 0x00
+    TINY = 0x01
+    SHORT = 0x02
+    LONG = 0x03
+    FLOAT = 0x04
+    DOUBLE = 0x05
+    NULL = 0x06
+    TIMESTAMP = 0x07
+    LONGLONG = 0x08
+    INT24 = 0x09
+    DATE = 0x0a
+    TIME = 0x0b
+    DATETIME = 0x0c
+    YEAR = 0x0d
+    NEWDATE = 0x0e
+    VARCHAR = 0x0f
+    BIT = 0x10
+    JSON = 0xf5
+    NEWDECIMAL = 0xf6
+    ENUM = 0xf7
+    SET = 0xf8
+    TINY_BLOB = 0xf9
     MEDIUM_BLOB = 0xfa
-    LONG_BLOB   = 0xfb
-    BLOB        = 0xfc
-    VAR_STRING  = 0xfd
-    STRING      = 0xfe
-    GEOMETRY    = 0xff
+    LONG_BLOB = 0xfb
+    BLOB = 0xfc
+    VAR_STRING = 0xfd
+    STRING = 0xfe
+    GEOMETRY = 0xff
 
     desc = {
-        'DECIMAL':       (0x00, 'DECIMAL'),
-        'TINY':          (0x01, 'TINY'),
-        'SHORT':         (0x02, 'SHORT'),
-        'LONG':          (0x03, 'LONG'),
-        'FLOAT':         (0x04, 'FLOAT'),
-        'DOUBLE':        (0x05, 'DOUBLE'),
-        'NULL':          (0x06, 'NULL'),
-        'TIMESTAMP':     (0x07, 'TIMESTAMP'),
-        'LONGLONG':      (0x08, 'LONGLONG'),
-        'INT24':         (0x09, 'INT24'),
-        'DATE':          (0x0a, 'DATE'),
-        'TIME':          (0x0b, 'TIME'),
-        'DATETIME':      (0x0c, 'DATETIME'),
-        'YEAR':          (0x0d, 'YEAR'),
-        'NEWDATE':       (0x0e, 'NEWDATE'),
-        'VARCHAR':       (0x0f, 'VARCHAR'),
-        'BIT':           (0x10, 'BIT'),
-        'NEWDECIMAL':    (0xf6, 'NEWDECIMAL'),
-        'ENUM':          (0xf7, 'ENUM'),
-        'SET':           (0xf8, 'SET'),
-        'TINY_BLOB':     (0xf9, 'TINY_BLOB'),
-        'MEDIUM_BLOB':   (0xfa, 'MEDIUM_BLOB'),
-        'LONG_BLOB':     (0xfb, 'LONG_BLOB'),
-        'BLOB':          (0xfc, 'BLOB'),
-        'VAR_STRING':    (0xfd, 'VAR_STRING'),
-        'STRING':        (0xfe, 'STRING'),
-        'GEOMETRY':      (0xff, 'GEOMETRY'),
+        'DECIMAL': (0x00, 'DECIMAL'),
+        'TINY': (0x01, 'TINY'),
+        'SHORT': (0x02, 'SHORT'),
+        'LONG': (0x03, 'LONG'),
+        'FLOAT': (0x04, 'FLOAT'),
+        'DOUBLE': (0x05, 'DOUBLE'),
+        'NULL': (0x06, 'NULL'),
+        'TIMESTAMP': (0x07, 'TIMESTAMP'),
+        'LONGLONG': (0x08, 'LONGLONG'),
+        'INT24': (0x09, 'INT24'),
+        'DATE': (0x0a, 'DATE'),
+        'TIME': (0x0b, 'TIME'),
+        'DATETIME': (0x0c, 'DATETIME'),
+        'YEAR': (0x0d, 'YEAR'),
+        'NEWDATE': (0x0e, 'NEWDATE'),
+        'VARCHAR': (0x0f, 'VARCHAR'),
+        'BIT': (0x10, 'BIT'),
+        'JSON': (0xf5, 'JSON'),
+        'NEWDECIMAL': (0xf6, 'NEWDECIMAL'),
+        'ENUM': (0xf7, 'ENUM'),
+        'SET': (0xf8, 'SET'),
+        'TINY_BLOB': (0xf9, 'TINY_BLOB'),
+        'MEDIUM_BLOB': (0xfa, 'MEDIUM_BLOB'),
+        'LONG_BLOB': (0xfb, 'LONG_BLOB'),
+        'BLOB': (0xfc, 'BLOB'),
+        'VAR_STRING': (0xfd, 'VAR_STRING'),
+        'STRING': (0xfe, 'STRING'),
+        'GEOMETRY': (0xff, 'GEOMETRY'),
     }
 
     @classmethod
@@ -163,7 +212,7 @@ class FieldType(_Constants):
             cls.VARCHAR,
             cls.ENUM,
             cls.VAR_STRING, cls.STRING,
-            ]
+        ]
 
     @classmethod
     def get_binary_types(cls):
@@ -171,7 +220,7 @@ class FieldType(_Constants):
         return [
             cls.TINY_BLOB, cls.MEDIUM_BLOB,
             cls.LONG_BLOB, cls.BLOB,
-            ]
+        ]
 
     @classmethod
     def get_number_types(cls):
@@ -183,14 +232,14 @@ class FieldType(_Constants):
             cls.LONGLONG, cls.INT24,
             cls.BIT,
             cls.YEAR,
-            ]
+        ]
 
     @classmethod
     def get_timestamp_types(cls):
         """Get the list of all timestamp types"""
         return [
             cls.DATETIME, cls.TIMESTAMP,
-            ]
+        ]
 
 
 class FieldFlag(_Flags):
@@ -199,58 +248,58 @@ class FieldFlag(_Flags):
     Field flags as found in MySQL sources mysql-src/include/mysql_com.h
     """
     _prefix = ''
-    NOT_NULL             = 1 <<  0
-    PRI_KEY              = 1 <<  1
-    UNIQUE_KEY           = 1 <<  2
-    MULTIPLE_KEY         = 1 <<  3
-    BLOB                 = 1 <<  4
-    UNSIGNED             = 1 <<  5
-    ZEROFILL             = 1 <<  6
-    BINARY               = 1 <<  7
+    NOT_NULL = 1 << 0
+    PRI_KEY = 1 << 1
+    UNIQUE_KEY = 1 << 2
+    MULTIPLE_KEY = 1 << 3
+    BLOB = 1 << 4
+    UNSIGNED = 1 << 5
+    ZEROFILL = 1 << 6
+    BINARY = 1 << 7
 
-    ENUM                 = 1 <<  8
-    AUTO_INCREMENT       = 1 <<  9
-    TIMESTAMP            = 1 << 10
-    SET                  = 1 << 11
+    ENUM = 1 << 8
+    AUTO_INCREMENT = 1 << 9
+    TIMESTAMP = 1 << 10
+    SET = 1 << 11
 
-    NO_DEFAULT_VALUE     = 1 << 12
-    ON_UPDATE_NOW        = 1 << 13
-    NUM                  = 1 << 14
-    PART_KEY             = 1 << 15
-    GROUP                = 1 << 14    # SAME AS NUM !!!!!!!????
-    UNIQUE               = 1 << 16
-    BINCMP               = 1 << 17
+    NO_DEFAULT_VALUE = 1 << 12
+    ON_UPDATE_NOW = 1 << 13
+    NUM = 1 << 14
+    PART_KEY = 1 << 15
+    GROUP = 1 << 14  # SAME AS NUM !!!!!!!????
+    UNIQUE = 1 << 16
+    BINCMP = 1 << 17
 
-    GET_FIXED_FIELDS     = 1 << 18
-    FIELD_IN_PART_FUNC   = 1 << 19
-    FIELD_IN_ADD_INDEX   = 1 << 20
-    FIELD_IS_RENAMED     = 1 << 21
+    GET_FIXED_FIELDS = 1 << 18
+    FIELD_IN_PART_FUNC = 1 << 19
+    FIELD_IN_ADD_INDEX = 1 << 20
+    FIELD_IS_RENAMED = 1 << 21
 
     desc = {
-        'NOT_NULL':             (1 <<  0, "Field can't be NULL"),
-        'PRI_KEY':              (1 <<  1, "Field is part of a primary key"),
-        'UNIQUE_KEY':           (1 <<  2, "Field is part of a unique key"),
-        'MULTIPLE_KEY':         (1 <<  3, "Field is part of a key"),
-        'BLOB':                 (1 <<  4, "Field is a blob"),
-        'UNSIGNED':             (1 <<  5, "Field is unsigned"),
-        'ZEROFILL':             (1 <<  6, "Field is zerofill"),
-        'BINARY':               (1 <<  7, "Field is binary  "),
-        'ENUM':                 (1 <<  8, "field is an enum"),
-        'AUTO_INCREMENT':       (1 <<  9, "field is a autoincrement field"),
-        'TIMESTAMP':            (1 << 10, "Field is a timestamp"),
-        'SET':                  (1 << 11, "field is a set"),
-        'NO_DEFAULT_VALUE':     (1 << 12, "Field doesn't have default value"),
-        'ON_UPDATE_NOW':        (1 << 13, "Field is set to NOW on UPDATE"),
-        'NUM':                  (1 << 14, "Field is num (for clients)"),
+        'NOT_NULL': (1 << 0, "Field can't be NULL"),
+        'PRI_KEY': (1 << 1, "Field is part of a primary key"),
+        'UNIQUE_KEY': (1 << 2, "Field is part of a unique key"),
+        'MULTIPLE_KEY': (1 << 3, "Field is part of a key"),
+        'BLOB': (1 << 4, "Field is a blob"),
+        'UNSIGNED': (1 << 5, "Field is unsigned"),
+        'ZEROFILL': (1 << 6, "Field is zerofill"),
+        'BINARY': (1 << 7, "Field is binary  "),
+        'ENUM': (1 << 8, "field is an enum"),
+        'AUTO_INCREMENT': (1 << 9, "field is a autoincrement field"),
+        'TIMESTAMP': (1 << 10, "Field is a timestamp"),
+        'SET': (1 << 11, "field is a set"),
+        'NO_DEFAULT_VALUE': (1 << 12, "Field doesn't have default value"),
+        'ON_UPDATE_NOW': (1 << 13, "Field is set to NOW on UPDATE"),
+        'NUM': (1 << 14, "Field is num (for clients)"),
 
-        'PART_KEY':             (1 << 15, "Intern; Part of some key"),
-        'GROUP':                (1 << 14, "Intern: Group field"), # Same as NUM
-        'UNIQUE':               (1 << 16, "Intern: Used by sql_yacc"),
-        'BINCMP':               (1 << 17, "Intern: Used by sql_yacc"),
-        'GET_FIXED_FIELDS':     (1 << 18, "Used to get fields in item tree"),
-        'FIELD_IN_PART_FUNC':   (1 << 19, "Field part of partition func"),
-        'FIELD_IN_ADD_INDEX':   (1 << 20, "Intern: Field used in ADD INDEX"),
-        'FIELD_IS_RENAMED':     (1 << 21, "Intern: Field is being renamed"),
+        'PART_KEY': (1 << 15, "Intern; Part of some key"),
+        'GROUP': (1 << 14, "Intern: Group field"),  # Same as NUM
+        'UNIQUE': (1 << 16, "Intern: Used by sql_yacc"),
+        'BINCMP': (1 << 17, "Intern: Used by sql_yacc"),
+        'GET_FIXED_FIELDS': (1 << 18, "Used to get fields in item tree"),
+        'FIELD_IN_PART_FUNC': (1 << 19, "Field part of partition func"),
+        'FIELD_IN_ADD_INDEX': (1 << 20, "Intern: Field used in ADD INDEX"),
+        'FIELD_IS_RENAMED': (1 << 21, "Intern: Field is being renamed"),
     }
 
 
@@ -258,36 +307,38 @@ class ServerCmd(_Constants):
     """MySQL Server Commands
     """
     _prefix = 'COM_'
-    SLEEP           =  0
-    QUIT            =  1
-    INIT_DB         =  2
-    QUERY           =  3
-    FIELD_LIST      =  4
-    CREATE_DB       =  5
-    DROP_DB         =  6
-    REFRESH         =  7
-    SHUTDOWN        =  8
-    STATISTICS      =  9
-    PROCESS_INFO    = 10
-    CONNECT         = 11
-    PROCESS_KILL    = 12
-    DEBUG           = 13
-    PING            = 14
-    TIME            = 15
-    DELAYED_INSERT  = 16
-    CHANGE_USER     = 17
-    BINLOG_DUMP     = 18
-    TABLE_DUMP      = 19
-    CONNECT_OUT     = 20
-    REGISTER_SLAVE  = 21
-    STMT_PREPARE    = 22
-    STMT_EXECUTE    = 23
+    SLEEP = 0
+    QUIT = 1
+    INIT_DB = 2
+    QUERY = 3
+    FIELD_LIST = 4
+    CREATE_DB = 5
+    DROP_DB = 6
+    REFRESH = 7
+    SHUTDOWN = 8
+    STATISTICS = 9
+    PROCESS_INFO = 10
+    CONNECT = 11
+    PROCESS_KILL = 12
+    DEBUG = 13
+    PING = 14
+    TIME = 15
+    DELAYED_INSERT = 16
+    CHANGE_USER = 17
+    BINLOG_DUMP = 18
+    TABLE_DUMP = 19
+    CONNECT_OUT = 20
+    REGISTER_SLAVE = 21
+    STMT_PREPARE = 22
+    STMT_EXECUTE = 23
     STMT_SEND_LONG_DATA = 24
-    STMT_CLOSE      = 25
-    STMT_RESET      = 26
-    SET_OPTION      = 27
-    STMT_FETCH      = 28
-    DAEMON          = 29
+    STMT_CLOSE = 25
+    STMT_RESET = 26
+    SET_OPTION = 27
+    STMT_FETCH = 28
+    DAEMON = 29
+    BINLOG_DUMP_GTID = 30
+    RESET_CONNECTION = 31
 
     desc = {
         'SLEEP': (0, 'SLEEP'),
@@ -320,6 +371,8 @@ class ServerCmd(_Constants):
         'SET_OPTION': (27, 'SET_OPTION'),
         'STMT_FETCH': (28, 'STMT_FETCH'),
         'DAEMON': (29, 'DAEMON'),
+        'BINLOG_DUMP_GTID': (30, 'BINLOG_DUMP_GTID'),
+        'RESET_CONNECTION': (31, 'RESET_CONNECTION'),
     }
 
 
@@ -328,48 +381,63 @@ class ClientFlag(_Flags):
 
     Client options as found in the MySQL sources mysql-src/include/mysql_com.h
     """
-    LONG_PASSWD             = 1 << 0
-    FOUND_ROWS              = 1 << 1
-    LONG_FLAG               = 1 << 2
-    CONNECT_WITH_DB         = 1 << 3
-    NO_SCHEMA               = 1 << 4
-    COMPRESS                = 1 << 5
-    ODBC                    = 1 << 6
-    LOCAL_FILES             = 1 << 7
-    IGNORE_SPACE            = 1 << 8
-    PROTOCOL_41             = 1 << 9
-    INTERACTIVE             = 1 << 10
-    SSL                     = 1 << 11
-    IGNORE_SIGPIPE          = 1 << 12
-    TRANSACTIONS            = 1 << 13
-    RESERVED                = 1 << 14
-    SECURE_CONNECTION       = 1 << 15
-    MULTI_STATEMENTS        = 1 << 16
-    MULTI_RESULTS           = 1 << 17
-    SSL_VERIFY_SERVER_CERT  = 1 << 30
-    REMEMBER_OPTIONS        = 1 << 31
+    LONG_PASSWD = 1 << 0
+    FOUND_ROWS = 1 << 1
+    LONG_FLAG = 1 << 2
+    CONNECT_WITH_DB = 1 << 3
+    NO_SCHEMA = 1 << 4
+    COMPRESS = 1 << 5
+    ODBC = 1 << 6
+    LOCAL_FILES = 1 << 7
+    IGNORE_SPACE = 1 << 8
+    PROTOCOL_41 = 1 << 9
+    INTERACTIVE = 1 << 10
+    SSL = 1 << 11
+    IGNORE_SIGPIPE = 1 << 12
+    TRANSACTIONS = 1 << 13
+    RESERVED = 1 << 14
+    SECURE_CONNECTION = 1 << 15
+    MULTI_STATEMENTS = 1 << 16
+    MULTI_RESULTS = 1 << 17
+    PS_MULTI_RESULTS = 1 << 18
+    PLUGIN_AUTH = 1 << 19
+    CONNECT_ARGS = 1 << 20
+    PLUGIN_AUTH_LENENC_CLIENT_DATA = 1 << 21
+    CAN_HANDLE_EXPIRED_PASSWORDS = 1 << 22
+    SESION_TRACK = 1 << 23
+    DEPRECATE_EOF = 1 << 24
+    SSL_VERIFY_SERVER_CERT = 1 << 30
+    REMEMBER_OPTIONS = 1 << 31
 
     desc = {
-        'LONG_PASSWD':        (1 <<  0, 'New more secure passwords'),
-        'FOUND_ROWS':         (1 <<  1, 'Found instead of affected rows'),
-        'LONG_FLAG':          (1 <<  2, 'Get all column flags'),
-        'CONNECT_WITH_DB':    (1 <<  3, 'One can specify db on connect'),
-        'NO_SCHEMA':          (1 <<  4, "Don't allow database.table.column"),
-        'COMPRESS':           (1 <<  5, 'Can use compression protocol'),
-        'ODBC':               (1 <<  6, 'ODBC client'),
-        'LOCAL_FILES':        (1 <<  7, 'Can use LOAD DATA LOCAL'),
-        'IGNORE_SPACE':       (1 <<  8, "Ignore spaces before ''"),
-        'PROTOCOL_41':        (1 <<  9, 'New 4.1 protocol'),
-        'INTERACTIVE':        (1 << 10, 'This is an interactive client'),
-        'SSL':                (1 << 11, 'Switch to SSL after handshake'),
-        'IGNORE_SIGPIPE':     (1 << 12, 'IGNORE sigpipes'),
-        'TRANSACTIONS':       (1 << 13, 'Client knows about transactions'),
-        'RESERVED':           (1 << 14, 'Old flag for 4.1 protocol'),
-        'SECURE_CONNECTION':  (1 << 15, 'New 4.1 authentication'),
-        'MULTI_STATEMENTS':   (1 << 16, 'Enable/disable multi-stmt support'),
-        'MULTI_RESULTS':      (1 << 17, 'Enable/disable multi-results'),
-        'SSL_VERIFY_SERVER_CERT':     (1 << 30, ''),
-        'REMEMBER_OPTIONS':           (1 << 31, ''),
+        'LONG_PASSWD': (1 << 0, 'New more secure passwords'),
+        'FOUND_ROWS': (1 << 1, 'Found instead of affected rows'),
+        'LONG_FLAG': (1 << 2, 'Get all column flags'),
+        'CONNECT_WITH_DB': (1 << 3, 'One can specify db on connect'),
+        'NO_SCHEMA': (1 << 4, "Don't allow database.table.column"),
+        'COMPRESS': (1 << 5, 'Can use compression protocol'),
+        'ODBC': (1 << 6, 'ODBC client'),
+        'LOCAL_FILES': (1 << 7, 'Can use LOAD DATA LOCAL'),
+        'IGNORE_SPACE': (1 << 8, "Ignore spaces before ''"),
+        'PROTOCOL_41': (1 << 9, 'New 4.1 protocol'),
+        'INTERACTIVE': (1 << 10, 'This is an interactive client'),
+        'SSL': (1 << 11, 'Switch to SSL after handshake'),
+        'IGNORE_SIGPIPE': (1 << 12, 'IGNORE sigpipes'),
+        'TRANSACTIONS': (1 << 13, 'Client knows about transactions'),
+        'RESERVED': (1 << 14, 'Old flag for 4.1 protocol'),
+        'SECURE_CONNECTION': (1 << 15, 'New 4.1 authentication'),
+        'MULTI_STATEMENTS': (1 << 16, 'Enable/disable multi-stmt support'),
+        'MULTI_RESULTS': (1 << 17, 'Enable/disable multi-results'),
+        'PS_MULTI_RESULTS': (1 << 18, 'Multi-results in PS-protocol'),
+        'PLUGIN_AUTH': (1 << 19, 'Client supports plugin authentication'),
+        'CONNECT_ARGS': (1 << 20, 'Client supports connection attributes'),
+        'PLUGIN_AUTH_LENENC_CLIENT_DATA': (1 << 21,
+                                           'Enable authentication response packet to be larger than 255 bytes'),
+        'CAN_HANDLE_EXPIRED_PASSWORDS': (1 << 22, "Don't close the connection for a connection with expired password"),
+        'SESION_TRACK': (1 << 23, 'Capable of handling server state change information'),
+        'DEPRECATE_EOF': (1 << 24, 'Client no longer needs EOF packet'),
+        'SSL_VERIFY_SERVER_CERT': (1 << 30, ''),
+        'REMEMBER_OPTIONS': (1 << 31, ''),
     }
 
     default = [
@@ -381,6 +449,7 @@ class ClientFlag(_Flags):
         SECURE_CONNECTION,
         MULTI_STATEMENTS,
         MULTI_RESULTS,
+        CONNECT_ARGS
     ]
 
     @classmethod
@@ -400,30 +469,56 @@ class ServerFlag(_Flags):
     Server flags as found in the MySQL sources mysql-src/include/mysql_com.h
     """
     _prefix = 'SERVER_'
-    STATUS_IN_TRANS             = 1 << 0
-    STATUS_AUTOCOMMIT           = 1 << 1
-    MORE_RESULTS_EXISTS         = 1 << 3
-    QUERY_NO_GOOD_INDEX_USED    = 1 << 4
-    QUERY_NO_INDEX_USED         = 1 << 5
-    STATUS_CURSOR_EXISTS        = 1 << 6
-    STATUS_LAST_ROW_SENT        = 1 << 7
-    STATUS_DB_DROPPED           = 1 << 8
+    STATUS_IN_TRANS = 1 << 0
+    STATUS_AUTOCOMMIT = 1 << 1
+    MORE_RESULTS_EXISTS = 1 << 3
+    QUERY_NO_GOOD_INDEX_USED = 1 << 4
+    QUERY_NO_INDEX_USED = 1 << 5
+    STATUS_CURSOR_EXISTS = 1 << 6
+    STATUS_LAST_ROW_SENT = 1 << 7
+    STATUS_DB_DROPPED = 1 << 8
     STATUS_NO_BACKSLASH_ESCAPES = 1 << 9
+    SERVER_STATUS_METADATA_CHANGED = 1 << 10
+    SERVER_QUERY_WAS_SLOW = 1 << 11
+    SERVER_PS_OUT_PARAMS = 1 << 12
+    SERVER_STATUS_IN_TRANS_READONLY = 1 << 13
+    SERVER_SESSION_STATE_CHANGED = 1 << 14
 
     desc = {
-        'SERVER_STATUS_IN_TRANS':            (1 << 0,
-                                              'Transaction has started'),
-        'SERVER_STATUS_AUTOCOMMIT':          (1 << 1,
-                                              'Server in auto_commit mode'),
-        'SERVER_MORE_RESULTS_EXISTS':        (1 << 3,
-                                              'Multi query - '
-                                              'next query exists'),
-        'SERVER_QUERY_NO_GOOD_INDEX_USED':   (1 << 4, ''),
-        'SERVER_QUERY_NO_INDEX_USED':        (1 << 5, ''),
-        'SERVER_STATUS_CURSOR_EXISTS':       (1 << 6, ''),
-        'SERVER_STATUS_LAST_ROW_SENT':       (1 << 7, ''),
-        'SERVER_STATUS_DB_DROPPED':          (1 << 8, 'A database was dropped'),
-        'SERVER_STATUS_NO_BACKSLASH_ESCAPES':   (1 << 9, ''),
+        'SERVER_STATUS_IN_TRANS': (1 << 0,
+                                   'Transaction has started'),
+        'SERVER_STATUS_AUTOCOMMIT': (1 << 1,
+                                     'Server in auto_commit mode'),
+        'SERVER_MORE_RESULTS_EXISTS': (1 << 3,
+                                       'Multi query - '
+                                       'next query exists'),
+        'SERVER_QUERY_NO_GOOD_INDEX_USED': (1 << 4, ''),
+        'SERVER_QUERY_NO_INDEX_USED': (1 << 5, ''),
+        'SERVER_STATUS_CURSOR_EXISTS': (1 << 6,
+                                        'Set when server opened a read-only '
+                                        'non-scrollable cursor for a query.'),
+        'SERVER_STATUS_LAST_ROW_SENT': (1 << 7,
+                                        'Set when a read-only cursor is '
+                                        'exhausted'),
+        'SERVER_STATUS_DB_DROPPED': (1 << 8, 'A database was dropped'),
+        'SERVER_STATUS_NO_BACKSLASH_ESCAPES': (1 << 9, ''),
+        'SERVER_STATUS_METADATA_CHANGED': (1024,
+                                           'Set if after a prepared statement '
+                                           'reprepare we discovered that the '
+                                           'new statement returns a different '
+                                           'number of result set columns.'),
+        'SERVER_QUERY_WAS_SLOW': (2048, ''),
+        'SERVER_PS_OUT_PARAMS': (4096,
+                                 'To mark ResultSet containing output '
+                                 'parameter values.'),
+        'SERVER_STATUS_IN_TRANS_READONLY': (8192,
+                                            'Set if multi-statement '
+                                            'transaction is a read-only '
+                                            'transaction.'),
+        'SERVER_SESSION_STATE_CHANGED': (1 << 14,
+                                         'Session state has changed on the '
+                                         'server because of the execution of '
+                                         'the last statement'),
     }
 
 
@@ -458,31 +553,41 @@ class ShutdownType(_Constants):
     Shutdown types used by the COM_SHUTDOWN server command.
     """
     _prefix = ''
-    SHUTDOWN_DEFAULT = '\x00'
-    SHUTDOWN_WAIT_CONNECTIONS = '\x01'
-    SHUTDOWN_WAIT_TRANSACTIONS = '\x02'
-    SHUTDOWN_WAIT_UPDATES = '\x08'
-    SHUTDOWN_WAIT_ALL_BUFFERS = '\x10'
-    SHUTDOWN_WAIT_CRITICAL_BUFFERS = '\x11'
-    KILL_QUERY = '\xfe'
-    KILL_CONNECTION = '\xff'
+    SHUTDOWN_DEFAULT = 0
+    SHUTDOWN_WAIT_CONNECTIONS = 1
+    SHUTDOWN_WAIT_TRANSACTIONS = 2
+    SHUTDOWN_WAIT_UPDATES = 8
+    SHUTDOWN_WAIT_ALL_BUFFERS = 16
+    SHUTDOWN_WAIT_CRITICAL_BUFFERS = 17
+    KILL_QUERY = 254
+    KILL_CONNECTION = 255
 
     desc = {
-        'SHUTDOWN_DEFAULT': (SHUTDOWN_DEFAULT,
+        'SHUTDOWN_DEFAULT': (
+            SHUTDOWN_DEFAULT,
             "defaults to SHUTDOWN_WAIT_ALL_BUFFERS"),
-        'SHUTDOWN_WAIT_CONNECTIONS': (SHUTDOWN_WAIT_CONNECTIONS,
+        'SHUTDOWN_WAIT_CONNECTIONS': (
+            SHUTDOWN_WAIT_CONNECTIONS,
             "wait for existing connections to finish"),
-        'SHUTDOWN_WAIT_TRANSACTIONS': (SHUTDOWN_WAIT_TRANSACTIONS,
+        'SHUTDOWN_WAIT_TRANSACTIONS': (
+            SHUTDOWN_WAIT_TRANSACTIONS,
             "wait for existing trans to finish"),
-        'SHUTDOWN_WAIT_UPDATES': (SHUTDOWN_WAIT_UPDATES,
+        'SHUTDOWN_WAIT_UPDATES': (
+            SHUTDOWN_WAIT_UPDATES,
             "wait for existing updates to finish"),
-        'SHUTDOWN_WAIT_ALL_BUFFERS': (SHUTDOWN_WAIT_ALL_BUFFERS,
+        'SHUTDOWN_WAIT_ALL_BUFFERS': (
+            SHUTDOWN_WAIT_ALL_BUFFERS,
             "flush InnoDB and other storage engine buffers"),
-        'SHUTDOWN_WAIT_CRITICAL_BUFFERS': (SHUTDOWN_WAIT_CRITICAL_BUFFERS,
+        'SHUTDOWN_WAIT_CRITICAL_BUFFERS': (
+            SHUTDOWN_WAIT_CRITICAL_BUFFERS,
             "don't flush InnoDB buffers, "
             "flush other storage engines' buffers"),
-        'KILL_QUERY': (KILL_QUERY, "(no description)"),
-        'KILL_CONNECTION': (KILL_CONNECTION, "(no description)"),
+        'KILL_QUERY': (
+            KILL_QUERY,
+            "(no description)"),
+        'KILL_CONNECTION': (
+            KILL_CONNECTION,
+            "(no description)"),
     }
 
 
@@ -519,7 +624,7 @@ class CharacterSet(_Constants):
                 "Character set '{0}' unsupported".format(setid))
 
     @classmethod
-    def get_desc(cls, setid):
+    def get_desc(cls, name):
         """Retrieves character set information as string using an ID
 
         Retrieves character set and collation information based on the
@@ -528,7 +633,7 @@ class CharacterSet(_Constants):
         Returns a tuple.
         """
         try:
-            return "%s/%s" % cls.get_info(setid)
+            return "%s/%s" % cls.get_info(name)
         except:
             raise
 
@@ -546,7 +651,7 @@ class CharacterSet(_Constants):
                 return info[1], info[0], charset
             except:
                 ProgrammingError("Character set ID '%s' unsupported." % (
-                                 charset))
+                    charset))
 
         for cid, info in enumerate(cls.desc):
             if info is None:
@@ -578,7 +683,8 @@ class CharacterSet(_Constants):
                 info = cls.desc[charset]
                 return (charset, info[0], info[1])
             except IndexError:
-                ProgrammingError("Character set ID %s unknown." % (charset))
+                ProgrammingError("Character set ID {0} unknown.".format(
+                    charset))
 
         if charset is not None and collation is None:
             info = cls.get_default_collation(charset)
@@ -589,14 +695,15 @@ class CharacterSet(_Constants):
                     continue
                 if collation == info[1]:
                     return (cid, info[0], info[1])
-            raise ProgrammingError("Collation '%s' unknown." % (collation))
+            raise ProgrammingError("Collation '{0}' unknown.".format(collation))
         else:
             for cid, info in enumerate(cls.desc):
                 if info is None:
                     continue
                 if info[0] == charset and info[1] == collation:
                     return (cid, info[0], info[1])
-            raise ProgrammingError("Character set '%s' unknown." % (charset))
+            _ = cls.get_default_collation(charset)
+            raise ProgrammingError("Collation '{0}' unknown.".format(collation))
 
     @classmethod
     def get_supported(cls):
@@ -611,7 +718,7 @@ class CharacterSet(_Constants):
         return tuple(res)
 
 
-class SQLMode(_Constants):  # pylint: disable=R0921
+class SQLMode(_Constants):
     """MySQL SQL Modes
 
     The numeric values of SQL Modes are not interesting, only the names
@@ -659,12 +766,12 @@ class SQLMode(_Constants):  # pylint: disable=R0921
         raise NotImplementedError
 
     @classmethod
-    def get_info(cls, number):
+    def get_info(cls, setid):
         raise NotImplementedError
 
     @classmethod
     def get_full_info(cls):
-        """Returns a sequence of all availble SQL Modes
+        """Returns a sequence of all available SQL Modes
 
         This class method returns a tuple containing all SQL Mode names. The
         names will be alphabetically sorted.
@@ -673,7 +780,11 @@ class SQLMode(_Constants):  # pylint: disable=R0921
         """
         res = []
         for key in vars(cls).keys():
-            if (not key.startswith('_')
-                and not hasattr(getattr(cls, key), '__call__')):
+            if not key.startswith('_') \
+                    and not hasattr(getattr(cls, key), '__call__'):
                 res.append(key)
         return tuple(sorted(res))
+
+CONN_ATTRS_DN = ["_pid", "_platform", "_source_host", "_client_name",
+                 "_client_license", "_client_version", "_os", "_connector_name",
+                 "_connector_license", "_connector_version"]

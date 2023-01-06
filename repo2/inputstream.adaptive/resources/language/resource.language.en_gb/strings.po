@@ -12,6 +12,14 @@ msgstr ""
 "Language: en\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+msgctxt "Addon Summary"
+msgid "InputStream client for adaptive streams"
+msgstr ""
+
+msgctxt "Addon Description"
+msgid "InputStream client for adaptive streams"
+msgstr ""
+
 msgctxt "#30100"
 msgid "General"
 msgstr ""
@@ -65,6 +73,10 @@ msgstr ""
 
 msgctxt "#30121"
 msgid "Enable Pre-Release Features"
+msgstr ""
+
+msgctxt "#30122"
+msgid "Don't use secure decoder if possible"
 msgstr ""
 
 msgctxt "#30150"

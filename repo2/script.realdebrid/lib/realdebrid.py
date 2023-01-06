@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import lib.util as util
 import threading, time, json, os, ast, re, sys
 import xbmc, xbmcvfs, xbmcplugin, xbmcaddon, xbmcgui
@@ -14,7 +15,7 @@ try:  # Python 3
     from urllib.request import build_opener
     from urllib.parse import urlencode
     from urllib.request import HTTPCookieProcessor
-    p2 = False
+    p3 = True
 except ImportError:
     import cookielib
     from urllib2 import urlopen
@@ -22,7 +23,7 @@ except ImportError:
     from urllib2 import build_opener
     from urllib import urlencode
     from urllib2 import HTTPCookieProcessor
-    p2 = True
+    p3 = False
 
 client_id="MN55HGIQEO2BE" #realdebrid clientid
 
@@ -46,7 +47,7 @@ home=translatePath(addon.getAddonInfo('path'))
 
 def checkDetails():
     if xbmcaddon.Addon('script.realdebrid').getSetting('rd_id')=="" or xbmcaddon.Addon('script.realdebrid').getSetting('rd_secret')=="" or xbmcaddon.Addon('script.realdebrid').getSetting('rd_access')=="" or xbmcaddon.Addon('script.realdebrid').getSetting('rd_refresh')=="":
-        ok = xbmcgui.Dialog().yesno("RealDebrid not configured", "You have not configured RealDebrid, you cannot proceed without doing this. Do you want to do this now?")
+        ok = xbmcgui.Dialog().yesno("Configure Real-Debrid", "You have not configured RealDebrid,\n You can not proceed without doing this.\n Do you want to do this now? ")
         if ok:
             return auth()
 
@@ -69,7 +70,7 @@ def verifyThread(authData):
     authJSON=json.loads(authData)
 
     # create dialog with progress to show information
-    authMsg="To authorise your RealDebrid account, use a browser to browse to [B]"+authJSON['verification_url']+"[/B] and enter the verification code [B]"+authJSON['user_code']+"[/B]"
+    authMsg="To authorize your RealDebrid account, use a browser or browse to [B]"+authJSON['verification_url']+"[/B] and enter the verification code  Also added to clipboard[B]"+authJSON['user_code']+"[/B]"
     authDialog=util.progressStart("RealDebrid Authentication", authMsg)
 
     authorised=False
@@ -86,7 +87,7 @@ def verifyThread(authData):
             break
         if timer==100:
             util.progressStop(authDialog)
-            util.alert("RealDebrid aithentication has timed out. Please try again.")
+            util.alert("Authentication timed out. Try again.")
             break
 
         # all good to carry on lets check auth
@@ -129,7 +130,7 @@ def verifyThread(authData):
         util.alert("RealDebrid authenticated.")
         return True
     else:
-        util.alert("There was an error authenticating with RealDebrid")
+        util.alert("An error occurred while authenticating with the Real-Debrid")
         return False
 
 def refreshToken():
@@ -152,7 +153,7 @@ def refreshToken():
         authorised=True
     except Exception as e:
         util.logError("Error Refreshing Token: "+str(e))
-        util.alert("Your RealDebrid account needs re-authorising")
+        util.alert("Your connection to Real-Debrid requires re-authorization")
         auth()
 
 def hostStatus():
@@ -211,7 +212,7 @@ def unrestrict(parameters):
                 attempts=attempts+1
                 if attempts>3:
                     error=True
-                    util.notify("Unable to unrestrict link")
+                    util.notify("The link cannot be unblocked")
                     break
                 elif "Unauthorized" in e:
                     refreshToken()
@@ -289,7 +290,7 @@ def torrentSelect(id, all):
                 files.append(file['path'])
 
             dialog = xbmcgui.Dialog()
-            ret = dialog.multiselect("Select files you want to download", files)
+            ret = dialog.multiselect("Select the files you want to download", files)
 
         if ret:
             ret=map(lambda x: x + 1, ret)
@@ -335,13 +336,13 @@ def torrentsDelete(id):
     r = requests.delete("https://api.real-debrid.com/rest/1.0/torrents/delete/"+str(id), headers=headers)
 
     if r.status_code==404:
-        util.alert("Unable to delete torrent, permission denied.")
+        util.alert("Unable to delete torrent, access denied.")
         return False
     elif r.status_code==403:
-        util.alert("Unable to delete torrent, torrent not found.")
+        util.alert("This torrent could not be deleted, the torrent was not found.")
         return False
     elif r.status_code==401:
-        util.alert("Unable to delete torrent.")
+        util.alert("The torrent cannot be deleted.")
         return False
 
     return True
@@ -410,7 +411,7 @@ def torrents(parameters):
             url=item['links'][0]
             mode=5
         elif item['status']== "downloading":
-            name="[Downloading "+str(item['progress'])+"%] "+item['filename']
+            name="[Pobieranie "+str(item['progress'])+"%] "+item['filename']
             url=""
             mode=""
         else:
@@ -441,14 +442,14 @@ def delID(parameters):
     headers={"Authorization": "Bearer "+str(xbmcaddon.Addon('script.realdebrid').getSetting('rd_access'))}
 
     if parameters['method']=="torrent":
-        if xbmcgui.Dialog().yesno("Delete torrent?", "Do you want to delete the torrent" + '\n\n' + parameters['name']):
+        if xbmcgui.Dialog().yesno("Delete Torrent?", "Do you want to delete the torrent" + '\n\n' + parameters['name']):
             r = requests.delete("https://api.real-debrid.com/rest/1.0/torrents/delete/"+parameters['id'], headers=headers)
             try:
                 isError(json.loads(r.text))
             except:
                 xbmc.executebuiltin('Container.Refresh')
     else:
-        if xbmcgui.Dialog().yesno("Delete link?", "Do you want to delete the link" + '\n\n' + parameters['name']):
+        if xbmcgui.Dialog().yesno("Delete the file? ", "Do you want to delete the file" + '\n\n' + parameters['name']):
             util.logError("https://api.real-debrid.com/rest/1.0/downloads/delete/"+parameters['id'])
             r = requests.delete("https://api.real-debrid.com/rest/1.0/downloads/delete/"+parameters['id'], headers=headers)
             try:
@@ -462,7 +463,7 @@ def download(parameters, dest=addon.getSetting('download_path')):
     else:
         link=unrestrict({"url":parameters['url']})
         if not link:
-            util.alert("There was an error downloading your file")
+            util.alert("There was an error downloading the file ")
         else:
             lib.simpledownloader.download(parameters['name'], parameters['poster'], link['download'], dest)
 
@@ -480,10 +481,10 @@ def vpnInfo(parameters):
 
     vpnInfo = False
     for l in lines:
-        if p2:
-            line = l
-        else:
+        if p3:
             line = bytes.decode(l)
+        else:
+            line = l
 
         line = line.strip(' \t\n\r')
 
@@ -511,24 +512,24 @@ def vpnInfo(parameters):
     else:
       lines = line1.split('.')
       for line in lines:
-        if p2:
-            li = xbmcgui.ListItem(line.strip(), iconImage='DefaultFolder.png')
-        else:
+        if p3:
             li = xbmcgui.ListItem(line.strip())
+        else:
+            li = xbmcgui.ListItem(line.strip(), iconImage='DefaultFolder.png')
 
         xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]), url="", listitem=li, isFolder=False)
 
-      if p2:
-          li = xbmcgui.ListItem(line2, iconImage='DefaultFolder.png')
-      else:
+      if p3:
           li = xbmcgui.ListItem(line2)
+      else:
+          li = xbmcgui.ListItem(line2, iconImage='DefaultFolder.png')
 
       xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]), url="", listitem=li, isFolder=False)
 
-      if p2:
-          li = xbmcgui.ListItem(line3, iconImage='DefaultFolder.png')
-      else:
+      if p3:
           li = xbmcgui.ListItem(line3)
+      else:
+          li = xbmcgui.ListItem(line3, iconImage='DefaultFolder.png')
 
       xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]), url="", listitem=li, isFolder=False)
 

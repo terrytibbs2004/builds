@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <category label="30090">
+        <setting label="30006" type="action" action="RunPlugin(plugin://plugin.video.ustvgo/?action=iptvsimple_setup)"/>
+        <setting label="30091" type="bool" id="vpnchannels" default="True"/>
+    </category>
+</settings>
