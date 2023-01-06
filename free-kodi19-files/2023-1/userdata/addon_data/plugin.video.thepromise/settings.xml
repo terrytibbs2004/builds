@@ -39,9 +39,9 @@
     <setting id="hosts.quality">1</setting>
     <setting id="min.quality">3</setting>
     <setting id="remove.cam">true</setting>
-    <setting id="size.filters" default="true">false</setting>
+    <setting id="size.filters" default="true">true</setting>
     <setting id="min.size.gb" default="true">0</setting>
-    <setting id="max.size.gb">20</setting>
+    <setting id="max.size.gb">2</setting>
     <setting id="debrid.only">true</setting>
     <setting id="remove.hevc" default="true">false</setting>
     <setting id="remove.dv" default="true">false</setting>
@@ -56,7 +56,7 @@
     <setting id="provider.library">true</setting>
     <setting id="provider.official">true</setting>
     <setting id="official.text" default="true" />
-    <setting id="official.country" default="true">US</setting>
+    <setting id="official.country" default="true">GB</setting>
     <setting id="prime">true</setting>
     <setting id="iplayer">true</setting>
     <setting id="crackle">true</setting>
