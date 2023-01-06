@@ -7,7 +7,7 @@ class MyXBMCPlayer(xbmc.Player):
         self.is_active = True
         self.urlplayed = False
         self.pdialogue=None
-        print "#XBMCPlayer#"
+        #print "#XBMCPlayer#"
     
     #def play(self, url, listitem):
     #   print 'Now im playing... %s' % url
@@ -19,20 +19,22 @@ class MyXBMCPlayer(xbmc.Player):
 	#	self.pdialogue=pdialogue
 		
     def onPlayBackStarted( self ):
-        print "#Playback Started#"
+        #print "#Playback Started#"
+        '''
         try:
             print "#Im playing :: " 
         except:
             print "#I failed get what Im playing#"
+        '''
         if (self.pdialogue):
             self.pdialogue.close()
         self.urlplayed = True
             
     def onPlayBackEnded( self ):
-        print "#Playback Ended#"
+        #print "#Playback Ended#"
         self.is_active = False
         
     def onPlayBackStopped( self ):
-        print "## Playback Stopped ##"
+        #print "## Playback Stopped ##"
         self.is_active = False
 

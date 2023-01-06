@@ -1,10 +1,11 @@
 """CSS matcher."""
-from __future__ import unicode_literals
 from datetime import datetime
 from . import util
 import re
 from .import css_types as ct
 import unicodedata
+
+import bs4
 
 # Empty tag pattern (whitespace okay)
 RE_NOT_EMPTY = re.compile('[^ \t\r\n\f]')
@@ -88,57 +89,36 @@ class _DocumentNav(object):
     @staticmethod
     def is_doc(obj):
         """Is `BeautifulSoup` object."""
-
-        import bs4
         return isinstance(obj, bs4.BeautifulSoup)
 
     @staticmethod
     def is_tag(obj):
         """Is tag."""
-
-        import bs4
         return isinstance(obj, bs4.Tag)
-
-    @staticmethod
-    def is_comment(obj):
-        """Is comment."""
-
-        import bs4
-        return isinstance(obj, bs4.Comment)
 
     @staticmethod
     def is_declaration(obj):  # pragma: no cover
         """Is declaration."""
-
-        import bs4
         return isinstance(obj, bs4.Declaration)
 
     @staticmethod
     def is_cdata(obj):
         """Is CDATA."""
-
-        import bs4
         return isinstance(obj, bs4.CData)
 
     @staticmethod
     def is_processing_instruction(obj):  # pragma: no cover
         """Is processing instruction."""
-
-        import bs4
         return isinstance(obj, bs4.ProcessingInstruction)
 
     @staticmethod
     def is_navigable_string(obj):
         """Is navigable string."""
-
-        import bs4
         return isinstance(obj, bs4.NavigableString)
 
     @staticmethod
     def is_special_string(obj):
         """Is special string."""
-
-        import bs4
         return isinstance(obj, (bs4.Comment, bs4.Declaration, bs4.CData, bs4.ProcessingInstruction, bs4.Doctype))
 
     @classmethod
@@ -325,7 +305,7 @@ class _DocumentNav(object):
         """Get classes."""
 
         classes = cls.get_attribute_by_name(el, 'class', [])
-        if isinstance(classes, util.ustr):
+        if isinstance(classes, str):
             classes = RE_NOT_WS.findall(classes)
         return classes
 
@@ -335,6 +315,11 @@ class _DocumentNav(object):
         return ''.join(
             [node for node in self.get_descendants(el, tags=False, no_iframe=no_iframe) if self.is_content_string(node)]
         )
+
+    def get_own_text(self, el, no_iframe=False):
+        """Get Own Text."""
+
+        return [node for node in self.get_contents(el, no_iframe=no_iframe) if self.is_content_string(node)]
 
 
 class Inputs(object):
@@ -661,8 +646,7 @@ class _Match(object):
         # Verify prefix matches
         elif (
             tag.prefix
-            and tag.prefix != '*'
-            and (tag_ns is None or namespace != tag_ns)
+            and tag.prefix != '*' and (tag_ns is None or namespace != tag_ns)
         ):
             match = False
         return match
@@ -803,8 +787,7 @@ class _Match(object):
             sibling = self.get_previous(el, tags=False)
             while is_root and sibling is not None:
                 if (
-                    self.is_tag(sibling)
-                    or (self.is_content_string(sibling) and sibling.strip())
+                    self.is_tag(sibling) or (self.is_content_string(sibling) and sibling.strip())
                     or self.is_cdata(sibling)
                 ):
                     is_root = False
@@ -814,8 +797,7 @@ class _Match(object):
             sibling = self.get_next(el, tags=False)
             while is_root and sibling is not None:
                 if (
-                    self.is_tag(sibling)
-                    or (self.is_content_string(sibling) and sibling.strip())
+                    self.is_tag(sibling) or (self.is_content_string(sibling) and sibling.strip())
                     or self.is_cdata(sibling)
                 ):
                     is_root = False
@@ -966,12 +948,23 @@ class _Match(object):
         content = None
         for contain_list in contains:
             if content is None:
-                content = self.get_text(el, no_iframe=self.is_html)
+                if contain_list.own:
+                    content = self.get_own_text(el, no_iframe=self.is_html)
+                else:
+                    content = self.get_text(el, no_iframe=self.is_html)
             found = False
             for text in contain_list.text:
-                if text in content:
-                    found = True
-                    break
+                if contain_list.own:
+                    for c in content:
+                        if text in c:
+                            found = True
+                            break
+                    if found:
+                        break
+                else:
+                    if text in content:
+                        found = True
+                        break
             if not found:
                 match = False
         return match
@@ -1093,13 +1086,9 @@ class _Match(object):
             for k, v in self.iter_attributes(parent):
                 attr_ns, attr = self.split_namespace(parent, k)
                 if (
-                    ((not has_ns
-                      or has_html_ns)
-                     and (util.lower(k) if not self.is_xml else k) == 'lang')
+                    ((not has_ns or has_html_ns) and (util.lower(k) if not self.is_xml else k) == 'lang')
                     or (
-                        has_ns
-                        and not has_html_ns
-                        and attr_ns == NS_XML
+                        has_ns and not has_html_ns and attr_ns == NS_XML
                         and (util.lower(attr) if not self.is_xml and attr is not None else attr) == 'lang'
                     )
                 ):
@@ -1436,30 +1425,6 @@ class CSSMatch(_DocumentNav, _Match):
     """The Beautiful Soup CSS match class."""
 
 
-class CommentsMatch(_DocumentNav):
-    """Comments matcher."""
-
-    def __init__(self, el):
-        """Initialize."""
-
-        self.assert_valid_input(el)
-        self.tag = el
-
-    def get_comments(self, limit=0):
-        """Get comments."""
-
-        if limit < 1:
-            limit = None
-
-        for child in self.get_descendants(self.tag, tags=False):
-            if self.is_comment(child):
-                yield child
-                if limit is not None:
-                    limit -= 1
-                    if limit < 1:
-                        break
-
-
 class SoupSieve(ct.Immutable):
     """Compiled Soup Sieve selector matching object."""
 
@@ -1502,19 +1467,6 @@ class SoupSieve(ct.Immutable):
             return CSSMatch(self.selectors, iterable, self.namespaces, self.flags).filter()
         else:
             return [node for node in iterable if not CSSMatch.is_navigable_string(node) and self.match(node)]
-
-    @util.deprecated("'comments' is not related to CSS selectors and will be removed in the future.")
-    def comments(self, tag, limit=0):
-        """Get comments only."""
-
-        return [comment for comment in CommentsMatch(tag).get_comments(limit)]
-
-    @util.deprecated("'icomments' is not related to CSS selectors and will be removed in the future.")
-    def icomments(self, tag, limit=0):
-        """Iterate comments only."""
-
-        for comment in CommentsMatch(tag).get_comments(limit):
-            yield comment
 
     def select_one(self, tag):
         """Select a single tag."""

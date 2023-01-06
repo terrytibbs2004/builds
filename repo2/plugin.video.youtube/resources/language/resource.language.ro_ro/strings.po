@@ -7,15 +7,14 @@ msgstr ""
 "Project-Id-Version: XBMC-Addons\n"
 "Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
 "POT-Creation-Date: 2015-09-21 11:01+0000\n"
-"PO-Revision-Date: 2022-03-09 20:53+0000\n"
-"Last-Translator: Christian Gade <gade@kodi.tv>\n"
-"Language-Team: Romanian <https://kodi.weblate.cloud/projects/kodi-add-ons-video/plugin-video-youtube/ro_ro/>\n"
-"Language: ro_ro\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE\n"
+"Language: ro_RO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2;\n"
-"X-Generator: Weblate 4.11.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1))\n"
 
 msgctxt "Addon Summary"
 msgid "Plugin for YouTube"
@@ -492,11 +491,11 @@ msgstr "Regiune"
 
 msgctxt "#30551"
 msgid "Recommendations"
-msgstr "Recomandări"
+msgstr ""
 
 msgctxt "#30552"
 msgid "Maintenance"
-msgstr "Mentenanță"
+msgstr ""
 
 msgctxt "#30553"
 msgid "Delete function cache database"
@@ -508,7 +507,7 @@ msgstr ""
 
 msgctxt "#30555"
 msgid "Clear function cache"
-msgstr "Golește cache-ul funcției"
+msgstr ""
 
 msgctxt "#30556"
 msgid "Clear search history"
@@ -528,11 +527,11 @@ msgstr ""
 
 msgctxt "#30560"
 msgid "Subtitle language"
-msgstr "Limba subtitrării"
+msgstr ""
 
 msgctxt "#30561"
 msgid "None"
-msgstr "Nici una"
+msgstr ""
 
 msgctxt "#30562"
 msgid "All"
@@ -552,15 +551,15 @@ msgstr ""
 
 msgctxt "#30566"
 msgid "Prompt"
-msgstr "Prompt"
+msgstr ""
 
 msgctxt "#30567"
 msgid "Set as Watch Later"
-msgstr "Adaugă la 'Vezi mai târziu'"
+msgstr ""
 
 msgctxt "#30568"
 msgid "Remove as Watch Later"
-msgstr "Șterge din 'Vezi mai târziu'"
+msgstr ""
 
 msgctxt "#30569"
 msgid "Are you sure you want to remove '%s' as your Watch Later list?"
@@ -572,11 +571,11 @@ msgstr ""
 
 msgctxt "#30571"
 msgid "Set as History"
-msgstr "Adaugă la istoric"
+msgstr ""
 
 msgctxt "#30572"
 msgid "Remove as History"
-msgstr "Șterge din istoric"
+msgstr ""
 
 msgctxt "#30573"
 msgid "Are you sure you want to remove '%s' as your History list?"
@@ -596,7 +595,7 @@ msgstr ""
 
 msgctxt "#30577"
 msgid "Settings"
-msgstr "Setări"
+msgstr ""
 
 msgctxt "#30578"
 msgid "Force SSL certificate verification"
@@ -688,15 +687,15 @@ msgstr ""
 
 msgctxt "#30600"
 msgid "Configure subtitles"
-msgstr "Configurează subtitrare"
+msgstr ""
 
 msgctxt "#30601"
 msgid "%s with %s fallback"
-msgstr "%s cu rezervă %s"
+msgstr ""
 
 msgctxt "#30602"
 msgid "No auto-generated"
-msgstr "Fără subtitrări auto-generate"
+msgstr ""
 
 msgctxt "#30603"
 msgid "Age gate"
@@ -1032,7 +1031,7 @@ msgstr ""
 
 msgctxt "#30686"
 msgid "Clear data cache"
-msgstr "Golește cache de date"
+msgstr ""
 
 msgctxt "#30687"
 msgid "data cache"
@@ -1148,7 +1147,7 @@ msgstr ""
 
 msgctxt "#30715"
 msgid "Removed from playlist"
-msgstr "Șters din listă"
+msgstr ""
 
 msgctxt "#30716"
 msgid "Liked video"
@@ -1160,7 +1159,7 @@ msgstr ""
 
 msgctxt "#30718"
 msgid "Rating removed"
-msgstr "Evaluare ștearsă"
+msgstr ""
 
 msgctxt "#30719"
 msgid "Subscribed to channel"
@@ -1176,7 +1175,7 @@ msgstr ""
 
 msgctxt "#30722"
 msgid "HDR"
-msgstr "HDR"
+msgstr ""
 
 msgctxt "#30723"
 msgid "Proxy is required for mpeg-dash vods (see HTTP Server)[CR]> 1080p and HDR requires InputStream Adaptive >= 2.3.14"
@@ -1192,15 +1191,15 @@ msgstr ""
 
 msgctxt "#30726"
 msgid "Uploads"
-msgstr "Încărcări"
+msgstr ""
 
 msgctxt "#30727"
 msgid "Adaptive (MP4/H264)"
-msgstr "Adaptiv (MP4/H264)"
+msgstr ""
 
 msgctxt "#30728"
 msgid "Adaptive (WEBM/VP9)"
-msgstr "Adaptiv (WEBM/VP9)"
+msgstr ""
 
 msgctxt "#30729"
 msgid "Remote friendly search"
@@ -1216,102 +1215,18 @@ msgstr ""
 
 msgctxt "#30732"
 msgid "Comments"
-msgstr "Comentarii"
+msgstr ""
 
 msgctxt "#30733"
 msgid "Likes"
-msgstr "Aprecieri"
+msgstr ""
 
 msgctxt "#30734"
 msgid "Replies"
-msgstr "Răspunsuri"
+msgstr ""
 
 msgctxt "#30735"
 msgid "Edited"
-msgstr ""
-
-msgctxt "#30736"
-msgid "Hide short videos (1 minute or less)"
-msgstr ""
-
-msgctxt "#30900"
-msgid "Subscriptions groups"
-msgstr ""
-
-msgctxt "#30901"
-msgid "Add to group"
-msgstr ""
-
-msgctxt "#30902"
-msgid "Remove from group"
-msgstr ""
-
-msgctxt "#30903"
-msgid "Delete group"
-msgstr ""
-
-msgctxt "#30904"
-msgid "Create new group"
-msgstr ""
-
-msgctxt "#30905"
-msgid "Enter a name for new group"
-msgstr ""
-
-msgctxt "#30906"
-msgid "Group '%s' created"
-msgstr ""
-
-msgctxt "#30907"
-msgid "Are you sure you want to remove group '%s'?"
-msgstr ""
-
-msgctxt "#30908"
-msgid "Group '%s' removed"
-msgstr ""
-
-msgctxt "#30909"
-msgid "Select new group for channel '%s'"
-msgstr ""
-
-msgctxt "#30910"
-msgid "Сhannel '%s' added to group '%s'"
-msgstr ""
-
-msgctxt "#30911"
-msgid "Are you sure you want remove channel '%s' from group '%s'?"
-msgstr ""
-
-msgctxt "#30912"
-msgid "Сhannel '%s' removed from group '%s'"
-msgstr ""
-
-msgctxt "#30913"
-msgid "[Without groups]"
-msgstr ""
-
-msgctxt "#30914"
-msgid "Move to other group"
-msgstr ""
-
-msgctxt "#30915"
-msgid "Select new group for channel '%s' from group '%s'"
-msgstr ""
-
-msgctxt "#30916"
-msgid "Сhannel '%s' moved from group '%s' to group '%s'"
-msgstr ""
-
-msgctxt "#30917"
-msgid "Rename group"
-msgstr ""
-
-msgctxt "#30918"
-msgid "Enter a new name for group"
-msgstr ""
-
-msgctxt "#30919"
-msgid "Group '%s' renamed to '%s'"
 msgstr ""
 
 #~ msgctxt "#30100"

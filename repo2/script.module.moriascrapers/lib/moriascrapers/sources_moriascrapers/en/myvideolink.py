@@ -1,20 +1,14 @@
 # -*- coding: utf-8 -*-
 
-'''
-    MoriaScrapers module
-'''
-
-
-
 import re
 
 from six import ensure_text
 from six.moves import zip
 
-from moriascrapers import parse_qs, urljoin, urlencode, quote_plus
-from moriascrapers.modules import cleantitle, client, source_utils, log_utils
+from homelanderscrapers import parse_qs, urljoin, urlencode, quote_plus
+from homelanderscrapers.modules import cleantitle, client, source_utils, log_utils
 
-from moriascrapers import custom_base_link
+from homelanderscrapers import custom_base_link
 custom_base = custom_base_link(__name__)
 
 
@@ -22,8 +16,8 @@ class source:
     def __init__(self):
         self.priority = 1
         self.language = ['en']
-        self.domains = ['go2.myvideolinks.net', 'see.home.kg', 'get.myvideolinks.net']
-        self.base_link = custom_base or 'http://to.myvideolinks.net'
+        self.domains = ['to.myvideolinks.net', 'get.myvideolinks.net', 'new.myvideolinks.net']
+        self.base_link = custom_base or 'https://to.myvideolinks.net/'
         self.search_link = '/?s=%s'
         self.aliases = []
 

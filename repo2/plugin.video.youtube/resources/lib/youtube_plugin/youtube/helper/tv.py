@@ -56,8 +56,6 @@ def my_subscriptions_to_items(provider, context, json_data, do_filter=False):
     utils.update_video_infos(provider, context, video_id_dict, channel_items_dict=channel_item_dict, use_play_data=use_play_data)
     utils.update_fanarts(provider, context, channel_item_dict)
 
-    result = utils.filter_short_videos(context, result)
-
     # next page
     next_page_token = json_data.get('next_page_token', '')
     if next_page_token or json_data.get('continue', False):
@@ -101,8 +99,6 @@ def tv_videos_to_items(provider, context, json_data):
     channel_item_dict = {}
     utils.update_video_infos(provider, context, video_id_dict, channel_items_dict=channel_item_dict, use_play_data=use_play_data)
     utils.update_fanarts(provider, context, channel_item_dict)
-
-    result = utils.filter_short_videos(context, result)
 
     # next page
     next_page_token = json_data.get('next_page_token', '')
@@ -152,8 +148,6 @@ def saved_playlists_to_items(provider, context, json_data):
     channel_items_dict = {}
     utils.update_playlist_infos(provider, context, playlist_id_dict, channel_items_dict)
     utils.update_fanarts(provider, context, channel_items_dict)
-
-    result = utils.filter_short_videos(context, result)
 
     # next page
     next_page_token = json_data.get('next_page_token', '')

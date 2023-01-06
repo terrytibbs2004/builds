@@ -109,7 +109,8 @@ def check():
 if __name__ == '__main__':
     log('********** XBMC STARTED **********')
     clear()
-    while (not xbmc.abortRequested):  
+    monitor = xbmc.Monitor()
+    while (not monitor.abortRequested):  
         if not STARTED:
             STARTED = xbmc.Player().isPlaying()
         else:
@@ -129,7 +130,7 @@ import xbmcgui
 import xbmcplugin
 import xbmcvfs
 
-import urllib
+import urllib.request, urllib.parse, urllib.error
 
 import os
 import requests
@@ -147,11 +148,11 @@ except:
 
 ADDONID    = 'plugin.audio.mp3streams'
 ADDON      =  xbmcaddon.Addon(ADDONID)
-HOME       =  xbmc.translatePath(ADDON.getAddonInfo('path'))
-PROFILE    =  xbmc.translatePath(ADDON.getAddonInfo('profile'))
+HOME       =  xbmcvfs.translatePath(ADDON.getAddonInfo('path'))
+PROFILE    =  xbmcvfs.translatePath(ADDON.getAddonInfo('profile'))
 PROFILE    =  ADDON.getAddonInfo('profile')
 ICON       =  os.path.join(HOME, 'icon.png')
-TEMP       =  xbmc.translatePath(os.path.join(PROFILE, 'temp_dl'))
+TEMP       =  xbmcvfs.translatePath(os.path.join(PROFILE, 'temp_dl'))
 
 MAX_DOWNLOADERS = 3
 
@@ -179,7 +180,7 @@ def deleteFile(filename):
         tries -= 1 
         try: 
             xbmcvfs.delete(filename)
-        except Exception, e: 
+        except Exception as e: 
             log('ERROR %s in deleteFile %s' % (str(e), filename))
             log('ERROR tries=%d' % tries)
             xbmc.sleep(500)
@@ -198,7 +199,7 @@ def verifyFileSize(filename):
     ADDON   =  xbmcaddon.Addon(ADDONID)
     precache = int(ADDON.getSetting('pre-cache').replace('K', ''))
 
-    filename = xbmc.translatePath(filename)
+    filename = xbmcvfs.translatePath(filename)
 
     log('VERIFYING %s' % filename)
     count = 100
@@ -317,7 +318,7 @@ def resetCache():
 
 
 def createMD5(url):
-    return MD5(url).hexdigest()
+    return MD5(url.encode('utf-8')).hexdigest()
 
 
 def clean(text):
@@ -355,7 +356,7 @@ def createFilename(title, artist, album, url):
  
     try:
         xbmcvfs.mkdirs(filename)
-    except Exception, e:
+    except Exception as e:
         log('Error creating folder %s - %s' % (filename, str(e)))
 
     filename = os.path.join(filename, title + '.mp3')
@@ -366,7 +367,9 @@ def createFilename(title, artist, album, url):
 #called from default.py
 def getListItem(title, artist, album, track, image, duration, url, fanart, isPlayable, useDownload):
 
-    liz = xbmcgui.ListItem(title, iconImage=image, thumbnailImage=image)
+    liz = xbmcgui.ListItem(title)
+    
+    liz.setArt({'icon': image, 'thumb': image}) 
 
     liz.setInfo('music', {'Title':title, 'Artist':artist, 'Album':album, 'Duration':duration})
 
@@ -374,21 +377,21 @@ def getListItem(title, artist, album, track, image, duration, url, fanart, isPla
     liz.setProperty('fanart_image', fanart)
     liz.setProperty('IsPlayable',   isPlayable)
 
-    if FRODO or ('.mp3' in url) or (not useDownload):
+    if FRODO or '.mp3' in url or not useDownload:
         return url, liz
     title = "%s. %s" % (track,title)
     filename = createFilename(title, artist, album, url)
                 
     plugin = 'plugin://%s/'  % ADDONID
     plugin += '?mode=%d'     % 999
-    plugin += '&title=%s'    % urllib.quote_plus(title)
-    plugin += '&artist=%s'   % urllib.quote_plus(artist)
-    plugin += '&album=%s'    % urllib.quote_plus(album)
-    plugin += '&track=%s'    % urllib.quote_plus(str(track))
-    plugin += '&image=%s'    % urllib.quote_plus(image)
-    plugin += '&duration=%s' % urllib.quote_plus(duration)
-    plugin += '&filename=%s' % urllib.quote_plus(filename)
-    plugin += '&url=%s'      % urllib.quote_plus(url)
+    plugin += '&title=%s'    % urllib.parse.quote_plus(title)
+    plugin += '&artist=%s'   % urllib.parse.quote_plus(artist)
+    plugin += '&album=%s'    % urllib.parse.quote_plus(album)
+    plugin += '&track=%s'    % urllib.parse.quote_plus(str(track))
+    plugin += '&image=%s'    % urllib.parse.quote_plus(image)
+    plugin += '&duration=%s' % urllib.parse.quote_plus(duration)
+    plugin += '&filename=%s' % urllib.parse.quote_plus(filename)
+    plugin += '&url=%s'      % urllib.parse.quote_plus(url)
 
     return plugin, liz
 
@@ -429,7 +432,7 @@ def fetchNext(posn):
         return
 
     item = playlist[posn]
-    url  = item.getfilename()
+    url  = item.getPath()
 
     log('URL = %s' % url)
 
@@ -441,35 +444,35 @@ def fetchNext(posn):
 
     params = getParams(url)
 
-    try:    mode = int(urllib.unquote_plus(params['mode']))
+    try:    mode = int(urllib.parse.unquote_plus(params['mode']))
     except: return
 
     if mode != 999:
         return fetchNext(posn+1)
 
-    try:    title = urllib.unquote_plus(params['title'])
+    try:    title = urllib.parse.unquote_plus(params['title'])
     except: return
 
-    try:    artist = urllib.unquote_plus(params['artist'])
+    try:    artist = urllib.parse.unquote_plus(params['artist'])
     except: return
 
-    try:    album = urllib.unquote_plus(params['album'])
+    try:    album = urllib.parse.unquote_plus(params['album'])
     except: return
 
-    try:    track = urllib.unquote_plus(params['track'])
+    try:    track = urllib.parse.unquote_plus(params['track'])
     except: return
 
-    try:    url = urllib.unquote_plus(params['url'])
+    try:    url = urllib.parse.unquote_plus(params['url'])
     except: return
 
-    try:    filename = urllib.unquote_plus(params['filename'])
+    try:    filename = urllib.parse.unquote_plus(params['filename'])
     except: return
 
     log('Title    %s' % title)
     log('URL      %s' % url)
     log('Filename %s' % filename)
 
-    if xbmcvfs.exists(xbmc.translatePath(filename)):
+    if xbmcvfs.exists(xbmcvfs.translatePath(filename)):
         return
 
     downloader = Downloader(title, artist, album, track, url, filename)
@@ -481,10 +484,10 @@ def fetchFile(title, artist, album, track, url, filename):
 
     nDownloaders = getNmrDownloaders()
     log('Number of downloaders= %d' % nDownloaders)
-    if nDownloaders >= MAX_DOWNLOADERS: #-1 to allow for fetchNext
+    if nDownloaders >= MAX_DOWNLOADERS-1: #-1 to allow for fetchNext
         stopDownloaders()
 
-    if xbmcvfs.exists(xbmc.translatePath(filename)) and xbmcvfs.File(filename).size() > 250 * 1024:
+    if xbmcvfs.exists(xbmcvfs.translatePath(filename)) and xbmcvfs.File(filename).size() > 250 * 1024:
         log('%s already exists' % filename)
         return
 
@@ -496,15 +499,14 @@ def play(sys, params):
     log('Setting resolving property')
     xbmcgui.Window(10000).setProperty(RESOLVING, RESOLVING)
 
-    title    = urllib.unquote_plus(params['title'])
-    artist   = urllib.unquote_plus(params['artist'])
-    album    = urllib.unquote_plus(params['album'])
-    track    = urllib.unquote_plus(params['track'])
-    image    = urllib.unquote_plus(params['image'])
-    duration = urllib.unquote_plus(params['duration'])
-    filename = urllib.unquote_plus(params['filename'])
-    url      = urllib.unquote_plus(params['url'])
-
+    title    = urllib.parse.unquote_plus(params['title'])
+    artist   = urllib.parse.unquote_plus(params['artist'])
+    album    = urllib.parse.unquote_plus(params['album'])
+    track    = urllib.parse.unquote_plus(params['track'])
+    image    = urllib.parse.unquote_plus(params['image'])
+    duration = urllib.parse.unquote_plus(params['duration'])
+    filename = urllib.parse.unquote_plus(params['filename'])
+    url      = urllib.parse.unquote_plus(params['url'])
     log('**** In playFile ****')
     log(title)
     log(url)
@@ -518,7 +520,9 @@ def play(sys, params):
     fetchNext(next)
 
     log('**** FILE %s NOW AVAILABLE ****' % filename)
-    liz = xbmcgui.ListItem(title, iconImage=image, thumbnailImage=image, path=filename)
+    liz = xbmcgui.ListItem(title, path=filename)
+    
+    liz.setArt({'icon': image, 'thumb': image}) 
 
     liz.setInfo('music', {'Title':title, 'Artist':artist, 'Album':album, 'Duration':duration})
     liz.setProperty('mimetype', 'audio/mpeg')
@@ -548,7 +552,7 @@ class Downloader(threading.Thread):
          self.album    = album
          self.track    = int(track)
          self.url      = url
-         self.filename = xbmc.translatePath(filename)
+         self.filename = xbmcvfs.translatePath(filename)
          self.complete = False
 
 
@@ -574,7 +578,7 @@ class Downloader(threading.Thread):
 
                  f.close()
                  self.complete = True
-         except Exception, e:
+         except Exception as e:
              xbmcgui.Window(10000).setProperty(self.filename, 'EXCEPTION')
              log('Error in downloadFile % s' % str(e))
              try:    f.close()
@@ -646,7 +650,7 @@ class Downloader(threading.Thread):
              log('%s DOWNLOAD COMPLETED' % self.title)
              try:
                  self.applyID3()
-             except Exception, e:
+             except Exception as e:
                  log('Error applying tags %s' % str(e))
          else:
              log('%s DOWNLOAD CANCELLED' % self.title)

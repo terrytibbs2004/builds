@@ -8,10 +8,10 @@ __all__ = [
     'HTMLParserTreeBuilder',
 ]
 
-from HTMLParser import HTMLParser
+from html.parser import HTMLParser
 
 try:
-    from HTMLParser import HTMLParseError
+    from html.parser import HTMLParseError
 except ImportError:
     # HTMLParseError is removed in Python 3.5. Since it can never be
     # thrown in 3.5, we can just define our own class as a placeholder.
@@ -114,7 +114,7 @@ class BeautifulSoupHTMLParser(HTMLParser):
         # just because its name matches a known empty-element tag. We
         # know that this is an empty-element tag and we want to call
         # handle_endtag ourselves.
-        tag = self.handle_starttag(name, attrs, handle_empty_element=False)
+        tag = self.handle_starttag(name, attrs, handle_empty_element=False)  # noQA
         self.handle_endtag(name)
 
     def handle_starttag(self, name, attrs, handle_empty_element=True):
@@ -146,7 +146,7 @@ class BeautifulSoupHTMLParser(HTMLParser):
                     on_dupe(attr_dict, key, value)
             else:
                 attr_dict[key] = value
-            attrvalue = '""'
+            attrvalue = '""'  # noQA
 
         sourceline, sourcepos = self.getpos()
         tag = self.soup.handle_starttag(
@@ -222,10 +222,10 @@ class BeautifulSoupHTMLParser(HTMLParser):
                     pass
         if not data:
             try:
-                data = unichr(real_name)
+                data = chr(real_name)
             except (ValueError, OverflowError):
                 pass
-        data = data or u"\N{REPLACEMENT CHARACTER}"
+        data = data or "\N{REPLACEMENT CHARACTER}"
         self.handle_data(data)
 
     def handle_entityref(self, name):
@@ -352,7 +352,7 @@ class HTMLParserTreeBuilder(HTMLTreeBuilder):
          document to Unicode and parsing it. Each strategy will be tried
          in turn.
         """
-        if isinstance(markup, unicode):
+        if isinstance(markup, str):
             # Parse Unicode as-is.
             yield (markup, None, None, False)
             return

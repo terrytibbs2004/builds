@@ -6,14 +6,12 @@ import urllib
 from datetime import timedelta
 from functools import wraps
 
-from xbmcswift2 import xbmc, xbmcaddon, xbmcplugin, xbmcgui, ListItem
+from xbmcswift2 import xbmc, xbmcvfs, xbmcaddon, xbmcplugin, xbmcgui, ListItem
 from xbmcswift2.storage import TimedStorage
 from xbmcswift2.logger import log
 from xbmcswift2.constants import SortMethod
 from xbmcswift2.common import Modes, DEBUG_MODES
 from xbmcswift2.request import Request
-
-
 
 
 class XBMCMixin(object):
@@ -154,7 +152,7 @@ class XBMCMixin(object):
         return storage
 
     def temp_fn(self, path):
-        return os.path.join(xbmc.translatePath('special://temp/'), path)
+        return os.path.join(xbmcvfs.translatePath('special://temp/'), path)
 
     def get_string(self, stringid):
         '''Returns the localized string from strings.po for the given
@@ -169,12 +167,6 @@ class XBMCMixin(object):
 
     def set_content(self, content):
         '''Sets the content type for the plugin.'''
-        # TODO: Change to a warning instead of an assert. Otherwise will have
-        # to keep this list in sync with
-        #       any XBMC changes.
-        #contents = ['files', 'songs', 'artists', 'albums', 'movies',
-        #'tvshows', 'episodes', 'musicvideos']
-        #assert content in contents, 'Content type "%s" is not valid' % content
         xbmcplugin.setContent(self.handle, content)
 
     def get_setting(self, key, converter=None, choices=None):
@@ -199,8 +191,6 @@ class XBMCMixin(object):
         #TODO: allow pickling of settings items?
         # TODO: STUB THIS OUT ON CLI
         value = self.addon.getSetting(id=key)
-        if converter is unicode:
-            return value.decode('utf-8')
 
         if converter is str:
             return value
@@ -224,7 +214,7 @@ class XBMCMixin(object):
         return self.addon.setSetting(id=key, value=val)
 
     def open_settings(self):
-        '''Opens the settings dialog within XBMC'''
+        '''Opens the settings dialog within KODI'''
         self.addon.openSettings()
 
     def add_to_playlist(self, items, playlist='video'):
@@ -258,11 +248,6 @@ class XBMCMixin(object):
         '''
         log.warning('Editing skin viewmodes is not allowed.')
         return None
-
-    def set_view_mode(self, view_mode_id):
-        '''@deprecated Calls KODI's Container.SetViewMode. Requires an integer
-        view_mode_id'''
-        log.warning('Changing skin viewmodes is not allowed.')
 
     def keyboard(self, default=None, heading=None, hidden=False):
         '''Displays the keyboard input window to the user. If the user does not
@@ -326,10 +311,15 @@ class XBMCMixin(object):
         # method directly. This is to ensure a video is played before calling
         # this method.
         player = xbmc.Player()
-        for _ in xrange(30):
+        monitor = xbmc.Monitor()
+        for _ in range(30):
             if player.isPlaying():
                 break
-            time.sleep(1)
+
+            if monitor.abortRequested():
+                return
+
+            monitor.waitForAbort(1)
         else:
             raise Exception('No video playing. Aborted after 30 seconds.')
 
@@ -339,7 +329,7 @@ class XBMCMixin(object):
         '''Takes a url or a listitem to be played. Used in conjunction with a
         playable list item with a path that calls back into your addon.
 
-        :param item: A playable list item or url. Pass None to alert XBMC of a
+        :param item: A playable list item or url. Pass None to alert KODI of a
                      failure to resolve the item.
 
                      .. warning:: When using set_resolved_url you should ensure
@@ -352,7 +342,7 @@ class XBMCMixin(object):
                           item.
         '''
         if self._end_of_directory:
-            raise Exception('Current XBMC handle has been removed. Either '
+            raise Exception('Current KODI handle has been removed. Either '
                             'set_resolved_url(), end_of_directory(), or '
                             'finish() has already been called.')
         self._end_of_directory = True
@@ -364,7 +354,7 @@ class XBMCMixin(object):
             succeeded = False
 
         # caller is passing a url instead of an item dict
-        if isinstance(item, basestring):
+        if isinstance(item, bytes) or isinstance(item, str):
             item = {'path': item}
 
         item = self._listitemify(item)
@@ -377,7 +367,7 @@ class XBMCMixin(object):
             self._add_subtitles(subtitles)
         return [item]
 
-    def play_video(self, item, player=None):
+    def play_video(self, item):
         try:
             # videos are always type video
             item['info_type'] = 'video'
@@ -386,10 +376,7 @@ class XBMCMixin(object):
 
         item = self._listitemify(item)
         item.set_played(True)
-        if player:
-            _player = xbmc.Player(player)
-        else:
-            _player = xbmc.Player()
+        _player = xbmc.Player()
         _player.play(item.get_path(), item.as_xbmc_listitem())
         return [item]
 
@@ -491,7 +478,7 @@ class XBMCMixin(object):
             self.add_items(items)
         if sort_methods:
             for sort_method in sort_methods:
-                if not isinstance(sort_method, basestring) and hasattr(sort_method, '__len__'):
+                if not isinstance(sort_method, str) and hasattr(sort_method, '__len__'):
                     self.add_sort_method(*sort_method)
                 else:
                     self.add_sort_method(sort_method)

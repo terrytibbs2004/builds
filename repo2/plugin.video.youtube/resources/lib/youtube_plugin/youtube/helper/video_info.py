@@ -740,10 +740,8 @@ class VideoInfo(object):
         #                                   'hl': self.language}}}
 
         payload = {'videoId': video_id,
-                   'context': {'client': {'clientVersion': '16.49', 'gl': self.region,
-                                          'clientName': 'ANDROID', 'hl': self.language}},
-                   'thirdParty': {'embedUrl': 'https://google.com'}
-        }
+                   'context': {'client': {'clientVersion': '16.05', 'gl': self.region,
+                                          'clientName': 'ANDROID', 'hl': self.language}}}
 
         player_response = {}
         for attempt in range(2):
@@ -753,10 +751,9 @@ class VideoInfo(object):
                                   allow_redirects=True)
                 r.raise_for_status()
                 player_response = r.json()
-                if player_response.get('playabilityStatus', {}).get('status', 'OK') in \
-                        ('AGE_CHECK_REQUIRED', 'UNPLAYABLE') and attempt == 0:
-                    payload['context']['client']['clientName'] = 'ANDROID_EMBEDDED_PLAYER'
-                    payload['context']['client']['clientVersion'] = '16.20'
+                if player_response.get('playabilityStatus', {}).get('status', 'OK') == 'AGE_CHECK_REQUIRED' \
+                        and attempt == 0:
+                    payload['context']['client']['clientScreen'] = 'EMBED'
                     continue
             except:
                 error_message = 'Failed to get player response for video_id "%s"' % video_id
@@ -866,11 +863,10 @@ class VideoInfo(object):
                 if not reason:
                     reason = 'UNKNOWN'
 
-                if PY2:
-                    try:
-                        reason = reason.encode('raw_unicode_escape').decode('utf-8')
-                    except:
-                        pass
+                try:
+                    reason = reason.encode('raw_unicode_escape').decode('utf-8')
+                except:
+                    pass
 
                 raise YouTubeException(reason)
 

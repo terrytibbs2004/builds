@@ -817,6 +817,128 @@ v2.3.14 (2019-02-10)
       <icon>icon.png</icon>
     </assets>
   </extension>
+</addon><addon id="metadata.themoviedb.org.python" name="The Movie Database Python" version="1.6.2+matrix.1" provider-name="Team Kodi">
+  <requires>
+    <import addon="xbmc.metadata" version="2.1.0" />
+    <import addon="xbmc.python" version="3.0.0" />
+  </requires>
+  <extension point="xbmc.metadata.scraper.movies" library="python/scraper.py" />
+  <extension point="xbmc.addon.metadata">
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <news>v1.6.2 (2022-04-10)
+- Fix: IMDB ratings
+
+v1.6.0 (2021-12-24) - v1.6.1 (2022-01-09)
+- Feature: fallback to English language for Fanart.tv artwork
+- Feature: fanart prioritization option</news>
+    <platform>all</platform>
+    <license>GPL-2.0-or-later</license>
+    <forum>https://forum.kodi.tv/showthread.php?tid=344580</forum>
+    <website>https://www.themoviedb.org</website>
+    <source>https://github.com/xbmc/metadata.themoviedb.org.python</source>
+    <assets>
+      <icon>resources/icon.png</icon>
+    </assets>
+    <summary lang="af_ZA">TMDB Fliek Skraper</summary>
+    <summary lang="be_BY">Сродак для атрымання звестак пра фільмы на аснове TMDB</summary>
+    <summary lang="bg_BG">Сваля инф. за филми от TMDB</summary>
+    <summary lang="ca_ES">Arreplegador de pel·lícules TMDB</summary>
+    <summary lang="cs_CZ">Zdroj zisku dat k filmům TMDB</summary>
+    <summary lang="cy_GB">Crafwr Ffilmiau TMDB</summary>
+    <summary lang="da_DK">Python TMDB scraper til film</summary>
+    <summary lang="de_DE">Python TMDB Film-Scraper</summary>
+    <summary lang="el_GR">Scraper Ταινιών του TMDb</summary>
+    <summary lang="en_GB">Python TMDB Movie Scraper</summary>
+    <summary lang="en_NZ">Python TMDB Movie Scraper</summary>
+    <summary lang="en_US">Python TMDB Movie Scraper</summary>
+    <summary lang="es_AR">Scraper de Películas de TheMovieDB</summary>
+    <summary lang="es_ES">Scraper de películas de TheMovieDB</summary>
+    <summary lang="es_MX">Scraper de Películas TMDb</summary>
+    <summary lang="et_EE">Python TMDB filmikaabits</summary>
+    <summary lang="fi_FI">The Movie Database (TMDB) Python -tietolähde elokuville</summary>
+    <summary lang="fr_CA">Extracteur de films TMDB</summary>
+    <summary lang="fr_FR">Collecteur de Films TMDB</summary>
+    <summary lang="gl_ES">Scraper de Filme de TMDB</summary>
+    <summary lang="he_IL">TMDB סקרייפר סרטים</summary>
+    <summary lang="hr_HR">TMDB filmski sakupljač informacija</summary>
+    <summary lang="hu_HU">TMDB filmadat leolvasó</summary>
+    <summary lang="id_ID">Pengais Film TMDB</summary>
+    <summary lang="is_IS">Python-TMDB kvikmyndaskafa</summary>
+    <summary lang="it_IT">Ricercatore per TMDB Movie</summary>
+    <summary lang="ja_JP">TMDB映画のスクレーパー</summary>
+    <summary lang="ko_KR">TMDB 영화 정보수집기</summary>
+    <summary lang="lt_LT">TMDB filmų skreperis</summary>
+    <summary lang="mk_MK">TMDB инфо за филмови</summary>
+    <summary lang="ml_IN">മൂവി ഡി ബി, വിവരശേഖരം</summary>
+    <summary lang="ms_MY">Pengikis Cakera TMDB</summary>
+    <summary lang="my_MM">TMDB Movie Scraper</summary>
+    <summary lang="nb_NO">TMDB-skraper</summary>
+    <summary lang="nl_NL">Python TMDb-filmscraper</summary>
+    <summary lang="pl_PL">Ekstraktor filmowy TMDB</summary>
+    <summary lang="pt_BR">Scraper de Filmes TMDb</summary>
+    <summary lang="pt_PT">Colector de filmes TMDb</summary>
+    <summary lang="ro_RO">Scraper de filme TMDb</summary>
+    <summary lang="ru_RU">Инфоресурс на базе TMDB</summary>
+    <summary lang="se">Skrapa för TMDb</summary>
+    <summary lang="sk_SK">TheMovieDB filmový sťahovač</summary>
+    <summary lang="sl_SI">Ponudnik informacij o filmih TMDB</summary>
+    <summary lang="sv_SE">TMDB Filmskrapa</summary>
+    <summary lang="ta_IN">LastFM நிகழ்படம் சுரண்டி</summary>
+    <summary lang="th_TH">ตัวรับข้อมูลภาพยนต์ TMDB</summary>
+    <summary lang="tr_TR">Python TMDB Film Bilgi Sağlayıcısı</summary>
+    <summary lang="uk_UA">TMDB — джерело інформації про фільми</summary>
+    <summary lang="vi_VN">Trình lấy dữ liệu Phim từ TMDB</summary>
+    <summary lang="zh_CN">TMDB 电影刮削器</summary>
+    <summary lang="zh_TW">TMDB 電影搜括器</summary>
+    <description lang="af_ZA">themoviedb.org is 'n verniet en oop fliek databasis. Dit is totaal gebruiker gedryf deur mense soos jy. TMDB word huidiglik deur miljoene mense elke maand gebruik, en met hulle kragtige API word dit ook deur baie gewilde media sentrums soos Kodi gebruik om Fliek Metadata, Plakkate en Ondersteunerkuns te onttrek om die gebruiker se ondervinding te verryk.</description>
+    <description lang="be_BY">themoviedb.org - бясплатная і адкрытая база даных фільмаў. Яна напаўняецца і падтрымліваецца карыстальнікамі. TMDb штомесяц карыстаюцца мільёны людзей, а дзякуючы магутнаму API базу могуць выкарыстоўваць папулярныя медыяцэнтры накшталт Kodi, якія бяруць адтуль метаданыя, постары і ілюстрацыі.</description>
+    <description lang="bg_BG">themoviedb.org е безплатна и отворена филмова база данни. Задвижва се изцяло от потребителите си, от хора като вас. Милиони хора по света всеки месец ползват TMDb. Благодарение на многофункционално API може да се ползва от най-различни и популярни медийни центрове като Kodi, които извличат метаданни, постери и фанарт за филми с цел за красивото оформяне на интерфейса.</description>
+    <description lang="ca_ES">themoviedb.org és una base de dades oberta i lliure. Es manté completament per usuaris, per gent com tu. TMDb s'utilitza actualment per milions de persones cada mes i amb la seva potent API també és utilitzada per molts centre media populas com l'Kodi per obtenir les meta-dades de pel·lícules, pósters i fanart per enriquir l'experiència d'usuari.</description>
+    <description lang="cs_CZ">themoviedb.org je otevřená a svobodná databáze filmů. Je řízena uživateli, tedy lidmi jako vy. TMDB je každý měsíc používána milióny lidí a se svým výborným API je také používano mnoha populárními mediálními centry jako je Kodi, k získávání metadat, plagátů a fanartu filmů pro obohacení uživatelského zážitku.</description>
+    <description lang="cy_GB">Mae themoviedb.org yn gronfa ddata ffilmiau rhydd ac agored. Mae'n cael ei yrru gan ddefnyddwyr fel chi. Mae TMDb yn cael ei ddefnyddio gan filiynau o bobl bob mis a gyda'i API pwerus, mae'n cael ei ddefnyddio gan lawer o'r canolfannau cyfrwng fel Kodi i estyn metadata ffilmiau, posteri a chelf er mwyn cyfoethogi profiad defnyddwyr.</description>
+    <description lang="da_DK">themoviedb.org er en gratis og åben filmdatabase. Den er helt og aldeles brugerdrevet af folk som dig. TMDb bruges i øjeblikket af millioner af mennesker hver måned, og med deres kraftfulde API bruges den også af mange populære mediecentre såsom Kodi til at hente filmmetadata, plakater og fankunst for at berige brugerens oplevelse.</description>
+    <description lang="de_DE">TheMovieDB.org ist eine freie und offene Filmdatenbank. Sie wird komplett von ihren Anwendern betrieben. TMDB wird von Millionen von Menschen und dank ihrer mächtigen API auch von vielen Media-Centern, wie z. B. Kodi, benutzt, um Film-Metadaten, Poster und Fanarts zu beziehen.</description>
+    <description lang="el_GR">Το themoviedb.org είναι μία δωρεάν και ανοικτή βάση δεδομένων ταινιών. Διαχειρίζεται πλήρως από ανθρώπους σαν και εσάς. Το TMDb χρησιμοποιείται από εκατομμύρια ανθρώπους κάθε μήνα, και με το πανίσχυρο API τους, χρησιμοποιείται και από πολλά δημοφιλή κέντρα πολυμέσων όπως το Kodi για να λαμβάνουν μετα-δεδομένα Ταινιών, Αφίσες και Fanart για εμπλουτισμό της εμπειρίας του χρήστη.</description>
+    <description lang="en_GB">themoviedb.org is a free and open movie database. It's completely user driven by people like you. TMDb is currently used by millions of people every month and with their powerful API, it is also used by many popular media centers like Kodi to retrieve Movie Metadata, Posters and Fanart to enrich the user's experience.</description>
+    <description lang="en_NZ">themoviedb.org is a free and open movie database. It's completely user driven by people like you. TMDb is currently used by millions of people every month and with their powerful API, it is also used by many popular media centers like Kodi to retrieve Movie Metadata, Posters and Fanart to enrich the user's experience.</description>
+    <description lang="en_US">themoviedb.org is a free and open movie database. It's completely user driven by people like you. TMDb is currently used by millions of people every month and with their powerful API, it is also used by many popular media centers like Kodi to retrieve Movie Metadata, Posters and Fanart to enrich the user's experience.</description>
+    <description lang="es_AR">themovieDB.org es una base de datos de películas gratuita y abierta. Está formada con contenido subido por usuarios como vos. TMDb es actualmente utilizada por millones de personas cada mes y, gracias a su poderosa API, es usada por muchos programas populares como Kodi para descargar Información de Películas, Posters y Fanart para enriquecer la experiencia de usar Kodi.</description>
+    <description lang="es_ES">themovieDB.org es una base de datos de películas libre y abierta. Esta completamente gestionada por gente como tu. TMDb se usa diariamente por millones de personas gracias a su potente API, que es usada por más programas aparte de Kodi para descargar información de películas así como Carteles o Fanart (Fondos de escritorio basados en películas usados en distintos skins) para enriquecer la experiencia de usar Kodi.</description>
+    <description lang="es_MX">themoviedb.org es una base de datos de películas gratis y abierta. Es completamente manejada por usuarios y personas como tu. Actualmente TMDb es usada por millones de personas cada mes, y dado a su poderosa API, es usada también por varios media centers populares como Kodi para obtener Metada de Películas, Posters y Fanarts, enriqueciendo de esta manera la experiencia del usuario.</description>
+    <description lang="et_EE">themoviedb.org on tasuta ja avatud filmide andmebaas. See on täielikult kasutajate poolt hooldatud. TMDb-d kasutavad igal kuul miljonid inimesed. Seda kasutatakse kasutajakogemuse rikastamiseks paljudes teistes populaarsetes programmides, nagu Kodi, laadides alla filmiteavet, plakateid ja fännikunsti.</description>
+    <description lang="fi_FI">The Movie Database (TMDB) on yhteisön ylläpitämä, ilmainen ja avoin tietokanta elokuville ja televisiosarjoille. Palvelulla on miljoonia kuukausittaisia käyttäjiä ja sen tehokkaan rajapinnan avulla Kodi ja monet muut mediasovellukset voivat hyödyntää palvelun metatietoja ja mediakuvituksia käyttökokemuksen parantamiseen. Tietokannan vahva painotus kansaivälisyyteen ja kattava tietomäärä on suurelta osin ylivertainen ja olemme tästä erittäin ylpeitä. Yksinkertaisesti sanoen, elämme ja hengitämme yhteisönä ja juuri se tekee meistä erilaisia.</description>
+    <description lang="fr_CA">themoviedb.org est une base de données libre et ouverte. Elle est complètement gérée par des gens comme vous. TMDb est actuellement utilisée par des millions de personnes chaque mois et avec son API puissante, elle est également utilisée par de nombreux centres multimédias populaires comme Kodi pour récupérer les métadonnées des films, les affiches et le fanart afin d'enrichir l'expérience de l'utilisateur.</description>
+    <description lang="fr_FR">themoviedb.org est une base de données gratuite et libre d'accès de films. Elle est totalement gérée par les utilisateurs. TMDb est actuellement utilisée par des millions de personnes chaque mois et, grâce à ses puissantes fonctions et routines, elle est également utilisée par de nombreux Media Centers populaires comme Kodi aux fins de récupération des Métadonnées, Posters et Fanarts des films en vue d'améliorer l'expérience de l'utilisateur.</description>
+    <description lang="gl_ES">themoviedb.org é una base de datos sobre filmes libre e aberta, impulsada por xente coma ti. Na actualidade TMDb é usada por millóns de persoas todos os meses, e grazas ó seu potente API, usado por algúns dos centros multimedia máis populares como Kodi para obter a información dos filmes, Posters e Fanart e así mellorar a experiencia do usuario.</description>
+    <description lang="hr_HR">themoviedb.org je besplatna i otvorena baza filmskih podataka. TMDb trenutno koriste milijuni ljudi svaki mjesec uz pomoću njegovog snažnog API-ja, isto tako se koristi u mnogim popularnim medijskim centrima poput Kodi-a, kako bi mogli sakupljati informacije o filmovima, filmske postere, omote filmova i na kraju obogatili korisničko iskustvo.</description>
+    <description lang="hu_HU">A themoviedb.org egy ingyenes és nyílt filmadatbázis. Teljes egészében olyan felhasználók töltik fel, mint például Te. A TMDb-t havonta emberek milliói használják és a hatékony API-n keresztül számos népszerű média center is, mint például az Kodi a filmadatok, poszterek, fanartképek letöltésére.</description>
+    <description lang="id_ID">themoviedb.org adalah database film yang gratis dan terbuka. Ini benar-benar digerakkan oleh orang-orang seperti Anda. TMDb saat ini digunakan oleh jutaan orang setiap bulannya dan dengan APInya yang digdaya, juga digunakan oleh beberapa pusat media seperti Kodi untuk mengambil Metadata Film, Poster dan Fanart untuk menperkaya pengalaman penggunanya.</description>
+    <description lang="is_IS">themoviedb.org er ókeypis og opinn gagnagrunnur. Hann er algjörlega rekinn af fólki eins og þér. TMBd er notaður af milljónum manns í hverjum mánuði og með öflugum forritaskilum þeirra (API), er hann líka notaður af mörgum vinsælum heimabíókerfum eins og Kodi til að ná í ítarupplýsingar um kvikmyndir, veggspjöld og aðdáendamyndir til að lífga upplifun notandans.</description>
+    <description lang="it_IT">themoviedb.org è un database libero e aperto. E' gestito da utenti e persone come te. Viene usato correntemente da millioni di persone ogni mese e con le sue potenti API, è anche utilizzato da molti popolari media centers come Kodi per ottenere Metadati, Posters e Fanart di film per arricchire la loro esperienza utente.</description>
+    <description lang="ja_JP">themoviedb.org は自由でオープンな映画データベースです。その運営は、完全にユーザ主導で行われています。TMDb は現在毎月何百万人もの人に利用されているほか、Kodi のようなメディアセンターも、TMDb のパワフルな API を介して映画メタデータ、ポスター、ファンアートを取得し、使い勝手を向上させるなどして使っています。</description>
+    <description lang="ko_KR">themoviedb.org 는 전적으로 여러분 같은 이용자가 주도하는 무료 공개 영화 데이터베이스입니다. TMDb 는 현재 매월 수백만의 사람들이 강력한 API와 함께 사용하고 있을 뿐만 아니라 Kodi 같은 많은 미디어 센터가 영화 정보, 포스터, 팬아트를 가져와 풍성한 사용자 경험을 제공하는데 이용되고 있습니다.</description>
+    <description lang="lt_LT">themoviedb.org yra nemokama ir atvira filmų duomenų bazė. Ji palaikoma tokių pat vartotojų kaip ir jūs. TMDb šiuo metu naudojama milijonų žmonių kiekvieną mėnesį ir turi galingą API, o taip pat naudojama daugelio populiarių media centrų, tokių kaip Kodi, kad gautų filmų metaduomenis, plakatus ir Fanart, siekiant praturtinti vartotojo patirtį.</description>
+    <description lang="ml_IN">മൂവി ഡി ബി, എല്ലാവർക്കും കൈവക്കാവുന്ന ഒരു സൗജന്യ വിവരശേഖരമാണ്. ഇതുമൂലം ലോകം മുഴുവനും സിനിമാ പോസ്റ്ററുകൾ എല്ലവരും കാണുന്നു</description>
+    <description lang="ms_MY">themoviedb.org adalah pangkalan data cakera terbuka. Ia sepenuhnya dipacu oleh individu seperti anda. TMDb buat masa ini diguna oleh berjuta-juta individu setiap bulan dan dengan API hebat mereka, ia juga digunakan oleh banyak pusat media popular seperti Kodi untuk mendapatkan Data Meta, Poster, Seni Peminat Cereka untuk memperkayakan pengalaman pengguna.</description>
+    <description lang="nb_NO">themoviedb.org er en fir og åpen filmdatabase. Den drives helt og fullt av mennesker som deg. TMDB brukes av millioner av mennesker hver måned og med sitt gode API, brukes den også av mange popluære mediasenterløsninger som Kodi for å hente metadata for filmer, plakater og fanart for å gi en bedre brukeropplevelse.</description>
+    <description lang="nl_NL">Themoviedb.org is een vrije en open filmdatabank. Gebruikers zoals jij vormen de motor van deze site. Op dit moment gebruiken elke maand miljoenen mensen TMDb. De krachtige API van de site laat mediacenters zoals Kodi toe om metadata, posters en fanart op te halen en zo de gebruikerservaring te verrijken.</description>
+    <description lang="pl_PL">themoviedb.org jest wolną i otwartą filmową bazą danych. Jest ona całkowicie zarządzana przez osoby takie jak Ty. Obecnie odwiedzają ją miliony osób miesięcznie, a dzięki dostępności interfejsu programistycznego jest używana przez wiele centrów multimedialnych, takich jak Kodi, do pobierania informacji o filmach, plakatów i fototapet.</description>
+    <description lang="pt_BR">O themoviedb.org é um banco de dados aberto e gratuito. É completamente operado por pessoas como você. O TMDb é atualmente usado por milhares de pessoas a cada mês e com sua poderosa API, é usado por muitas centrais de mídia populares como o Kodi para buscar metadados, cartazes e fanart de filmes para enriquecer a experiência do usuário.</description>
+    <description lang="pt_PT">O themoviedb.org é uma base de dados de filmes livre e aberta. É actualizado inteiramente por pessoas como você e usado por milhões todos os meses. Com o poderoso motor de busca disponível, também se tornou no favorito para muitos programas de centro de média, como o popular Kodi, para obter informação, posters e fanart que enriquecem a experiência do utilizador.</description>
+    <description lang="ro_RO">themoviedb.org este o bază de date de filme gratuită și deschisă. Este actualizată de oameni ca și tine. TMDb este curent folosită de milioane de oameni în fiecare lună și datorită API-ului puternic, este de asemena folosită de multe centre media populare ca Kodi pentru a obține informații despre filme, afișe și imagini produse de fani (Fanart) care îmbogățesc experiența utilizatorului.</description>
+    <description lang="ru_RU">themoviedb.org — это бесплатная и открытая база данных фильмов. Она полностью поддерживается обычными людьми. В данный момент сайт TMDb используют миллионы людей каждый месяц, и благодаря мощному API его могут использовать различные популярные медиацентры, такие как Kodi, чтобы получать метаданные, постеры и фанарт для фильмов с целью красивого оформления интерфейса.</description>
+    <description lang="se">themoviedb.org är en fri och öppen filmdatabas. Det drivs helt av människor som dig. TMDb används av miljontals människor varje månad och med deras kraftfulla API, är det också använt av många populära mediacenter som Kodi för att hämta filmmetadata, omslag och fanart för att förgylla användarens upplevelse.</description>
+    <description lang="sk_SK">themoviedb.org je voľná a otvorená databáza filmov. Je výlučne vedená užívateľmi ako si ty. TMDb je každý mesiac používaná miliónmi ľudí, a vďaka svojmu výkonnému API je veľmi populárna medzi 'media centrami' ako Kodi pre sťahovanie filmových metadát, plagátov a fanartov pre obohatenie zážitkov.</description>
+    <description lang="sl_SI">themoviedb.org je brezplačna in prosta baza filmov. Je v celoti ustvarjena s strani uporabnikov kot ste vi. TMDB uporablja miljone ljudi in z njihovo močno API, jo lahko uporabljate tudi v multimedijskih centrih kot Kodi, s tem prenesete informacije o filmih, plakate in ozadja ter s tem popestrite uporabniško izkušnjo.</description>
+    <description lang="sv_SE">themoviedb.org är en gratis och öppen filmdatabas. Den drivs helt av människor som du. TMDb används för närvarande av miljoner människor varje månad och med deras kraftfulla API används den även av många populära mediacenter som t.ex. Kodi för att hämta metadata om filmer, affischer och fanart för att berika användarens upplevelse.</description>
+    <description lang="ta_IN">themoviedb.org ஒரு இலவச மற்றும் திறந்த திரைப்பட தரவுத்தளம் ஆகும். இந்த தரவுத்தளம் முற்றிலும் பயனர் மக்களால் இயக்கப்படுகிறது. TMDb அவர்களது சக்திவாய்ந்த API இனால் தற்போது பல இலட்சக்கணக்கான மக்களால் ஒவ்வொரு மாதமும் பயன்படுத்தப்படுகிறது, இது Kodi போன்ற பல பிரபல ஊடக மையங்களில் பயனர் அனுபவத்தை மேம்படுத்த பயன்படுத்தப்படுகிறது.</description>
+    <description lang="th_TH">themoviedb.org เป็นฐานข้อมูลภาพยนตร์ที่ฟรีและเปิดกว้าง. มันถูกขับเคลื่อนจากผู้ใช้ โดยคนเช่นคุณ. TMDb ปัจจุบันมีการใช้โดยคนนับล้านในแต่ละเดือน และมีประสิทธิภาพด้วย API ของพวกเขา , มันยังถูกใช้โดยหลายศูนย์สื่อที่นิยมเช่น Kodi เพื่อดึง อธิบายข้อมูลภาพยนตร์, โปสเตอร์และ แฟนอาร์ต เพื่อเพิ่มประสบการณ์ของผู้ใช้</description>
+    <description lang="tr_TR">themoviedb.org ücretsiz ve herkese açık bir film veri tabanıdır. Tamamen kullanıcılar tarafından oluşturulmakta ve yönetilmektedir. TMDb her ay milyonlarca kullanıcı tarafından kullanılmakta ve güçlü API'si sayesinde Kodi gibi bir çok popüler medya merkezi tarafından Film Veritabanı, Poster ve Fanart bilgilerini kullanarak kullanıcı deneyimini zenginleştirmektedir.</description>
+    <description lang="uk_UA">themoviedb.org - це безкоштовна і відкрита база даних фільмів. Вона повністю підтримується звичайними людьми. В даний момент сайт TMDb використовують мільйони людей кожен місяць, і завдяки потужному API, його можуть використовувати різні популярні медіацентри, такі як Kodi, щоб отримувати метадані, постери і фанарт для фільмів з метою оформлення інтерфейсу.</description>
+    <description lang="vi_VN">themoviedb.org là cơ sở dữ liệu về phim ảnh mở và miễn phí. Nó hoàn toàn được kiểm soát bởi những người như bạn. TMDb hiện tại đang được sử dụng bởi hàng triệu người dùng hàng tháng và với sự hỗ trợ của bộ API mạnh mẽ nó cũng được sử dụng bởi những thiết bị giải trí cá nhân như Kodi cho việc lấy dữ liệu về Phim ảnh, Poster và Fanart để làm tăng trải nghiệm của người sử dụng</description>
+    <description lang="zh_CN">themoviedb.org 是一个开放和自由的电影数据库。它完全由象你一样的用户来掌控。TMDb 每月为上百万用户提供服务，并通过强大的 API 界面为许多流行的媒体中心系统如 Kodi 提供电影资料、封面海报和同人画以丰富用户的体验。</description>
+    <description lang="zh_TW">themoviedb.org是一個免費和開放的電影資料庫。它是完全由與您一樣的廣大使用者來更新資訊。 TMDb目前擁有數以百萬計的使用人次並且有著強大的API，許多受歡迎的媒體中心平台像Kodi藉由TMDb獲取電影的數據資料庫，海報和影片資訊，以豐富使用者體驗。</description>
+  </extension>
 </addon><addon id="metadata.tvshows.themoviedb.org" name="The Movie Database" version="3.5.14" provider-name="Team Kodi">
   <requires>
     <import addon="xbmc.metadata" version="2.1.0" />
@@ -906,12 +1028,77 @@ v2.3.14 (2019-02-10)
         <icon>icon.png</icon>
     </assets>
   </extension>
-</addon><addon id="plugin.audio.mp3streams" name="MP3 Streams" version="2019.12.31" provider-name="Ctrl_Esc">
+</addon><addon id="metadata.tvshows.themoviedb.org.python" name="TMDb TV Shows" version="1.4.16" provider-name="Team Kodi">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0" />
+    <import addon="xbmc.metadata" version="2.1.0" />
+  </requires>
+  <extension point="xbmc.metadata.scraper.tvshows" library="main.py" cachepersistence="00:15" />
+  <extension point="xbmc.addon.metadata">
+    <news>1.4.16
+fix for cast list in episodes
+properly classify TMDb logos as clearlogos
+filter out SVG files
+fix for scraper ignoring NFO files with TVDB artwork URL
+updated language files
+	</news>
+    <platform>all</platform>
+    <license>GPL-3.0-or-later</license>
+    <assets>
+      <icon>resources/icon.png</icon>
+    </assets>
+	<forum>https://forum.kodi.tv/showthread.php?tid=357232</forum>
+    <website>https://www.themoviedb.org</website>
+    <source>https://github.com/xbmc/metadata.tvshows.themoviedb.org.python</source>
+    <summary lang="be_BY">Атрымліваць метаданыя серыялаў з themoviedb.org</summary>
+    <summary lang="ca_ES">Agafa les metadades de les sèries de themoviedb.org</summary>
+    <summary lang="cs_CZ">Získat metadata pro seriály z themoviedb.org</summary>
+    <summary lang="da_DK">Hent metadata til tv-shows fra themoviedb.org</summary>
+    <summary lang="de_DE">TV-Show-Metadaten von themoviedb.org abrufen</summary>
+    <summary lang="en_GB">Fetch TV Show metadata from themoviedb.org</summary>
+    <summary lang="es_ES">Obtener metadatos de Serie de TV de themoviedb.org</summary>
+    <summary lang="es_MX">Obtener metadatos de series de themoviedb.org</summary>
+    <summary lang="et_EE">Hangi seriaali metaandmed allikast themoviedb.org</summary>
+    <summary lang="fi_FI">The Movie Database (TMDB) -tietolähde televisiosarjoille</summary>
+    <summary lang="fr_FR">Récupérer les métadonnées d'une série depuis themoviedb.org</summary>
+    <summary lang="id_ID">Ambil metadata Acara TV dari themoviedb.org</summary>
+    <summary lang="is_IS">Sækja lýsigögn sjónvarpsþátta frá themoviedb.org</summary>
+    <summary lang="it_IT">Recupera i metadati dei programmi TV da themovedb.org</summary>
+    <summary lang="ko_KR">themoviedb.org에서 TV쇼 메타데이터를 가져옵니다</summary>
+    <summary lang="pl_PL">Pobieraj metadane programów telewizyjnch z themoviedb.org</summary>
+    <summary lang="pt_BR">Obter metadados de Séries em themoviedb.org</summary>
+    <summary lang="ru_RU">Получение метаданных о сериалах с сайта themoviedb.org</summary>
+    <summary lang="sv_SE">Hämta metadata för TV-serier från themoviedb.org</summary>
+    <summary lang="tr_TR">TV Programları meta verilerini themoviedb.org sitesinden al</summary>
+    <summary lang="zh_CN">从 themoviedb.org 获取剧集信息</summary>
+    <description lang="be_BY">The Movie Database (TMDb) - база даных фільмаў і серыялаў, створаная супольнасцю. Усе даныя дадавалі ўдзельнікі гэтай цудоўнай супольнасці, пачынаючы з 2008. Шматнацыянасць і разнастайнасць даных - тое, чым мы вельмі ганарымся. Калі сказаць прасцей, то мы жывем супольнасцю, і гэта адрознівае нас ад іншых.</description>
+    <description lang="ca_ES">The Movie Database (TMDb) és una base de dades de pel·lícules i sèries creada per la comunitat. Cada dada ha estat afegida per la nostra increïble comunitat que data de 2008. El fort enfoc internacional i la quantitat de dades de TMDb és en gran mesura inigualable i una cosa de la qual estem increïblement orgullosos. En poques paraules, vivim i respirem comunitat i això és precisament el que ens fa diferents.</description>
+    <description lang="cs_CZ">The Movie Database (TMDb) je komunitní databáze filmů a seriálů. Každý kousek dat byl přidán naší úžasnou komunitou sahající až do roku 2008. Silné mezinárodní zaměření a rozsah dat TMDb jsou do značné míry bezkonkurenční a jsme na ně nesmírně hrdí. Jednoduše řečeno, žijeme a dýcháme komunitou, a to je přesně to, co nás odlišuje.</description>
+    <description lang="da_DK">The Movie Database (TMDb) er en community-bygget film- og tv-database. Hvert stykke data er blevet tilføjet af vores fantastiske community, der går tilbage til 2008. TMDbs stærke internationale fokus og bredde af data er stort set uovertruffen, og noget vi er utroligt stolte af. Enkelt sagt, vi lever og ånder community, og det er netop det, der gør os forskellige.</description>
+    <description lang="de_DE">The Movie Database (TMDb) ist eine Film- und TV-Datenbank. Seit 2008 wurde jeder einzelne Datensatz von einer tollen Community beigesteuert. TMDb's starker internationaler Fokus und die Vielfalt der Daten ist weitgehend unübertroffen. Die Betreiber von TMDb sind darauf sehr stolz. Vereinfacht gesagt, lebt und atmet TMDb den Community-Gedanken und das genau macht den Unterschied.</description>
+    <description lang="en_GB">The Movie Database (TMDb) is a community built movie and TV database. Every piece of data has been added by our amazing community dating back to 2008. TMDb's strong international focus and breadth of data is largely unmatched and something we're incredibly proud of. Put simply, we live and breathe community and that's precisely what makes us different.</description>
+    <description lang="es_ES">The Movie Database (TMDb) es una base de datos contruida comunitariamente sobre películas y TV. Cada pedazo de información ha sido añadida por nuestra increible comunidad desde 2008. El sólido enfoque internacional y la amplitud de datos de TMDb son en gran medida incomparables y es algo de lo que estamos increíblemente orgullosos. En pocas palabras, vivimos y respiramos en comunidad y eso es precisamente lo que nos hace diferentes.</description>
+    <description lang="es_MX">The Movie Database (TMDb) es una base de datos de películas y series creada por la comunidad. Cada pedazo de información ha sido agregada por nuestra increíble comunidad desde 2008. El fuerte enfoque internacional de TMDb y la variedad de información son en gran medida incomparables y algo de lo que estamos increíblemente orgullosos. En pocas palabras, vivimos y respiramos comunidad y eso es precisamente lo que nos hace diferentes.</description>
+    <description lang="et_EE">The Movie Database (TMDb) on kogukonna loodud filmide ja sarjade andmebaas. Meie imeline kogukond on lisanud kõik need andmed alates aastast 2008. TMDb tugev rahvusvaheline fookus ja andmete laius on suures osas võrreldamatud ja selle üle oleme ääretult uhked. Lihtsamalt öeldes elame ja hingame kogukonnas ning just see teebki meid erinevaks.</description>
+    <description lang="fi_FI">The Movie Database (TMDB) on yhteisön ylläpitämä, ilmainen ja avoin tietokanta elokuville ja televisiosarjoille. Palvelulla on miljoonia kuukausittaisia käyttäjiä ja sen tehokkaan rajapinnan avulla Kodi ja monet muut mediasovellukset voivat hyödyntää palvelun metatietoja ja mediakuvituksia käyttökokemuksen parantamiseen. Tietokannan vahva painotus kansaivälisyyteen ja kattava tietomäärä on suurelta osin ylivertainen ja olemme tästä erittäin ylpeitä. Yksinkertaisesti sanoen, elämme ja hengitämme yhteisönä ja juuri se tekee meistä erilaisia.</description>
+    <description lang="fr_FR">La base de données The Movie Database (TMDb) est un projet communautaire visant à référencer les informations de films et séries télé. Chaque information a été ajoutée par notre incroyable communauté, et ce depuis 2008. La force internationale du projet TMBd, ainsi que la diversité et l'étendue de ces données l'ont rendu leader dans ce domaine et nous en sommes extrêmement fière. Décrit simplement, nous vivons et respirons communauté et c'est précisément ce qui nous rend différent.</description>
+    <description lang="id_ID">The Movie Database (TMDb) adalah database film dan TV yang dibangun oleh komunitas. Setiap bagian data telah ditambahkan oleh komunitas kami yang luar biasa sejak tahun 2008. Fokus internasional TMDb yang kuat dan luasnya data sebagian besar tak tertandingi dan sesuatu yang sangat kami banggakan. Sederhananya, kita hidup dan bernafas dalam komunitas dan justru itulah yang membuat kita berbeda.</description>
+    <description lang="is_IS">The Movie Database (TMDb) er samfélagslegur gagnagrunnur kvikmynda- og sjónvarpsefnis. Hver einasti gagnabútur hefur verið settur inn af frábærum liðsmönnum okkar allar götur síðan 2008. Mikil alþjóðleg áhersla TMDb ásamt breiðu sviði gagna sést óvíða og er eitthvað sem við erum ótrúlega stolt af. Sett fram á einfaldan máta, við lifum og hrærumst í þessu samfélagi og það er nákvæmlega þess vegna sem við erum öðruvísi.</description>
+    <description lang="it_IT">Il Movie Database (TMDb) è un database di film e TV creato dalla comunità. Ogni dato è stato aggiunto dalla nostra straordinaria comunità che risale al 2008. La forte attenzione internazionale e l'ampiezza dei dati di TMDb sono in gran parte impareggiabili e qualcosa di cui siamo incredibilmente orgogliosi. In parole povere, viviamo e respiriamo in comunità ed è proprio questo che ci rende diversi.</description>
+    <description lang="ko_KR">The Movie Database (TMDb)는 영화와 TV 데이터베이스를 구축한 커뮤니티입니다. 모든 자료들은 우리 놀라운 커뮤니티에서 2008년부터 추가돼 온 것들입니다. TMDb의 강력한 국제적 초점과 광범위한 데이터는 타의 추종을 불허하며 우리가 자랑스러워하는 점입니다. 간단히 말해, 우리는 커뮤니티와 살고 호흡하며 그것이 우리가 다른 점입니다.</description>
+    <description lang="pl_PL">The Movie Database (TMDb) to baza filmów i programów telewizyjnych zbudowana przez społeczność. Każdy element danych został dodany przez naszą niesamowitą społeczność od 2008 roku. Silna międzynarodowa koncentracja TMDb i zakres danych są w dużej mierze niezrównane i jesteśmy z tego niesamowicie dumni. Mówiąc prościej, żyjemy i oddychamy wspólnotą i właśnie to nas wyróżnia.</description>
+    <description lang="pt_BR">The Movie Database (TMDb) é um banco de dados de filmes e séries criado pela comunidade. Cada um dos pedaços de dados foram adicionados por nossa incrível comunidade desde 2008. O forte foco internacional e a amplitude de dados do TMDb são incomparáveis, algo do qual temos muito orgulho. Resumindo, vivemos e respiramos comunidade e é precisamente isso que nos torna diferentes.</description>
+    <description lang="ru_RU">The Movie Database (TMDb) - это база данных фильмов и сериалов, созданная сообществом. Все данные были добавлены нашим замечательным сообществом, начиная с 2008 года. Международная направленность и широта данных TMDb во многом не имеют себе равных, и это то, чем мы невероятно гордимся. Проще говоря, мы живём и дышим сообществом, и именно это отличает нас от других.</description>
+    <description lang="sv_SE">The Movie Database (TMDb) är en communitybyggd film- och TV-databas. All data har lagts till av våra fantastiska medlemmar ända sen 2008. TMDbs starka internationella fokus och bredd är i stort sett oöverträffad och något vi är väldigt stolta över. Communityn är hjärtat i det hela och det är det som skiljer oss från mängden.</description>
+    <description lang="tr_TR">The Movie Database (TMDb), topluluk tarafından oluşturulmuş bir film ve TV veritabanıdır. Her bir veri parçası, 2008 yılına dayanan muhteşem topluluğumuz tarafından eklenmiştir. TMDb'nin güçlü uluslararası odağı ve veri genişliği büyük ölçüde benzersizdir ve inanılmaz derecede gurur duyduğumuz bir şeydir. Basitçe söylemek gerekirse, topluluk içinde yaşıyor ve nefes alıyoruz ve bizi farklı kılan da tam olarak bu.</description>
+    <description lang="zh_CN">TMDb 是一个由网络社区创建的影视数据库。每一条数据都是由我们令人惊叹的社区添加的，可以追溯到2008年。TMDb 强大的国际关注度和数据广度在很大程度上是无与伦比的，我们对此感到无比自豪。简单地说，我们生活在社区中，呼吸着社区的气息，这正是我们与众不同的原因。</description>
+  </extension>
+</addon><addon id="plugin.audio.mp3streams" name="MP3 Streams" version="2022.0.2" provider-name="Jon Bovi">
     <requires>
-        <import addon="xbmc.python" version="2.1.0" />
-        <import addon="script.module.t0mm0.common" version="1.1.0" />
+        <import addon="xbmc.python" version="3.0.0" />
+        <import addon="script.module.future" />
         <import addon="script.module.mutagen" />
-        <import addon="script.module.requests" version="1.1.0" />
+        <import addon="script.module.requests" />
     </requires>
     <extension point="xbmc.python.pluginsource" library="default.py">
         <provides>audio</provides>
@@ -920,24 +1107,17 @@ v2.3.14 (2019-02-10)
     <extension point="xbmc.addon.metadata">
         <platform>all</platform>
         <summary>A music streaming Collection.</summary>
-        <description>We fix this Addon for the RaspberryPi Kodi Deutschland Community!° 
-
-https://www.facebook.com/groups/raspikdc
-
-Credits to:
-
-TOXYNTH | ValenVanHel | locofix 
-Art by Marquerite for original code. </description>
-        <news />
+        <description>MP3 Streams Kodi 19+</description>
+        <news>2022.0.2 - Fix errors loading pages. 2022.0.1 - Small fix, Kodi 20 ready. 2021.0.6 - Fixed issue with hanging  when skipping tracks. 2021.0.4 - Fixed Settings, 2021.0.3 - Bugfixes. Enjoy!</news>
         <assets>
             <icon>icon.png</icon>
             <fanart>fanart.jpg</fanart>
         </assets>
     </extension>
-</addon><addon id="plugin.audio.radio_de" name="Radio" provider-name="Tristan Fischer, enen92" version="3.0.4">
+</addon><addon id="plugin.audio.radio_de" name="Radio" provider-name="Tristan Fischer, enen92" version="3.0.9+matrix.1">
     <requires>
-        <import addon="xbmc.python" version="2.14.0" />
-        <import addon="script.module.xbmcswift2" version="2.5.0" />
+        <import addon="xbmc.python" version="3.0.0" />
+        <import addon="script.module.xbmcswift2" version="19.0.6" />
     </requires>
     <extension library="addon.py" point="xbmc.python.pluginsource">
         <provides>audio</provides>
@@ -948,76 +1128,73 @@ Art by Marquerite for original code. </description>
         <source>https://github.com/XBMC-Addons/plugin.audio.radio_de</source>
         <forum>https://forum.kodi.tv/showthread.php?tid=119362</forum>
         <license>GPL-2.0-only</license>
-        <news>v3.0.3 (1/5/2020)
-            [fix] Custom stations if the url is not a playlist (backport)
-            [new] Spanish website radio.es and improved translations
-            [new] screenshot support for addon-website (backport)
+        <news>v3.0.9+matrix.1 (31/12/2021)
+            [new] Sync translations
         </news>
-        <summary lang="be_BY">Access &gt;30000 radio broadcasts</summary>
+        <assets>
+            <icon>resources/art/icon.png</icon>
+            <fanart>resources/art/fanart.jpg</fanart>
+            <screenshot>resources/art/screenshot-1.png</screenshot>
+            <screenshot>resources/art/screenshot-2.png</screenshot>
+            <screenshot>resources/art/screenshot-3.png</screenshot>
+            <screenshot>resources/art/screenshot-4.png</screenshot>
+        </assets>
         <summary lang="ca_ES">accedeix a mes de 30000 emissores de radio</summary>
         <summary lang="da_DK">Få adgang til &gt;30000 radioudsendelser</summary>
-        <summary lang="de_DE">Zugriff auf &gt;30000 Radiosender</summary>
+        <summary lang="de_DE">Zugang zu mehr als 30000 Radiosendern</summary>
         <summary lang="el_GR">Πρόσβαση σε πάνω από 30000 εκπομπές</summary>
         <summary lang="en_GB">Access &gt;30000 radio broadcasts</summary>
         <summary lang="en_NZ">Access &gt;30000 radio broadcasts</summary>
         <summary lang="en_US">Access &gt;30000 radio broadcasts</summary>
         <summary lang="es_ES">Escuche más de 30000 emisoras de radio</summary>
-        <summary lang="fr_FR">Ecoutez plus de 30000 stations de radio</summary>
+        <summary lang="es_MX">Accede a &gt;30000 transmisiones de radio</summary>
         <summary lang="fr_CA">Accéder à &gt; 30000 radiodiffusions</summary>
+        <summary lang="fr_FR">Ecoutez plus de 30000 stations de radio</summary>
         <summary lang="gl_ES">Escoite máis de 30000 emisoras de radio</summary>
         <summary lang="he_IL">גישה ליותר מ־30000 שידורי רדיו</summary>
         <summary lang="hr_HR">Pristup &gt;30000 radio emitiranja</summary>
         <summary lang="hu_HU">Hozzáférés 30000-nél is több rádióadáshoz</summary>
         <summary lang="id_ID">Akses &gt;30000 siaran radio</summary>
         <summary lang="it_IT">Accedi a più di 30000 trasmissioni radio</summary>
+        <summary lang="ko_KR">&gt;3만개의 라디오 방송국 연결</summary>
         <summary lang="lt_LT">Prieiga&gt; 30000 radijo transliacijų</summary>
         <summary lang="nl_NL">Toegang tot &gt;30000 radio uitzendingen</summary>
         <summary lang="pl_PL">Dostęp do ponad 30000 stacji radiowych</summary>
-        <summary lang="pt_PT">Aceda a mais de 30000 transmissões de rádio</summary>
         <summary lang="pt_BR">Acesse&gt;30000 broadcasts rádios</summary>
+        <summary lang="pt_PT">Aceda a mais de 30000 transmissões de rádio</summary>
+        <summary lang="ru_RU">Доступ к &gt;30000 радиостанциям</summary>
         <summary lang="sk_SK">Pristupujte k vyše 30000 vysielaniam</summary>
-        <summary lang="sv_SE">Access &gt;30000 radiosändningar</summary>
+        <summary lang="sv_SE">Få tillgång till &gt;30000 radiosändningar</summary>
         <summary lang="ta_IN">30000 க்கும் மேல் வானொலி ஒளிபரப்புகளை அணுகவும்</summary>
         <summary lang="zh_CN">访问大于7000个电台广播</summary>
-        <description lang="be_BY">Music plugin to access over 30000 international radio broadcasts from rad.io, radio.de and radio.fr[CR]Currently features[CR]- English, german and french translated[CR]- Browse stations by location, genre, topic, country, city and language[CR]- Search for stations[CR]- 115 genres, 59 topics, 94 countrys, 1010 citys, 63 languages</description>
-        <description lang="ca_ES">Plugin de música per escoltar més de 30000 emissores de ràdio internacionals des rad.io, radio.de i radio.fr. [CR] Característiques: [CR]- Traduccions a l'anglès, alemany, francès i espanyol. [CR]- Cercador de emissores per ubicació, gènere, tema, país, ciutat o idioma. [CR]- Cercador d'emissores. [CR]- 115 gèneres, 59 temes, 94 països, 1010 ciutats, 63 idiomes.</description>
-        <description lang="da_DK">Musikplugin som giver adgang til over 30000 internationale radioudsendelser fra rad.io, radio.de og radio.fr[CR]Nuværende funktioner[CR]- Oversat til engelsk, tysk og fransk[CR]- Gennemse stationer efter lokalitet, genre, emne, land, by og sprog[CR]- Søg efter stationer[CR]- 115 genrer, 59 emner, 94 lande, 1010 byer og 63 sprog</description>
-        <description lang="de_DE">Das Radio im Internet mit über 30000 Radiosendern, Internetradio Stationen, gratis Streams und Podcasts live von rad.io, radio.de und radio.fr.[CR]Features[CR]- Auf deutsch, englisch und französisch übersetzt[CR]- Sortiert nach: in der Nähe, Genre, Thema, Land und Sprache[CR]- nach Sendern suchen[CR]- 115 Genre, 59 Themen, 94 Länder, 1010 Städte, 63 Sprachen</description>
+        <description lang="ca_ES">Plugin de música per escoltar més de 30000 emissores de ràdio internacionals des rad.io, radio.de i radio.fr[CR]Característiques actuals:[CR]- Traduccions a l'anglès, alemany i francès[CR]- Cercador d'emissores per ubicació, gènere, tema, país, ciutat o idioma[CR]- Cercador d'emissores[CR]- 115 gèneres, 59 temes, 94 països, 1010 ciutats, 63 idiomes</description>
+        <description lang="da_DK">Musikplugin som giver adgang til over 30000 internationale radioudsendelser fra rad.io, radio.de, radio.fr, radio.pt og radio.es[CR]Nuværende funktioner[CR]- Oversat til engelsk, tysk og fransk[CR]- Gennemse stationer efter lokalitet, genre, emne, land, by og sprog[CR]- Søg efter stationer[CR]- 115 genrer, 59 emner, 94 lande, 1010 byer og 63 sprog</description>
+        <description lang="de_DE">Das Radio im Internet mit über 30000 Radiosendern, Internetradiostationen, gratis Streams und Podcasts live von rad.io, radio.de und radio.fr.[CR]Features[CR]- Auf deutsch, englisch und französisch übersetzt[CR]- Sortiert nach: in der Nähe, Genre, Thema, Land und Sprache[CR]- nach Sendern suchen[CR]- 115 Genre, 59 Themen, 94 Länder, 1010 Städte, 63 Sprachen</description>
         <description lang="el_GR">Μουσικό plugin για πρόσβαση σε περισσότερους από 30000 διεθνείς ραδιοφωνικές εκπομπές από τα rad.io, radio.de και radio.fr[CR]Υποστηρίζονται[CR]- Μεταφράσεις σε Αγγλικά, Γερμανικά και Γαλλικά[CR]- Περιήγηση σταθμών ανά τοποθεσία, είδος, θέμα, χώρα, πόλη και γλώσσα[CR]- Αναζήτηση σταθμών[CR]- 115 είδη, 59 θέματα, 94 χώρες, 1010 πόλεις, 63 γλώσσες</description>
         <description lang="en_GB">Music plugin to access over 30000 international radio broadcasts from rad.io, radio.de, radio.fr, radio.pt and radio.es[CR]Currently features[CR]- English, german, french translated[CR]- Browse stations by location, genre, topic, country, city and language[CR]- Search for stations[CR]- 115 genres, 59 topics, 94 countrys, 1010 citys, 63 languages</description>
         <description lang="en_NZ">Music plugin to access over 30000 international radio broadcasts from rad.io, radio.de, radio.fr, radio.pt and radio.es[CR]Currently features[CR]- English, german and french translated[CR]- Browse stations by location, genre, topic, country, city and language[CR]- Search for stations[CR]- 115 genres, 59 topics, 94 countrys, 1010 citys, 63 languages</description>
         <description lang="en_US">Music plugin to access over 30000 international radio broadcasts from rad.io, radio.de and radio.fr[CR]Currently features[CR]- English, german and french translated[CR]- Browse stations by location, genre, topic, country, city and language[CR]- Search for stations[CR]- 115 genres, 59 topics, 94 countrys, 1010 citys, 63 languages</description>
         <description lang="es_ES">Complemento de música para escuchar más de 30000 emisoras de radio de todo el mundo desde rad.io, radio.de, radio.fr, radio.pt y radio.es.[CR]Funciones:[CR]- Traducciones al inglés, alemán, francés, portugués y español.[CR]- Buscador de emisoras por ubicación, género, tema, país, ciudad o idioma.[CR]- Buscador de emisoras por nombre.[CR]- 73 géneros, 103 temas, 174 países y multitud de ciudades e idiomas.</description>
-        <description lang="fr_FR">Plugin musical pour écouter plus de 30000 stations de radio internationales de rad.io, radio.de et radio.fr[CR]Fonctionnalités[CR]- Traduit en Anglais, Allemand et Français[CR]- Parcourir les stations par genre, thème, pays, ville et langue[CR]- Recherche de stations[CR]- 115 genres, 59 thèmes, 94 pays, 1010 villes, 63 langues</description>
+        <description lang="es_MX">Complemento de música para acceder a más de 30000 transmisiones de radio internacionales de rad.io, radio.de, radio.fr, radio.pt y radio.es[CR]Características actuales[CR]- Traducido a inglés, alemán, francés y español[CR]- Explora estaciones por ubicación, género, tópico, país, ciudad e idioma[CR]Busca estaciones[CR]- 115 géneros, 59 tópicos, 94 países, 1010, ciudades, 63 idiomas</description>
         <description lang="fr_CA">Plugiciel de musique pour accéder à plus de 30000 radiodiffusions internationales de rad.io, radio.de et radio.fr[CR]Offre présentement [CR]- Traductions en anglais, allemand et français[CR]- Parcourir des stations par lieux, genres, sujets, pays, villes et langues[CR]- Rechercher des stations[CR]- 115 genres, 59 sujets, 94 pays, 1 010 villes, 63 langues.</description>
+        <description lang="fr_FR">Plugin musical pour écouter plus de 30000 stations de radio internationales de rad.io, radio.de et radio.fr[CR]Fonctionnalités[CR]- Traduit en Anglais, Allemand et Français[CR]- Parcourir les stations par genre, thème, pays, ville et langue[CR]- Recherche de stations[CR]- 115 genres, 59 thèmes, 94 pays, 1010 villes, 63 langues</description>
         <description lang="gl_ES">Engadido de música para escoitar máis de 30000 emisoras de radio internacionais de rad.io, radio.de e radio.fr.[CR]Características:[CR]- Traducións ao inglés, alemán, francés e castelán.[CR]- Busca de emisoras por localización, xénero, tema, país, cidade ou idioma.[CR]- Busca de emisoras.[CR]- 115 xéneros, 59 temas, 94 países, 1010 cidades, 63 idiomas.</description>
         <description lang="he_IL">הרחבת מוזיקה המספקת גישה ליותר מ־30000 שידורי רדיו בינלאומים מ־rad.io, radio.de ו־radio.fr[CR]מאפיינים נוכחיים[CR]- שפות אנגלית, גרמנית וצרפתית[CR]- עיון לפי מיקום, סגנון, נושא, מדינה, עיר ושפה[CR]- חיפוש תחנות[CR]- 115 סגנונות, 59 נושאים, 94 מדינות 1010 ערים, 63 שפות</description>
         <description lang="hr_HR">Glazbeni dodatak za pristup 30000 međunarodnih radio stanica na rad.io, radio.de i radio.fr[CR]Trenutne značajke[CR]- engleski, njemački i francuski prijevodi[CR]- Pregledavajte stanice prema lokaciji, žanru, temi, zemlji, gradu i jeziku[CR]- Pretraživanje stanica[CR]- 115 žanrova, 59 tema, 94 zemalja, 1010 gradova, 63 jezika</description>
         <description lang="hu_HU">Beépülő modul több, mint 30000 nemzetközi rádióadás eléréséhez a rad.io, radio.de és radio.fr oldalakról[CR]Jelenlegi tulajdonságok[CR]- Angol, német, francia és magyar nyelv[CR]- Állomások böngészése hely, műfaj, téma, ország, város és nyelv szerint[CR]- Állomások keresése[CR]- 115 műfaj, 59 téma, 94 ország, 1010 város, 63 nyelv</description>
         <description lang="id_ID">Plugin musik untuk mengakses lebih dari 30000 siaran radio internasional dari rad.io, radio.de dan radio.fr[CR]Fitur saat ini[CR]- Terjemahan Inggris, Jerman dan Perancis[CR]- Jelajah stasiun berdasarkan lokasi, tema, topik, negara, kota dan bahasa[CR]- Cari stasiun[CR]- 115 tema, 59 topik, 94 negara, 1010 kota, 63 bahasa</description>
         <description lang="it_IT">Plugin per accedere a oltre 30000 trasmissioni internazionali radiofoniche da rad.io, radio.de e radio.fr[CR]Caratteristiche[CR]- Supporta inglese, tedesco e francese[CR]- Sfoglia le stazioni per località, genere, argomento, paese, citta e lingua[CR]- Ricerca delle stazioni[CR]- 115 generi, 59 argomenti, 94 paesi, 1010 città e 63 lingue</description>
+        <description lang="ko_KR">rad.io, radio.de, radio.fr, radio.pt 및 radio.es에서 3만개 이상의 국제 라디오 방송에 액세스할 수 있는 음악 플러그인[CR]현재 기능[CR]- 영어, 독일어, 프랑스어 번역[CR]- 방송국 검색 위치, 장르, 주제, 국가, 도시 및 언어별[CR]- 방송국 검색[CR]- 115개 장르, 59개 주제, 94개 국가, 1010개 도시, 63개 언어</description>
         <description lang="lt_LT">Muzikos įskiepio prieiga prie daugiau nei 30000 tarptautinių radijo transliacijų iš rad.io, radio.de ir radio.fr [CR] Šiuo metu programoja išversta į [Cr] - anglų, vokiečių ir prancūzų kalbas [CR] - Naršyti stotis pagal: vietovę, žanrą, temą, šalį, miestą ir/ar kalbą [CR] - Ieškoti radio stočių pagal:[Cr] - 115 žanrai, 59 temos, 94 šalys, 1010 miestų, 63 kalbos</description>
         <description lang="nl_NL">muziek plug-in om toegang te krijgen tot over 30000 internationale radiouitzendingen van rad.io, radio.de en radio.fr[CR]Huidige functies[CR]- engels, duits en frans vertaalt[CR]- Zoek naar stations vanuit locatie, genre, onderwerp, land, plaats en taal[CR]- zoek voor stations[CR]- 115 genres. 59 onderwerpen, 94 landen. 1010 plaatsen, 63 talen</description>
         <description lang="pl_PL">Wtyczka muzyczna dająca dostęp do ponad 30000 międzynarodowych stacji radiowych z[CR]rad.io, radio.de, daio.fr[CR]Obecnie w językach[CR]- Angielski, Niemiecki i Francuski[CR]- Szukaj stacji według lokacji, gatunku, tematu, kraju, miasta czy języka[CR]- 115 gatunków, 59 tematów, 94 kraje, 1010 miasta, 63 języki</description>
+        <description lang="pt_BR">Plugin de música para acessar mais de 30000 emissoras de rádio internacionais de rad.io, radio.de, radio.fr, radio.pt e radio.es [CR] Principais características [CR] - Inglês, Alemão e Francês traduzido [CR] - Procure estações por localização, gênero, tópico, país , cidade e linguagem [CR] - Procure estações [CR] - 115 gêneros, 59 temas, 94 países, 1010 cidades, 63 idiomas</description>
         <description lang="pt_PT">Plugin de música para aceder a mais de 30000 transmissões de rádio internacionais de rad.io, radio.de, radio.fr, radio.pt e radio.es[CR]Actualmente, disponibiliza:[CR]- Traduções em vários idiomas[CR]- Navegar estações por localização, género, tópico, país, cidade e idioma[CR]- Procurar por estações[CR]- 115 géneros, 59 tópicos, 94 países, 1010 cidades, 63 idiomas</description>
-        <description lang="pt_BR">Plugin de música para acessar mais de 30000 emissoras de rádio internacionais de rad.io, radio.de, radio.fr, radio.pt e radio.es [CR] Principais características [CR] - Inglês, Alemão e Francês traduzido [CR] - Procure estações por localização, gênero, tópico, país , cidade e  linguagem [CR] - Procure estações [CR] - 115 gêneros, 59 temas, 94 países, 1010 cidades, 63 idiomas</description>
-        <description lang="sk_SK">Hudobný doplnok na prístup k vyše 30000 medzinárodným rádio vysielaniam z rad.io, radio.de a radio.fr
-Momentálne podporuje:
-- anglické, nemecké a francúzske preklady
-- prehliadanie staníc podľa umiestnenia, žánru, témy, krajiny, mesta a jazyka
-- vyhľadávanie staníc
-- 115 žánrov, 59 tém, 94 krajín, 1010 miest, 63 jazykov</description>
-        <description lang="sv_SE">Musiktillägg som ger åtkomst till över 30000 internationella radiosändningar från rad.io, radio.de och radio.fr[CR]Nuvarande funktioner[CR]- Engelsk, tysk, svensk och fransk översättning[]- Bläddra efter stationer baserat på genre, ämne, land, stad och språk[CR]- Sök efter stationer[CR]-115 genres, 59 ämnen, 94 länder, 1010 städer, 63 språk</description>
+        <description lang="ru_RU">Музыкальный плагин для доступа к более чем 30000 международным радиостанциям с rad.io, radio.de, radio.fr, radio.pt и radio.es[CR]Текущие возможности[CR]- Английский, немецкий, французский переводы[CR]- Просмотр станций по расположению, жанру, теме, стране, городу и языку[CR]- Поиск станций[CR]- 115 жанров, 59 тем, 94 страны, 1010 городов, 63 языка</description>
+        <description lang="sk_SK">Hudobný doplnok na prístup k vyše 30000 medzinárodným rádio vysielaniam z rad.io, radio.de a radio.fr&amp;#10;Momentálne podporuje:&amp;#10;- anglické, nemecké a francúzske preklady&amp;#10;- prehliadanie staníc podľa umiestnenia, žánru, témy, krajiny, mesta a jazyka&amp;#10;- vyhľadávanie staníc&amp;#10;- 115 žánrov, 59 tém, 94 krajín, 1010 miest, 63 jazykov</description>
+        <description lang="sv_SE">Musiktillägg som ger åtkomst till över 30000 internationella radiosändningar från rad.io, radio.de och radio.fr[CR]Nuvarande funktioner[CR]- Engelsk, tysk, och fransk översättning[]- Bläddra efter stationer baserat på genre, ämne, land, stad och språk[CR]- Sök efter stationer[CR]-115 genres, 59 ämnen, 94 länder, 1010 städer, 63 språk</description>
         <description lang="ta_IN">இசை துணை பயன் rad.io, radio.de மற்றும் radio.fr இருந்து 30000 க்கும் மேல் வானொலி ஒளிபரப்புகளை அணுக உதவி செய்யும்[CR]தற்போதைய அம்சங்கள்[CR]- ஆங்கிலம், ஜெர்மன் மற்றும் பிரெஞ்சு மொழியாக்கம்[CR]- இருப்பிடம், வகை, தலைப்பு, நாடு, நகரம் மற்றும் மொழி கொண்டு நிலையங்களை உலாவ முடியும்[CR]- நிலையங்களை தேடுதல்[CR]- 115 வகைகள், 59 தலைப்புகள், 94 நாடுகள், 1010 நகரங்கள், 63 மொழிகள்</description>
         <description lang="zh_CN">访问rad.io、radio.de和radio.fr上超过7000个国际电台广播的音频插件[CR]现有功能[CR]- 英语、德语和法语支持[CR]- 按地点、类别、主题、国家、城市和语言浏览站点[CR]- 搜索站点[CR]- 115个类别、59个主题、94个国家、1010城市、63种语言</description>
-        <assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.jpg</fanart>
-            <screenshot>resources/art/screenshot-1.png</screenshot>
-            <screenshot>resources/art/screenshot-2.png</screenshot>
-            <screenshot>resources/art/screenshot-3.png</screenshot>
-            <screenshot>resources/art/screenshot-4.png</screenshot>
-        </assets>
     </extension>
 </addon><addon id="plugin.program.openwizard" name="[COLOR limegreen]Open[/COLOR]Wizard" version="1.5.2" provider-name="drinfernoo">
     <requires>
@@ -1157,27 +1334,27 @@ Momentálne podporuje:
             <fanart>fanart.png</fanart>
         </assets>
     </extension>
-</addon><addon id="plugin.video.Rising.Tides" name="[COLOR red][B]R[/B][/COLOR][COLOR white][B]ising[/B][/COLOR] [COLOR pink][B]T[/B][/COLOR][COLOR white][B]ides[/B][/COLOR]" version="1.4.22.3" provider-name="[COLOR turquoise][B]mullafabz[/B][/COLOR]">
+</addon><addon id="plugin.video.Rising.Tides" name="[COLOR red][B]R[/B][/COLOR][COLOR white][B]ising[/B][/COLOR] [COLOR pink][B]T[/B][/COLOR][COLOR white][B]ides[/B][/COLOR]" version="3.0.0" provider-name="[COLOR turquoise][B]mullafabz[/B][/COLOR]">
   <requires>
-	<import addon="xbmc.python" version="2.1.0" />
-	<import addon="script.module.simple.downloader" optional="false" />
-	<import addon="script.module.beautifulsoup" version="3.2.1" />
-	<import addon="script.module.beautifulsoup4" />
-	<import addon="script.module.requests" />
-	<import addon="script.module.httplib2" />
-	<import addon="script.module.resolveurl" optional="false" />
-	<import addon="script.module.liveresolver" version="0.1.50" />
-	<import addon="script.module.simplejson" />
-	<import addon="script.common.plugin.cache" version="2.5.2" />
-	<import addon="script.module.metahandler" version="2.5.1" />
+  <import addon="xbmc.python" version="3.0.0" />
+  <import addon="script.module.beautifulsoup4" />
+  <import addon="script.module.requests" />
+  <import addon="script.module.httplib2" />
+  <import addon="inputstream.adaptive" />
+  <import addon="script.module.resolveurl" optional="false" />
+  
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
     <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary lang="en">Watch many sports and events from the world</summary>
-    <description lang="en">I don't have any affiliation with the content provider nor KODI.Content freely available on the internet.More info at [COLOR lime][B]@mullafabz[/B][/COLOR]</description>
+    <description lang="en">I don't have any affiliation with the content provider nor KODI.Content freely available on the internet.More info [COLOR lime][B]@mullafabz[/B][/COLOR] on Twitter</description>
     <platform>all</platform>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
   </extension>
 </addon><addon id="plugin.video.asgard" name="[COLOR goldenrod]Asgard[/COLOR]" provider-name="Team Asgard" version="1.5.0">
     <requires>
@@ -1393,6 +1570,28 @@ Momentálne podporuje:
         </assets>
         <news>[B] Total CleanUp of Providers [/B]: Checked and Cleaned as of Oct. 2022. [CR][B] Check ChangeLog For More Details. [/B] [CR][B] (Please Report Any Issues To Me Directly By Email Or GitHub.) [/B]</news>
     </extension>
+</addon><addon id="plugin.video.shadow" name="Shadow" version="3.2.0" provider-name="Darkness">
+  <requires>
+	
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension library="resources/modules/" point="xbmc.python.module" />
+  <extension library="resources/sources/" point="xbmc.python.module" />
+  <extension library="resources/" point="xbmc.python.module" />
+  <extension point="xbmc.addon.metadata">
+	<reuselanguageinvoker>true</reuselanguageinvoker>
+    <summary lang="en">The single light in the Darkness</summary>
+    <description lang="en">All the media as fast as possible</description>
+	
+    <platform>all</platform>
+	<assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+  
 </addon><addon id="plugin.video.sporthdme" name="SportHD" version="0.1.30" provider-name="Bugatsinho">
   <requires>
     
@@ -1415,22 +1614,26 @@ Momentálne podporuje:
       <fanart>fanart.jpg</fanart>
     </assets>
   </extension>
-</addon><addon id="plugin.video.thecrew" version="1.0.4" name="[COLOR orchid]THE CREW[/COLOR]" provider-name="The Crew">
+</addon><addon id="plugin.video.thecrew" version="1.1.6b" name="[COLOR orchid]THE CREW[/COLOR]" provider-name="The Crew">
     <requires>
-        <import addon="xbmc.python" version="2.25.0" />
+        
         <import addon="script.module.thecrew" />
         <import addon="script.thecrew.artwork" />
         <import addon="script.thecrew.metadata" />
         <import addon="script.module.requests" />
         <import addon="script.module.resolveurl" />
-        <import addon="script.module.metahandler" />
+        <import addon="script.module.simplejson" />
+        <import addon="script.module.requests" />
+        <import addon="script.module.beautifulsoup4" />
+        <import addon="script.module.six" />
+        <import addon="script.module.kodi-six" />
         <import addon="plugin.video.youtube" optional="true" />
         <import addon="script.module.inputstreamhelper" version="0.3.3" />
     </requires>
-    <extension point="xbmc.python.pluginsource" library="thecrew.py">
+    <extension library="thecrew.py" point="xbmc.python.pluginsource">
         <provides>video</provides>
     </extension>
-    <extension point="xbmc.service" library="service.py" start="startup" />
+    <extension library="service.py" point="xbmc.service" start="startup" />
     <extension point="xbmc.addon.metadata">
         <summary lang="en">The Crew is a team of individuals that does what it can to provide others, you the best in entertainment.</summary>
         <description lang="en">Many come, Many go. The true and dedicated are here.</description>
@@ -1445,7 +1648,7 @@ Momentálne podporuje:
             <screenshot>resources/art/ss/3.png</screenshot>
         </assets>
     </extension>
-</addon><addon id="plugin.video.thepromise" name="ThePromise" version="22.7.32" provider-name="[COLORpurple]• [COLORorchid]Tech [COLORdarkorchid]E [COLORplum]Coyote [COLORpurple]•[/COLOR]">
+</addon><addon id="plugin.video.thepromise" name="ThePromise" version="22.7.31" provider-name="[COLORpurple]• [COLORorchid]Tech [COLORdarkorchid]E [COLORplum]Coyote [COLORpurple]•[/COLOR]">
     <requires>
         <import addon="script.thepromise.artwork" />
         <import addon="script.module.resolveurl" />
@@ -1483,102 +1686,596 @@ Momentálne podporuje:
 - See Changelog on Tools menu
         </news>
     </extension>
-</addon><addon id="plugin.video.youtube" name="YouTube" version="6.8.23" provider-name="anxdpanic, bromix">
-    <requires>
-        <import addon="xbmc.python" version="2.20.0" />
-        <import addon="script.module.six" version="1.11.0" />
-        <import addon="script.module.requests" version="2.12.4" />
-        <import addon="script.module.inputstreamhelper" version="0.2.2" optional="true" />
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="resources/lib/default.py">
-        <provides>video</provides>
-    </extension>
-    <extension point="xbmc.service" library="resources/lib/startup.py" start="login" />
-    <extension point="xbmc.python.module" library="resources/lib/" />
-    <extension point="xbmc.addon.metadata">
-        <news>
-[revert] subscription groups/tags - causing breaking issues
+</addon><addon id="plugin.video.youtube" name="YouTube" version="6.8.18+matrix.1" provider-name="anxdpanic, bromix">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0" />
+    <import addon="script.module.six" version="1.11.0" />
+    <import addon="script.module.requests" version="2.12.4" />
+    <import addon="script.module.inputstreamhelper" version="0.2.2" optional="true" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="resources/lib/default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.service" library="resources/lib/startup.py" />
+  <extension point="xbmc.python.module" library="resources/lib/" />
+  <extension point="xbmc.addon.metadata">
+    <news>
+[fix] Fix to_str |contrib: RNavega|
+[fix] Fix playback buffering |contrib: RNavega|
+[lang] translation updates from Weblate
         </news>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
+    <platform>all</platform>
+    <license>GPL-2.0-only</license>
+    <forum>https://ytaddon.panicked.xyz/forum</forum>
+    <website>https://www.youtube.com</website>
+    <source>https://github.com/anxdpanic/plugin.video.youtube</source>
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <summary lang="bg_BG">Добавка за YouTube</summary>
+    <summary lang="cs_CZ">Plugin pro YouTube</summary>
+    <summary lang="de_DE">Plugin für YouTube</summary>
+    <summary lang="el_GR">Πρόσθετο YouTube</summary>
+    <summary lang="en_GB">Plugin for YouTube</summary>
+    <summary lang="es_ES">Plugin para YouTube</summary>
+    <summary lang="es_MX">Plugin para YouTube</summary>
+    <summary lang="fr_FR">Plugin pour YouTube</summary>
+    <summary lang="he_IL">תוסף עבור YouTube</summary>
+    <summary lang="hu_HU">YouTube kiegészítő</summary>
+    <summary lang="it_IT">Plugin per YouTube</summary>
+    <summary lang="ko_KR">유튜브 플러그인</summary>
+    <summary lang="nb_NO">Tillegg for YouTube</summary>
+    <summary lang="pl_PL">Wtyczka YouTube</summary>
+    <summary lang="ru_RU">Видеодополнение YouTube</summary>
+    <summary lang="tr_TR">YouTube için eklenti</summary>
+    <summary lang="vi_VN">Plugin dành cho YouTube</summary>
+    <summary lang="zh_CN">YouTube附加元件</summary>
+    <summary lang="zh_TW">YouTube附加元件</summary>
+    <description lang="bg_BG">YouTube е един от най-големите уеб сайтове за споделяне на видео в целия свят.</description>
+    <description lang="cs_CZ">YouTube je jedna z největších webových stránek světa sdílející video.</description>
+    <description lang="de_DE">YouTube ist eines der größten Video-Sharing-Websites der Welt.</description>
+    <description lang="el_GR">Το YouTube είναι μία από τις μεγαλύτερες ιστοσελίδες διαμοιρασμού βίντεο στον κόσμο.</description>
+    <description lang="en_GB">YouTube is one of the biggest video-sharing websites of the world.</description>
+    <description lang="es_ES">YouTube es uno de los sitios web más grande del mundo para compartir vídeos.</description>
+    <description lang="es_MX">YouTube es uno de los más grandes sitios web de intercambio de videos del mundo.</description>
+    <description lang="fr_FR">YouTube est l'un des plus grands sites de partage vidéos du monde.</description>
+    <description lang="he_IL">YouTube הוא אחד מאתרי שיתוף הווידאו הגדולים בעולם.</description>
+    <description lang="hu_HU">A YouTube világ egyik legnagyobb videómegosztó weboldala.</description>
+    <description lang="it_IT">YouTube è uno dei più grandi siti web di condivisione video del mondo.</description>
+    <description lang="ko_KR">유튜브는 세상에서 가장 큰 동영상 공유 사이트 중의 하나입니다.</description>
+    <description lang="nb_NO">YouTube er en av verdens største nettsider for videodeling.</description>
+    <description lang="pl_PL">YouTube jest jednym z największych na świecie serwisów udostępniania wideo.</description>
+    <description lang="ru_RU">YouTube - популярнейший видеохостинговый сайт, предоставляющий пользователям услуги хранения, доставки и показа видео.</description>
+    <description lang="tr_TR">YouTube, dünya üzerindeki en büyük video paylaşma platformlarından birisidir.</description>
+    <description lang="vi_VN">YouTube là một trong những trang web chia sẻ video lớn nhất trên thế giới.</description>
+    <description lang="zh_CN">「Youtube」是全世界最大的影片分享網站</description>
+    <description lang="zh_TW">「Youtube」是全世界最大的影片分享網站</description>
+    <disclaimer lang="cs_CZ">Tento plugin není schválen společností Google</disclaimer>
+    <disclaimer lang="de_DE">Dieses Plugin ist nicht von Google befürwortet</disclaimer>
+    <disclaimer lang="el_GR">Η παρούσα μικροεφαρμογή δεν έχει υϊοθετηθεί από την Google</disclaimer>
+    <disclaimer lang="en_GB">This plugin is not endorsed by Google</disclaimer>
+    <disclaimer lang="es_ES">Este add-on no está respaldado por Google</disclaimer>
+    <disclaimer lang="es_MX">Este add-on no está respaldado por Google</disclaimer>
+    <disclaimer lang="it_IT">Questo plugin non è promosso da Google</disclaimer>
+    <disclaimer lang="ko_KR">이 플러그인은 Google의 허가를 받지 않았습니다</disclaimer>
+    <disclaimer lang="pl_PL">Ta wtyczka nie jest zatwierdzona przez Google</disclaimer>
+    <disclaimer lang="ru_RU">Плагин не поддерживается Google</disclaimer>
+    <disclaimer lang="tr_TR">Bu eklenti Google tarafından üretilmemiştir</disclaimer>
+    <disclaimer lang="vi_VN">Plugin này không được xác nhận bởi Google</disclaimer>
+    <disclaimer lang="zh_TW">此附加元件未由Google支持</disclaimer>
+  </extension>
+</addon><addon id="repository.Magnetic" name="Magnetic Repo" version="1.1.0" provider-name="1-cool-guy">
+        <requires>
+            <import addon="xbmc.addon" version="12.0.0" />
+        </requires>
+        <extension point="xbmc.addon.repository" name="Magnetic Repo">
+            <info compressed="false">https://magnetic.website/__zips/addons.xml</info>
+            <checksum>https://magnetic.website/__zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://magnetic.website/__zips/</datadir>
+            <hashes>false</hashes>
+			<dir>
+		    <info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
+            <hashes>false</hashes>
+			</dir>
+			<dir>
+            <info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
+            </dir>
+			<dir>
+            <info compressed="false">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/</datadir>
+            </dir>
+            <dir>
+            <info compressed="false">https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/</datadir>
+            <hashes>false</hashes>
+            </dir>	
+			<dir>
+            <info compressed="false">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/</datadir>
+        </dir>
+		<dir>
+    <info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
+    <checksum>https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml.md5</checksum>
+    <datadir zip="true">https://raw.githubusercontent.com/Gujal00/smrzips/master/zips/</datadir>
+</dir>
+        </extension>
+        <extension point="xbmc.addon.metadata">
+            <summary>Official Magnetic Repository</summary>
+            <description>Welcome to magnetic repo. Please enjoy</description>
+            <platform>all</platform>
+            <genre>movies,usa</genre>
+			<assets>
+			    <icon>icon.png</icon>
+			</assets>
+        </extension>
+    </addon><addon id="repository.NarcacistWizard" name="Narcacist's Wizard Repository" version="1.1.7" provider-name="Narcacist">
+        <extension point="xbmc.addon.repository" name="Narcacist's Wizard Repository">
+		<dir>
+            <info compressed="false">http://narcacist.com/_repo/addons.xml</info>
+            <checksum>http://narcacist.com/_repo/addons.xml.md5</checksum>
+            <datadir zip="true">http://narcacist.com/_repo/</datadir>
+		</dir>	
+			
+			<dir>
+			<info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
+		</dir>
+		
+		<dir>
+        <info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/Gujal00/smrzips/master/zips/</datadir>
+        </dir>
+				        
+        <dir>
+            <info compressed="false">https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/</datadir>
+            <hashes>false</hashes>
+        </dir>
+	
+		<dir>
+			<info compressed="false">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/</datadir>
+		</dir>
+		
+        </extension>
+        <extension point="xbmc.addon.metadata">
+            <summary>Install all the latest Builds</summary>
+            <description>Welcome to the New and Improved Narcacist WIZARD for all your Community Builds.</description>
+            <platform>all</platform>
+			<assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>    
+    </assets>
+    </extension>
+</addon><addon id="repository.Rising.Tides" name="[COLOR red][B]R[/B][/COLOR][COLOR white][B]ising[/B][/COLOR] [COLOR pink][B]T[/B][/COLOR][COLOR white][B]ides[/B][/COLOR] Repository" version="1.1" provider-name="[COLOR turquoise][B]@mullafabz[/B][/COLOR]">
+	<extension point="xbmc.addon.repository" name="[COLOR red][B]R[/B][/COLOR]ising [COLOR pink][B]T[/B][/COLOR]ides Repository">
+	<dir>
+		<info compressed="false">https://mullafabz.xyz/Plugins/K19/Plugins/addons.xml</info>
+		<checksum>https://mullafabz.xyz/Plugins/K19/Plugins/addons.xml.md5</checksum>
+		<datadir zip="true">https://mullafabz.xyz/Plugins/K19/Plugins/</datadir>
+	</dir>
+	<dir>
+		<info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/Gujal00/smrzips/master/zips/</datadir>
+    </dir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>All types of Contents</summary>
+		<description>Find any type of content</description>
+		<platform>all</platform>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+		</assets>
+	</extension>
+</addon><addon id="repository.jenrepo" name="Jen Repo" version="1.0.3" provider-name="Community">
+        <extension point="xbmc.addon.repository" name="Jen Addon Repo">
+            <info compressed="false">https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/</datadir>
+		<dir>
+            <info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
+        </dir>
+        <dir>
+            <info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
+        </dir>
+        <dir>
+            <info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/Gujal00/smrzips/master/zips/</datadir>
+        </dir>
+        <dir>
+            <info compressed="false">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/</datadir>
+        </dir>
+        </extension>
+        <extension point="xbmc.addon.metadata">
+            <summary>Official Repo For Jen Dependencies</summary>
+            <description>Jen Brings The Dawn Of A New Day in Kodi .. You Now Have The Power To Make Your Add-On</description>
+            <platform>all</platform>
+            <genre>movies,usa</genre>
+        </extension>
+    </addon><addon id="repository.jewrepo" name="[COLOR purple]JewRepo[/COLOR]" version="1.5.8" provider-name="JewBMX">
+    <extension point="xbmc.addon.repository" name="[COLOR purple]JewRepo[/COLOR]">
+    <dir>
+        <info compressed="false">https://raw.githubusercontent.com/jewbmx/repo/master/zips/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/jewbmx/repo/master/zips/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/jewbmx/repo/master/zips/</datadir>
+    </dir>
+    <dir>
+        <info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/Gujal00/smrzips/master/zips/</datadir>
+    </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Free the People, Free the World!</summary>
+        <description>JewBMX's Official Repository</description>
+        <platform>all</platform>
         <assets>
             <icon>icon.png</icon>
-            <fanart>fanart.jpg</fanart>
+            <fanart>icon.png</fanart>
         </assets>
-        <platform>all</platform>
-        <license>GPL-2.0-only</license>
-        <forum>https://ytaddon.panicked.xyz/forum</forum>
-        <website>https://www.youtube.com</website>
-        <source>https://github.com/anxdpanic/plugin.video.youtube</source>
-        <reuselanguageinvoker>true</reuselanguageinvoker>
-        <summary lang="bg_BG">Добавка за YouTube</summary>
-        <summary lang="cs_CZ">Plugin pro YouTube</summary>
-        <summary lang="da_DK">Plugin til YouTube</summary>
-        <summary lang="de_DE">Plugin für YouTube</summary>
-        <summary lang="el_GR">Πρόσθετο YouTube</summary>
-        <summary lang="en_GB">Plugin for YouTube</summary>
-        <summary lang="es_ES">Plugin para YouTube</summary>
-        <summary lang="es_MX">Complemento para YouTube</summary>
-        <summary lang="fi_FI">YouTube-lisäosa</summary>
-        <summary lang="fr_FR">Plugin pour YouTube</summary>
-        <summary lang="he_IL">תוסף עבור YouTube</summary>
-        <summary lang="hr_HR">Dodatak za YouTube</summary>
-        <summary lang="hu_HU">YouTube kiegészítő</summary>
-        <summary lang="it_IT">Plugin per YouTube</summary>
-        <summary lang="ko_KR">유튜브 플러그인</summary>
-        <summary lang="nb_NO">Tillegg for YouTube</summary>
-        <summary lang="nl_NL">Plugin voor YouTube</summary>
-        <summary lang="pl_PL">Wtyczka YouTube</summary>
-        <summary lang="ru_RU">Видеодополнение YouTube</summary>
-        <summary lang="sk_SK">Doplnok pre YouTube</summary>
-        <summary lang="tr_TR">YouTube için eklenti</summary>
-        <summary lang="vi_VN">Plugin dành cho YouTube</summary>
-        <summary lang="zh_CN">油管插件</summary>
-        <summary lang="zh_TW">YouTube附加元件</summary>
-        <description lang="bg_BG">YouTube е един от най-големите уеб сайтове за споделяне на видео в целия свят.</description>
-        <description lang="cs_CZ">YouTube je jedna z největších webových stránek světa sdílející video.</description>
-        <description lang="da_DK">YouTube er et af verdens største videodelingswebsteder.</description>
-        <description lang="de_DE">YouTube ist eines der größten Video-Sharing-Websites der Welt.</description>
-        <description lang="el_GR">Το YouTube είναι μία από τις μεγαλύτερες ιστοσελίδες διαμοιρασμού βίντεο στον κόσμο.</description>
-        <description lang="en_GB">YouTube is one of the biggest video-sharing websites of the world.</description>
-        <description lang="es_ES">YouTube es uno de los sitios web más grande del mundo para compartir vídeos.</description>
-        <description lang="es_MX">YouTube es uno de los más grandes sitios web de intercambio de videos del mundo.</description>
-        <description lang="fi_FI">YouTube on yksi maailman suurimmista videoiden jakosivustoista.</description>
-        <description lang="fr_FR">YouTube est l'un des plus grands sites de partage vidéos du monde.</description>
-        <description lang="he_IL">YouTube הוא אחד מאתרי שיתוף הווידאו הגדולים בעולם.</description>
-        <description lang="hr_HR">YouTube je jedna od najvećih stranica za dijeljenje video sadržaja na svijetu.</description>
-        <description lang="hu_HU">A YouTube világ egyik legnagyobb videómegosztó weboldala.</description>
-        <description lang="it_IT">YouTube è uno dei più grandi siti web di condivisione video del mondo.</description>
-        <description lang="ko_KR">유튜브는 세상에서 가장 큰 동영상 공유 사이트 중의 하나입니다.</description>
-        <description lang="nb_NO">YouTube er en av verdens største nettsider for videodeling.</description>
-        <description lang="nl_NL">YouTube is een van de grootste videodelenwebsite in de hele wereld.</description>
-        <description lang="pl_PL">YouTube jest jednym z największych na świecie serwisów udostępniania wideo.</description>
-        <description lang="ru_RU">YouTube - популярнейший видеохостинговый сайт, предоставляющий пользователям услуги хранения, доставки и показа видео.</description>
-        <description lang="sk_SK">YouTube je jednou z najväčších stránok na zdieľanie videa na svete.</description>
-        <description lang="tr_TR">YouTube, dünya üzerindeki en büyük video paylaşma platformlarından birisidir.</description>
-        <description lang="vi_VN">YouTube là một trong những trang web chia sẻ video lớn nhất trên thế giới.</description>
-        <description lang="zh_CN">油管是世界上最大的视频分享网站之一。</description>
-        <description lang="zh_TW">Youtube 是全世界最大的影片分享網站。</description>
-        <disclaimer lang="cs_CZ">Tento plugin není schválen společností Google</disclaimer>
-        <disclaimer lang="da_DK">Dette plugin er ikke godkendt af Google</disclaimer>
-        <disclaimer lang="de_DE">Dieses Plugin ist nicht von Google befürwortet</disclaimer>
-        <disclaimer lang="el_GR">Η παρούσα μικροεφαρμογή δεν έχει υϊοθετηθεί από την Google</disclaimer>
-        <disclaimer lang="en_GB">This plugin is not endorsed by Google</disclaimer>
-        <disclaimer lang="es_ES">Este add-on no está respaldado por Google</disclaimer>
-        <disclaimer lang="es_MX">Este complemento no está respaldado por Google</disclaimer>
-        <disclaimer lang="fi_FI">Google ei tue tätä lisäosaa</disclaimer>
-        <disclaimer lang="fr_FR">Ce module n'est pas validé par Google</disclaimer>
-        <disclaimer lang="hr_HR">Ovaj dodatak nije podržan od strane Googlea</disclaimer>
-        <disclaimer lang="it_IT">Questo plugin non è approvato da Google</disclaimer>
-        <disclaimer lang="ko_KR">이 플러그인은 Google의 허가를 받지 않았습니다</disclaimer>
-        <disclaimer lang="nl_NL">Deze plug-in wordt niet door Google ondersteund</disclaimer>
-        <disclaimer lang="pl_PL">Ta wtyczka nie jest zatwierdzona przez Google</disclaimer>
-        <disclaimer lang="ru_RU">Плагин не поддерживается Google</disclaimer>
-        <disclaimer lang="sk_SK">Tento doplnok nie je schválený spoločnosťou Google</disclaimer>
-        <disclaimer lang="tr_TR">Bu eklenti Google tarafından üretilmemiştir</disclaimer>
-        <disclaimer lang="vi_VN">Plugin này không được xác nhận bởi Google</disclaimer>
-        <disclaimer lang="zh_CN">此插件未被谷歌认可</disclaimer>
-        <disclaimer lang="zh_TW">此附加元件未由Google支持</disclaimer>
     </extension>
-</addon><addon id="script.common.plugin.cache" name="Common plugin cache" provider-name="anxdpanic, TheCollective" version="2.6.3">
+</addon><addon id="repository.jsergio" name="jsergio repo" version="1.0.4" provider-name="jsergio">
+	<extension point="xbmc.addon.repository" name="jsergio repo">
+        <info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Repo for jsergio Add-ons</summary>
+		<description>Repo for jsergio Add-ons</description>
+		<platform>all</platform>
+	</extension>
+</addon><addon id="repository.openscrapers" name="OpenScrapers Repository" version="1.0" provider-name="A4K">
+	<extension point="xbmc.addon.repository" name="OpenScrapers Repository">
+		<dir>
+            <info compressed="false">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/</datadir>
+        </dir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>OpenScrapers Repository</summary>
+		<description>The official repo for OpenScrapers!.</description>
+		<disclaimer />
+		<platform>all</platform>
+	</extension>
+</addon><addon id="repository.real19.org" name="Real Kodi Add-on repository" version="102.5" provider-name="Team Kodi">
+  <requires>
+    <import addon="xbmc.addon" version="12.0.0" />
+  </requires>
+	<extension point="xbmc.addon.repository">
+		
+		<info>http://mirrors.kodi.tv/addons/matrix/addons.xml.gz</info>
+		<checksum verify="sha256">http://mirrors.kodi.tv/addons/matrix/addons.xml.gz?sha256</checksum>
+		<datadir>https://mirrors.kodi.tv/addons/matrix</datadir>
+		<artdir>http://mirrors.kodi.tv/addons/matrix</artdir>
+		<hashes>sha256</hashes>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="af_ZA">Installeer Byvoegsels vanaf Kodi.tv</summary>
+		<summary lang="am_ET">ከ Kodi.tv ተጨማ-ሪዎች መግጠሚያ </summary>
+		<summary lang="ar_SA">ثبت إضافات من موقع Kodi.tv الرسمي</summary>
+		<summary lang="be_BY">Усталяваць дапаўненне з Kodi.tv</summary>
+		<summary lang="bg_BG">Инсталира добавки от Kodi.tv</summary>
+		<summary lang="ca_ES">Instal·la complements des de Kodi.tv</summary>
+		<summary lang="cs_CZ">Instalovat doplňky z Kodi.tv</summary>
+		<summary lang="cy_GB">Gosod Ychwanegion o Kodi.tv</summary>
+		<summary lang="da_DK">Installer add-ons fra Kodi.tv</summary>
+		<summary lang="de_DE">Installiere Addons von Kodi.tv</summary>
+		<summary lang="el_GR">Εγκατάσταση Προσθέτων από το Kodi.tv</summary>
+		<summary lang="en_AU">Install Add-ons from Kodi.tv</summary>
+		<summary lang="en_GB">Install Add-ons from Kodi.tv</summary>
+		<summary lang="en_NZ">Install Add-ons from Kodi.tv</summary>
+		<summary lang="en_US">Install Add-ons from Kodi.tv</summary>
+		<summary lang="es_AR">Instalar Add-ons de Kodi.tv</summary>
+		<summary lang="es_ES">Instalar Add-ons de Kodi.tv</summary>
+		<summary lang="es_MX">Instalar complementos de Kodi.tv</summary>
+		<summary lang="et_EE">Paigalda lisasid Kodi.tv lehelt</summary>
+		<summary lang="eu_ES">Instalatu Kodi.tv-eko gehigarriak</summary>
+		<summary lang="fa_IR">‫نصف افزونه‌ها از Kodi.tv</summary>
+		<summary lang="fi_FI">Asenna lisäosia Kodi.tv -sivustolta</summary>
+		<summary lang="fr_CA">Installer des addiciels depuis Kodi.tv</summary>
+		<summary lang="fr_FR">Installer des extensions depuis Kodi.tv</summary>
+		<summary lang="gl_ES">Instalar complementos dende Kodi.tv</summary>
+		<summary lang="he_IL">התקנת הרחבות מ־Kodi.tv</summary>
+		<summary lang="hr_HR">Instaliraj dodatke s Kodi.tv</summary>
+		<summary lang="hu_HU">Kiegészítők letöltése az Kodi.tv-ról</summary>
+		<summary lang="id_ID">Pasang Pengaya dari Kodi.tv</summary>
+		<summary lang="is_IS">Setja inn viðbætur frá Kodi.tv</summary>
+		<summary lang="it_IT">Installa addon da Kodi.tv</summary>
+		<summary lang="ja_JP">Kodi.tv からアドオンをインストール</summary>
+		<summary lang="ko_KR">Kodi.tv에서 애드온 설치</summary>
+		<summary lang="lt_LT">Įdiegti priedus iš Kodi.tv</summary>
+		<summary lang="lv_LV">Instalēt pielikumus no Kodi.tv</summary>
+		<summary lang="mk_MK">Инсталирај Додатоци од Kodi.tv</summary>
+		<summary lang="ms_MY">Pasang tambahan daripada Kodi.tv</summary>
+		<summary lang="mt_MT">Installa Add-ons minn Kodi.tv</summary>
+		<summary lang="my_MM">Kodi.tv မှ Add-on များကိုသွင်းမည်</summary>
+		<summary lang="nb_NO">Installer utvidelser fra Kodi.tv</summary>
+		<summary lang="nl_NL">Add-ons van Kodi.tv installeren</summary>
+		<summary lang="pl_PL">Instaluj dodatki z Kodi.tv</summary>
+		<summary lang="pt_BR">Instale Add-ons do Kodi.tv</summary>
+		<summary lang="pt_PT">Instalar Add-ons a partir de Kodi.tv</summary>
+		<summary lang="ro_RO">Instalați suplimente de la Kodi.tv</summary>
+		<summary lang="ru_RU">Установить дополнения с сайта Kodi.tv</summary>
+		<summary lang="sk_SK">Inštalovať doplnky z Kodi.tv</summary>
+		<summary lang="sl_SI">Namestite dodatke s Kodi.tv</summary>
+		<summary lang="sr_RS">Инсталирај додатне програме са Kodi.tv</summary>
+		<summary lang="sr_RS@latin">Instaliraj dodatne programe sa Kodi.tv</summary>
+		<summary lang="sv_SE">Installera tillägg från Kodi.tv</summary>
+		<summary lang="szl">Insztaluj przidŏwki ze Kodi.tv</summary>
+		<summary lang="tg_TJ">Насб кардани барномаҳои иловагӣ аз Kodi.tv</summary>
+		<summary lang="th_TH">ติดตั้งส่วนเสริมจาก Kodi.tv</summary>
+		<summary lang="tr_TR">Kodi.tv sitesinden eklentileri yükle</summary>
+		<summary lang="uk_UA">Встановити додатки з Kodi.tv</summary>
+		<summary lang="vi_VN">Cài đặt Add-on từ Kodi.tv</summary>
+		<summary lang="zh_CN">从 Kodi.tv 安装插件</summary>
+		<summary lang="zh_TW">從 Kodi.tv 安裝附加元件</summary>
+		<description lang="af_ZA">Aflaai en installeer byvoegsels vanaf die Amptelike Kodi.tv byvoegsel kodebank.[CR] Deur die amptelike Kodebank te gebruik trek jy voordeel van ons uitgebreide lêer spieël diens wat jou help vinniger aflaai vanaf 'n gebied naby aan jou.[CR] Alle byvoegsels in die kodebank het basiese toetsing ondergaan, as jy 'n gebreekte of nie werkende byvoegsel vind rapporteer dit asseblief aan die Kodi Span sodat ons die nodige stappe kan neem.</description>
+		<description lang="ar_SA">حمل و ثبت الإضافات من مستودع الإضافات لموقع Kodi.tv الرسمي.[CR] باستخدامك المستودع الرسمي ستكون قادر على الاستفادة مما نقدمه من خدمة حصرية لتوفير خوادم بديله لتحميل الملفات توفر لك سرعة تحميل أعلى من منطقه قريبة منك.[CR] جميع الإضافات في هذا المستودع خضعت لاختبارات مبدئية, إذا صادفتك إضافة معطوبة أو لا تعمل برجاء الإبلاغ عنها لفريق Kodi لنتمكن من اتخاذ الإجراء اللازم.</description>
+		<description lang="be_BY">Спампаваць і ўсталяваць дапаўненне з афіцыйнага рэпазіторыя Kodi.tv . [CR] Пры выкарыстанні афіцыйнага рэпазіторыя вы зможаце выкарыстаць нашу службу люстэрак, каб у вас была больш вышэйшая хуткасць спампоўвання з рэгіёна, бліжэйшага да вас. [CR] Усе дапаўненні ў гэтым рэпазіторыя былі пратэставаныя. Калі вы выявілі пашкоджанае дапаўненне, ці дапаўненне, якое не працуе, калі ласка, паведаміце пра гэта камандзе Kodi, каб мы маглі гэта выправіць.</description>
+		<description lang="bg_BG">Сваля и инсталира добавки от официалното хранилище за добавки на Kodi.tv. Ползвайки добавката ще се възползвате от системата ни от огледални сървъри - за да сваляте с висока скорост, от сървър близък до Вас. Добавките от хранилището са минали няколко теста, но ако се натъкнете на неработеща или проблемна добавка, моля уведомете екипа на Kodi, за да бъдат предприети необходимите действия.</description>
+		<description lang="ca_ES">Baixeu i instal·leu els complements des del dipòsit oficial de Kodi.tv.[CR] Mitjançant el dipòsit oficial, podreu aprofitar els avantatges del nostre servei de rèplica de fitxers per ajudar-vos a tenir unes baixades més ràpides des d'una regió que estigui a prop vostre.[CR] Tots els complements d'aquest dipòsit han passat per proves bàsiques, així que si trobeu algun complement que no funcioni correctament, si us plau, digueu-ho a l'equip de Kodi perquè puguin dur a terme les accions pertinents.</description>
+		<description lang="cs_CZ">Stáhnout a nainstalovat doplňky z oficiálního repozitáře doplňků Kodi.tv.[CR] Použitím oficiálního repozitáře budete moci využít naši rozsáhlou službu zrcadel souborů, která vám pomůže rychleji stahovat z oblasti blízko vás.[CR] Všechny doplňky v tomto repozitáři prošly základním testováním. Pokud najdete rozbitý nebo nefunkční doplněk, oznamte to týmu Kodi, abychom mohli přijmout veškerá nezbytná opatření.</description>
+		<description lang="cy_GB">Llwytho i lawr a gosod ychwanegion o storfa ychwanegion Swyddogol Kodi.tv.{CR}Drwy ddefnyddio'r Storfa swyddogol bydd modd i chi gymryd mantais o'n gwasanaeth drychau ffeiliau i'ch cynorthwyoi lwytho i lawr yn gyflym o ardal yn agos i chi.[CR] Mae pob ychwnaegyn yn y storfa hwn wedi eu profi'n fras, os ydych yn canfod ychwanegyn sydd wedi torri  neu ddim yn gweithio yna hysbyswch Team Kodi fel bod modd i ni weithredu.</description>
+		<description lang="da_DK">Hent og installer add-ons fra det officielle Kodi.tv add-on fjernlager.[CR] Ved at bruge det officielle fjernlager drager du fordel af vores omfattende spejltjeneste, som gør at du kan hente hurtigere fra et sted nær dig.[CR]  Alle add-ons i dette fjernlager har gennemgået grundlæggende tests. Hvis du finder en defekt add-on, så rapporter venligst dette til Team Kodi, så vi kan tage hånd i hanke med eventuelle problemer.</description>
+		<description lang="de_DE">Dies ist das offizielle Kodi.tv Addon-Verzeichnis.[CR]Dieses Addon-Verzeichnis ermöglicht aufgrund umfangreicher Spiegelserver in der Nähe schnelle Downloads.[CR]Alle Addons in diesem Verzeichnis wurden einfachen Tests unterzogen. Sollte dennoch ein Addon nicht richtig funktionieren benachrichtige bitte Team Kodi, damit wir reagieren können.</description>
+		<description lang="el_GR">Πραγματοποιήστε λήψη και εγκατάσταση προσθέτων από το επίσημο αποθετήριο του Kodi.tv.[CR]  Χρησιμοποιώντας το Επίσημο Αποθετήριο μπορείτε να εκμεταλλευτείτε τους εκτεταμένους διακομιστές αρχείων μας για ταχύτερες λήψεις από μία κοντινή σας περιοχή.[CR]  Όλα τα πρόσθετα σε αυτό το αποθετήριο έχουν περάσει τις στοιχειώδεις δοκιμές, αν βρείτε ένα κατεστραμμένο ή ανενεργό πρόσθετο παρακαλούμε να το αναφέρετε στην Ομάδα Kodi ούτως ώστε να πραγματοποιηθούν οι απαραίτητες ενέργειες.</description>
+		<description lang="en_AU">Download and install add-ons from the Official Kodi.tv add-on repository.[CR]  By using the official Repository you will be able to take advantage of our extensive file mirror service to help get you faster downloads from a region close to you.[CR]  All add-ons on this repository have undergone basic testing, if you find a broken or not working add-on please report it to Team Kodi so we can take any action needed.</description>
+		<description lang="en_GB">Download and install add-ons from the Official Kodi.tv add-on repository.[CR]  By using the official Repository you will be able to take advantage of our extensive file mirror service to help get you faster downloads from a region close to you.[CR]  All add-ons on this repository have under gone basic testing, if you find a broken or not working add-on please report it to Team Kodi so we can take any action needed.</description>
+		<description lang="en_NZ">Download and install add-ons from the Official Kodi.tv add-on repository.[CR]  By using the official Repository you will be able to take advantage of our extensive file mirror service to help get you faster downloads from a region close to you.[CR]  All add-ons on this repository have under gone basic testing, if you find a broken or not working add-on please report it to Team Kodi so we can take any action needed.</description>
+		<description lang="en_US">Download and install add-ons from the Official Kodi.tv add-on repository.[CR]  By using the official Repository you will be able to take advantage of our extensive file mirror service to help get you faster downloads from a region close to you.[CR]  All add-ons on this repository have under gone basic testing, if you find a broken or not working add-on please report it to Team Kodi so we can take any action needed.</description>
+		<description lang="es_AR">Descarga e instala el complemento desde el repositorio oficial de Kodi.tv.[CR] Usando el repositorio oficial tendrá las ventajas de nuestro servicio de réplicas para ayudarle a conseguir unas descargas más rápidas de un sitio cercano a su región.[CR] Todos los complementos en este repositorio han pasado por un periodo de pruebas básico, pero si encuentra algún complemento que no funciona, por favor infórmelo al equipo de Kodi para que podamos tomar las acciones necesarias.</description>
+		<description lang="es_ES">Descarga e instala add-ons desde el repositorio oficial de Kodi.[CR]  Usando el repositorio oficial podrá aprovecharse de nuestro servicio de mirrors para poder descargar más rápidamente desde un sitio cercano.[CR]  Todos los add-ons de este repositorio han pasado por un periodo de pruebas básico, pero si encontrara alguno que no funcionase, por favor, avise al equipo de Kodi para solucionar el problema.</description>
+		<description lang="es_MX">Descarga e instala complementos del repositorio oficial de Kodi.tv.[CR] Al usar el repositorio oficial, tienes la ventaja de los servicios de réplicas para tener descargas más rápidas.[CR] Todos los complementos en este repositorio se han probado de manera básica, si encuentras alguno roto o que no funciona, por favor repórtalo al equipo de Kodi para poder tomar las medidas necesarias.</description>
+		<description lang="et_EE">Lae alla ja installi lisasid ametlikust Kodi.tv hoidlast.[CR]  Ametliku hoidla kasutamise eeliseks on võimalus kasutada meie ulatuslikku failide peegelteenust laadides faile sulle kõige lähemast serverist.[CR]  Kõik lisad selles hoidlas on läbinud elementaarse testimise. Siiski, kui sa leiad vigase või mittetöötava lisa, siis palun teavita sellest Kodi meeskonda, et me saaksime vajaliku abi osutada.</description>
+		<description lang="eu_ES">Deskargatu eta instalatu gehigarriak Kodi.tv biltegi ofizialetik.[CR]  
+Biltegi ofiziala erabiliz zugandik gertu dagoen gune batetik deskargatu
+ditzakezu gure fitxategi-ispilu zerbitzu zabalaren abantailaz aprobetxatuaz.[CR]  
+Biltegi honetako gehigarri guztiek oinarrizko probak gainditu dituzte baina hondaturiko edo funtzionatzen ez duen gehigarri baten bat aurkituz gero jakinarazi Kodi taldeari beharrezko ekintzak burutu ditzagun.</description>
+		<description lang="fa_IR">افزودنی ها را از منبع رسمی افزونه ها در Kodi.tv دانلود و نصب کنید. [CR] با استفاده از منبع رسمی شما قادر خواهید بود از خدمات گسترده سرویس دانلود جایگزین ما بهره ببرید که امکان دانلود از مناطق نزدیکتر را در اختیار شما قرار می دهد. [CR] همه افزونه های این منبع آزمایش های اولیه را پشت سر گذاشته اند. در صورت یافتن افزونه معیوب یا غیر قابل استفاده لطفا آن را به تیم کودی گزارش کنید تا اقدامات لازم را انجام دهیم.</description>
+		<description lang="fi_FI">Lataa ja asenna lisäosia virallisesta Kodi.tv lisäosien ohjelmavarastosta.[CR]  Käyttämällä virallista ohjelmavarastoa sinun on mahdollista käyttää hyväksesi meidän kattavaa tiedostojen peilauspalveluamme saavuttaaksesi korkeat latausnopeudet sinun lähialueeltasi.[CR]  Kaikki tämän ohjelmavaraston lisäosat on testattu toimiviksi, jos löydät rikkinäisen tai "ei toimivan" lisäosan, ilmoita siitä Team Kodille, jotta voimme korjata asian.</description>
+		<description lang="fr_CA">Télécharger et installer des addiciels depuis le dépôt officiel de Kodi.tv.[CR] En utilisant le dépôt officiel vous pourrez bénéficier de notre service étendu de miroirs de fichiers favorisant des téléchargements plus rapides depuis une région proche de vous.[CR] Tous les addiciels de ce dépôt ont subi des tests de base. Si vous trouvez un addiciel non fonctionnel ou brisé, veuillez le rapporter à l’équipe Kodi afin que nous puissions agir.</description>
+		<description lang="fr_FR">Télécharger et installer des extensions à partir du dépôt officiel Kodi.tv.[CR]En utilisant le dépôt officiel, vous bénéficierez de notre service de serveurs miroirs permettant de télécharger rapidement depuis une région proche de chez vous.[CR]Toutes les extensions de ce dépôt ont subi des tests de base, si vous trouvez une extension totalement ou en partie inutilisable, merci d'en informer l'Équipe Kodi afin que nous puissions prendre les mesures nécessaires.</description>
+		<description lang="gl_ES">Descargar e instalar complementos dende o repositorio oficial de Kodi.tv.[CR] Empregando o repositorio oficial, poderás gozar das vantaxes do seu extenso servizo de replicación de ficheiros que che permite unhas descargas máis rápidas dende unha rexión preto á túa.[CR] Tódolos complementos deste repositorio pasaron por comprobacións básicas. Se atopas algún complemento roto ou non funcional, por favor informa ao equipo de Kodi para que poidan actuar en consecuencia.</description>
+		<description lang="he_IL">הורדה והתקנת הרחבות ממאגר הרחבות Kodi.tv הרשמי.[CR] שימוש במאגר הרשמי מאפשר לנצל את שירות שיקוף הקבצים של Kodi.tv העוזר להוריד מהר יותר מהשרת הקרוב ביותר.[CR] כל ההרחבות במאגר זה עברו בדיקה בסיסית. יש לדווח לצוות הפיתוח של Kodi על כל הרחבה שנמצאה כלא תקינה או שלא עובדת ע"מ שתתבצע הפעולה המתאימה.</description>
+		<description lang="hr_HR">Preuzmite i instalirajte dodatke sa službenog Kodi.tv repozitorija dodataka.[CR] Korištenjem službenog repozitorija bit ćete u mogućnosti iskoristiti prednosti usluge našeg brzog zrcalnog poslužitelja datoteka, kako bi mogli brže preuzimati iz regije koje je bliže vašoj lokaciji.[CR] Svi dodaci na ovom repozitoriju prošli su osnovno testiranje, u slučaju da primijetite neispravan dodatak, molimo vas da to prijavite Kodi timu koji će zatim poduzeti potrebne korake.</description>
+		<description lang="hu_HU">Kiegészítők letöltése és telepítése a hivatalos Kodi.tv tárolóhelyről.[CR] A hivatalos tárolóhely használatával kihasználhatod szerteágazó tükör-kiszolgáló hálózatunkat, ami segít a gyorsabb letöltésben egy hozzád közelebb eső körzet használatával.[CR]  Minden kiegészítő ezen a tárolóhelyen átment egy alaptesztelésen. Ha mégis hibás vagy nem működő kiegészítőt találsz, kérünk jelezd az Kodi csapatnak, hogy megtegyük a szükséges lépéseket.</description>
+		<description lang="id_ID">Unduh dan pasang pengaya dari repositori pengaya resmi Kodi.tv. [CR] Dengan menggunakan repositori resmi anda akan mendapat keuntungan dari miror berkas kami yang luas dimana dapat membantu anda untuk lebih cepat mengunduh dari daerah yang dekat dengan anda. [CR] Semua pengaya pada repository telah melalui uji coba standar, jika anda menemukan pengaya yang rusak atau tidak bekerja tolong laporkan kepada tim Kodi agar kami bisa menindak lanjutinya.</description>
+		<description lang="is_IS">Sækja og setja inn viðbætur frá hinu viðurkennda Kodi.tv viðbótasafni.[CR] Með því að nota þetta safn getur þú nýtt þér möguleikann á fullkominni speglunarþjónustu sem hjálpar við að sækja hraðar viðbætur frá landsvæði nálægt þér.[CR] Allar viðbætur í þessu safni hafa gengið undir grunnprófanir, ef þú finnur viðbætur sem eru bilaðar eða virka ekki, endilega láttu Kodi-teymið vita svo við getum gert eitthvað í málinu.</description>
+		<description lang="it_IT">Scarica e installa gli add-on dalla libreria ufficiale di Kodi.tv.[CR]  Usando la libreria ufficiale avrai il vantaggio di ottenere download più veloci con mirror più vicini alla tua località.[CR]  Tutti gli add-on in questa libreria sono stati sottoposti a test di base, se ne trovi uno non funzionante o corrotto, per favore riporta il problema al team di Kodi così potremmo prendere provvedimenti.</description>
+		<description lang="ja_JP">オフィシャルの Kodi.tv リポジトリからアドオンをダウンロードします。[CR]  オフィシャルリポジトリを使うことで、お住まいのエリアに近いミラーサーバーから高速にアドオンをダウンロードすることが可能です。[CR]  このリポジトリ上のアドオンは全て、簡単な動作テストを受けてはいますが、もしアドオンがおかしかったりうまく動作しなかったりした場合は、Kodi チームに連絡をお願いします。</description>
+		<description lang="ko_KR">공식 Kodi.tv 애드온 저장소에서 애드온을 다운로드하여 설치합니다.[CR] 공식 저장소를 사용하면 파일 미러링 서비스를 통해 사용자와 가까운 곳에서 빠르게 다운로드할 수 있습니다.[CR] 저장소의 모든 애드온은 기본 테스트를 거치지만 작동이 되지 않거나 손상된 애드온을 발견하면 필요한 조치를 취할 수 있게 Team Kodi로 알려주시기 바랍니다.</description>
+		<description lang="lt_LT">Atsisiųskite ir įdiegite priedus iš oficialios Kodi.tv saugyklos.[CR]Naudojantis oficialia saugykla, galėsite pasinaudoti pranašumu mūsų didele failų veidrodinę paslauga.[CR]Taip pat siekiame padėti jums greičiau parsisiųsti priedą iš Jūsų regiono.[CR]Visiems šioje saugykloje saugomiems priedams buvo atliktas testavimas, jei Jūs radote netaisyklingą ir nedarbinį priedą.[CR]Prašome pranešti apie tai Kodi komandai, kad mes galėtume imtis būtinų veiksmų </description>
+		<description lang="lv_LV">Lejupielādējiet un instalējiet pielikumus no oficiālā Kodi.tv pielikumu repozitorija[CR] Izmantojot oficiālo repozitoriju, varēsiet izmantot mūsu plašo spoguļu pakalpojumu, lai iegūtu ātrākas lejupielādes no reģiona, kas vistuvāk.[CR] Visi pielikumi šajā repozitorijā ir izgājuši pamata testēšanu, bet, ja atrodat saplīsušu vai nestrādājošu pielikumu, lūdzu, ziņojiet par to Team Kodi, lai varam izpildīt nepieciešamās labošanas darbības.</description>
+		<description lang="mk_MK">Превземи и инсталирај Додатоци од официјалниот Kodi.tv склад.[CR] Со користење на официјалниот склад ќе бидете во можност да ги користите предностите на нашата богата датотека со услуги која ви помага да добиете побрзи превземања од регионот блиску до вас.[CR]  Сите Додатоци во овој склад се основно тестирани, ако најдете неисправни или додатоци кои не работат пријавете го тоа на тимот на Kodi така што ќе можеме да превземеме било каква акција што е потребна.</description>
+		<description lang="ms_MY">Muat turun dan pasang tambahan PVR melalui repositori rasmi Kodi.tv[CR]  Dengan menggunakan Repositori rasmi anda dapat perkhidmatan cermin fail yang luas supaya dapat memuat turun lebih pantas menerusi kawasan berhampiran anda.[CR]  Semua tambahan di dalam repositori ini telah lulus pengujian asas, jika anda temui tambahan yang rosak atau tidak berfungsi sila laporkannya kepada Team Kodi supaya kami boleh membuat tindakan yang sewajarnya.</description>
+		<description lang="mt_MT">Niżżel u nstalla add-ons mir-repożitorju uffiċjali ta Kodi.tv.[CR] Permezz ta' dan ir-ripożitorju uffiċjali tista' tieħu vantaġġ mis-servizz ta' file mirrors estensiv li jgħinek tniżżel l-add-ons iktar malajr minn postijiet li huma ġeografikament qrib tiegħek.[CR] L-Add-ons kollha f'dan ir-repożitorju għaddew minn testijiet bażiċi, f'każ li tinzerta xi add-on miksura jew mhux taħdem jekk jpgħġbok irrportha lil Team Kodi biex inkunu nistgħu nieħdu l-azzjoni li jkun hemm bżonn.</description>
+		<description lang="nb_NO">Last ned og installer utvidelser fra den offisielle Kodi.tv-pakkebrønnen.[CR] Når du benytter den offisielle pakkebrønnen kan du dra nytte av vår omfattende arkivtjeneste slik at du får raskere nedlasting fra en tjener nær deg.[CR] Alle tillegg i denne brønnen har gått gjennom grunnleggende testing, men hvis du finner en utvidelse som ikke fungerer, rapporter det til Team Kodi, så vi får sett på det.</description>
+		<description lang="nl_NL">Download en installeer add-ons uit de officiële Kodi.tv add-on depot.[CR]Wanneer u de officiële depot gebruikt beschikt u over onze uitgebreide mirrorservice, waardoor u snel kunt downloaden van locaties in uw buurt.[CR] Alle add-ons in dit depot ondergingen standaardtests. Indien u een defecte of niet-werkende add-on vindt, meld dit dan aan Team Kodi zodat zij actie kunnen ondernemen.</description>
+		<description lang="pl_PL">Pobieraj i instaluj dodatki z oficjalnego repozytorium Kodi.tv.[CR] Używając oficjalnego repozytorium korzystasz z serwerów lustrzanych, rozsianych po całym świecie. Wybierany jest ten, który znajduje się najbliżej ciebie, zapewniając dużą prędkość połączenia.[CR]Wszystkie dodatki znajdujące się w tym repozytorium są testowane, ale mogą okazać się niesprawne. Zgłoś wówczas błąd, aby zespół Kodi mógł podjąć odpowiednie działanie.</description>
+		<description lang="pt_BR">Transfira e instale add-ons a partir do repositório oficial do Kodi.tv.[CR]|Ao utilizar o repositório oficial, você será capaz de tirar proveito do nosso serviço de espelhamento de arquivos, auxiliando em downloads mais rápidos a partir de uma região perto de você.[CR]|Todos os add-ons neste repositório passam por testes básicos, se você encontrar algum quebrado ou que não esteja funcionando, por favor reporte para a equipe do Kodi, para que possamos tomar as ações necessárias.</description>
+		<description lang="pt_PT">Transferir e instalar add-ons a partir do repositório de add-ons oficiais de Kodi.tv.[CR]Ao utilizar o Repositório oficial, irá beneficiar do nosso serviço de servidores de ficheiros para o ajudar a ter transferências mais rápidas da região mais perto de si.[CR]Todos os Add-ons neste repositório foram alvo de testes básicos. Se encontrar um danificado ou que não funciona, por favor, informe Tema Kodi, para que a situação seja resolvida.</description>
+		<description lang="ro_RO">Descărcați și instalați suplimente din depozitul de suplimente Kodi.tv oficial.[CR]  Folosind depozitul (repository) oficial puteți beneficia de serviciul nostru de găzduire distribuită pentru a vă ajuta să descărcați mai repede dintr-o regiune mai apropiată de dumneavoastră.[CR]  Toate suplimentele din acest depozit au trecut testele de bază, în caz că găsiți un supliment defect vă rugăm să îl raportați echipei Kodi pentru a lua măsurile necesare.</description>
+		<description lang="ru_RU">Загружайте и устанавливайте обновления из официального репозитория Kodi.tv[CR]Используя официальный репозиторий, вы сможете воспользоваться преимуществами распределенного хранилища для быстрой загрузки файлов с ближайшего к вам сервера.[CR]Все дополнения в данном репозитории прошли тестирование. Если вы обнаружили нерабочее дополнение, сообщите об этом разработчикам Kodi.</description>
+		<description lang="sk_SK">Stiahnuť a nainštalovať doplnky z oficiálneho repozitára doplnkov Kodi.tv.[CR] Použitím oficiálneho repozitára získavate možnosť využiť rozsiahly systém serverov, ktorý Vám umožní rýchlejšie sťahovanie z vám blízkeho regiónu.[CR] Všetky doplnky v tomto repozitári boli podrobené základnému testovaniu. Ak nájdete poškodené alebo nefunkčné doplnky, oznámte to prosím tímu Kodi aby mohol podľa potreby zakročiť.</description>
+		<description lang="sl_SI">Prenos in namestitev dodatkov iz uradnega skladišča Kodi.tv.[CR] Z uporabo uradnega skladišča, boste lahko izkoristili hitrejšo povezavo, ki bo izbrana glede na vašo lokacijo.[CR] Vsi dodatki tega skladišča so bili osnovno stestirani, če pa boste našli pokvarjen ali nedelujoč dodatek, to sporočite ekipi Kodi, da bomo lahko odpravili napake.</description>
+		<description lang="sr_RS">Преузмите и инсталирајте додатке из Званичног Kodi.tv спремишта додатака.[CR] Коришћењем званичног Спремишта моћићете да искористите предности нашег сервиса копија фајлова који ће вам помоћи приликом бржег преузимања из региона ближег вашој локацији.[CR] Сви додаци у овом спремишту прошли су основно тестирање, у случају да пронађете неисправан додатак молимо вас да то пријавите Kodi тиму који ће затим предузети неопходне мере.</description>
+		<description lang="sr_RS@latin">Preuzmi i instaliraj dodatne programe iz Zvaničnog Kodi.tv spremišta za dodatne programe.[CR] Korišćenjem zvaničnog Spremišta moći ćete da iskoristite prednosti našeg servisa kopija fajlova koji će vam pomoći prilikom bržeg preuzimanja iz regiona bližeg vašoj lokaciji.[CR] Svi dodatni programi u ovom spremištu prošli su osnovno testiranje, u slučaju da pronađete neispravan dodatni program molimo vas da to prijavite Kodi timu koji će zatim preduzeti neophodne mere.</description>
+		<description lang="sv_SE">Hämta och installera tillägg från det officiella Kodi.tv tilläggsförrådet.[CR] Genom att använda det officiella förrådet kommer du att få fördelen att kunna använda vår omfattande spegeltjänst som kommer att hjälpa dig till snabbare hämtningar från en plats nära dig.[CR] Alla tillägg i detta förråd har genomgått grundläggande tester. Hittar du ett trasigt eller icke fungerande tillägg, vänligen meddela detta till Team Kodi så att vi kan vidta nödvändiga åtgärder.</description>
+		<description lang="szl">Sebiyrej i insztaluj przidŏwki z ôficjalnygo repozytoriōm Kodi.tv.[CR] Przi Używaniu ôficjalnygo repozytoriōm używŏsz serwerōw zdrzadłowych, rozsianych po calistym świecie. Ôbiyrany je tyn, kery je nŏjbliżyj ciebie, co istuje srogõ wartkość skuplowaniŏ.[CR]Wszyjske przidŏwki w tym repozytoriōm sōm testowane, ale mogōm pokŏzać sie popszniōne. Zgłoś wtynczŏs feler, coby ekipa Kodi mogła go sprŏwić.</description>
+		<description lang="tg_TJ">Барномаҳои иловагиро аз анбори нармафзори Kodi.tv боргирӣ кунед ва насб намоед.[CR]  Аз истифодаи анбори нармафзори расмии мо ба шумо имконият пайдо мешавад, ки тавонед шароити мусофидро аз хидмати оинаи файлии васеъ ба даст оред ва нармафзори лозимиро аз сервери минтакаи ба шумо наздиктар бо суръати баланд боргирӣ кунед.[CR]  Ҳамаи барномаҳо аз анбори нармафзори мо дар ҳолати санҷишӣ мебошанд, бинобар ин агар ягон барномаи иловагии нуқсондор ё вайроншударо ёбед, лутфан дар бораи он барнома ва нуқсон пайдошуда ба гурӯҳи кории Kodi гузориш диҳед, то ин ки мо тавонем ҳамаи камбудиҳои барномаҳои моро ҳал кунем.</description>
+		<description lang="th_TH">ดาวน์โหลดและติดตั้งส่วนเสริม จากแหล่งข้อมูลโปรแกรมของ Kodi.tv อย่างเป็นทางการ.[CR]  โดยการใช้งานแหล่งข้อมูลโปรแกรมอย่างเป็นทางการ คุณสามารถใช้ประโยชน์จากบริการแฟ้มมิเรอร์ที่กว้างขวางของเรา ที่จะช่วยให้การดาวน์โหลดของคุณเร็วขึ้นจากภูมิภาคที่ใกล้ที่สุด.[CR]  ส่วนเสริม ทั้งหมดในแหล่งเก็บข้อมูลนี้ อยู่ภายใต้การทดสอบขั้นพื้นฐานแล้ว ถ้าคุณพบส่วนเสริมที่เสียหายหรือไม่ทำงาน กรุณาแจ้งทีมงาน Kodi เพื่อให้เราสามารถดำเนินการใด ๆ ที่จำเป็น.</description>
+		<description lang="tr_TR">Eklentileri resmi Kodi.tv eklenti deposundan indir ve yükle.[CR]Resmi yazılım depomuzu kullanarak size en yakın bölgeden en hızlı biçimde indirme yapmanızı sağlayacak gelişkin dosya aynalama servisini kullanma avantajını elde edeceksiniz.[CR]Bu yazılım deposundaki tüm eklentiler temel testlerden geçerler, şayet hatalı ya da çalışmayan bir eklenti bulur iseniz lütfen düzeltilmesi için bu durumu Kodi Takımına bildiriniz.</description>
+		<description lang="uk_UA">Завантажити і встановити додатки з Офіційного репозиторію додатків Kodi.tv.[CR]  Використовуючи Офіційний Репозиторій ви отримаєте перевагу надану нашими дзеркальними серверами, які забезпечать вам швидке завантаження із найближчого до вас регіону.[CR]  Всі додатки в цьому Репозиторії пройшли лише базове тестування. Якщо ви знайшли зламаний або непрацюючий додаток, будь-ласка повідомте про це Команду Kodi щоб ми могли вжити потрібних заходів.</description>
+		<description lang="vi_VN">Tải về và cài đặt tiện ích từ kho tiện ích chính thức của Kodi.[CR]  Khi sử dụng kho lưu trữ này bạn sẽ hưởng lợi từ dịch vụ nguồn của chúng tôi, giúp bạn có thể tải về nhanh hơn từ một khu vực gần bạn.[CR]  Tất cả tiện ích trên kho lưu trữ này đã được thông qua bài kiểm tra cơ bản, nếu bạn phát hiện ra một tiện ích không hoạt động xin vui lòng báo cáo lại nó cho đội ngũ Kodi để chúng tôi có thể kịp thời xử lý.</description>
+		<description lang="zh_CN">从官方 Kodi.tv 插件库下载和安装插件。[CR]　通过官方插件库你将能利用我们广泛的镜像服务优势，使你能够就近下载资源。[CR]　官方库中的所有插件都经过了基本的测试，如果你发现有损坏或不能正常工作的插件请向 Kodi 开发团队报告，以便及时处理。</description>
+		<description lang="zh_TW">從 Kodi.tv 官方的附加元件庫下載並安裝附加元件。[CR] 使用官方的附加元件庫你可以從離你較近的檔案鏡像伺器以較快的速度下載附加元件。[CR] 在這個附加元件庫中的附加元件都經過簡單的測試，如果你發現損壞或無法正常工作的附加元件，請回報給 Kodi 團隊，以讓 Kodi 團隊能做一些必須的處置。</description>
+		<disclaimer lang="af_ZA">Die Kodi span het nie al die byvoegsels in die kodebank gemaak nie en is nie verantwoordelik vir hulle inhoud nie</disclaimer>
+		<disclaimer lang="am_ET">የ Kodi ቡድን እዚህ ማጠራቀሚያ ውስጥ ያሉትን የ ተጨማ-ሪዎች ይዞታ አልፈጠሩም ስለዚህም ምንም አይነት ሀላፊነት አይወስዱም</disclaimer>
+		<disclaimer lang="ar_SA">فريق Kodi لم يقم بصنع جميع اﻹضافات فى هذا المستودع وغير مسؤول عن محتواها</disclaimer>
+		<disclaimer lang="be_BY">Каманда Kodi не распрацоўвае усё дапаўненні з гэтага рэпазіторыя і не нясе адказнасці за іх змесціва</disclaimer>
+		<disclaimer lang="bg_BG">Екипът на Kodi не е автор на всички добавки в хранилището и не носи отговорност за съдържанието им.</disclaimer>
+		<disclaimer lang="ca_ES">L'equip de Kodi no ha fet tots els complements d'aquest dipòsit i per tant no són responsables del seu contingut.</disclaimer>
+		<disclaimer lang="cs_CZ">Tým Kodi nevytvořil všechny doplňky v tomto repozitáři a není zodpovědný za jejich obsah</disclaimer>
+		<disclaimer lang="cy_GB">Nid Team Kodi wnaeth yr holl ychwanegion yn y storfa hon ac nid ydynt yn gyfrifol am eu cynnwys.</disclaimer>
+		<disclaimer lang="da_DK">Team Kodi har ikke lavet alle add-ons i dette fjernlager og er ikke ansvarlig for deres indhold</disclaimer>
+		<disclaimer lang="de_DE">Die Addons in diesem Verzeichnis wurden nicht alle vom Team Kodi erstellt. Verantwortlich für den Inhalt sind die jeweiligen Autoren.</disclaimer>
+		<disclaimer lang="el_GR">Η Ομάδα Kodi δεν δημιούργησε όλα τα πρόσθετα σε αυτό το αποθετήριο συνεπώς δεν είναι υπεύθυνη για το περιεχόμενό τους</disclaimer>
+		<disclaimer lang="en_AU">Team Kodi did not make all the add-ons on this repository and are not responsible for their content</disclaimer>
+		<disclaimer lang="en_GB">Team Kodi did not make all the add-ons on this repository and are not responsible for their content</disclaimer>
+		<disclaimer lang="en_NZ">Team Kodi did not make all the add-ons on this repository and are not responsible for their content</disclaimer>
+		<disclaimer lang="en_US">Team Kodi did not make all the add-ons on this repository and are not responsible for their content</disclaimer>
+		<disclaimer lang="es_AR">No todos los add-ons en este repositorio han sido creados por el equipo de Kodi y este no es responsable de su contenido</disclaimer>
+		<disclaimer lang="es_ES">El equipo de Kodi no ha hecho todos los Add-ons de este repositorio y no son responsables de su contenido</disclaimer>
+		<disclaimer lang="es_MX">El equipo de Kodi no hizo todos los complementos en este repositorio y no es responsable de su contenido</disclaimer>
+		<disclaimer lang="et_EE">Kodi meeskond ei teinud kõiki lisasid selles hoidlas ja ei vastuta ka nende sisu eest.</disclaimer>
+		<disclaimer lang="eu_ES">Kodi taldeak ez ditu biltegi honetako gehigarri guztiak sortu eta ez da beren edukien erantzule.</disclaimer>
+		<disclaimer lang="fa_IR">همه افزونه های این منبع محصول کار تیم کودی نیستند و این تیم مسئولیتی در قبال محتوای آنها ندارد.</disclaimer>
+		<disclaimer lang="fi_FI">Team Kodi ei ole tehnyt kaikkia tässä ohjelmavarastossa olevia lisäosia, eikä siten ole vastuullinen kyseisten lisäosien sisällöstä</disclaimer>
+		<disclaimer lang="fr_CA">L’équipe Kodi n’a pas créé tous les addiciels de ce dépôt et n’est pas responsable de leur contenu</disclaimer>
+		<disclaimer lang="fr_FR">L’Équipe Kodi n’a pas créé toutes les extensions de ce dépôt et n’est pas responsable de leur contenu.</disclaimer>
+		<disclaimer lang="gl_ES">O equipo de Kodi non creou todos os Engadidos deste repositorio e non é responsábel do seu contido</disclaimer>
+		<disclaimer lang="he_IL">צוות הפיתוח של Kodi לא יצר את כל ההרחבות שבמאגר זה ואיננו אחראי על תוכנן</disclaimer>
+		<disclaimer lang="hr_HR">Kodi tim nije autor svih dodataka u ovom repozitoriju te kao takvi ne odgovaraju za njihov sadržaj</disclaimer>
+		<disclaimer lang="hu_HU">Nem minden itt található kiegészítőt az Kodi csapat készített és nem vállal felelősséget azok tartalmáért</disclaimer>
+		<disclaimer lang="id_ID">Tim Kodi tidak membuat semua pengaya pada repository ini dan tidak bertanggung jawab atas isinya.</disclaimer>
+		<disclaimer lang="is_IS">Kodi-teymið framleiðir ekki allar þessar viðbætur og er ekki ábyrgt fyrir innihaldi þeirra.</disclaimer>
+		<disclaimer lang="it_IT">Il team di Kodi non ha creato tutti gli add-on di questa libreria e non è responsabile per il loro contenuto</disclaimer>
+		<disclaimer lang="ja_JP">Kodi チームが、このリポジトリ上の全アドオンを作ったわけではありません。また、その内容についても責任は負いかねます。</disclaimer>
+		<disclaimer lang="ko_KR">Team Kodi가 이 저장소의 모든 애드온을 제작한 것은 아니며, 애드온 컨텐츠에 대한 책임이 없습니다.</disclaimer>
+		<disclaimer lang="lt_LT">Kodi komanda netestavo priedų šioje saugykloje ir neatsako arba nėra atsakinga už jų turinį</disclaimer>
+		<disclaimer lang="lv_LV">Kodi komanda nav izveidojusi visus šīs krātuves pielikumus un nav atbildīga par to saturu</disclaimer>
+		<disclaimer lang="mk_MK">Kodi тимот ги нема направено сите овие додатоци и не е одговорен за нивната содржина</disclaimer>
+		<disclaimer lang="ms_MY">Team Kodi tidak menghasilkan semua tambahan di dalam repositori ini dan tidak bertanggungjawab keatas kandungannya</disclaimer>
+		<disclaimer lang="mt_MT">Team Kodi m'għamilx l-add-ons kollha li hawn f'dan ir-repożitorju u mhumiex responsabbli għall-kontenut tagħhom</disclaimer>
+		<disclaimer lang="nb_NO">Team Kodi har ikke utviklet alle utvidelsene i denne pakkebrønnen og er ikke ansvarlig for deres innhold</disclaimer>
+		<disclaimer lang="nl_NL">Team Kodi heeft niet alle add-ons in deze depot geschreven en is niet verantwoordelijk voor hun inhoud.</disclaimer>
+		<disclaimer lang="pl_PL">Zespół Kodi nie tworzy wszystkich dodatków i nie bierze odpowiedzialności za ich zawartość</disclaimer>
+		<disclaimer lang="pt_BR">O Time do Kodi não produziu todos os add-ons deste repositório, e portanto não é responsável ​​por seu conteúdo</disclaimer>
+		<disclaimer lang="pt_PT">A Team Kodi não desenvolveu todos os add-ons neste repositório, e não é responsável pelo seu conteúdo.</disclaimer>
+		<disclaimer lang="ro_RO">Echipa Kodi nu a creat toate aceste suplimente din acest depozit și nu este responsabilă pentru conținutul lor.</disclaimer>
+		<disclaimer lang="ru_RU">Разработчики Kodi не являются авторами всех дополнений в данном репозитории и не несут ответственность за их содержимое.</disclaimer>
+		<disclaimer lang="sk_SK">Tým Kodi nevytvoril všetky doplnky v tomto repozitári a nie je zodpovedný za ich obsah</disclaimer>
+		<disclaimer lang="sl_SI">Ekipa Kodi ni naredila vseh dodatkov v tem skladišču in ne odgovarja za njihovo vsebino</disclaimer>
+		<disclaimer lang="sr_RS">Тим Kodi није направио све додатке у овом спремишту и није одговоран за њихов садржај</disclaimer>
+		<disclaimer lang="sr_RS@latin">Tim-Kodi nije napravio sve dodatne programe u ovom spremištu i nije odgovoran za njihov sadržaj</disclaimer>
+		<disclaimer lang="sv_SE">Team Kodi har inte gjort alla tillägg i förrådet och är inte ansvariga för innehållet i dessa.</disclaimer>
+		<disclaimer lang="szl">Ekipa Kodi niy rychtuje wszyjskich przidŏwkōw i niy ôdpadŏ za jejich zawartość</disclaimer>
+		<disclaimer lang="tg_TJ">Гурӯҳи кории Kodi дар ин анбори нармафзор соҳиби ҳамаи барномаҳои иловагӣ намебошад ва барои мӯҳтавояшон ҷавобгар намебшад</disclaimer>
+		<disclaimer lang="th_TH">ทีม Kodi ไม่ได้จัดทำ ส่วนเสริม ทั้งหมดในแหล่งข้อมูลโปรแกรมนี้ และจะไม่รับผิดชอบต่อเนื้อหาเหล่านั้น</disclaimer>
+		<disclaimer lang="tr_TR">Kodi takımı bu depodaki tüm eklentileri geliştirmemiştir ve bunların içeriklerinden sorumlu değildir.</disclaimer>
+		<disclaimer lang="uk_UA">Зауважте, що не всі додатки в цьому Репозиторії створені Командою Kodi, і тому Команда не несе відповідальності за їх вміст.</disclaimer>
+		<disclaimer lang="vi_VN">Đội ngũ Kodi không làm ra tất cả các add-on có trên kho chứa này và sẽ không chịu trách nhiệm về nội dung của các add-on đấy</disclaimer>
+		<disclaimer lang="zh_CN">本库中插件不完全由 Kodi 团队开发，Kodi 团队对他人提交的内容不承担责任</disclaimer>
+		<disclaimer lang="zh_TW">這個附加元件庫的附加元件並非全部由 Kodi 團隊製作的，所以我們不對這些內容負責。</disclaimer>
+		<platform>all</platform>
+		<assets>
+			<icon>icon.png</icon>
+		</assets>
+	</extension>
+</addon><addon id="repository.resolveurl" name="ResolveURL Repository" provider-name="gujal" version="1.0.0">
+  <extension point="xbmc.addon.repository" name="ResolveURL Repository">
+    <dir>
+      <info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
+      <checksum>https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml.md5</checksum>
+      <datadir zip="true">https://raw.githubusercontent.com/Gujal00/smrzips/master/zips/</datadir>
+    </dir>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <description lang="en_GB">ResolveURL and Link Tester</description>
+    <license />
+    <language />
+    <website />
+    <news />
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets> 
+  </extension>
+</addon><addon id="repository.thecrew" name="[COLOR orchid]THE CREW REPO[/COLOR]" provider-name="The Crew" version="0.3.4">
+	<extension point="xbmc.addon.repository" name="The Crew">
+			<dir minversion="16.0.0" maxversion="18.9.9">
+			<info compressed="false">https://raw.githubusercontent.com/thecrewwh/zips/master/_zip/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/thecrewwh/zips/master/_zip/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/thecrewwh/zips/master/_zip</datadir>
+			</dir>
+			<dir minversion="18.9.9">
+			<info compressed="false">https://raw.githubusercontent.com/thecrewwh/zips/master/matrix/_zip/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/thecrewwh/zips/master//matrix/_zip/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/thecrewwh/zips/master//matrix/_zip</datadir>
+			</dir>
+			<dir>
+			<info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/Gujal00/smrzips/master/zips/</datadir>
+			</dir>
+			<dir>
+			<info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
+			</dir>
+			<dir>
+			<info compressed="false">https://raw.githubusercontent.com/dobbelina/repository.dobbelina/master/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/dobbelina/repository.dobbelina/master/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/dobbelina/repository.dobbelina/master/</datadir>
+			</dir>
+			<dir>
+			<info compressed="false">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/</datadir>
+			</dir>
+			<dir>
+			<info compressed="false">https://raw.githubusercontent.com/therealatreides/housetools/master/code/_housefiles/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/therealatreides/housetools/master/code/_housefiles/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/therealatreides/housetools/master/code/_housefiles/</datadir>
+			</dir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">The Crew is a team of individuals that does what it can to provide others, you the best in entertainment.</summary>
+		<description lang="en">Many come, Many go. The true and dedicated are here. We here</description>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+		<disclaimer lang="en">The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+			<screenshot>resources/art/ss/1.png</screenshot>
+			<screenshot>resources/art/ss/2.png</screenshot>
+			<screenshot>resources/art/ss/3.png</screenshot>
+		</assets>
+	</extension>
+</addon><addon id="repository.thewarehouse" name="The WareHouse Repository" version="22.6.8" provider-name="[COLORpurple]• [COLORorchid]Tech [COLORdarkorchid]E [COLORplum]Coyote [COLORpurple]•[/COLOR]">
+    <extension point="xbmc.addon.repository" name="The WareHouse Repository">
+        <dir minversion="18.9.0">
+            <info compressed="false">https://raw.githubusercontent.com/warehousecrates/TheWareHouse/main/matrix/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/warehousecrates/TheWareHouse/main/matrix/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/warehousecrates/TheWareHouse/main/matrix/zips/</datadir>
+        </dir>
+        <dir minversion="18.0" maxversion="18.9.0">
+            <info compressed="false">https://raw.githubusercontent.com/warehousecrates/TheWareHouse/main/leia/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/warehousecrates/TheWareHouse/main/leia/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/warehousecrates/TheWareHouse/main/leia/zips/</datadir>
+        </dir>
+		<dir>
+			<info compressed="false">https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/</datadir>
+		</dir>
+        <dir>
+            <info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/Gujal00/smrzips/master/zips/</datadir>
+        </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>The WareHouse Repository</summary>
+        <description>The WareHouse Repository</description>
+        <platform>all</platform>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+    </extension>
+</addon><addon id="repository.universalscrapers" name="universalscrapers-repository" version="1.0.0" provider-name="universalscrapers">
+        <requires>
+            <import addon="xbmc.addon" version="12.0.0" />
+        </requires>
+        <extension point="xbmc.addon.repository" name="universalscrapers">
+            <info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
+            <hashes>false</hashes>
+        </extension>
+        <extension point="xbmc.addon.metadata">
+            <summary>Scrape common video host for URL's to be playable in XBMC/Kodi.</summary>
+            <description>carrying on the dream</description>
+            <platform>all</platform>
+        </extension>
+    </addon><addon id="script.common.plugin.cache" name="Common plugin cache" provider-name="anxdpanic, TheCollective" version="2.6.3">
     <requires>
         <import addon="xbmc.python" version="2.24.0" />
     </requires>
@@ -1611,29 +2308,37 @@ Momentálne podporuje:
             <fanart>fanart.jpg</fanart>
         </assets>
     </extension>
-</addon><addon id="script.keymap" name="Keymap Editor" version="1.1.3" provider-name="takoi,pkscout">
+</addon><addon id="script.keymap" name="Keymap Editor" version="1.1.4" provider-name="takoi,pkscout">
 	<requires>
-		<import addon="xbmc.python" version="2.26.0" />
-		<import addon="script.module.kodi-six" version="0.0.3" />
-		<import addon="script.module.defusedxml" version="0.6.0" />
+		<import addon="xbmc.python" version="3.0.0" />
+		<import addon="script.module.defusedxml" version="0.6.0+matrix.1" />
 	</requires>
 	<extension point="xbmc.python.script" library="default.py" />
 	<extension point="xbmc.addon.metadata">
-		<news>
-v1.1.3
-- Better support for v18 Leia
-- Fix so script only backups user defined keymaps if trying to save new keymap file
-- Moved all text into language file for easier internationalization
+		<news>v1.1.4
+- fixed depreciacted translatepath call
+- removed dependancy on kodi-six
+- updated language files
 		</news>
 		<assets>
         	<icon>icon.png</icon>
         </assets>
-		<summary lang="en_GB">An editor for keymap files</summary>
-		<description lang="en_GB">Keymap Editor is a GUI for configuring mappings for remotes, keyboard and other inputs supported by Kodi. Note: existing user defined key mappings will be renamed to .bak.</description>
 		<platform>all</platform>
 		<license>GPL-3.0-only</license>
 		<forum>https://forum.kodi.tv/showthread.php?tid=168767</forum>
-		<source>https://github.com/tamland/xbmc-keymap-editor</source>
+		<source>https://github.com/pkscout/script.keymap</source>
+		<summary lang="de_DE">Ein Editor für Keymap-Dateien</summary>
+		<summary lang="en_GB">An editor for keymap files</summary>
+		<summary lang="hu_HU">Távvezérlő fájlok kezelője</summary>
+		<summary lang="ko_KR">키맵 파일용 편집기</summary>
+		<summary lang="ru_RU">Редактор файлов раскладки клавиатуры</summary>
+		<summary lang="zh_CN">一个键映射文件的编辑器</summary>
+		<description lang="de_DE">Keymap Editor ist eine grafische Oberfläche zum Konfigurieren von Tastenzuordnungen für Fernbedienungen, Tastaturen und anderen von Kodi unterstützten Eingabegeräten. Hinweis: Existierende benutzerdefinierte Tastenzuordnungen werden zu .bak umbenannt.</description>
+		<description lang="en_GB">Keymap Editor is a GUI for configuring mappings for remotes, keyboard and other inputs supported by Kodi. Note: existing user defined key mappings will be renamed to .bak.</description>
+		<description lang="hu_HU">A Keymap Editor egy grafikus felhasználói felület a távvezérlők, a billentyűzet és a Kodi által támogatott egyéb bemenetek konfigurálásához. Megjegyzés: a meglévő, felhasználó által definiált keymap fájlok át lesznek nevezve .bak -ra.</description>
+		<description lang="ko_KR">키맵 편집기는 Kodi에서 지원하는 리모컨, 키보드 및 기타 입력에 대한 매핑을 구성하기 위한 GUI입니다. 참고: 기존 사용자 정의 키 매핑은 .bak으로 이름이 바뀝니다.</description>
+		<description lang="ru_RU">Keymap Editor - это графический интерфейс для настройки привязки клавиш пультов, клавиатуры и других устройств ввода, поддерживаемых Kodi. Примечание: существующие пользовательские привязки клавиш будут переименованы в .bak.</description>
+		<description lang="zh_CN">键映射编辑器是一个用于配置 Kodi 支持的遥控器、键盘和其他输入设备的功能映射的图形界面。注意：现有的用户定义键映射将重命名为.bak。</description>
 	</extension>
 </addon><addon id="script.module.addon.common" name="Common addon methods" version="2.0.1" provider-name="Eldorado (original: t0mm0)">
   <requires>
@@ -1692,26 +2397,26 @@ v1.1.3
     <license>BSD</license>
     <platform>all</platform>
   </extension>
-</addon><addon id="script.module.beautifulsoup4" name="BeautifulSoup4" version="4.9.3" provider-name="Leonard Richardson (leonardr@segfault.org)">
-	<requires>
-		<import addon="xbmc.python" version="2.26.0" />
-		<import addon="script.module.soupsieve" version="1.9.6" />
-	</requires>
-	<extension point="xbmc.python.module" library="lib" />
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en_GB">Screen-scraping library</summary>
-		<description lang="en_GB">Beautiful Soup is a library that makes it easy to scrape information from web pages. It sits atop an HTML or XML parser, providing Pythonic idioms for iterating, searching, and modifying the parse tree.</description>
-		<license>MIT</license>
-		<platform>all</platform>
-		<website>https://www.crummy.com/software/BeautifulSoup/</website>
-		<source>https://code.launchpad.net/beautifulsoup</source>
-		<assets>
-			<icon>icon.png</icon>
-		</assets>
-	</extension>
-</addon><addon id="script.module.certifi" name="certifi" version="2021.10.8" provider-name="Certifi">
+</addon><addon id="script.module.beautifulsoup4" name="BeautifulSoup4" version="4.9.3+matrix.1" provider-name="Leonard Richardson (leonardr@segfault.org)">
   <requires>
-    <import addon="xbmc.python" version="2.25.0" />
+    <import addon="xbmc.python" version="3.0.0" />
+    <import addon="script.module.soupsieve" version="2.0.0+matrix.1" />
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Screen-scraping library</summary>
+    <description lang="en_GB">Beautiful Soup is a library that makes it easy to scrape information from web pages. It sits atop an HTML or XML parser, providing Pythonic idioms for iterating, searching, and modifying the parse tree.</description>
+    <license>MIT</license>
+    <platform>all</platform>
+    <website>https://www.crummy.com/software/BeautifulSoup/</website>
+	<source>https://code.launchpad.net/beautifulsoup</source>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon><addon id="script.module.certifi" name="certifi" version="2022.9.24" provider-name="Certifi">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0" />
   </requires>
   <extension point="xbmc.python.module" library="lib" />
   <extension point="xbmc.addon.metadata">
@@ -1724,9 +2429,9 @@ v1.1.3
       <icon>resources/icon.png</icon>
     </assets>
   </extension>
-</addon><addon id="script.module.chardet" name="chardet" version="4.0.0" provider-name="Character Encoding Detector">
+</addon><addon id="script.module.chardet" name="chardet" version="4.0.0+matrix.1" provider-name="Character Encoding Detector">
   <requires>
-    <import addon="xbmc.python" version="2.25.0" />
+    <import addon="xbmc.python" version="3.0.0" />
   </requires>
   <extension point="xbmc.python.module" library="lib" />
   <extension point="xbmc.addon.metadata">
@@ -1740,10 +2445,10 @@ v1.1.3
       <icon>resources/icon.png</icon>
     </assets>
   </extension>
-</addon><addon id="script.module.dateutil" name="python-dateutil" version="2.8.1" provider-name="Paul Ganssle, Gustavo Niemeyer">
+</addon><addon id="script.module.dateutil" name="python-dateutil" version="2.8.2" provider-name="Paul Ganssle, Gustavo Niemeyer, Tomi Pieviläinen, Yaron de Leeuw">
   <requires>
-    <import addon="xbmc.python" version="2.25.0" />
-    <import addon="script.module.six" version="1.12.0" />
+    <import addon="xbmc.python" version="3.0.0" />
+    <import addon="script.module.six" version="1.15.0+matrix.1" />
   </requires>
   <extension point="xbmc.python.module" library="lib" />
   <extension point="xbmc.addon.metadata">
@@ -1756,9 +2461,9 @@ v1.1.3
       <icon>icon.png</icon>
     </assets>
   </extension>
-</addon><addon id="script.module.defusedxml" name="defusedxml" version="0.6.0" provider-name="Christian Heimes">
+</addon><addon id="script.module.defusedxml" name="defusedxml" version="0.6.0+matrix.1" provider-name="Christian Heimes">
 	<requires>
-		<import addon="xbmc.python" version="2.25.0" />
+		<import addon="xbmc.python" version="3.0.0" />
 	</requires>
 	<extension point="xbmc.python.module" library="lib" />
 	<extension point="xbmc.addon.metadata">
@@ -1772,20 +2477,23 @@ v1.1.3
 			<icon>icon.png</icon>
 		</assets>
 	</extension>
-</addon><addon id="script.module.future" name="future" version="0.17.1" provider-name="Ed Schofield">
+</addon><addon id="script.module.future" name="future" version="0.18.2+matrix.1" provider-name="Ed Schofield">
   <requires>
-    <import addon="xbmc.python" version="2.14.0" />
+    <import addon="xbmc.python" version="3.0.0" />
   </requires>
-  <extension point="xbmc.python.module" library="libs" />
+  <extension point="xbmc.python.module" library="lib" />
   <extension point="xbmc.addon.metadata">
-    <summary lang="en">Clean single-source support for Python 3 and 2</summary>
-    <description lang="en">future is the missing compatibility layer between Python 2 and Python 3. It allows you to use a single, clean Python 3.x-compatible codebase to support both Python 2 and Python 3 with minimal overhead.</description>
+    <summary lang="en_GB">Clean single-source support for Python 3 and 2</summary>
+    <description lang="en_GB">future is the missing compatibility layer between Python 2 and Python 3. It allows you to use a single, clean Python 3.x-compatible codebase to support both Python 2 and Python 3 with minimal overhead.</description>
     <platform>all</platform>
     <license>MIT</license>
     <source>https://github.com/PythonCharmers/python-future</source>
     <website>http://python-future.org</website>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
   </extension>
-</addon><addon id="script.module.homelanderscrapers" name="[COLOR red]Homelander [/COLOR]Scrapers" version="1.0.8" provider-name="Homelander">
+</addon><addon id="script.module.homelanderscrapers" name="[COLOR red]Homelander [/COLOR]Scrapers" version="1.1.1" provider-name="Homelander">
     <requires>
         
         <import addon="script.module.beautifulsoup4" />
@@ -1812,25 +2520,25 @@ v1.1.3
     </assets>
     <news />
     </extension>
-</addon><addon id="script.module.httplib2" name="httplib2" provider-name="Joe Gregorio" version="0.10.3">
+</addon><addon id="script.module.httplib2" name="httplib2" provider-name="Joe Gregorio" version="0.17.0+matrix.2">
   <requires>
-    <import addon="xbmc.python" version="2.14.0" />
+    <import addon="xbmc.python" version="3.0.0" />
   </requires>
   <extension library="lib" point="xbmc.python.module" />
   <extension point="xbmc.addon.metadata">
-        <description lan="en">httplib2 module</description>
-        <summary lang="en">httplib2 module</summary>
+        <description lang="en_GB">httplib2 module</description>
+        <summary lang="en_GB">httplib2 module</summary>
         <license>MIT</license>
         <platform>all</platform>
-        <email />
         <website>https://pypi.python.org/pypi/httplib2</website>
-        <forum />
         <source>https://github.com/httplib2/httplib2</source>
-        <language />
+        <assets>
+          <icon>icon.png</icon>
+        </assets>
    </extension>
-</addon><addon id="script.module.idna" name="idna" version="2.10.0" provider-name="Kim Davies">
+</addon><addon id="script.module.idna" name="idna" version="3.4.0" provider-name="Kim Davies">
   <requires>
-    <import addon="xbmc.python" version="2.25.0" />
+    <import addon="xbmc.python" version="3.0.0" />
   </requires>
   <extension point="xbmc.python.module" library="lib" />
   <extension point="xbmc.addon.metadata">
@@ -1844,10 +2552,10 @@ v1.1.3
       <icon>resources/icon.png</icon>
     </assets>
   </extension>
-</addon><addon id="script.module.inputstreamhelper" name="InputStream Helper" version="0.5.10" provider-name="emilsvennesson, dagwieers, mediaminister, horstle">
+</addon><addon id="script.module.inputstreamhelper" name="InputStream Helper" version="0.5.10+matrix.1" provider-name="emilsvennesson, dagwieers, mediaminister, horstle">
   <requires>
     
-    <import addon="xbmc.python" version="2.25.0" />
+    <import addon="xbmc.python" version="3.0.0" />
     <import addon="script.module.pysocks" version="1.6.8" optional="true" />
   </requires>
   
@@ -1891,9 +2599,9 @@ v0.5.9 (2022-03-22)
       <icon>resources/icon.png</icon>
     </assets>
   </extension>
-</addon><addon id="script.module.kodi-six" name="Kodi Six" version="0.1.3" provider-name="Roman V.M.">
+</addon><addon id="script.module.kodi-six" name="Kodi Six" version="0.1.3.1" provider-name="Roman V.M.">
   <requires>
-    <import addon="xbmc.python" version="2.26.0" />
+    <import addon="xbmc.python" version="3.0.0" />
   </requires>
   <extension point="xbmc.python.module" library="libs" />
   <extension point="xbmc.addon.metadata">
@@ -1943,7 +2651,7 @@ v0.5.9 (2022-03-22)
     <email />
     <source />
   </extension>
-</addon><addon id="script.module.moriascrapers" name="MoriaScrapers Module" version="1.03.04" provider-name="Moria">
+</addon><addon id="script.module.moriascrapers" name="MoriaScrapers Module" version="1.03.05" provider-name="Moria">
     <requires>
         
         <import addon="script.module.beautifulsoup4" />
@@ -1970,27 +2678,21 @@ v0.5.9 (2022-03-22)
     </assets>
     <news />
     </extension>
-</addon><addon id="script.module.mutagen" name="mutagen" version="2019.10.10" provider-name="Joe Wreschnig">
+</addon><addon id="script.module.mutagen" name="Mutagen" version="1.44.0+matrix.1" provider-name="Christoph Reiter">
   <requires>
-    <import addon="xbmc.python" version="2.1.0" />
+    <import addon="xbmc.python" version="3.0.0" />
   </requires>
   <extension point="xbmc.python.module" library="lib" />
   <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Library to handle audio metadata.</summary>
+    <description lang="en_GB">Mutagen is a Python module to handle audio metadata.</description>
+    <license>GPL-2.0-or-later</license>
     <platform>all</platform>
-    <language />
-    <summary lang="en">Mutagen is a Python module to handle audio metadata.</summary>
-    <description lang="en">Mutagen is a Python module to handle audio metadata. It supports ASF, FLAC, 
-M4A, Monkey's Audio, MP3, Musepack, Ogg Opus, Ogg FLAC, Ogg Speex, Ogg 
-Theora, Ogg Vorbis, True Audio, WavPack and OptimFROG audio files. All 
-versions of ID3v2 are supported, and all standard ID3v2.4 frames are 
-parsed. It can read Xing headers to accurately calculate the bitrate and 
-length of MP3s. ID3 and APEv2 tags can be edited regardless of audio 
-format. It can also manipulate Ogg streams on an individual packet/page 
-level.</description>
-    <disclaimer lang="en">Code taken from http://code.google.com/p/mutagen/</disclaimer>
-    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-    <website>http://code.google.com/p/mutagen/</website>
-    <source>https://bitbucket.org/lazka/mutagen/overview</source>
+    <website>https://mutagen.readthedocs.io/en/latest/</website>
+	<source>https://github.com/quodlibet/mutagen</source>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
   </extension>
 </addon><addon id="script.module.myconnpy" name="MySQL Connector/Python" version="1.1.7" provider-name="MySQL">
     <requires>
@@ -2076,13 +2778,13 @@ level.</description>
     </assets>
     <news />
     </extension>
-</addon><addon id="script.module.requests" name="requests" version="2.27.1" provider-name="Python Software Foundation">
+</addon><addon id="script.module.requests" name="requests" version="2.27.1+matrix.1" provider-name="Python Software Foundation">
   <requires>
-    <import addon="xbmc.python" version="2.25.0" />
-    <import addon="script.module.certifi" version="2021.10.8" />
-    <import addon="script.module.chardet" version="4.0.0" />
-    <import addon="script.module.idna" version="2.10.0" />
-    <import addon="script.module.urllib3" version="1.26.9" />
+    <import addon="xbmc.python" version="3.0.0" />
+    <import addon="script.module.certifi" version="2022.5.18+matrix.1" />
+    <import addon="script.module.chardet" version="4.0.0+matrix.1" />
+    <import addon="script.module.idna" version="3.3.0+matrix.1" />
+    <import addon="script.module.urllib3" version="1.26.9+matrix.1" />
   </requires>
   <extension point="xbmc.python.module" library="lib" />
   <extension point="xbmc.addon.metadata">
@@ -2090,7 +2792,7 @@ level.</description>
     <description lang="en_GB">Requests is an elegant and simple HTTP library for Python, built for human beings.</description>
     <license>Apache-2.0</license>
     <platform>all</platform>
-    <website>https://requests.readthedocs.io/en/latest/</website>
+    <website>https://requests.readthedocs.io/</website>
     <source>https://github.com/psf/requests</source>
     <assets>
       <icon>resources/icon.png</icon>
@@ -2123,7 +2825,7 @@ level.</description>
             <fanart>fanart.jpg</fanart>
         </assets>
     </extension>
-</addon><addon id="script.module.resolveurl.xxx" version="2.1.34" name="Adult Resolver SMR Extension" provider-name="gujal">
+</addon><addon id="script.module.resolveurl.xxx" version="2.1.35" name="Adult Resolver SMR Extension" provider-name="gujal">
     <requires>
         
         <import addon="script.module.resolveurl" version="5.1.0" />
@@ -2150,24 +2852,27 @@ level.</description>
     <summary lang="en">Simple downloader for xbmc plugins.</summary>
   </extension>
   <extension library="lib" point="xbmc.python.module" />
-</addon><addon id="script.module.simplejson" name="simplejson" version="3.16.1" provider-name="Bob Ippolito">
+</addon><addon id="script.module.simplejson" name="simplejson" version="3.17.0+matrix.2" provider-name="Bob Ippolito">
   <requires>
-    <import addon="xbmc.python" version="2.14.0" />
+    <import addon="xbmc.python" version="3.0.0" />
   </requires>
   <extension point="xbmc.python.module" library="lib" />
   <extension point="xbmc.addon.metadata">
     <platform>all</platform>
     <language />
-    <summary lang="en">Simple, fast, extensible JSON encoder/decoder for Python</summary>
-    <description lang="en">Simple, fast, extensible JSON encoder/decoder for Python</description>
-    <disclaimer lang="en">Code taken from https://pypi.org/project/simplejson/</disclaimer>
+    <summary lang="en_GB">Simple, fast, extensible JSON encoder/decoder for Python</summary>
+    <description lang="en_GB">Simple, fast, extensible JSON encoder/decoder for Python</description>
+    <disclaimer lang="en_GB">Code taken from https://pypi.org/project/simplejson/</disclaimer>
     <license>MIT License, Academic Free License v. 2.1</license>
     <website>https://pypi.org/project/simplejson/</website>
     <source>https://github.com/simplejson/simplejson</source>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
   </extension>
-</addon><addon id="script.module.six" name="six" version="1.15.0" provider-name="gutworth">
+</addon><addon id="script.module.six" name="six" version="1.15.0+matrix.1" provider-name="gutworth">
   <requires>
-    <import addon="xbmc.python" version="2.14.0" />
+    <import addon="xbmc.python" version="3.0.0" />
   </requires>
   <extension point="xbmc.python.module" library="lib" />
   <extension point="xbmc.addon.metadata">
@@ -2181,12 +2886,11 @@ level.</description>
       <icon>icon.png</icon>
     </assets>
   </extension>
-</addon><addon id="script.module.soupsieve" name="Soup Sieve" version="1.9.6+leia.1" provider-name="Isaac Muse">
+</addon><addon id="script.module.soupsieve" name="Soup Sieve" version="2.1.0+matrix.1" provider-name="Isaac Muse">
 	<requires>
-		<import addon="xbmc.python" version="2.26.0" />
-		<import addon="script.module.backports.functools_lru_cache" version="1.6.1" />
+		<import addon="xbmc.python" version="3.0.0" />
 	</requires>
-	<extension point="xbmc.python.module" library="lib/" />
+	<extension point="xbmc.python.module" library="lib" />
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en_GB">A CSS selector library</summary>
 		<description lang="en_GB">Soup Sieve is a CSS selector library designed to be used with Beautiful Soup 4. It aims to provide selecting, matching, and filtering using modern CSS selectors.</description>
@@ -2208,9 +2912,9 @@ level.</description>
     <summary lang="en">Collection of commonly used addon routines</summary>
     <description lang="en">Collection of commonly used addon routines to simplify addon development.</description>
   </extension>
-</addon><addon id="script.module.thecrew" name="[COLOR orchid]THE CREW MODULE[/COLOR]" version="1.0.8" provider-name="The Crew">
+</addon><addon id="script.module.thecrew" name="[COLOR orchid]THE CREW MODULE[/COLOR]" version="1.1.6r" provider-name="The Crew">
     <requires>
-        <import addon="xbmc.python" version="2.25.0" />
+        
         <import addon="script.module.beautifulsoup4" />
     </requires>
     <extension point="xbmc.python.module" library="lib" />
@@ -2225,9 +2929,9 @@ level.</description>
             <fanart>fanart.jpg</fanart>
         </assets>
     </extension>
-</addon><addon id="script.module.urllib3" name="urllib3" version="1.26.9" provider-name="urllib3">
+</addon><addon id="script.module.urllib3" name="urllib3" version="1.26.13+matrix.1" provider-name="urllib3">
   <requires>
-    <import addon="xbmc.python" version="2.25.0" />
+    <import addon="xbmc.python" version="3.0.0" />
   </requires>
   <extension point="xbmc.python.module" library="lib" />
   <extension point="xbmc.addon.metadata">
@@ -2258,17 +2962,21 @@ level.</description>
     <platform>all</platform>
     <license>BSD-3-Clause</license>
   </extension>
-</addon><addon id="script.module.xbmcswift2" name="xbmcswift2" provider-name="Jonathan Beluch (jbel), enen92" version="13.0.4">
+</addon><addon id="script.module.xbmcswift2" name="xbmcswift2" provider-name="Jonathan Beluch (jbel), enen92" version="19.0.7">
   <requires>
-    <import addon="xbmc.python" version="2.14.0" />
+    <import addon="xbmc.python" version="3.0.0" />
   </requires>
   <extension library="lib" point="xbmc.python.module" />
   <extension point="xbmc.addon.metadata">
     <platform>all</platform>
     <source>https://github.com/XBMC-Addons/script.module.xbmcswift2</source>
     <license>GPL-3.0</license>
-    <summary lang="en">xbmcswift2 is a small framework to ease development of KODI addons.</summary>
-    <description lang="en">xbmcswift2 is a small framework to ease development of KODI addons.</description>
+    <summary lang="en_GB">xbmcswift2 is a small framework to ease development of KODI addons.</summary>
+    <description lang="en_GB">xbmcswift2 is a small framework to ease development of KODI addons.</description>
+    <news>Fixes for python 3.10 - move collections.MutableMapping to collections.abc.MutableMapping</news>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
   </extension>
 </addon><addon id="script.moria.artwork" version="1.1.0" name="Moria Artwork" provider-name="host505">
 	<requires>
@@ -2340,9 +3048,9 @@ level.</description>
         </assets>
         <news>Changed the fanart to be a simple small image that has a matching color tone to the theme chosen.</news>
     </extension>
-</addon><addon id="script.speedtester" name="Speed Tester" version="1.1.2" provider-name="Dr0idGuy, dagwieers">
+</addon><addon id="script.speedtester" name="Speed Tester" version="1.1.2+matrix.1" provider-name="Dr0idGuy, dagwieers">
   <requires>
-    <import addon="xbmc.python" version="2.26.0" />
+    <import addon="xbmc.python" version="3.0.0" />
   </requires>
   <extension point="xbmc.python.script" library="resources/lib/addon_entry.py">
     <provides>executable</provides>
@@ -2595,11 +3303,9 @@ v1.0.1 (2019-08-06)
 			<screenshot>resources/screenshot-08.jpg</screenshot>
 		</assets>
 	</extension>
-</addon><addon id="skin.estuary1" version="3.4.9" name="Estuary1" provider-name="Terry Tibs,phil65, Ichabod Fletchman">
+</addon><addon id="skin.estuary1" version="2.5.7" name="Estuary1" provider-name="Terry Tibs,phil65, Ichabod Fletchman">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0" />
-		<import addon="visualization.spectrum" />
-		
 	</requires>
 	<extension point="xbmc.gui.skin" debugging="false">
 		<res width="1920" height="1440" aspect="4:3" default="false" folder="xml" />

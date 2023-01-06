@@ -1,4 +1,4 @@
-import urllib,urllib2,sys,re,xbmcplugin,xbmcgui,xbmcaddon,xbmc,os,cookielib
+import urllib,sys,re,xbmcplugin,xbmcgui,xbmcaddon,xbmc,os,cookielib
 from datetime import datetime,tzinfo,timedelta
 import json
 import base64
@@ -76,7 +76,8 @@ def OPEN_URL(url):
 	link = requests.session().get(url, headers=headers, verify=False).text
 	link = link.encode('ascii', 'ignore')
 	return link
-    
+
+'''    
 def getUrl(url, cookieJar=None,post=None, timeout=20, headers=None,jsonpost=False):
 
     #ctx = ssl.create_default_context()
@@ -125,7 +126,7 @@ def getUrl(url, cookieJar=None,post=None, timeout=20, headers=None,jsonpost=Fals
         link=response.read()
     response.close()
     return link;
-    
+'''   
 def regex_from_to(text, from_string, to_string, excluding=True):
 	import re,string
 	if excluding:

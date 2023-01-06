@@ -15,19 +15,15 @@ import xbmcswift2
 
 from functools import wraps
 from optparse import OptionParser
+from urllib.parse import urlencode, parse_qs
 
-from xbmcswift2 import xbmc, xbmcgui, xbmcplugin, xbmcaddon, Request
+
+from xbmcswift2 import xbmc, xbmcvfs, xbmcgui, xbmcplugin, xbmcaddon, Request
 from xbmcswift2.listitem import ListItem
 from xbmcswift2.logger import log, setup_log
 from xbmcswift2.common import enum, clean_dict, Modes, DEBUG_MODES
 from xbmcswift2.urls import UrlRule, NotFoundException, AmbiguousUrlException
 from xbmcswift2.xbmcmixin import XBMCMixin
-
-from urllib import urlencode
-try:
-    from urlparse import parse_qs
-except ImportError:
-    from cgi import parse_qs
 
 
 class Plugin(XBMCMixin):
@@ -111,7 +107,7 @@ class Plugin(XBMCMixin):
         self._log = setup_log(self._addon_id)
 
         # The path to the storage directory for the addon
-        self._storage_path = xbmc.translatePath(
+        self._storage_path = xbmcvfs.translatePath(
             'special://profile/addon_data/%s/.storage/' % self._addon_id)
         if not os.path.isdir(self._storage_path):
             os.makedirs(self._storage_path)
@@ -120,7 +116,7 @@ class Plugin(XBMCMixin):
         # Since xbmcswift2 currently relies on execution from an addon's root
         # directly, we can rely on cwd for now...
         if xbmcswift2.CLI_MODE:
-            from xbmcswift2.mockxbmc import utils
+            from xbmcswift2.mockxbmc import utils # pylint: disable=import-error, no-name-in-module
             if filepath:
                 addon_dir = os.path.dirname(filepath)
             else:
@@ -290,7 +286,7 @@ class Plugin(XBMCMixin):
             rule = self._view_functions[endpoint]
         except KeyError:
             try:
-                rule = (rule for rule in self._view_functions.values() if rule.view_func == endpoint).next()
+                rule = (rule for rule in self._view_functions.values() if rule.view_func == endpoint).__next__()
             except StopIteration:
                 raise NotFoundException(
                     '%s doesn\'t match any known patterns.' % endpoint)

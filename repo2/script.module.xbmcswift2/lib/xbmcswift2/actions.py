@@ -12,16 +12,16 @@
 def background(url):
     '''This action will run an addon in the background for the provided URL.
 
-    See 'XBMC.RunPlugin()' at
-    https://kodi.wiki/index.php?title=List_of_built-in_functions.
+    See 'RunPlugin()' at
+    https://codedocs.xyz/xbmc/xbmc/page__list_of_built_in_functions.html.
     '''
-    return 'XBMC.RunPlugin(%s)' % url
+    return 'RunPlugin(%s)' % url
 
 
 def update_view(url):
     '''This action will update the current container view with provided url.
 
-    See 'XBMC.Container.Update()' at
-    https://kodi.wiki/index.php?title=List_of_built-in_functions.
+    See 'Container.Update()' at
+    https://codedocs.xyz/xbmc/xbmc/page__list_of_built_in_functions.html.
     '''
-    return 'XBMC.Container.Update(%s)' % url
+    return 'Container.Update(%s)' % url

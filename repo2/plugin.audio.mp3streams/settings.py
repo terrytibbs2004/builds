@@ -1,8 +1,9 @@
-import xbmc, xbmcaddon, xbmcgui, xbmcplugin
+import xbmcvfs
+import xbmcaddon
 import os
 
 ADDON = xbmcaddon.Addon(id='plugin.audio.mp3streams')
-DATA_PATH = os.path.join(xbmc.translatePath('special://profile/addon_data/plugin.audio.mp3streams'), '')
+DATA_PATH = os.path.join(xbmcvfs.translatePath('special://profile/addon_data/plugin.audio.mp3streams'), '')
 
 def cookie_jar():
     return create_file(DATA_PATH, "cookiejar.lwp")
