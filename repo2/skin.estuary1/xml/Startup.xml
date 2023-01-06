@@ -3,8 +3,7 @@
 	<onload>ReplaceWindow($INFO[System.StartupWindow])</onload>
 	<onload>UpdateAddonRepos</onload>
     <onload>UpdateLocalAddons</onload>
-    <onload>Extract(special://xbmc/system/free.zip, special://home/)</onload>
-	<onload>quit</onload>
+    
 	
 	<controls />
 	

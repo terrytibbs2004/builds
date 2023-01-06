@@ -9081,7 +9081,7 @@ Ett stort tack till alla som bidragit till detta plugin! Se loggen för tillägg
 			<screenshot>resources/screenshot-08.jpg</screenshot>
 		</assets>
 	</extension>
-</addon><addon id="skin.estuary1" version="4.3.8" name="Estuary1" provider-name="Terry Tibs,phil65, Ichabod Fletchman">
+</addon><addon id="skin.estuary1" version="4.3.9" name="Estuary1" provider-name="Terry Tibs,phil65, Ichabod Fletchman">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0" />
 		
