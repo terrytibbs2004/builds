@@ -1119,8 +1119,10 @@ Initial release.
     <summary lang="en_GB">A common caching API for Kodi add-ons.</summary>
     <description lang="en_GB">A common caching API for Kodi add-ons.</description>
   </extension>
-</addon><addon id="script.keymap" name="Keymap Editor" version="1.1.5" provider-name="takoi,pkscout">
+</addon><addon id="script.keymap" name="Keymap Editor" version="1.2.5" provider-name="takoi,pkscout">
 	<requires>
+	
+	<import addon="visualization.spectrum" />
 		<import addon="xbmc.python" version="3.0.0" />
 		<import addon="script.module.defusedxml" version="0.6.0+matrix.1" />
 	</requires>
