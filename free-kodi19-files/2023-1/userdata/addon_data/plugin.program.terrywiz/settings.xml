@@ -1,0 +1,14 @@
+<settings version="2">
+    <setting id="buildname">Update</setting>
+    <setting id="buildversion">2.8</setting>
+    <setting id="firstrun">true</setting>
+    <setting id="firstrunNotify" default="true">false</setting>
+    <setting id="notifyversion" default="true">0</setting>
+    <setting id="autoclearpackages">true</setting>
+    <setting id="update_passed" default="true">false</setting>
+    <setting id="backupfolder">/storage/emulated/0/Download/</setting>
+    <setting id="savefavs" default="true">false</setting>
+    <setting id="savedebrid" default="true">false</setting>
+    <setting id="savesources" default="true">false</setting>
+    <setting id="saveadvanced" default="true">false</setting>
+</settings>
