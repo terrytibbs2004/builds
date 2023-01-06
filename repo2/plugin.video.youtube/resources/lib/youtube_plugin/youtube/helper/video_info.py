@@ -740,8 +740,10 @@ class VideoInfo(object):
         #                                   'hl': self.language}}}
 
         payload = {'videoId': video_id,
-                   'context': {'client': {'clientVersion': '16.05', 'gl': self.region,
-                                          'clientName': 'ANDROID', 'hl': self.language}}}
+                   'context': {'client': {'clientVersion': '16.49', 'gl': self.region,
+                                          'clientName': 'ANDROID', 'hl': self.language}},
+                   'thirdParty': {'embedUrl': 'https://google.com'}
+        }
 
         player_response = {}
         for attempt in range(2):
@@ -751,9 +753,10 @@ class VideoInfo(object):
                                   allow_redirects=True)
                 r.raise_for_status()
                 player_response = r.json()
-                if player_response.get('playabilityStatus', {}).get('status', 'OK') == 'AGE_CHECK_REQUIRED' \
-                        and attempt == 0:
-                    payload['context']['client']['clientScreen'] = 'EMBED'
+                if player_response.get('playabilityStatus', {}).get('status', 'OK') in \
+                        ('AGE_CHECK_REQUIRED', 'UNPLAYABLE', 'CONTENT_CHECK_REQUIRED') and attempt == 0:
+                    payload['context']['client']['clientName'] = 'ANDROID_EMBEDDED_PLAYER'
+                    payload['context']['client']['clientVersion'] = '16.20'
                     continue
             except:
                 error_message = 'Failed to get player response for video_id "%s"' % video_id
@@ -852,7 +855,14 @@ class VideoInfo(object):
 
                     if 'errorScreen' in playability_status and 'playerErrorMessageRenderer' in playability_status['errorScreen']:
                         status_renderer = playability_status['errorScreen']['playerErrorMessageRenderer']
-                        descript_reason = status_renderer.get('subreason', {}).get('simpleText')
+                        status_reason = status_renderer.get('reason', {})
+                        main_text_runs = status_reason.get('runs', [{}])
+                        reason_text = []
+                        descript_reason = ''
+                        for text in main_text_runs:
+                            reason_text.append(text.get('text', ''))
+                        if reason_text:
+                            descript_reason = ''.join(reason_text)
                         if descript_reason:
                             reason = descript_reason
                         else:
@@ -863,10 +873,11 @@ class VideoInfo(object):
                 if not reason:
                     reason = 'UNKNOWN'
 
-                try:
-                    reason = reason.encode('raw_unicode_escape').decode('utf-8')
-                except:
-                    pass
+                if PY2:
+                    try:
+                        reason = reason.encode('raw_unicode_escape').decode('utf-8')
+                    except:
+                        pass
 
                 raise YouTubeException(reason)
 

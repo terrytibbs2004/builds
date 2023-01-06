@@ -17,9 +17,9 @@ class APIKeyStore(JSONStore):
     def set_defaults(self):
         data = self.get_data()
         if 'keys' not in data:
-            data = {'keys': {'personal': {'AIzaSyAil9qQK_AI05kgi89SQGy71m4Pz6zqtB0': '', '390049015383-rudtougt4pd9lrcukvl7f5o2mtaik05d.apps.googleusercontent.com': '', 'jIXoykZJuxh7tDcL-vn9vSLZ': ''}, 'developer': {}}}
+            data = {'keys': {'personal': {'api_key': '', 'client_id': '', 'client_secret': ''}, 'developer': {}}}
         if 'personal' not in data['keys']:
-            data['keys']['personal'] = {'AIzaSyAil9qQK_AI05kgi89SQGy71m4Pz6zqtB0': '', '390049015383-rudtougt4pd9lrcukvl7f5o2mtaik05d.apps.googleusercontent.com': '', 'jIXoykZJuxh7tDcL-vn9vSLZ': ''}
+            data['keys']['personal'] = {'api_key': '', 'client_id': '', 'client_secret': ''}
         if 'developer' not in data['keys']:
             data['keys']['developer'] = {}
         self.save(data)

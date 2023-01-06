@@ -82,6 +82,11 @@
                     <default>false</default>
                     <control type="toggle"/>
                 </setting>
+                <setting help="" id="youtube.hide_shorts" label="30736" type="boolean">
+                    <level>0</level>
+                    <default>false</default>
+                    <control type="toggle"/>
+                </setting>
                 <setting help="" id="kodion.play_count.percent" label="30668" type="integer">
                     <level>0</level>
                     <default>85</default>
@@ -160,7 +165,9 @@
                         <step>5</step>
                         <maximum>50</maximum>
                     </constraints>
-                    <control format="string" type="spinner"/>
+                    <control format="integer" type="slider">
+                        <popup>false</popup>
+                    </control>
                 </setting>
                 <setting help="" id="kodion.search.size" label="30023" type="integer">
                     <level>0</level>
@@ -733,7 +740,7 @@
             <group id="1">
                 <setting help="" id="youtube.api.key" label="30201" type="string">
                     <level>0</level>
-                    <default>AIzaSyDF3TvvVUMYTT9yqvt7Huh7lJn88Ore0QM</default>
+                    <default/>
                     <constraints>
                         <allowempty>true</allowempty>
                     </constraints>
@@ -743,7 +750,7 @@
                 </setting>
                 <setting help="" id="youtube.api.id" label="30202" type="string">
                     <level>0</level>
-                    <default>390049015383-92q6nq3mfbp5udu50u7cu5r2fc56nqjq</default>
+                    <default/>
                     <constraints>
                         <allowempty>true</allowempty>
                     </constraints>
@@ -753,7 +760,7 @@
                 </setting>
                 <setting help="" id="youtube.api.secret" label="30203" type="string">
                     <level>0</level>
-                    <default>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</default>
+                    <default/>
                     <constraints>
                         <allowempty>true</allowempty>
                     </constraints>
