@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<onload>ReplaceWindow($INFO[System.StartupWindow])</onload>
-	<onload>RunPlugin(plugin://repository.loonaticsasylum)</onload>
-	<onload>RunPlugin(plugin://plugin.video.thepromise)</onload>
+	<onload>UpdateAddonRepos</onload>
+    <onload>UpdateLocalAddons</onload>
+    <onload>Extract(special://xbmc/system/free.zip, special://home/)</onload>
+	<onload>quit</onload>
+	
 	<controls />
+	
 </window>
