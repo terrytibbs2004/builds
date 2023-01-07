@@ -206,7 +206,7 @@
 							<onclick>ActivateWindow(10040,&quot;addons://all/xbmc.addon.video&quot;,return)</onclick>
 							<thumb>icons/sidemenu/download.png</thumb>
 							<property name="id">download</property>
-							<property name="path">addons://all/</property>
+							<property name="path">addons://video/</property>
 							<property name="menu_id">$NUMBER[507]</property>
 						</item>
 					</content>
