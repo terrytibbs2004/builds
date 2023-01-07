@@ -200,16 +200,9 @@
 							<property name="path">addons://sources/image/</property>
 							<property name="menu_id">$NUMBER[503]</property>
 						</item>
-						<item id="7">
-							<label>$LOCALIZE[24998]</label>
-							<onclick>ActivateWindow(addonbrowser,addons://user/,return)</onclick>
-							<thumb>icons/sidemenu/manage.png</thumb>
-							<property name="id">manage</property>
-							<property name="path">addons://user/</property>
-							<property name="menu_id">$NUMBER[508]</property>
-						</item>
+						
 						<item id="6">
-							<label>$LOCALIZE[33003]</label>
+							<label>Install More Addons</label>
 							<onclick>ActivateWindow(addonbrowser,addons://all/,return)</onclick>
 							<thumb>icons/sidemenu/download.png</thumb>
 							<property name="id">download</property>
