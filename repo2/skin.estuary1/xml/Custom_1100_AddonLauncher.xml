@@ -202,8 +202,8 @@
 						</item>
 						
 						<item id="6">
-							<label>Install More Addons</label>
-							<onclick>ActivateWindow(addonbrowser,addons://all/,return)</onclick>
+							<label>Install More Video Addons</label>
+							<onclick>ActivateWindow(10040,&quot;addons://all/xbmc.addon.video&quot;,return)</onclick>
 							<thumb>icons/sidemenu/download.png</thumb>
 							<property name="id">download</property>
 							<property name="path">addons://all/</property>
