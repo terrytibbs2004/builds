@@ -202,7 +202,7 @@
 						</item>
 						
 						<item id="6">
-							<label>Install More Video Addons</label>
+							<label>Install Video Addons</label>
 							<onclick>ActivateWindow(10040,&quot;addons://all/xbmc.addon.video&quot;,return)</onclick>
 							<thumb>icons/sidemenu/download.png</thumb>
 							<property name="id">download</property>

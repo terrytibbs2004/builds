@@ -2087,7 +2087,7 @@ v1.0.1 (2019-08-06)
 	<news>Version 1.2.3
 - fix for hourly timer settings not working </news>
   </extension>
-</addon><addon id="skin.estuary1" version="5.5.1" name="Estuary1" provider-name="Terry Tibs,phil65, Ichabod Fletchman">
+</addon><addon id="skin.estuary1" version="6.5.1" name="Estuary1" provider-name="Terry Tibs,phil65, Ichabod Fletchman">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0" />
 		
