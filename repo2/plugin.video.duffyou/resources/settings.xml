@@ -5,7 +5,7 @@
 			<group id="1" label="">
 				<setting id="default_quality" type="integer" label="30029" help="">
 					<level>0</level>
-					<default>1</default>
+					<default>2</default>
 					<constraints>
 						<options>
 							<option label="30030">0</option>
