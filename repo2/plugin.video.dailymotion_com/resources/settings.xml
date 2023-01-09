@@ -4,7 +4,7 @@
 		<setting id="language" type="enum" label="30101" values="Argentina|Brasil|Canada (EN)|Canada (FR)|Deutschland|España|France|India|Indonesia|Italia|Ivory Coast|Malaysia|México|Pakistan|Pilipinas|Türkiye|United Kingdom|United States|Việt Nam|대한민국|台灣" default="16"/>
 		<setting id="dmUser" type="text" label="30106" default=""/>
 		<setting id="itemsPerPage" type="enum" label="30107" values="25|50|75|100" default="1"/>
-		<setting id="maxVideoQuality" type="enum" label="30105" values="240p|380p|SD|HD|FHD|QHD|UHD" default="2"/>
+		<setting id="maxVideoQuality" type="enum" label="30105" values="240p|380p|SD|HD|FHD|QHD|UHD" default="3"/>
 	</category> 
 	<category label="30112">
 		<setting id="downloadDir" type="folder" label="30108" default=""/>

@@ -1196,7 +1196,7 @@ set scraper to resue Python interpreter to increase speed of scraping
             <fanart>fanart.jpg</fanart>
         </assets>
     </extension>
-</addon><addon id="plugin.video.dailymotion_com" name="DailyMotion.com" version="2.4.3+matrix.1" provider-name="gujal">
+</addon><addon id="plugin.video.dailymotion_com" name="DailyMotion.com" version="2.4.3+matrix.20" provider-name="gujal">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="script.module.six" version="0.0.1" />
@@ -2710,7 +2710,7 @@ v1.0.1 (2019-08-06)
 	<news>Version 1.2.3
 - fix for hourly timer settings not working </news>
   </extension>
-</addon><addon id="skin.estuary1" version="6.6.1" name="Estuary1" provider-name="Terry Tibs,phil65, Ichabod Fletchman">
+</addon><addon id="skin.estuary1" version="6.7.1" name="Estuary1" provider-name="Terry Tibs,phil65, Ichabod Fletchman">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0" />
 		
