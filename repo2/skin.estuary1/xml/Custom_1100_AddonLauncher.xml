@@ -166,15 +166,7 @@
 							<property name="path">addons://sources/audio/</property>
 							<property name="menu_id">$NUMBER[501]</property>
 						</item>
-						<item id="8">
-							<label>$LOCALIZE[35049]</label>
-							<visible>System.GetBool(gamesgeneral.enable)</visible>
-							<onclick>ActivateWindow(games,addons://sources/game/,return)</onclick>
-							<thumb>icons/sidemenu/games.png</thumb>
-							<property name="id">game</property>
-							<property name="path">addons://sources/game/</property>
-							<property name="menu_id">$NUMBER[509]</property>
-						</item>
+						
 						<item id="3">
 							<label>$LOCALIZE[1043]</label>
 							<onclick>ActivateWindow(programs,addons://sources/executable/,return)</onclick>
@@ -183,31 +175,37 @@
 							<property name="path">addons://sources/executable/</property>
 							<property name="menu_id">$NUMBER[502]</property>
 						</item>
-						<item id="4">
-							<label>$LOCALIZE[20244]</label>
-							<onclick>ActivateWindow(programs,androidapp://sources/apps/,return)</onclick>
-							<thumb>icons/sidemenu/android.png</thumb>
-							<property name="id">android</property>
-							<property name="path">androidapp://sources/apps/</property>
-							<property name="menu_id">$NUMBER[506]</property>
-							<visible>System.Platform.Android</visible>
-						</item>
+						
 						<item id="5">
-							<label>$LOCALIZE[1039]</label>
-							<onclick>ActivateWindow(pictures,addons://sources/image/,return)</onclick>
-							<thumb>icons/sidemenu/pictures.png</thumb>
-							<property name="id">pictures</property>
-							<property name="path">addons://sources/image/</property>
-							<property name="menu_id">$NUMBER[503]</property>
+							<label>More Video Addons</label>
+							<onclick>RunPlugin(plugin://plugin.video.duffyou)</onclick>
+							<onclick>RunPlugin(plugin://plugin.video.dailymotion_com)</onclick>
+							<onclick>RunPlugin(plugin://plugin.video.iplayerwww)</onclick>
+							<onclick>RunPlugin(plugin://plugin.video.moria)</onclick>
+							<onclick>RunPlugin(plugin://plugin.video.nightwing)</onclick>
+							
+							
+							
+							<onclick>RunPlugin(plugin://plugin.video.scrubsv2)</onclick>
+							<onclick>RunPlugin(plugin://plugin.video.thecrew)</onclick>
+							<onclick>RunPlugin(plugin://plugin.video.umbrella)</onclick>
+							
+							
+							
+							
+							<thumb>icons/sidemenu/download.png</thumb>
+							<property name="id">video</property>
+							<property name="path">addons://sources/video/</property>
+							<property name="menu_id">$NUMBER[500]</property>
 						</item>
 						
 						<item id="6">
-							<label>Install Video Addons</label>
-							<onclick>ActivateWindow(10040,&quot;addons://all/xbmc.addon.video&quot;,return)</onclick>
+							<label>More Sports Addons</label>
+							<onclick>RunPlugin(plugin://plugin.video.the-loop)</onclick>
 							<thumb>icons/sidemenu/download.png</thumb>
-							<property name="id">download</property>
-							<property name="path">addons://video/</property>
-							<property name="menu_id">$NUMBER[507]</property>
+							<property name="id">video</property>
+							<property name="path">addons://sources/video/</property>
+							<property name="menu_id">$NUMBER[500]</property>
 						</item>
 					</content>
 				</control>
