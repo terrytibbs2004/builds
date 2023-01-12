@@ -576,7 +576,7 @@ msgid "Revoke Plex"
 msgstr ""
 
 msgctxt "#32526"
-msgid "(Select/Re-Select) plexshare source"
+msgid "(Select/Re-Select) PlexShare Source"
 msgstr ""
 
 msgctxt "#32527"
@@ -637,4 +637,8 @@ msgstr ""
 
 msgctxt "#32543"
 msgid "IBIT"
+msgstr ""
+
+msgctxt "#32544"
+msgid "See Active PlexShares"
 msgstr ""

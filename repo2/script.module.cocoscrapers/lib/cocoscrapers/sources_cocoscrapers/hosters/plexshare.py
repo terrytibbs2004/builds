@@ -1,17 +1,21 @@
 # -*- coding: utf-8 -*-
 # created by Venom for Fenomscrapers (updated 8-07-2022)
+# modified for multiple shares -ud (01/10/23)
 """
-	Fenomscrapers Project
+	CocoScrapers Project
 """
-
 import re
+import time
 import requests
 from urllib.parse import quote
+from cocoscrapers.modules import cleantitle, source_utils
 from cocoscrapers.modules.client import parseDOM, replaceHTMLCodes
-from cocoscrapers.modules.control import addonEnabled, setting as getSetting
-from cocoscrapers.modules import source_utils, cleantitle
-PLEX_AUDIO = {'dca': 'dts', 'dca-ma': 'hdma'}
+from cocoscrapers.modules import source_utils
+from cocoscrapers.modules import workers
+from cocoscrapers.modules import control
+from cocoscrapers.modules import plex as plexShare
 
+PLEX_AUDIO = {'dca': 'dts', 'dca-ma': 'hdma'}
 
 class source:
 	priority = 2
@@ -20,38 +24,55 @@ class source:
 	hasEpisodes = True
 	def __init__(self):
 		self.language = ['en']
-		self.client_id = getSetting('plex.client_id')
-		self.accessToken = getSetting('plexshare.accessToken')
-		self.base_link = getSetting('plexshare.url')
-		self.composite_installed = addonEnabled('plugin.video.composite_for_plex')
-		if self.composite_installed: self.play_link = 'plugin://plugin.video.composite_for_plex/?url=%s' % self.base_link
-		else: self.play_link = self.base_link
-		self.sourceTitle = getSetting('plexshare.sourceTitle')
-		self.moviesearch = '/search?type=1&query=%s&year=%s&limit=100&X-Plex-Client-Identifier=%s&X-Plex-Token=%s' % ('%s', '%s', self.client_id, self.accessToken)
-		self.episodesearch = '/hubs/search?query=%s&limit=30&X-Plex-Client-Identifier=%s&X-Plex-Token=%s' % ('%s', self.client_id, self.accessToken)
-		# parentIndex = season number ; index = episode number in season
-		# self.episodesearch = '/search?type=4&query=%s&parentIndex=%s&index=%s&limit=6000&X-Plex-Client-Identifier=%s&X-Plex-Token=%s' % ('%s', '%s', '%s', self.client_id, self.accessToken)
+		self.client_id = control.setting('plex.client_id')
+		self.composite_installed = control.addonEnabled('plugin.video.composite_for_plex')
 
 
 	def sources(self, data, hostDict):
-		sources = []
-		if not data or not self.accessToken or not self.base_link: return sources
-		sources_append = sources.append
+		self.sources = []
+		if not data: return self.sources
+		self.sources_append = self.sources.append
+		try:
+			shares = plexShare.Plex().plex_get_all()
+			########################################################
+			threads = []
+			append = threads.append
+			for share in shares:
+				append(workers.Thread(self.get_sources, share[0], share[1], share[2], data))
+			[i.start() for i in threads]
+			alive = [x for x in threads if x.is_alive() is True]
+			while alive:
+				alive = [x for x in threads if x.is_alive() is True]
+				time.sleep(0.1)
+			from cocoscrapers.modules import log_utils
+			log_utils.log('sources = %s' % str(self.sources))
+			return self.sources
+		except:
+			source_utils.scraper_error('PLEXSHARE')
+			return self.sources
+
+	def get_sources(self, sourceTitle, accessToken, plexShareURL, data):
+		base_link = plexShareURL
+		moviesearch = '/search?type=1&query=%s&year=%s&limit=100&X-Plex-Client-Identifier=%s&X-Plex-Token=%s' % ('%s', '%s', self.client_id, accessToken)
+		episodesearch = '/hubs/search?query=%s&limit=30&X-Plex-Client-Identifier=%s&X-Plex-Token=%s' % ('%s', self.client_id, accessToken)
+		if self.composite_installed: play_link = 'plugin://plugin.video.composite_for_plex/?url=%s' % base_link
+		else: play_link = base_link
+
 		try:
 			aliases = data['aliases']
 			year = data['year']
 			if 'tvshowtitle' in data:
 				title, episode_title = data['tvshowtitle'], data['title']
 				hdlr = 'S%02dE%02d' % (int(data['season']), int(data['episode']))
-				url = '%s%s' % (self.base_link, self.episodesearch % (quote(title+' '+episode_title)))
+				url = '%s%s' % (base_link, episodesearch % (quote(title+' '+episode_title)))
 				years = None
 			else:
 				title, episode_title = data['title'], None
 				hdlr = year
-				url = '%s%s' % (self.base_link, self.moviesearch % (quote(title), year))
+				url = '%s%s' % (base_link, moviesearch % (quote(title), year))
 				years = [str(int(year)-1), str(year), str(int(year)+1)]
-			
-			#log_utils.log('url = %s' % url)
+			from cocoscrapers.modules import log_utils
+			log_utils.log('url = %s' % url)
 
 			try: results = requests.get(url)
 			except requests.exceptions.SSLError: results = requests.get(url, verify=False)
@@ -63,7 +84,7 @@ class source:
 			# check_foreign_audio = source_utils.check_foreign_audio()
 		except:
 			source_utils.scraper_error('PLEXSHARE')
-			return sources
+			return self.sources
 
 		for result in results:
 			try:
@@ -106,10 +127,10 @@ class source:
 
 				if self.composite_installed:
 					key = parseDOM(result, 'Video', ret='key')[0]
-					url = '%s%s?X-Plex-Client-Identifier=%s&X-Plex-Token=%s&mode=5' % (self.play_link, key, self.client_id, self.accessToken)
+					url = '%s%s?X-Plex-Client-Identifier=%s&X-Plex-Token=%s&mode=5' % (play_link, key, self.client_id, accessToken)
 				else:
 					key = parseDOM(result, 'Part', ret='key')[0].rsplit('/', 1)[0] # remove "/file.mkv" to replace with true file name for dnld
-					url = '%s%s/%s?X-Plex-Client-Identifier=%s&X-Plex-Token=%s' % (self.play_link, key, file_name, self.client_id, self.accessToken)
+					url = '%s%s/%s?X-Plex-Client-Identifier=%s&X-Plex-Token=%s' % (play_link, key, file_name, self.client_id, accessToken)
 
 				size = parseDOM(result, 'Part', ret='size')[0]
 				quality, info = source_utils.get_release_quality(name_info, url)
@@ -118,9 +139,7 @@ class source:
 					if isize: info.insert(0, isize)
 				except: dsize = 0
 				info = ' | '.join(info)
-
-				sources_append({'provider': 'plexshare', 'plexsource': self.sourceTitle, 'source': 'direct', 'name': file_name, 'name_info': name_info,
+				self.sources_append({'provider': 'plexshare', 'plexsource': sourceTitle, 'source': 'direct', 'name': file_name, 'name_info': name_info,
 								'quality': quality, 'language': 'en', 'url': url, 'info': info, 'direct': True, 'debridonly': False, 'size': dsize})
 			except:
 				source_utils.scraper_error('PLEXSHARE')
-		return sources

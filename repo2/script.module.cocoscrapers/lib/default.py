@@ -105,5 +105,9 @@ elif action == 'plexSelectShare':
 	from cocoscrapers.modules import plex
 	plex.Plex().get_plexshare_resource()
 
+elif action == 'plexSeeShare':
+	from cocoscrapers.modules import plex
+	plex.Plex().see_active_shares()
+
 elif action == 'ShowOKDialog':
 	control.okDialog(params.get('title', 'default'), int(params.get('message', '')))

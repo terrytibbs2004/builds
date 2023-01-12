@@ -41,6 +41,7 @@ SETTINGS_PATH = transPath(joinPath(addonInfo('path'), 'resources', 'settings.xml
 dataPath = transPath(addonInfo('profile'))
 cacheFile = joinPath(dataPath, 'cache.db')
 undesirablescacheFile = joinPath(dataPath, 'undesirables.db')
+plexSharesFile = joinPath(dataPath, 'plexshares.db')
 settingsFile = joinPath(dataPath, 'settings.xml')
 
 def getKodiVersion(full=False):

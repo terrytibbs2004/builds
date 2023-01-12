@@ -139,7 +139,7 @@
 							<condition on="property" name="InfoBool">false</condition>
 						</dependency>
 						<dependency type="visible">
-							<condition operator="!is" setting="plex.token"/>
+							<condition on="property" name="InfoBool">false</condition>
 						</dependency>
 					</dependencies>
 					<control type="edit" format="string">
@@ -158,7 +158,7 @@
 							<condition on="property" name="InfoBool">false</condition>
 						</dependency>
 						<dependency type="visible">
-							<condition operator="!is" setting="plex.token"/>
+							<condition on="property" name="InfoBool">false</condition>
 						</dependency>
 					</dependencies>
 					<control type="edit" format="string">
@@ -177,7 +177,7 @@
 							<condition on="property" name="InfoBool">false</condition>
 						</dependency>
 						<dependency type="visible">
-							<condition operator="!is" setting="plex.token"/>
+							<condition on="property" name="InfoBool">false</condition>
 						</dependency>
 					</dependencies>
 					<control type="edit" format="string">
@@ -195,7 +195,7 @@
 							<condition on="property" name="InfoBool">false</condition>
 						</dependency>
 						<dependency type="visible">
-							<condition operator="!is" setting="plex.token"/>
+							<condition on="property" name="InfoBool">false</condition>
 						</dependency>
 					</dependencies>
 					<control type="edit" format="string">
@@ -214,7 +214,7 @@
 							<condition on="property" name="InfoBool">false</condition>
 						</dependency>
 						<dependency type="visible">
-							<condition operator="!is" setting="plex.token"/>
+							<condition on="property" name="InfoBool">false</condition>
 						</dependency>
 					</dependencies>
 					<control type="edit" format="string">
@@ -241,6 +241,35 @@
 						<close>true</close>
 					</control>
 				</setting>
+				<setting id="plexSeeActiveShares" type="action" label="32544" help="">
+					<level>0</level>
+					<data>RunPlugin(plugin://script.module.cocoscrapers/?action=plexSeeShare)</data>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="!is" setting="plex.token"/>
+						</dependency>
+					</dependencies>
+					<control type="button" format="action">
+					</control>
+				</setting>
+				<setting id="plexSelectShareButton" type="action" label="32526" help="">
+					<level>0</level>
+					<data>RunPlugin(plugin://script.module.cocoscrapers/?action=plexSelectShare)</data>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="!is" setting="plex.token"/>
+						</dependency>
+					</dependencies>
+					<control type="button" format="action">
+						<close>true</close>
+					</control>
+				</setting>
 				<setting id="plexRevokeButton" type="action" label="32525" help="">
 					<level>0</level>
 					<data>RunPlugin(plugin://script.module.cocoscrapers/?action=plexRevoke)</data>
@@ -254,21 +283,6 @@
 								<condition operator="!is" setting="plex.client_id"/>
 								<condition operator="!is" setting="plex.token"/>
 							</or>
-						</dependency>
-					</dependencies>
-					<control type="button" format="action">
-						<close>true</close>
-					</control>
-				</setting>
-				<setting id="plexSelectShareButton" type="action" label="32526" help="">
-					<level>0</level>
-					<data>RunPlugin(plugin://script.module.cocoscrapers/?action=plexSelectShare)</data>
-					<constraints>
-						<allowempty>true</allowempty>
-					</constraints>
-					<dependencies>
-						<dependency type="visible">
-							<condition operator="!is" setting="plex.token"/>
 						</dependency>
 					</dependencies>
 					<control type="button" format="action">
