@@ -911,16 +911,13 @@
 </item>
 <item>
 
-<label>Uk Soaps</label>
+<label>My Tv Episodes</label>
 							
-
-							
-							<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.dailymotion_com/?mode=listVideos&amp;url=https%3a%2f%2fapi.dailymotion.com%2fvideos%3ffields%3ddescription%2cduration%2cid%2cowner.username%2ctaken_time%2cthumbnail_large_url%2ctitle%2cviews_total%26owner%3dTv-Soap%26sort%3drecent%26limit%3d50%26family_filter%3d1%26localization%3den_GB%26page%3d1&quot;,return)</onclick>
+							<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.thepromise/?action=calendar&amp;url=mycalendar&quot;,return)</onclick>
 							<property name="menu_id">$NUMBER[14000]</property>
 						
 							<property name="id">favorites</property>
 							<visible>!Skin.HasSetting(HomeMenuNoFavButton)</visible>
-						
 						
 </item>
 <item>
