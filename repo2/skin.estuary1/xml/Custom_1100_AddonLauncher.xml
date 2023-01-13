@@ -181,14 +181,9 @@
 							<onclick>RunPlugin(plugin://plugin.video.duffyou)</onclick>
 							<onclick>RunPlugin(plugin://plugin.video.dailymotion_com)</onclick>
 							<onclick>RunPlugin(plugin://plugin.video.iplayerwww)</onclick>
-							<onclick>RunPlugin(plugin://plugin.video.moria)</onclick>
-							<onclick>RunPlugin(plugin://plugin.video.nightwing)</onclick>
 							
-							
-							
-							<onclick>RunPlugin(plugin://plugin.video.scrubsv2)</onclick>
 							<onclick>RunPlugin(plugin://plugin.video.thecrew)</onclick>
-							<onclick>RunPlugin(plugin://plugin.video.umbrella)</onclick>
+							
 							
 							
 							
