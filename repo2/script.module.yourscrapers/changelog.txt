@@ -1,0 +1,9 @@
+22.5.13 - ADINA Forked from Fen
+
+My apologies to EZRA author for the hijacking his addon EZRA.
+I assumed it was open to take over, I'm sorry. I was asked by
+many users if I could have it in my repo. I alter all my
+addon(s) version number to the the date of when it was pushed
+to the repo. I also changed myaccounts to your accounts
+because i didn't want it interfering with other(s) repo addon(s)
+which still use myaccounts.
