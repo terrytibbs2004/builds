@@ -2117,7 +2117,7 @@ Known issues:
             <screenshot>resources/art/ss/3.png</screenshot>
         </assets>
     </extension>
-</addon><addon id="plugin.video.thepromise" name="ThePromise" version="23.0.00" provider-name="[COLORpurple]• [COLORorchid]Tech [COLORdarkorchid]E [COLORplum]Coyote [COLORpurple]•[/COLOR]">
+</addon><addon id="plugin.video.thepromise" name="ThePromise" version="23.0.01" provider-name="[COLORpurple]• [COLORorchid]Tech [COLORdarkorchid]E [COLORplum]Coyote [COLORpurple]•[/COLOR]">
     <requires>
         <import addon="script.thepromise.artwork" />
         <import addon="script.module.resolveurl" />

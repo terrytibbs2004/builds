@@ -229,19 +229,12 @@ def manager(name, imdb, tmdb, content):
 
         items = [(control.lang(32516), '/sync/collection')]
         items += [(control.lang(32517), '/sync/collection/remove')]
-        items += [(control.lang(32518), '/sync/watchlist')]
-        items += [(control.lang(32519), '/sync/watchlist/remove')]
-        items += [(control.lang(32520), '/users/me/lists/%s/items')]
+     
 
         result = getTraktAsJson('/users/me/lists')
         lists = [(i['name'], i['ids']['slug']) for i in result]
         lists = [lists[i//2] for i in range(len(lists)*2)]
-        for i in range(0, len(lists), 2):
-            lists[i] = ((six.ensure_str(control.lang(32521) % lists[i][0])), '/users/me/lists/%s/items' % lists[i][1])
-        for i in range(1, len(lists), 2):
-            lists[i] = ((six.ensure_str(control.lang(32522) % lists[i][0])), '/users/me/lists/%s/items/remove' % lists[i][1])
-        items += lists
-
+        
         select = control.selectDialog([i[0] for i in items], control.lang(32515))
 
         if select == -1:
