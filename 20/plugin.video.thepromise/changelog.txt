@@ -1,0 +1,10 @@
+[B][COLOR gold]22.7.31[/COLOR][/B]
+- Added Documentaries section
+- Added StandUp Comedy section
+- Added Retro Cartoons
+- Added User Movie / Tv Show lists
+- Added 1Click FREE Movies
+- Added IPTV section
+
+[B][COLOR gold]22.4.28[/COLOR][/B]
+- Initial version
