@@ -1,0 +1,9 @@
+[B]Version 1.1.73[/B]
+- Rule34: fix pagination
+- Rule34: pick all qualities
+- beemtube: fix playback
+- myfreecams: fix listing
+- Hentaihaven Video playback fix
+- Pornhits: new site
+- Palimas: fix listing
+- TubeXporn: new site
