@@ -8,8 +8,9 @@
     :license: GPLv3, see LICENSE for more details.
 '''
 import re
-from urllib.parse import urlencode, unquote_plus, quote_plus
 from xbmcswift2.common import pickle_dict, unpickle_dict
+
+from urllib import urlencode, unquote_plus, quote_plus
 
 
 # TODO: Use regular Exceptions
@@ -104,7 +105,11 @@ class UrlRule(object):
         with the appropriate value from the items dict.
         '''
         for key, val in items.items():
+            if not isinstance(val, basestring):
+                raise TypeError('Value "%s" for key "%s" must be an instance'
+                                    ' of basestring' % (val, key))
             items[key] = quote_plus(val)
+
         try:
             path = self._url_format.format(**items)
         except AttributeError:
@@ -141,7 +146,7 @@ class UrlRule(object):
         '''
         # Convert any ints and longs to strings
         for key, val in items.items():
-            if isinstance(val, int):
+            if isinstance(val, (int, long)):
                 items[key] = str(val)
 
         # First use our defaults passed when registering the rule

@@ -25,12 +25,10 @@ from resolveurl.lib import helpers
 class MixDropResolver(ResolveUrl):
     name = 'MixDrop'
     domains = ['mixdrop.co', 'mixdrop.to', 'mixdrop.sx', 'mixdrop.bz', 'mixdrop.ch',
-               'mixdrp.co', 'mixdrp.to', 'mixdrop.gl', 'mixdrop.club']
-    pattern = r'(?://|\.)(mixdro?p\.(?:c[ho]|to|sx|bz|gl|club))/(?:f|e)/(\w+)'
+               'mixdrp.co', 'mixdrp.to']
+    pattern = r'(?://|\.)(mixdro?p\.(?:c[ho]|to|sx|bz))/(?:f|e)/(\w+)'
 
     def get_media_url(self, host, media_id):
-        if host.endswith('.club'):
-            host = host.replace('.club', '.co')
         web_url = self.get_url(host, media_id)
         rurl = 'https://{}/'.format(host)
         headers = {'Origin': rurl[:-1],

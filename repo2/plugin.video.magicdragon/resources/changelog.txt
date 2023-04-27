@@ -1,6 +1,5 @@
-[COLOR yellow][B]v3.1.7[/B]
-* Christmas Section Moved To Boxsets
-* Remove code to allow windows defender to see add on and allow
+[COLOR yellow][B]v3.1.2[/B]
+* New Music Section Added
 
 [COLOR yellow][B]v3.0.8[/B]
 * Fixed All Settings To Respond To Magic Dragon

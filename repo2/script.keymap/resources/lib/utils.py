@@ -18,18 +18,15 @@
 import defusedxml.ElementTree as ET
 import xml.etree.ElementTree as UET
 import json
-import xbmc
-import xbmcaddon
+from kodi_six import xbmc
+from kodi_six import xbmcaddon
 
 tr = xbmcaddon.Addon().getLocalizedString
 
-
 def rpc(method, **params):
     params = json.dumps(params)
-    query = '{"jsonrpc": "2.0", "method": "%s", "params": %s, "id": 1}' % (
-        method, params)
+    query = '{"jsonrpc": "2.0", "method": "%s", "params": %s, "id": 1}' % (method, params)
     return json.loads(xbmc.executeJSONRPC(query))
-
 
 def read_keymap(filename):
     ret = []
@@ -42,10 +39,8 @@ def read_keymap(filename):
                         key = mapping.get('id') or mapping.tag
                         action = mapping.text
                         if action:
-                            ret.append(
-                                (context.tag.lower(), action.lower(), key.lower()))
+                            ret.append((context.tag.lower(), action.lower(), key.lower()))
     return ret
-
 
 def write_keymap(keymap, filename):
     contexts = list(set([c for c, a, k in keymap]))
@@ -57,7 +52,7 @@ def write_keymap(keymap, filename):
         builder.start("keyboard", {})
         for c, a, k in keymap:
             if c == context:
-                builder.start("key", {"id": k})
+                builder.start("key", {"id":k})
                 builder.data(a)
                 builder.end("key")
         builder.end("keyboard")

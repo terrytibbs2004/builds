@@ -41,7 +41,7 @@ class VKResolver(ResolveUrl):
         except:
             oid, video_id = re.findall('(.*)_(.*)', media_id)[0]
 
-        sources = self.__get_sources(oid, video_id, headers)
+        sources = self.__get_sources(oid, video_id)
         if sources:
             sources.sort(key=lambda x: int(x[0]), reverse=True)
             source = helpers.pick_source(sources)
@@ -50,30 +50,23 @@ class VKResolver(ResolveUrl):
 
         raise ResolverError('No video found')
 
-    def __get_sources(self, oid, video_id, headers={}):
-        sources_url = 'https://vk.com/al_video.php?act=show'
-        data = {
-            'act': 'show',
-            'al': 1,
-            'video': '{0}_{1}'.format(oid, video_id)
-        }
-        headers.update({'X-Requested-With': 'XMLHttpRequest'})
-        html = self.net.http_POST(sources_url, form_data=data, headers=headers).content
-
+    def __get_sources(self, oid, video_id):
+        sources_url = 'https://vk.com/al_video.php?act=show_inline&al=1&video=%s_%s' % (oid, video_id)
+        html = self.net.http_GET(sources_url).content
         if html.startswith('<!--'):
             html = html[4:]
         js_data = json.loads(html)
         payload = []
         sources = []
         for item in js_data.get('payload'):
-            if isinstance(item, list):
+            if type(item) == list:
                 payload = item
         if payload:
             for item in payload:
-                if isinstance(item, dict):
+                if type(item) == dict:
                     js_data = item.get('player').get('params')[0]
             for item in list(js_data.keys()):
-                if item.startswith('url'):
+                if item.startswith('url') and '.mp4' in js_data.get(item):
                     sources.append((item[3:], js_data.get(item)))
             if not sources:
                 sources = [('360', js_data.get('hls'))]

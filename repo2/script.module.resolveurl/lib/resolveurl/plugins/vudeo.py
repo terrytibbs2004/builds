@@ -22,14 +22,13 @@ from resolveurl.lib import helpers
 
 class VudeoResolver(ResolveGeneric):
     name = 'Vudeo'
-    domains = ['vudeo.net', 'vudeo.io', 'vudeo.co']
-    pattern = r'(?://|\.)(vudeo\.(?:net|[ic]o))/(?:embed-)?([0-9a-zA-Z-]+)'
+    domains = ['vudeo.net', 'vudeo.io']
+    pattern = r'(?://|\.)(vudeo\.(?:net|io))/(?:embed-)?([0-9a-zA-Z-]+)'
 
     def get_media_url(self, host, media_id):
         return helpers.get_media_url(
             self.get_url(host, media_id),
-            patterns=[r'''sources:\s*\["(?P<url>[^"]+)'''],
-            verifypeer=False
+            patterns=[r'''sources:\s*\["(?P<url>[^"]+)''']
         )
 
     def get_url(self, host, media_id):

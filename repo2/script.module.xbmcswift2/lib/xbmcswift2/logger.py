@@ -23,24 +23,26 @@ from xbmcswift2 import CLI_MODE
 
 
 class XBMCFilter(object):
-    '''A logging filter that streams to STDOUT or to the kodi log if
-    running inside KODI.
+    '''A logging filter that streams to STDOUT or to the xbmc log if
+    running inside XBMC.
     '''
     python_to_xbmc = {
         'DEBUG': 'LOGDEBUG',
-        'INFO': 'LOGINFO',
+        'INFO': 'LOGNOTICE',
         'WARNING': 'LOGWARNING',
         'ERROR': 'LOGERROR',
-        'CRITICAL': 'LOGFATAL',
+        'CRITICAL': 'LOGSEVERE',
     }
 
     xbmc_levels = {
         'LOGDEBUG': 0,
         'LOGINFO': 1,
-        'LOGWARNING': 2,
-        'LOGERROR': 3,
-        'LOGFATAL': 4,
-        'LOGNONE': 5,
+        'LOGNOTICE': 2,
+        'LOGWARNING': 3,
+        'LOGERROR': 4,
+        'LOGSEVERE': 5,
+        'LOGFATAL': 6,
+        'LOGNONE': 7,
     }
 
     def __init__(self, prefix):
