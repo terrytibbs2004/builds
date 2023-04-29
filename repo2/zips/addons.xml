@@ -899,7 +899,7 @@ updated language files
       <fanart>fanart.jpg</fanart>
     </assets>
   </extension>
-</addon><addon id="plugin.video.terrysport" name="Terry Tibbs Sports" version="1.0" provider-name="mbebe and terry tibbs">
+</addon><addon id="plugin.video.terrysport" name="Terry Tibbs Sports" version="1.1" provider-name="mbebe and terry tibbs">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="script.module.requests" />
