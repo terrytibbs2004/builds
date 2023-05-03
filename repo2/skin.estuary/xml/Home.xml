@@ -923,17 +923,114 @@
 					</itemlayout>
 					<content>
 						<item>
-							<label>Install Addons</label>
-							
-							<onclick>PlayMedia(&quot;plugin://plugin.program.terrywiz/?url=%2Fstorage%2Femulated%2F0%2FDownloader%2Fnew191.zip&amp;mode=15&amp;name=new191&amp;icon=%2Fdata%2Fuser%2F0%2Forg.xbmc.kodi%2Fcache%2Fapk%2Fassets%2Faddons%2Fplugin.program.terrywiz%2Fresources%2Ficon.png&amp;fanart=%2Fdata%2Fuser%2F0%2Forg.xbmc.kodi%2Fcache%2Fapk%2Fassets%2Faddons%2Fplugin.program.terrywiz%2Fresources%2Ffanart.jpg&amp;description=new191.zip&amp;name2=&amp;version=&quot;)</onclick>
+							<label>$LOCALIZE[342]</label>
+							<onclick condition="Library.HasContent(movies) + Skin.HasSetting(home_no_categories_widget)">ActivateWindow(Videos,videodb://movies/,return)</onclick>
+							<onclick condition="Library.HasContent(movies) + !Skin.HasSetting(home_no_categories_widget)">ActivateWindow(Videos,videodb://movies/titles/,return)</onclick>
+							<onclick condition="!Library.HasContent(movies)">ActivateWindow(Videos,sources://video/,return)</onclick>
 							<property name="menu_id">$NUMBER[5000]</property>
 							<thumb>icons/sidemenu/movies.png</thumb>
 							<property name="id">movies</property>
 							<visible>!Skin.HasSetting(HomeMenuNoMovieButton)</visible>
 						</item>
-						
-							
-							
+						<item>
+							<label>$LOCALIZE[20343]</label>
+							<onclick condition="Library.HasContent(tvshows) + Skin.HasSetting(home_no_categories_widget)">ActivateWindow(Videos,videodb://tvshows/,return)</onclick>
+							<onclick condition="Library.HasContent(tvshows) + !Skin.HasSetting(home_no_categories_widget)">ActivateWindow(Videos,videodb://tvshows/titles/,return)</onclick>
+							<onclick condition="!Library.HasContent(tvshows)">ActivateWindow(Videos,sources://video/,return)</onclick>
+							<property name="menu_id">$NUMBER[6000]</property>
+							<thumb>icons/sidemenu/tv.png</thumb>
+							<property name="id">tvshows</property>
+							<visible>!Skin.HasSetting(HomeMenuNoTVShowButton)</visible>
+						</item>
+						<item>
+							<label>$LOCALIZE[2]</label>
+							<onclick>ActivateWindow(Music,root,return)</onclick>
+							<property name="menu_id">$NUMBER[7000]</property>
+							<thumb>icons/sidemenu/music.png</thumb>
+							<property name="id">music</property>
+							<visible>!Skin.HasSetting(HomeMenuNoMusicButton)</visible>
+						</item>
+						<item>
+							<label>$LOCALIZE[427]</label>
+							<onclick>PlayDisc</onclick>
+							<property name="menu_id">$NUMBER[21000]</property>
+							<thumb>icons/sidemenu/disc.png</thumb>
+							<property name="id">disc</property>
+							<visible>System.HasMediaDVD</visible>
+						</item>
+						<item>
+							<label>$LOCALIZE[20389]</label>
+							<property name="menu_id">$NUMBER[16000]</property>
+							<onclick>ActivateWindow(Videos,musicvideos,return)</onclick>
+							<thumb>icons/sidemenu/musicvideos.png</thumb>
+							<property name="id">musicvideos</property>
+							<visible>!Skin.HasSetting(HomeMenuNoMusicVideoButton)</visible>
+						</item>
+						<item>
+							<label>$LOCALIZE[19020]</label>
+							<property name="menu_id">$NUMBER[12000]</property>
+							<onclick>ActivateWindow(TVChannels)</onclick>
+							<thumb>icons/sidemenu/livetv.png</thumb>
+							<property name="id">livetv</property>
+							<visible>!Skin.HasSetting(HomeMenuNoTVButton)</visible>
+						</item>
+						<item>
+							<label>$LOCALIZE[19021]</label>
+							<property name="menu_id">$NUMBER[13000]</property>
+							<onclick>ActivateWindow(RadioChannels)</onclick>
+							<thumb>icons/sidemenu/radio.png</thumb>
+							<property name="id">radio</property>
+							<visible>!Skin.HasSetting(HomeMenuNoRadioButton)</visible>
+						</item>
+						<item>
+							<label>$LOCALIZE[15016]</label>
+							<property name="menu_id">$NUMBER[17000]</property>
+							<onclick>ActivateWindow(Games)</onclick>
+							<thumb>icons/sidemenu/games.png</thumb>
+							<property name="id">games</property>
+							<visible>System.GetBool(gamesgeneral.enable) + !Skin.HasSetting(HomeMenuNoGamesButton)</visible>
+						</item>
+						<item>
+							<label>$LOCALIZE[24001]</label>
+							<property name="menu_id">$NUMBER[8000]</property>
+							<onclick>ActivateWindow(1100)</onclick>
+							<thumb>icons/sidemenu/addons.png</thumb>
+							<property name="id">addons</property>
+							<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
+						</item>
+						<item>
+							<label>$LOCALIZE[1]</label>
+							<onclick>ActivateWindow(Pictures)</onclick>
+							<property name="menu_id">$NUMBER[4000]</property>
+							<thumb>icons/sidemenu/pictures.png</thumb>
+							<property name="id">pictures</property>
+							<visible>!Skin.HasSetting(HomeMenuNoPicturesButton)</visible>
+						</item>
+						<item>
+							<label>$LOCALIZE[3]</label>
+							<onclick>ActivateWindow(Videos,root)</onclick>
+							<property name="menu_id">$NUMBER[11000]</property>
+							<thumb>icons/sidemenu/videos.png</thumb>
+							<property name="id">video</property>
+							<visible>!Skin.HasSetting(HomeMenuNoVideosButton)</visible>
+						</item>
+						<item>
+							<label>$LOCALIZE[10134]</label>
+							<onclick>ActivateWindow(favourites)</onclick>
+							<property name="menu_id">$NUMBER[14000]</property>
+							<thumb>icons/sidemenu/favourites.png</thumb>
+							<property name="id">favorites</property>
+							<visible>!Skin.HasSetting(HomeMenuNoFavButton)</visible>
+						</item>
+						<item>
+							<label>$LOCALIZE[8]</label>
+							<onclick condition="!String.IsEmpty(Weather.Plugin)">ActivateWindow(Weather)</onclick>
+							<onclick condition="String.IsEmpty(Weather.Plugin)">ReplaceWindow(servicesettings,weather)</onclick>
+							<property name="menu_id">$NUMBER[15000]</property>
+							<thumb>icons/sidemenu/weather.png</thumb>
+							<property name="id">weather</property>
+							<visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
+						</item>
 					</content>
 				</control>
 				<control type="grouplist" id="700">
