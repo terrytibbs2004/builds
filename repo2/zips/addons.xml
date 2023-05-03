@@ -1685,7 +1685,7 @@ v0.5.9 (2022-03-22)
     <disclaimer lang="zh_CN">可放心使用此脚本，更多信息访问 kodi.tv</disclaimer>
     <disclaimer lang="zh_TW">歡迎使用本腳本，相關資訊請參閱kodi.tv</disclaimer>
   </extension>
-</addon><addon id="skin.estuary" version="33.0.5" name="Estuary" provider-name="phil65, Ichabod Fletchman">
+</addon><addon id="skin.estuary" version="3.1.5" name="Estuary" provider-name="phil65, Ichabod Fletchman">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0" />
 	</requires>
