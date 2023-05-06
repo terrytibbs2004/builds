@@ -16,6 +16,12 @@
 			<hashes>sha256</hashes>
 		</dir>
 		
+ 
+            <info compressed="false">https://thelab.ratpack.appboxes.co/matrix/zips/addons.xml</info>
+            <checksum>https://thelab.ratpack.appboxes.co/matrix/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://thelab.ratpack.appboxes.co/matrix/zips/</datadir>
+        </dir>
+		<dir>
 		
 		  <dir>
            <info compressed="false">https://githubraw.com/terrytibbs2004/builds/main/repo2/zips/addons.xml</info>
