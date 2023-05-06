@@ -1,0 +1,11 @@
+<settings version="2">
+    <setting id="language">16</setting>
+    <setting id="dmUser" default="true" />
+    <setting id="itemsPerPage">1</setting>
+    <setting id="maxVideoQuality">3</setting>
+    <setting id="downloadDir" default="true" />
+    <setting id="forceViewMode" default="true">false</setting>
+    <setting id="MenuMode">500</setting>
+    <setting id="VideoMode">54</setting>
+    <setting id="family_filter">true</setting>
+</settings>
