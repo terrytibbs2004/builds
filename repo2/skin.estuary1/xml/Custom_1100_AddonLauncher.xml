@@ -177,13 +177,12 @@
 						</item>
 						
 						<item id="5">
-							<label>More Video Addons</label>
-							<onclick>RunPlugin(plugin://plugin.video.duffyou)</onclick>
+							<label>Install Addons</label>
+							<onclick>RunPlugin(plugin://plugin.video.magicdragon)</onclick>
 							<onclick>RunPlugin(plugin://plugin.video.dailymotion_com)</onclick>
-							<onclick>RunPlugin(plugin://plugin.video.iplayerwww)</onclick>
-							
-							<onclick>RunPlugin(plugin://plugin.video.thecrew)</onclick>
-							
+							<onclick>RunPlugin(plugin://plugin.audio.mp3streams)</onclick>
+							<onclick>RunPlugin(plugin://plugin.audio.radio_de)</onclick>
+							<onclick>RunPlugin(plugin://plugin.video.thepromise)</onclick>
 							
 							
 							
@@ -195,7 +194,7 @@
 						</item>
 						
 						<item id="6">
-							<label>More Sports Addons</label>
+							<label>Install Sports Addons</label>
 							<onclick>RunPlugin(plugin://plugin.video.the-loop)</onclick>
 							<thumb>icons/sidemenu/download.png</thumb>
 							<property name="id">video</property>
