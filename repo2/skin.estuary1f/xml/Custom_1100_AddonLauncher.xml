@@ -166,15 +166,7 @@
 							<property name="path">addons://sources/audio/</property>
 							<property name="menu_id">$NUMBER[501]</property>
 						</item>
-						<item id="8">
-							<label>$LOCALIZE[35049]</label>
-							<visible>System.GetBool(gamesgeneral.enable)</visible>
-							<onclick>ActivateWindow(games,addons://sources/game/,return)</onclick>
-							<thumb>icons/sidemenu/games.png</thumb>
-							<property name="id">game</property>
-							<property name="path">addons://sources/game/</property>
-							<property name="menu_id">$NUMBER[509]</property>
-						</item>
+						
 						<item id="3">
 							<label>$LOCALIZE[1043]</label>
 							<onclick>ActivateWindow(programs,addons://sources/executable/,return)</onclick>
@@ -183,38 +175,31 @@
 							<property name="path">addons://sources/executable/</property>
 							<property name="menu_id">$NUMBER[502]</property>
 						</item>
-						<item id="4">
-							<label>$LOCALIZE[20244]</label>
-							<onclick>ActivateWindow(programs,androidapp://sources/apps/,return)</onclick>
-							<thumb>icons/sidemenu/android.png</thumb>
-							<property name="id">android</property>
-							<property name="path">androidapp://sources/apps/</property>
-							<property name="menu_id">$NUMBER[506]</property>
-							<visible>System.Platform.Android</visible>
-						</item>
+						
 						<item id="5">
-							<label>$LOCALIZE[1039]</label>
-							<onclick>ActivateWindow(pictures,addons://sources/image/,return)</onclick>
-							<thumb>icons/sidemenu/pictures.png</thumb>
-							<property name="id">pictures</property>
-							<property name="path">addons://sources/image/</property>
-							<property name="menu_id">$NUMBER[503]</property>
-						</item>
-						<item id="7">
-							<label>$LOCALIZE[24998]</label>
-							<onclick>ActivateWindow(addonbrowser,addons://user/,return)</onclick>
-							<thumb>icons/sidemenu/manage.png</thumb>
-							<property name="id">manage</property>
-							<property name="path">addons://user/</property>
-							<property name="menu_id">$NUMBER[508]</property>
-						</item>
-						<item id="6">
-							<label>$LOCALIZE[33003]</label>
-							<onclick>ActivateWindow(addonbrowser,addons://all/,return)</onclick>
+							<label>Install Addons</label>
+							<onclick>RunPlugin(plugin://plugin.video.magicdragon)</onclick>
+							<onclick>RunPlugin(plugin://plugin.video.dailymotion_com)</onclick>
+							<onclick>RunPlugin(plugin://plugin.audio.mp3streams)</onclick>
+							<onclick>RunPlugin(plugin://plugin.audio.radio_de)</onclick>
+							<onclick>RunPlugin(plugin://plugin.video.thepromise)</onclick>
+							
+							
+							
+							
 							<thumb>icons/sidemenu/download.png</thumb>
-							<property name="id">download</property>
-							<property name="path">addons://all/</property>
-							<property name="menu_id">$NUMBER[507]</property>
+							<property name="id">video</property>
+							<property name="path">addons://sources/video/</property>
+							<property name="menu_id">$NUMBER[500]</property>
+						</item>
+						
+						<item id="6">
+							<label>Install Sports Addons</label>
+							<onclick>RunPlugin(plugin://plugin.video.the-loop)</onclick>
+							<thumb>icons/sidemenu/download.png</thumb>
+							<property name="id">video</property>
+							<property name="path">addons://sources/video/</property>
+							<property name="menu_id">$NUMBER[500]</property>
 						</item>
 					</content>
 				</control>

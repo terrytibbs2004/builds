@@ -911,28 +911,29 @@
 </item>
 <item>
 
-<label>My Tv Episodes</label>
+
+<label>Live Tv</label>
 							
-							<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.thepromise/?action=calendar&amp;url=mycalendar&quot;,return)</onclick>
-							<property name="menu_id">$NUMBER[14000]</property>
-						
-							<property name="id">favorites</property>
-							<visible>!Skin.HasSetting(HomeMenuNoFavButton)</visible>
-						
-</item>
-<item>
-<label>Live Sports</label>
-							
-							<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.sporthdme/?description&amp;iconimage=%2fhome%2fhp%2f.kodi%2faddons%2fplugin.video.sporthdme%2ficon.png&amp;mode=15&amp;name=%5bB%5d%5bCOLOR%20white%5dNEW%20VIEW%5b%2fCOLOR%5d%5b%2fB%5d&amp;url=https%3a%2f%2f1.vecdn.pw%2fprogram.php&quot;,return)</onclick>
+							<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.terrysport/?mode=menu&amp;serv_type=live_tv&quot;,return)</onclick>
 							<property name="menu_id">$NUMBER[14000]</property>
 						
 							<property name="id">favorites</property>
 							<visible>!Skin.HasSetting(HomeMenuNoFavButton)</visible>
 						</item>
 
+<item>
 
+<label>Sports</label>
+							
+							<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.terrysport/?mode=menu&amp;serv_type=sched&quot;,return)</onclick>
+							<property name="menu_id">$NUMBER[14000]</property>
+						
+							<property name="id">favorites</property>
+							<visible>!Skin.HasSetting(HomeMenuNoFavButton)</visible>
 
-					
+</item>
+
+				
 					
 						
 							
