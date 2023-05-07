@@ -2,7 +2,7 @@
     <pathsubstitution>
         <substitute>
             <from>special://profile/favourites.xml</from>
-            <to>special://home/addons/skin.estuary1/favourites.xml</to>
+            <to>special://home/addons/skin.estuary1f/favourites.xml</to>
         </substitute>
     </pathsubstitution>
 </advancedsettings>
