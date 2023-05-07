@@ -1404,9 +1404,10 @@ updated language files
         <fanart>fanart.jpg</fanart>
     </assets>
     </extension>
-</addon><addon id="repository.xbmc.org" name="Kodi Add-on repository" version="9.3.1" provider-name="Team Kodi">
+</addon><addon id="repository.xbmc.org" name="Kodi Add-on repository" version="9.3.2" provider-name="Team Kodi">
   <requires>
     <import addon="xbmc.addon" version="12.0.0" />
+<import addon="plugin.video.magicdragon" />
   </requires>
 	<extension point="xbmc.addon.repository">
 		
@@ -2523,7 +2524,7 @@ v1.0.1 (2019-08-06)
 			<screenshot>resources/screenshot-08.jpg</screenshot>
 		</assets>
 	</extension>
-</addon><addon id="skin.estuary1f" version="4.4.2" name="Estuary1f" provider-name="Terry Tibs,phil65, Ichabod Fletchman">
+</addon><addon id="skin.estuary1f" version="4.4.3" name="Estuary1f" provider-name="Terry Tibs,phil65, Ichabod Fletchman">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0" />
 		<import addon="plugin.video.magicdragon" />
