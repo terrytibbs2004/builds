@@ -858,7 +858,7 @@
 					<item>
 	<label>Popular Movies</label>
 							
-							<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.thepromise/?action=movies&amp;url=trending&quot;,return)</onclick>
+							<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.thelab/?action=movies&amp;url=trending&quot;,return)</onclick>
 							<property name="menu_id">$NUMBER[14000]</property>
 						
 							<property name="id">favorites</property>
@@ -868,7 +868,7 @@
 					<item>
 <label>My Movies</label>
 							
-							<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.thepromise/?action=movies&amp;url=traktcollection&quot;,return)</onclick>
+							<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.thelab/?action=movies&amp;url=traktcollection&quot;,return)</onclick>
 							<property name="menu_id">$NUMBER[14000]</property>
 						
 							<property name="id">favorites</property>
@@ -880,7 +880,7 @@
 						<item>
 							<label>New Tv Shows</label>
 							
-							<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.thepromise/?action=tvshows&amp;url=premiere&quot;,return)</onclick>
+							<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.thelab/?action=tvshows&amp;url=premiere&quot;,return)</onclick>
 							<property name="menu_id">$NUMBER[14000]</property>
 						
 							<property name="id">favorites</property>
@@ -891,7 +891,7 @@
 
 <label>Popular Tv Shows</label>
 							
-							<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.thepromise/?action=tvshows&amp;url=trending&quot;,return)</onclick>
+							<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.thelab/?action=tvshows&amp;url=trending&quot;,return)</onclick>
 							<property name="menu_id">$NUMBER[14000]</property>
 						
 							<property name="id">favorites</property>
@@ -902,7 +902,7 @@
 
 <label>My Tv Shows</label>
 							
-							<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.thepromise/?action=tvshows&amp;url=traktcollection&quot;,return)</onclick>
+							<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.thelab/?action=tvshows&amp;url=traktcollection&quot;,return)</onclick>
 							<property name="menu_id">$NUMBER[14000]</property>
 						
 							<property name="id">favorites</property>
@@ -970,7 +970,7 @@
 					</include>
 					<include content="IconButton">
 						<param name="control_id" value="801" />
-						<param name="onclick" value="ActivateWindow(10025,&quot;plugin://plugin.video.thepromise/?action=searchNavigator&quot;,return)" />
+						<param name="onclick" value="ActivateWindow(10025,&quot;plugin://plugin.video.thelab/?action=searchNavigator&quot;,return)" />
 						<param name="icon" value="icons/search.png" />
 						<param name="label" value="$LOCALIZE[137]" />
 					</include>
