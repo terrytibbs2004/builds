@@ -1,0 +1,18 @@
+Homage To:
+[B][COLOR blue]
+LockDown
+       Machine
+[/COLOR][/B]
+
+[B][COLOR magenta]23.4.30[/COLOR][/B]
+- Code changes
+- Removed CNG - Click n Go / Currently Not working
+- Moved Test Area to Main
+- Moved 1Clicks (Debrid) to Main
+- Moved 1Clicks (Free) to Main
+
+[B][COLOR magenta]23.4.5[/COLOR][/B]
+- Code changes
+
+[B][COLOR magenta]23.4.1[/COLOR][/B]
+- Initial version
