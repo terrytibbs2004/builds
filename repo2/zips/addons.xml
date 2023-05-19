@@ -1075,12 +1075,13 @@ updated language files
     <description lang="tr_TR">The Movie Database (TMDb), topluluk tarafından oluşturulmuş bir film ve TV veritabanıdır. Her bir veri parçası, 2008 yılına dayanan muhteşem topluluğumuz tarafından eklenmiştir. TMDb'nin güçlü uluslararası odağı ve veri genişliği büyük ölçüde benzersizdir ve inanılmaz derecede gurur duyduğumuz bir şeydir. Basitçe söylemek gerekirse, topluluk içinde yaşıyor ve nefes alıyoruz ve bizi farklı kılan da tam olarak bu.</description>
     <description lang="zh_CN">TMDb 是一个由网络社区创建的影视数据库。每一条数据都是由我们令人惊叹的社区添加的，可以追溯到2008年。TMDb 强大的国际关注度和数据广度在很大程度上是无与伦比的，我们对此感到无比自豪。简单地说，我们生活在社区中，呼吸着社区的气息，这正是我们与众不同的原因。</description>
   </extension>
-</addon><addon id="plugin.audio.mp3streams" name="MP3 Streams" version="2022.0.2" provider-name="Jon Bovi">
+</addon><addon id="plugin.audio.mp3streams" name="MP3 Streams" version="2022.1.2" provider-name="Jon Bovi">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="script.module.future" />
         <import addon="script.module.mutagen" />
         <import addon="script.module.requests" />
+<import addon="visualization.spectrum" />
     </requires>
     <extension point="xbmc.python.pluginsource" library="default.py">
         <provides>audio</provides>
